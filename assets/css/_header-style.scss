@@ -1,0 +1,197 @@
+header {
+	background: linear-gradient(to bottom, darkslategray 0%, black 100%);
+	position: relative;
+	width: 100%;
+	height: $header-height;
+	nav {
+		align-items: center;
+		background-image: url(../img/background-title.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom: $border;
+		border-bottom-right-radius: $border-radius;
+		display: flex;
+		font-family: $font-title;
+		justify-content: space-between;
+		position: relative;
+		height: 100%;
+		.logo-container,
+		.nav-separator,
+		.nav-section {
+			display: flex;
+		}
+		.logo-container,
+		.nav-section {
+			position: inherit;
+		}
+		.nav-separator,
+		.nav-section {
+			height: 100%;
+		}
+		.logo-container {
+			align-content: flex-end;
+			justify-content: space-around;
+			margin-left: $header-margin;
+			text-decoration: none;
+			.logo-img,
+			em {
+				position: inherit;
+			}
+			.logo-img {
+				display: flex;
+			}
+			em {
+				align-self: flex-end;
+				color: white;
+				display: block;
+				font-size: $logo-title;
+			}
+		}
+		.nav-separator {
+			border: none;
+			border-right: $border;
+			border-radius: $border-radius;
+			position: absolute;
+			width: $header-separator-width;
+			left: 260px;
+		}
+		.nav-section {
+			align-items: center;
+			justify-content: space-between;
+			.nav-menu {
+				.nav-menu-btn {
+					.menu-icon {
+						display: none;
+					}
+				}
+				.nav-menu-btn,
+				#expandList {
+					display: none;
+				}
+				.nav-list {
+					align-items: center;
+					display: flex;
+					justify-content: space-evenly;
+					position: inherit;
+					width: $header-link-box;
+					.nav-item {
+						-moz-transition: 0.5s ease;
+						-ms-transition: 0.5s ease;
+						-o-transition: 0.5s ease;
+						-webkit-transition: 0.5s ease;
+						color: white;
+						font-size: $header-link;
+						position: inherit;
+						text-align: center;
+						text-decoration: none;
+						transition: 0.5s ease;
+						&:hover {
+							text-shadow: 5px 5px 5px black;
+						}
+						&:active,
+						&:visited:active {
+							-moz-transform: translate(2px, 2px);
+							-ms-transform: translate(2px, 2px);
+							-o-transform: translate(2px, 2px);
+							-webkit-transform: translate(2px, 2px);
+							color: $visited-links;
+							text-shadow: none;
+							transform: translate(2px, 2px);
+						}
+						&:visited {
+							color: $visited-links-perm;
+						}
+						&:hover,
+						&:visited:hover {
+							color: $title-color;
+						}
+					}
+					.list-separator {
+						border: $border;
+						height: $header-link-separator-height;
+					}
+				}
+			}
+			.content-separator,
+			.lang-stg {
+				position: inherit;
+				height: 100%;
+			}
+			.content-separator {
+				border: none;
+				border-right: $border;
+			}
+			.lang-stg {
+				align-items: center;
+				background: inherit;
+				display: flex;
+				justify-content: center;
+				width: $language-settings-box;
+				.lang-btn,
+				.lang-content {
+					align-items: center;
+				}
+				.lang-btn {
+					-moz-transition: 0.5s ease;
+					-ms-transition: 0.5s ease;
+					-o-transition: 0.5s ease;
+					-webkit-transition: 0.5s ease;
+					border: 1px solid transparent;
+					border-radius: $border-radius;
+					color: white;
+					cursor: pointer;
+					display: flex;
+					font-size: $language-button-marker;
+					padding: $language-button-padding;
+					transition: 0.5s ease;
+					z-index: 2;
+					&:hover {
+						border: $border;
+						box-shadow: 5px 5px 5px black;
+					}
+				}
+				#expandLang {
+					display: none;
+					&:checked {
+						~ .lang-btn {
+							border: none;
+							box-shadow: none;
+							transition: none;
+						}
+						~ .lang-content {
+							display: flex;
+						}
+					}
+				}
+				.lang-content {
+					background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
+					background-image: url(../img/background-title.jpg);
+					background-position: top;
+					background-repeat: no-repeat;
+					background-size: cover;
+					border: $border;
+					border-right: none;
+					border-top: none;
+					border-bottom-right-radius: $border-radius;
+					display: none;
+					flex-direction: column;
+					justify-content: flex-end;
+					padding: $language-content-padding;
+					position: absolute;
+					z-index: 1;
+					height: $language-content-height;
+					left: -2px;
+					right: 0;
+					top: 0;
+					.lang-item {
+						display: flex;
+						justify-content: flex-end;
+						margin-top: $language-item-separator;
+						box-shadow: 5px 5px 5px black;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "introrustg-base2line";
+	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+$debug: 1px solid black;
+$font-title: "introrustg-base2line", sans-serif;
+$border: 1px solid #d4bf79;
+$border-lg: 2px solid #d4bf79;
+$border-radius: 10px;
+$greetings-height: 1200px;
+$h1: 56px;
+$header-height: 100px;
+$header-link: 22px;
+$header-link-box: 600px;
+$header-link-box-small: 110px;
+$header-link-separator-height: 30px;
+$header-margin: 10px;
+$header-menu-small-left: 10px;
+$header-menu-small-right: 10px;
+$header-separator-width: 20px;
+$language-button-marker: 22px;
+$language-button-padding: 5px;
+$language-content-height: 150px;
+$language-content-padding: 0 10px 10px 10px;
+$language-item-separator: 5px;
+$language-settings-box: 80px;
+$logo-title: 56px;
+$title-color: #d4bf79;
+$transition-height: 100px;
+$visited-links: #777;
+$visited-links-perm: #d0d0d0;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-attachment: fixed;
+	background-color: midnightblue;
+	background-image: url(../img/background-lofi.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
