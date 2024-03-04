@@ -22,7 +22,7 @@
 			font-weight: normal;
 			text-align: center;
 			position: inherit;
-			bottom: 200px;
+			bottom: $h1-adjustment;
 		}
 	}
 	.transition {
@@ -36,8 +36,8 @@
 		border-left: $border;
 		border-right: $border;
 		border-top: $border;
-		border-top-left-radius: 50px;
-		border-top-right-radius: 50px;
+		border-top-left-radius: $personal-box-radius;
+		border-top-right-radius: $personal-box-radius;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -47,7 +47,7 @@
 			display: flex;
 			flex-direction: column;
 			position: inherit;
-			height: 1200px;
+			height: $my-name-box-height;
 			width: 100%;
 			.section-title {
 				align-items: center;
@@ -57,12 +57,13 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				border-bottom: $border;
-				border-top-left-radius: 50px;
-				border-top-right-radius: 50px;
+				border-top-left-radius: $personal-box-radius;
+				border-top-right-radius: $personal-box-radius;
 				color: $title-color;
 				display: flex;
 				justify-content: center;
-				padding: 10px 0;
+				padding-bottom: $title-padding-bottom;
+				padding-top: $title-padding-top;
 				position: inherit;
 				width: 100%;
 				h2 {
