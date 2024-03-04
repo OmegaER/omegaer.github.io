@@ -16,6 +16,7 @@ header {
 		justify-content: space-between;
 		position: relative;
 		height: 100%;
+		width: 100%;
 		.logo-container,
 		.nav-separator,
 		.nav-section {
@@ -60,7 +61,9 @@ header {
 			align-items: center;
 			justify-content: space-between;
 			.nav-menu {
+				border: $debug; //deb
 				.nav-menu-btn {
+					display: none;
 					.menu-icon {
 						display: none;
 					}

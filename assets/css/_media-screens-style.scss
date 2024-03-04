@@ -141,7 +141,38 @@
 }
 
 /*header*/
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1052px) {
+	header {
+		nav {
+			.nav-section {
+				.nav-menu {
+					.nav-list {
+						width: $header-link-box * 0.75;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 879px) {
+	header {
+		nav {
+			.nav-separator {
+				left: 255px;
+			}
+			.nav-section {
+				.nav-menu {
+					.nav-list {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
 	header {
 		height: $header-height * 0.75;
 		nav {
@@ -207,7 +238,8 @@
 						transition: height 0.5s ease;
 						z-index: 1;
 						height: 0;
-						min-width: auto;
+						width: $header-link-box;
+						max-width: auto;
 						right: -10px;
 						top: 60px;
 						.nav-item {
