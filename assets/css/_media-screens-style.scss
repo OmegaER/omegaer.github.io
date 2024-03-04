@@ -91,7 +91,7 @@
 			height: $greetings-height * 1.5;
 			h1 {
 				font-size: $h1 * 1.5;
-				bottom: 400px;
+				bottom: $h1-adjustment * 1.5;
 			}
 		}
 		.transition {
@@ -141,7 +141,38 @@
 }
 
 /*header*/
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 1052px) {
+	header {
+		nav {
+			.nav-section {
+				.nav-menu {
+					.nav-list {
+						width: $header-link-box * 0.75;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 879px) {
+	header {
+		nav {
+			.nav-separator {
+				left: 255px;
+			}
+			.nav-section {
+				.nav-menu {
+					.nav-list {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
 	header {
 		height: $header-height * 0.75;
 		nav {
@@ -207,7 +238,8 @@
 						transition: height 0.5s ease;
 						z-index: 1;
 						height: 0;
-						min-width: auto;
+						width: $header-link-box;
+						max-width: auto;
 						right: -10px;
 						top: 60px;
 						.nav-item {
@@ -326,13 +358,11 @@
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 932px) {
 	.about-me {
 		.greetings {
-			height: 800px;
 			h1 {
-				font-size: 42px;
-				bottom: 150px;
+				font-size: $h1 * 0.95;
 			}
 		}
 		.personal-box {
@@ -417,39 +447,71 @@
 	}
 }
 
-@media screen and (max-width: 607px) {
+@media screen and (max-width: 820px) {
 	.about-me {
 		.greetings {
-			height: 600px;
 			h1 {
-				font-size: 32px;
-				bottom: 115px;
-			}
-		}
-		.personal-box {
-			.my-name {
-				.section-title {
-					h2 {
-						br {
-							display: block;
-						}
-					}
-					.add-info {
-						font-size: 21px;
-					}
-				}
+				font-size: $h1 * 0.90;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 463px) {
+@media screen and (max-width: 768px) {
 	.about-me {
 		.greetings {
-			height: 450px;
 			h1 {
-				font-size: 22px;
-				bottom: 90px;
+				font-size: $h1 * 0.85;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: $h1 * 0.75;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: $h1 * 0.65;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: $h1 * 0.60;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: $h1 * 0.55;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: math.div($h1, 2);
 			}
 		}
 	}
@@ -508,6 +570,221 @@
 					.lang-content {
 						height: $language-content-height * 0.9;
 					}
+				}
+			}
+		}
+	}
+	.about-me {
+		.greetings {
+			h1 {
+				font-size: $h1 * 0.45;
+			}
+		}
+	}
+}
+
+/*HEIGHTS*/
+@media screen and (max-height: 1368px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 1.2;
+			h1 {
+				bottom: $h1-adjustment * 1.2;
+			}
+		}
+		.transition {
+			height: $transition-height * 1.2;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 1.2;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 1.2;
+					padding-top: $title-padding-top * 1.2;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 1024px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.9;
+			h1 {
+				bottom: $h1-adjustment * 0.9;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.9;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.9;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.9;
+					padding-top: $title-padding-top * 0.9;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 932px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.8;
+			h1 {
+				bottom: $h1-adjustment * 0.8;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.8;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.8;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.8;
+					padding-top: $title-padding-top * 0.8;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 896px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.75;
+			h1 {
+				bottom: $h1-adjustment * 0.75;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.75;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.75;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.75;
+					padding-top: $title-padding-top * 0.75;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 768px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.65;
+			h1 {
+				bottom: $h1-adjustment * 0.65;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.65;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.65;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.65;
+					padding-top: $title-padding-top * 0.65;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 667px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.6;
+			h1 {
+				bottom: $h1-adjustment * 0.6;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.6;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.6;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.6;
+					padding-top: $title-padding-top * 0.6;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 512px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.45;
+			h1 {
+				bottom: $h1-adjustment * 0.45;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.45;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.45;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.45;
+					padding-top: $title-padding-top * 0.45;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 430px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.4;
+			h1 {
+				bottom: $h1-adjustment * 0.4;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.4;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.4;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.4;
+					padding-top: $title-padding-top * 0.4;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 414px) {
+	.about-me {
+		.greetings {
+			height: $greetings-height * 0.35;
+			h1 {
+				bottom: $h1-adjustment * 0.35;
+			}
+		}
+		.transition {
+			height: $transition-height * 0.35;
+		}
+		.personal-box {
+			.my-name {
+				height: $my-name-box-height * 0.35;
+				.section-title {
+					padding-bottom: $title-padding-bottom * 0.35;
+					padding-top: $title-padding-top * 0.35;
 				}
 			}
 		}
