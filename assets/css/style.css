@@ -85,9 +85,6 @@ header nav .nav-section {
   align-items: center;
   justify-content: space-between;
 }
-header nav .nav-section .nav-menu {
-  border: 1px solid black;
-}
 header nav .nav-section .nav-menu .nav-menu-btn {
   display: none;
 }
