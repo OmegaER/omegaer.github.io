@@ -68,7 +68,7 @@
 				width: 100%;
 				h2 {
 					font-family: $font-title;
-					font-size: 42px;
+					font-size: $h2;
 					font-weight: normal;
 					text-align: center;
 					br {
@@ -146,6 +146,15 @@
 									#overlayCheck1,
 									#overlayCheck2 {
 										display: none;
+									}
+									#overlayCheck1 {
+										&:checked {
+											~ .overlay {
+												height: 12%;
+											}
+										}
+									}
+									#overlayCheck2 {
 										&:checked {
 											~ .overlay {
 												height: 17%;
@@ -170,8 +179,8 @@
 										.image-desc {
 											color: white;
 											display: block;
-											font-size: 22px;
-											padding: 10px;
+											font-size: $normal-font;
+											padding: $image-overlays-padding;
 											position: relative;
 											text-align: justify;
 										}

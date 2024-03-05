@@ -1,15 +1,16 @@
 @use "sass:math";
 
-/*Schermi > 1920px*/
+/*SPECIAL*/
+/*Screens > 1920px*/
 @media screen and (min-width: 1921px) {
 	header {
-		border-bottom-right-radius: $border-radius * 2;
+		border-bottom-right-radius: $border-radius * 1.5;
 		height: $header-height * 1.5;
 		nav {
 			border-bottom: $border-lg;
-			border-bottom-right-radius: 20px;
+			border-bottom-right-radius: $border-radius * 1.5;
 			.logo-container {
-				margin-left: $header-margin * 2;
+				margin-left: $header-margin * 1.5;
 				.logo-img {
 					.logo-alt {
 						width: 150px;
@@ -21,8 +22,8 @@
 			}
 			.nav-separator {
 				border-right: $border-lg;
-				border-radius: $border-radius * 2;
-				width: $header-separator-width * 2;
+				border-radius: $border-radius * 1.5;
+				width: $header-separator-width * 1.5;
 				left: 400px;
 			}
 			.nav-section {
@@ -56,9 +57,9 @@
 					margin: 0 10px 0 10px;
 					width: $language-settings-box * 1.5;
 					.lang-btn {
-						border-radius: $border-radius * 2;
+						border-radius: $border-radius * 1.5;
 						font-size: $language-button-marker * 1.5;
-						padding: $language-button-padding * 2;
+						padding: $language-button-padding * 1.5;
 						.lang-btn-alt {
 							width: 60px;
 						}
@@ -70,13 +71,13 @@
 						border: $border-lg;
 						border-right: none;
 						border-top: none;
-						border-bottom-right-radius: $border-radius * 2;
-						padding: $language-button-padding * 2;
+						border-bottom-right-radius: $border-radius * 1.5;
+						padding: $language-button-padding * 1.5;
 						height: $language-content-height * 1.5;
 						left: -10px;
 						right: -10px;
 						.lang-item {
-							margin-top: $language-item-separator * 2;
+							margin-top: $language-item-separator * 1.5;
 							.lang-item-alt {
 								width: 35px;
 							}
@@ -95,21 +96,23 @@
 			}
 		}
 		.transition {
-			height: $transition-height * 2;
+			height: $transition-height * 1.5;
 		}
 		.personal-box {
 			.my-name {
-				height: 1200px * 1.5; //start
+				height: $my-name-box-height * 1.5;
 				.section-title {
 					h2 {
-						font-size: 42px * 1.5; //stat
+						font-size: $h2 * 1.5;
 					}
 				}
 				.section-detail {
+					padding-bottom: $title-padding-bottom * 1.5;
+					padding-top: $title-padding-top * 1.5;
 					.add-info {
-                        text-shadow: 10px 10px 10px black;
-						font-size: 32px * 1.5; //stat
-						margin-top: 40px * 1.5; //stat
+						text-shadow: 8px 8px 8px black;
+						font-size: $additional-info * 1.5;
+						margin-top: $additional-info-adjustment * 1.5;
 					}
 					.pic-pag {
 						.pic-pag-mid {
@@ -118,15 +121,15 @@
 									.slide-content {
 										.overlay-btn {
 											.img-block {
-												box-shadow: 10px 10px 15px black;
-												width: 500px * 1.5; //stat
+												box-shadow: 8px 8px 15px black;
+												width: $image-overlays * 1.5;
 											}
 										}
 										.overlay {
-											width: 500px * 1.5; //stat
+											width: $image-overlays * 1.5;
 											.image-desc {
-												font-size: 22px * 1.5; //stat
-												padding: 10px * 2; //stat
+												font-size: $normal-font * 1.5;
+												padding: $image-overlays-padding * 1.5;
 											}
 										}
 									}
@@ -140,6 +143,7 @@
 	}
 }
 
+/*WIDTH*/
 /*header*/
 @media screen and (max-width: 1052px) {
 	header {
@@ -172,7 +176,7 @@
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	header {
 		height: $header-height * 0.75;
 		nav {
@@ -342,11 +346,28 @@
 								.slide {
 									.overlay-btn {
 										.img-block {
-											width: 400px;
+											width: $image-overlays-alt;
+										}
+									}
+									#overlayCheck1 {
+										&:checked {
+											~ .overlay {
+												height: 15% !important;
+											}
+										}
+									}
+									#overlayCheck2 {
+										&:checked {
+											~ .overlay {
+												height: 25% !important;
+											}
 										}
 									}
 									.overlay {
-										width: 400px;
+										width: $image-overlays-alt;
+										.image-desc {
+											font-size: $normal-font-alt !important;
+										}
 									}
 								}
 							}
@@ -367,17 +388,15 @@
 		}
 		.personal-box {
 			.my-name {
-				height: 800px;
 				.section-title {
-					.h2 {
-						font-size: 42px * 0.75;
+					h2 {
+						font-size: $h2 * 0.95;
 					}
 				}
 				.section-detail {
-                    .add-info {
-                        font-size: 32px * 0.75;
-                        margin-top: 40px * 0.75;
-                    }
+					.add-info {
+						font-size: $additional-info * 0.95;
+					}
 					.pic-pag {
 						.pic-pag-mid {
 							flex-direction: column;
@@ -414,8 +433,8 @@
 								align-items: center;
 								display: flex;
 								justify-content: center;
-                                margin-bottom: 20px;
-                                margin-top: 20px;
+								margin-bottom: 20px;
+								margin-top: 20px;
 								.bullet-points {
 									background: radial-gradient(#ccc 0%, transparent 100%);
 									border-radius: 100%;
@@ -423,8 +442,8 @@
 									margin: 0 10px;
 									opacity: 0.5;
 									transition: background-color 0.5s ease-out;
-									height: 30px;
-									width: 30px;
+									height: $bullet-points-size;
+									width: $bullet-points-size;
 									&:hover {
 										background-color: black;
 										transition: background-color 0.5s ease-in;
@@ -438,6 +457,20 @@
 								-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 								transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 								width: 200%;
+								.slide {
+									.overlay-btn {
+										.img-block {
+											width: $image-overlays-alt * 0.95;
+										}
+									}
+									.overlay {
+										width: $image-overlays-alt * 0.95;
+										.image-desc {
+											font-size: $normal-font-alt * 0.95 !important;
+											padding: $image-overlays-padding * 0.95 !important;
+										}
+									}
+								}
 							}
 						}
 					}
@@ -451,17 +484,100 @@
 	.about-me {
 		.greetings {
 			h1 {
-				font-size: $h1 * 0.90;
+				font-size: $h1 * 0.9;
+			}
+		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.9;
+					}
+				}
+				.section-detail {
+					.add-info {
+						font-size: $additional-info * 0.9;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.bullets {
+								//cont con margins
+								.bullet-points {
+									margin: 0 10px * 0.9; //cont
+									height: $bullet-points-size * 0.9;
+									width: $bullet-points-size * 0.9;
+								}
+							}
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 5px 5px 9px black;
+												width: $image-overlays-alt * 0.9;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.9;
+											.image-desc {
+												font-size: $normal-font-alt * 0.9 !important;
+												padding: $image-overlays-padding * 0.9 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 }
-
+/*merge*/
 @media screen and (max-width: 768px) {
 	.about-me {
 		.greetings {
 			h1 {
 				font-size: $h1 * 0.85;
+			}
+		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.85;
+					}
+				}
+				.section-detail {
+					.add-info {
+						text-shadow: 4px 4px 4px black;
+						font-size: $additional-info * 0.85;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 4px 4px 9px black;
+												width: $image-overlays-alt * 0.85;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.85;
+											.image-desc {
+												font-size: $normal-font-alt * 0.85 !important;
+												padding: $image-overlays-padding * 0.85 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -474,6 +590,43 @@
 				font-size: $h1 * 0.75;
 			}
 		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.75;
+					}
+				}
+				.section-detail {
+					.add-info {
+						font-size: $additional-info * 0.75;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 4px 4px 8px black;
+												width: $image-overlays-alt * 0.75;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.75;
+											.image-desc {
+												font-size: $normal-font-alt * 0.75 !important;
+												padding: $image-overlays-padding * 0.75 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -484,14 +637,45 @@
 				font-size: $h1 * 0.65;
 			}
 		}
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.about-me {
-		.greetings {
-			h1 {
-				font-size: $h1 * 0.60;
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.65;
+						br {
+							display: block;
+						}
+					}
+				}
+				.section-detail {
+					.add-info {
+						text-shadow: 3px 3px 3px black;
+						font-size: $additional-info * 0.65;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 3px 3px 7px black;
+												width: $image-overlays-alt * 0.65;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.65;
+											.image-desc {
+												font-size: $normal-font-alt * 0.65 !important;
+												padding: $image-overlays-padding * 0.65 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -501,7 +685,44 @@
 	.about-me {
 		.greetings {
 			h1 {
-				font-size: $h1 * 0.55;
+				font-size: $h1 * 0.6;
+			}
+		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.6;
+					}
+				}
+				.section-detail {
+					.add-info {
+						font-size: $additional-info * 0.6;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 3px 3px 6px black;
+												width: $image-overlays-alt * 0.6;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.6;
+											.image-desc {
+												font-size: $normal-font-alt * 0.6 !important;
+												padding: $image-overlays-padding * 0.6 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -514,10 +735,47 @@
 				font-size: math.div($h1, 2);
 			}
 		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: math.div($h2, 2);
+					}
+				}
+				.section-detail {
+					.add-info {
+						font-size: math.div($additional-info, 2);
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 3px 3px 5px black;
+												width: math.div($image-overlays-alt, 2);
+											}
+										}
+										.overlay {
+											width: math.div($image-overlays-alt, 2);
+											.image-desc {
+												font-size: math.div($normal-font-alt, 2) !important;
+												padding: math.div($image-overlays-padding, 2) !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
-/*GALAXY FOLD - Schermi <= 280px*/
+/*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
 	header {
 		nav {
@@ -580,6 +838,44 @@
 				font-size: $h1 * 0.45;
 			}
 		}
+		.personal-box {
+			.my-name {
+				.section-title {
+					h2 {
+						font-size: $h2 * 0.45;
+					}
+				}
+				.section-detail {
+					.add-info {
+						text-shadow: 2px 2px 2px black;
+						font-size: $additional-info * 0.45;
+					}
+					.pic-pag {
+						.pic-pag-mid {
+							.inner {
+								.slide {
+									.slide-content {
+										.overlay-btn {
+											.img-block {
+												box-shadow: 2px 2px 5px black;
+												width: $image-overlays-alt * 0.45;
+											}
+										}
+										.overlay {
+											width: $image-overlays-alt * 0.45;
+											.image-desc {
+												font-size: $normal-font-alt * 0.45 !important;
+												padding: $image-overlays-padding * 0.45 !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -601,6 +897,11 @@
 				.section-title {
 					padding-bottom: $title-padding-bottom * 1.2;
 					padding-top: $title-padding-top * 1.2;
+				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 1.2;
+					}
 				}
 			}
 		}
@@ -625,6 +926,11 @@
 					padding-bottom: $title-padding-bottom * 0.9;
 					padding-top: $title-padding-top * 0.9;
 				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.9;
+					}
+				}
 			}
 		}
 	}
@@ -647,6 +953,11 @@
 				.section-title {
 					padding-bottom: $title-padding-bottom * 0.8;
 					padding-top: $title-padding-top * 0.8;
+				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.8;
+					}
 				}
 			}
 		}
@@ -671,6 +982,11 @@
 					padding-bottom: $title-padding-bottom * 0.75;
 					padding-top: $title-padding-top * 0.75;
 				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.75;
+					}
+				}
 			}
 		}
 	}
@@ -693,6 +1009,11 @@
 				.section-title {
 					padding-bottom: $title-padding-bottom * 0.65;
 					padding-top: $title-padding-top * 0.65;
+				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.65;
+					}
 				}
 			}
 		}
@@ -717,6 +1038,11 @@
 					padding-bottom: $title-padding-bottom * 0.6;
 					padding-top: $title-padding-top * 0.6;
 				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.6;
+					}
+				}
 			}
 		}
 	}
@@ -739,6 +1065,11 @@
 				.section-title {
 					padding-bottom: $title-padding-bottom * 0.45;
 					padding-top: $title-padding-top * 0.45;
+				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.45;
+					}
 				}
 			}
 		}
@@ -763,6 +1094,11 @@
 					padding-bottom: $title-padding-bottom * 0.4;
 					padding-top: $title-padding-top * 0.4;
 				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.4;
+					}
+				}
 			}
 		}
 	}
@@ -785,6 +1121,11 @@
 				.section-title {
 					padding-bottom: $title-padding-bottom * 0.35;
 					padding-top: $title-padding-top * 0.35;
+				}
+				.section-detail {
+					.add-info {
+						margin-top: $additional-info-adjustment * 0.35;
+					}
 				}
 			}
 		}

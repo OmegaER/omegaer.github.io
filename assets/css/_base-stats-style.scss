@@ -6,13 +6,19 @@
 }
 
 $debug: 1px solid black;
+
+$additional-info: 32px;
+$additional-info-adjustment: 40px;
 $font-title: "introrustg-base2line", sans-serif;
 $border: 1px solid #d4bf79;
 $border-lg: 2px solid #d4bf79;
 $border-radius: 10px;
+$bullet-points-margin: 0 10px;
+$bullet-points-size: 30px;
 $greetings-height: 1200px;
 $h1: 56px;
 $h1-adjustment: 200px;
+$h2: 42px;
 $header-height: 100px;
 $header-link: 22px;
 $header-link-box: 700px;
@@ -22,6 +28,9 @@ $header-margin: 10px;
 $header-menu-small-left: 10px;
 $header-menu-small-right: 10px;
 $header-separator-width: 20px;
+$image-overlays: 500px;
+$image-overlays-alt: 400px;
+$image-overlays-padding: 10px;
 $language-button-marker: 22px;
 $language-button-padding: 5px;
 $language-content-height: 150px;
@@ -30,6 +39,8 @@ $language-item-separator: 5px;
 $language-settings-box: 80px;
 $logo-title: 56px;
 $my-name-box-height: 1200px;
+$normal-font: 22px;
+$normal-font-alt: 21px;
 $personal-box-radius: 50px;
 $title-color: #d4bf79;
 $title-padding-bottom: 10px;
