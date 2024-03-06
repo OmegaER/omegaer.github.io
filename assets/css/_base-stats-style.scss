@@ -13,7 +13,7 @@ $font-title: "introrustg-base2line", sans-serif;
 $border: 1px solid #d4bf79;
 $border-lg: 2px solid #d4bf79;
 $border-radius: 10px;
-$bullet-points-margin: 0 10px;
+$bullet-points-margin-x: 10px;
 $bullet-points-size: 30px;
 $greetings-height: 1200px;
 $h1: 56px;
@@ -50,6 +50,8 @@ $visited-links: #777;
 $visited-links-perm: #d0d0d0;
 
 * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;

@@ -122,7 +122,7 @@
 										.overlay-btn {
 											.img-block {
 												box-shadow: 8px 8px 15px black;
-												width: $image-overlays * 1.5;
+												max-width: $image-overlays * 1.5;
 											}
 										}
 										.overlay {
@@ -143,7 +143,7 @@
 	}
 }
 
-/*WIDTH*/
+/*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 /*header*/
 @media screen and (max-width: 1052px) {
 	header {
@@ -231,7 +231,6 @@
 					}
 					.nav-list {
 						-moz-transition: height 0.5s ease;
-						-ms-transition: height 0.5s ease;
 						-o-transition: height 0.5s ease;
 						-webkit-transition: height 0.5s ease;
 						align-items: flex-end;
@@ -344,11 +343,6 @@
 						.pic-pag-mid {
 							.inner {
 								.slide {
-									.overlay-btn {
-										.img-block {
-											width: $image-overlays-alt;
-										}
-									}
 									#overlayCheck1 {
 										&:checked {
 											~ .overlay {
@@ -409,7 +403,8 @@
 									~ .bullets {
 										.bullet-points {
 											&:nth-child(1) {
-												background: #444;
+												background-color: #444;
+												background-image: url(../img/background-title.jpg);
 											}
 										}
 									}
@@ -423,23 +418,30 @@
 									~ .bullets {
 										.bullet-points {
 											&:nth-child(2) {
-												background: #444;
+												background-color: #444;
+												background-image: url(../img/background-title.jpg);
 											}
 										}
 									}
 								}
 							}
 							.bullets {
-								align-items: center;
+								align-self: center;
 								display: flex;
-								justify-content: center;
-								margin-bottom: 20px;
-								margin-top: 20px;
+								justify-content: space-evenly;
+								margin-bottom: 20px; //stat
+								margin-top: 20px; //stat
+								width: 25%;
 								.bullet-points {
-									background: radial-gradient(#ccc 0%, transparent 100%);
+									-moz-transition: background-color 0.5s ease-out;
+									-o-transition: background-color 0.5s ease-out;
+									-webkit-transition: background-color 0.5s ease-out;
+									background-color: #ccc;
 									border-radius: 100%;
+									box-shadow: 2px 2px 1px black;
 									cursor: pointer;
-									margin: 0 10px;
+									margin-bottom: 10px; //stat
+									margin-top: 10px; //stat
 									opacity: 0.5;
 									transition: background-color 0.5s ease-out;
 									height: $bullet-points-size;
@@ -458,13 +460,15 @@
 								transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 								width: 200%;
 								.slide {
-									.overlay-btn {
-										.img-block {
-											width: $image-overlays-alt * 0.95;
-										}
-									}
+									padding-bottom: 15px; //stat
+									width: 75%;
 									.overlay {
 										width: $image-overlays-alt * 0.95;
+										.overlay-btn {
+											.img-block {
+												max-width: $image-overlays-alt;
+											}
+										}
 										.image-desc {
 											font-size: $normal-font-alt * 0.95 !important;
 											padding: $image-overlays-padding * 0.95 !important;
@@ -503,7 +507,8 @@
 							.bullets {
 								//cont con margins
 								.bullet-points {
-									margin: 0 10px * 0.9; //cont
+									margin-left: $bullet-points-margin-x * 0.9;
+									margin-right: $bullet-points-margin-x * 0.9;
 									height: $bullet-points-size * 0.9;
 									width: $bullet-points-size * 0.9;
 								}
@@ -511,12 +516,6 @@
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 5px 5px 9px black;
-												width: $image-overlays-alt * 0.9;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.9;
 											.image-desc {
@@ -556,15 +555,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: $bullet-points-margin-x * 0.85;
+									margin-right: $bullet-points-margin-x * 0.85;
+									height: $bullet-points-size * 0.85;
+									width: $bullet-points-size * 0.85;
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 4px 4px 9px black;
-												width: $image-overlays-alt * 0.85;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.85;
 											.image-desc {
@@ -603,15 +604,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: $bullet-points-margin-x * 0.75;
+									margin-right: $bullet-points-margin-x * 0.75;
+									height: $bullet-points-size * 0.75;
+									width: $bullet-points-size * 0.75;
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 4px 4px 8px black;
-												width: $image-overlays-alt * 0.75;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.75;
 											.image-desc {
@@ -654,15 +657,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: $bullet-points-margin-x * 0.65;
+									margin-right: $bullet-points-margin-x * 0.65;
+									height: $bullet-points-size * 0.65;
+									width: $bullet-points-size * 0.65;
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 3px 3px 7px black;
-												width: $image-overlays-alt * 0.65;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.65;
 											.image-desc {
@@ -701,15 +706,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: $bullet-points-margin-x * 0.6;
+									margin-right: $bullet-points-margin-x * 0.6;
+									height: $bullet-points-size * 0.6;
+									width: $bullet-points-size * 0.6;
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 3px 3px 6px black;
-												width: $image-overlays-alt * 0.6;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.6;
 											.image-desc {
@@ -748,15 +755,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: math.div($bullet-points-margin-x, 2);
+									margin-right: math.div($bullet-points-margin-x, 2);
+									height: math.div($bullet-points-size, 2);
+									width: math.div($bullet-points-size, 2);
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 3px 3px 5px black;
-												width: math.div($image-overlays-alt, 2);
-											}
-										}
 										.overlay {
 											width: math.div($image-overlays-alt, 2);
 											.image-desc {
@@ -852,15 +861,17 @@
 					}
 					.pic-pag {
 						.pic-pag-mid {
+							.bullets {
+								.bullet-points {
+									margin-left: $bullet-points-margin-x * 0.45;
+									margin-right: $bullet-points-margin-x * 0.45;
+									height: $bullet-points-size * 0.45;
+									width: $bullet-points-size * 0.45;
+								}
+							}
 							.inner {
 								.slide {
 									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 2px 2px 5px black;
-												width: $image-overlays-alt * 0.45;
-											}
-										}
 										.overlay {
 											width: $image-overlays-alt * 0.45;
 											.image-desc {
@@ -879,7 +890,7 @@
 	}
 }
 
-/*HEIGHTS*/
+/*--------------------------------HEIGHTS----------------------------------------------------------------*/
 @media screen and (max-height: 1368px) {
 	.about-me {
 		.greetings {

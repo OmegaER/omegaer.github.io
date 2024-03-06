@@ -5,6 +5,8 @@
   font-style: normal;
 }
 * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -304,7 +306,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: inherit;
   height: 100%;
   width: 100%;
@@ -312,13 +314,14 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 .about-me .personal-box .my-name .section-detail .add-info {
   color: white;
   font-size: 32px;
-  margin-top: 40px;
-  position: absolute;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
   text-align: center;
   text-shadow: 5px 5px 5px black;
-  top: 0;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -329,15 +332,12 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   display: flex;
   justify-content: space-evenly;
   position: inherit;
-  width: 100%;
+  width: 75%;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .slide-control {
   display: none;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets {
-  display: none;
-}
-.about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .controls {
   display: none;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner {
@@ -367,6 +367,9 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   box-shadow: 5px 5px 10px black;
   display: block;
   position: inherit;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content #overlayCheck1,
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content #overlayCheck2 {
@@ -391,7 +394,8 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   position: absolute;
   transition: height 0.5s ease;
   height: 0;
-  max-width: auto;
+  width: 100%;
+  max-width: 500px;
   bottom: 0;
 }
 .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay .image-desc {
@@ -531,7 +535,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
     box-shadow: 8px 8px 15px black;
-    width: 750px;
+    max-width: 750px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 750px;
@@ -541,7 +545,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     padding: 15px;
   }
 }
-/*WIDTH*/
+/*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 /*header*/
 @media screen and (max-width: 1052px) {
   header nav .nav-section .nav-menu .nav-list {
@@ -607,7 +611,6 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   header nav .nav-section .nav-menu .nav-list {
     -moz-transition: height 0.5s ease;
-    -ms-transition: height 0.5s ease;
     -o-transition: height 0.5s ease;
     -webkit-transition: height 0.5s ease;
     align-items: flex-end;
@@ -691,9 +694,6 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 }
 /*about me*/
 @media screen and (max-width: 1280px) {
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .overlay-btn .img-block {
-    width: 400px;
-  }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide #overlayCheck1:checked ~ .overlay {
     height: 15% !important;
   }
@@ -725,26 +725,34 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     margin-left: 0;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid #slide1:checked ~ .bullets .bullet-points:nth-child(1) {
-    background: #444;
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid #slide2:checked ~ .inner {
     margin-left: -100%;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid #slide2:checked ~ .bullets .bullet-points:nth-child(2) {
-    background: #444;
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets {
-    align-items: center;
+    align-self: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 20px;
     margin-top: 20px;
+    width: 25%;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
-    background: radial-gradient(#ccc 0%, transparent 100%);
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    background-color: #ccc;
     border-radius: 100%;
+    box-shadow: 2px 2px 1px black;
     cursor: pointer;
-    margin: 0 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     opacity: 0.5;
     transition: background-color 0.5s ease-out;
     height: 30px;
@@ -758,11 +766,15 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
     width: 200%;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .overlay-btn .img-block {
-    width: 380px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide {
+    padding-bottom: 15px;
+    width: 75%;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .overlay {
     width: 380px;
+  }
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .overlay .overlay-btn .img-block {
+    max-width: 400px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .overlay .image-desc {
     font-size: 19.95px !important;
@@ -780,13 +792,10 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     font-size: 28.8px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
-    margin: 0 9px;
+    margin-left: 9px;
+    margin-right: 9px;
     height: 27px;
     width: 27px;
-  }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 5px 5px 9px black;
-    width: 360px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 360px;
@@ -808,9 +817,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     text-shadow: 4px 4px 4px black;
     font-size: 27.2px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 4px 4px 9px black;
-    width: 340px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 8.5px;
+    margin-right: 8.5px;
+    height: 25.5px;
+    width: 25.5px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 340px;
@@ -830,9 +841,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   .about-me .personal-box .my-name .section-detail .add-info {
     font-size: 24px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 4px 4px 8px black;
-    width: 300px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    height: 22.5px;
+    width: 22.5px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 300px;
@@ -856,9 +869,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     text-shadow: 3px 3px 3px black;
     font-size: 20.8px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 3px 3px 7px black;
-    width: 260px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 6.5px;
+    margin-right: 6.5px;
+    height: 19.5px;
+    width: 19.5px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 260px;
@@ -878,9 +893,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   .about-me .personal-box .my-name .section-detail .add-info {
     font-size: 19.2px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 3px 3px 6px black;
-    width: 240px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 6px;
+    margin-right: 6px;
+    height: 18px;
+    width: 18px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 240px;
@@ -900,9 +917,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   .about-me .personal-box .my-name .section-detail .add-info {
     font-size: 16px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 3px 3px 5px black;
-    width: 200px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 200px;
@@ -961,9 +980,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     text-shadow: 2px 2px 2px black;
     font-size: 14.4px;
   }
-  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay-btn .img-block {
-    box-shadow: 2px 2px 5px black;
-    width: 180px;
+  .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .bullets .bullet-points {
+    margin-left: 4.5px;
+    margin-right: 4.5px;
+    height: 13.5px;
+    width: 13.5px;
   }
   .about-me .personal-box .my-name .section-detail .pic-pag .pic-pag-mid .inner .slide .slide-content .overlay {
     width: 180px;
@@ -973,7 +994,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     padding: 4.5px !important;
   }
 }
-/*HEIGHTS*/
+/*--------------------------------HEIGHTS----------------------------------------------------------------*/
 @media screen and (max-height: 1368px) {
   .about-me .greetings {
     height: 1440px;

@@ -85,37 +85,35 @@
 				background-size: cover;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-evenly;
+				justify-content: space-around;
 				position: inherit;
 				height: 100%;
 				width: 100%;
 				.add-info {
 					color: white;
 					font-size: 32px;
-					margin-top: 40px;
-					position: absolute;
+					margin-bottom: 20px; // continua da qui
+					margin-top: 20px;
+					position: relative;
 					text-align: center;
 					text-shadow: 5px 5px 5px black;
-					top: 0;
 				}
 				.pic-pag {
+					align-items: center;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-evenly;
 					position: relative;
-					width: 100%;
+					width: 100%; //??!!
 					.pic-pag-mid {
 						display: flex;
 						justify-content: space-evenly;
 						position: inherit;
-						width: 100%;
+						width: 75%;
 						.slide-control {
 							display: none;
 						}
 						.bullets {
-							display: none;
-						}
-						.controls {
 							display: none;
 						}
 						.inner {
@@ -141,6 +139,9 @@
 											box-shadow: 5px 5px 10px black;
 											display: block;
 											position: inherit;
+											height: auto;
+											width: 100%;
+											max-width: 500px;
 										}
 									}
 									#overlayCheck1,
@@ -174,7 +175,8 @@
 										position: absolute;
 										transition: height 0.5s ease;
 										height: 0;
-										max-width: auto; //DIPENDE DALL'IMMAGINE
+										width: 100%;
+										max-width: 500px; //DIPENDE DALL'IMMAGINE
 										bottom: 0;
 										.image-desc {
 											color: white;
