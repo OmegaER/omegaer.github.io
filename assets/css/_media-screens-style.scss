@@ -89,48 +89,34 @@
 	}
 	.about-me {
 		.greetings {
-			height: $greetings-height * 1.5;
 			h1 {
 				font-size: $h1 * 1.5;
-				bottom: $h1-adjustment * 1.5;
 			}
-		}
-		.transition {
-			height: $transition-height * 1.5;
 		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 1.5;
 				.section-title {
 					h2 {
 						font-size: $h2 * 1.5;
 					}
 				}
 				.section-detail {
-					padding-bottom: $title-padding-bottom * 1.5;
-					padding-top: $title-padding-top * 1.5;
 					.add-info {
-						text-shadow: 8px 8px 8px black;
 						font-size: $additional-info * 1.5;
-						margin-top: $additional-info-adjustment * 1.5;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay-btn {
-											.img-block {
-												box-shadow: 8px 8px 15px black;
-												max-width: $image-overlays * 1.5;
-											}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											box-shadow: 8px 8px 15px black;
 										}
-										.overlay {
-											width: $image-overlays * 1.5;
-											.image-desc {
-												font-size: $normal-font * 1.5;
-												padding: $image-overlays-padding * 1.5;
-											}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font * 1.5;
+											padding: $image-overlays-padding * 1.5;
 										}
 									}
 								}
@@ -340,27 +326,31 @@
 			.my-name {
 				.section-detail {
 					.pic-pag {
-						.pic-pag-mid {
-							.inner {
-								.slide {
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt;
+										}
+									}
 									#overlayCheck1 {
 										&:checked {
 											~ .overlay {
-												height: 15% !important;
+												/*continua*/
 											}
 										}
 									}
 									#overlayCheck2 {
 										&:checked {
 											~ .overlay {
-												height: 25% !important;
+												/*continua*/
 											}
 										}
 									}
 									.overlay {
-										width: $image-overlays-alt;
 										.image-desc {
-											font-size: $normal-font-alt !important;
+											font-size: $normal-font-alt;
 										}
 									}
 								}
@@ -392,86 +382,85 @@
 						font-size: $additional-info * 0.95;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							flex-direction: column;
-							overflow: hidden;
-							#slide1 {
-								&:checked {
-									~ .inner {
-										margin-left: 0;
-									}
-									~ .bullets {
-										.bullet-points {
-											&:nth-child(1) {
-												background-color: #444;
-												background-image: url(../img/background-title.jpg);
-											}
+						align-items: flex-start;
+						overflow: hidden;
+						#slide1 {
+							&:checked {
+								~ .inner {
+									margin-left: 0;
+								}
+								~ .bullets {
+									.bullet-points {
+										&:nth-child(1) {
+											background-color: #444;
+											background-image: url(../img/background-title.jpg);
 										}
 									}
 								}
 							}
-							#slide2 {
-								&:checked {
-									~ .inner {
-										margin-left: -100%;
-									}
-									~ .bullets {
-										.bullet-points {
-											&:nth-child(2) {
-												background-color: #444;
-												background-image: url(../img/background-title.jpg);
-											}
+						}
+						#slide2 {
+							&:checked {
+								~ .inner {
+									margin-left: -100%;
+								}
+								~ .bullets {
+									.bullet-points {
+										&:nth-child(2) {
+											background-color: #444;
+											background-image: url(../img/background-title.jpg);
 										}
 									}
 								}
 							}
-							.bullets {
-								align-self: center;
-								display: flex;
-								justify-content: space-evenly;
-								margin-bottom: 20px; //stat
-								margin-top: 20px; //stat
-								width: 25%;
-								.bullet-points {
-									-moz-transition: background-color 0.5s ease-out;
-									-o-transition: background-color 0.5s ease-out;
-									-webkit-transition: background-color 0.5s ease-out;
-									background-color: #ccc;
-									border-radius: 100%;
-									box-shadow: 2px 2px 1px black;
-									cursor: pointer;
-									margin-bottom: 10px; //stat
-									margin-top: 10px; //stat
-									opacity: 0.5;
-									transition: background-color 0.5s ease-out;
-									height: $bullet-points-size;
-									width: $bullet-points-size;
-									&:hover {
-										background-color: black;
-										transition: background-color 0.5s ease-in;
-									}
+						}
+						.bullets {
+							align-self: center;
+							display: flex;
+							justify-content: space-evenly;
+							margin-bottom: 20px; //stat
+							margin-top: 20px; //stat
+							width: 25%;
+							.bullet-points {
+								-moz-transition: background-color 0.5s ease-out;
+								-o-transition: background-color 0.5s ease-out;
+								-webkit-transition: background-color 0.5s ease-out;
+								background-color: #ccc;
+								border-radius: 100%;
+								box-shadow: 2px 2px 1px black;
+								cursor: pointer;
+								margin-bottom: 10px; //stat
+								margin-top: 10px; //stat
+								opacity: 0.5;
+								transition: background-color 0.5s ease-out;
+								height: $bullet-points-size;
+								width: $bullet-points-size;
+								&:hover {
+									background-color: black;
+									transition: background-color 0.5s ease-in;
 								}
 							}
-							.inner {
-								-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-								-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-								-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-								-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-								transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-								width: 200%;
-								.slide {
-									padding-bottom: 15px; //stat
-									width: 75%;
+						}
+						.inner {
+							-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							width: 200%;
+							.slide {
+								padding-bottom: 15px; //stat
+								width: 75%;
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.95;
+										}
+									}
 									.overlay {
-										width: $image-overlays-alt * 0.95;
-										.overlay-btn {
-											.img-block {
-												max-width: $image-overlays-alt;
-											}
-										}
 										.image-desc {
-											font-size: $normal-font-alt * 0.95 !important;
-											padding: $image-overlays-padding * 0.95 !important;
+											font-size: $normal-font-alt * 0.95;
+											padding: $image-overlays-padding * 0.95;
 										}
 									}
 								}
@@ -503,25 +492,27 @@
 						font-size: $additional-info * 0.9;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								//cont con margins
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.9;
-									margin-right: $bullet-points-margin-x * 0.9;
-									height: $bullet-points-size * 0.9;
-									width: $bullet-points-size * 0.9;
-								}
+						.bullets {
+							//cont con margins
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.9;
+								margin-right: $bullet-points-margin-x * 0.9;
+								height: $bullet-points-size * 0.9;
+								width: $bullet-points-size * 0.9;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.9;
-											.image-desc {
-												font-size: $normal-font-alt * 0.9 !important;
-												padding: $image-overlays-padding * 0.9 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.9;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.9;
+											padding: $image-overlays-padding * 0.9;
 										}
 									}
 								}
@@ -550,28 +541,29 @@
 				}
 				.section-detail {
 					.add-info {
-						text-shadow: 4px 4px 4px black;
 						font-size: $additional-info * 0.85;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.85;
-									margin-right: $bullet-points-margin-x * 0.85;
-									height: $bullet-points-size * 0.85;
-									width: $bullet-points-size * 0.85;
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.85;
+								margin-right: $bullet-points-margin-x * 0.85;
+								height: $bullet-points-size * 0.85;
+								width: $bullet-points-size * 0.85;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.85;
-											.image-desc {
-												font-size: $normal-font-alt * 0.85 !important;
-												padding: $image-overlays-padding * 0.85 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.85;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.85;
+											padding: $image-overlays-padding * 0.85;
 										}
 									}
 								}
@@ -603,24 +595,26 @@
 						font-size: $additional-info * 0.75;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.75;
-									margin-right: $bullet-points-margin-x * 0.75;
-									height: $bullet-points-size * 0.75;
-									width: $bullet-points-size * 0.75;
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.75;
+								margin-right: $bullet-points-margin-x * 0.75;
+								height: $bullet-points-size * 0.75;
+								width: $bullet-points-size * 0.75;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.75;
-											.image-desc {
-												font-size: $normal-font-alt * 0.75 !important;
-												padding: $image-overlays-padding * 0.75 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.75;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.75;
+											padding: $image-overlays-padding * 0.75;
 										}
 									}
 								}
@@ -652,28 +646,29 @@
 				}
 				.section-detail {
 					.add-info {
-						text-shadow: 3px 3px 3px black;
 						font-size: $additional-info * 0.65;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.65;
-									margin-right: $bullet-points-margin-x * 0.65;
-									height: $bullet-points-size * 0.65;
-									width: $bullet-points-size * 0.65;
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.65;
+								margin-right: $bullet-points-margin-x * 0.65;
+								height: $bullet-points-size * 0.65;
+								width: $bullet-points-size * 0.65;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.65;
-											.image-desc {
-												font-size: $normal-font-alt * 0.65 !important;
-												padding: $image-overlays-padding * 0.65 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.65;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.65;
+											padding: $image-overlays-padding * 0.65;
 										}
 									}
 								}
@@ -705,24 +700,26 @@
 						font-size: $additional-info * 0.6;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.6;
-									margin-right: $bullet-points-margin-x * 0.6;
-									height: $bullet-points-size * 0.6;
-									width: $bullet-points-size * 0.6;
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.6;
+								margin-right: $bullet-points-margin-x * 0.6;
+								height: $bullet-points-size * 0.6;
+								width: $bullet-points-size * 0.6;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.6;
-											.image-desc {
-												font-size: $normal-font-alt * 0.6 !important;
-												padding: $image-overlays-padding * 0.6 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.6;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.6;
+											padding: $image-overlays-padding * 0.6;
 										}
 									}
 								}
@@ -754,24 +751,26 @@
 						font-size: math.div($additional-info, 2);
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: math.div($bullet-points-margin-x, 2);
-									margin-right: math.div($bullet-points-margin-x, 2);
-									height: math.div($bullet-points-size, 2);
-									width: math.div($bullet-points-size, 2);
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: math.div($bullet-points-margin-x, 2);
+								margin-right: math.div($bullet-points-margin-x, 2);
+								height: math.div($bullet-points-size, 2);
+								width: math.div($bullet-points-size, 2);
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: math.div($image-overlays-alt, 2);
-											.image-desc {
-												font-size: math.div($normal-font-alt, 2) !important;
-												padding: math.div($image-overlays-padding, 2) !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: math.div($image-overlays-alt, 2);
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: math.div($normal-font-alt, 2);
+											padding: math.div($image-overlays-padding, 2);
 										}
 									}
 								}
@@ -856,28 +855,29 @@
 				}
 				.section-detail {
 					.add-info {
-						text-shadow: 2px 2px 2px black;
 						font-size: $additional-info * 0.45;
 					}
 					.pic-pag {
-						.pic-pag-mid {
-							.bullets {
-								.bullet-points {
-									margin-left: $bullet-points-margin-x * 0.45;
-									margin-right: $bullet-points-margin-x * 0.45;
-									height: $bullet-points-size * 0.45;
-									width: $bullet-points-size * 0.45;
-								}
+						.bullets {
+							.bullet-points {
+								margin-left: $bullet-points-margin-x * 0.45;
+								margin-right: $bullet-points-margin-x * 0.45;
+								height: $bullet-points-size * 0.45;
+								width: $bullet-points-size * 0.45;
 							}
-							.inner {
-								.slide {
-									.slide-content {
-										.overlay {
-											width: $image-overlays-alt * 0.45;
-											.image-desc {
-												font-size: $normal-font-alt * 0.45 !important;
-												padding: $image-overlays-padding * 0.45 !important;
-											}
+						}
+						.inner {
+							.slide {
+								.slide-content {
+									.overlay-btn {
+										.img-block {
+											max-height: $image-overlays-alt * 0.45;
+										}
+									}
+									.overlay {
+										.image-desc {
+											font-size: $normal-font-alt * 0.45;
+											padding: $image-overlays-padding * 0.45;
 										}
 									}
 								}
@@ -890,28 +890,17 @@
 	}
 }
 
-/*--------------------------------HEIGHTS----------------------------------------------------------------*/
+/*--------------------------------HEIGHTS----------------------------------------------------------------
 @media screen and (max-height: 1368px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 1.2;
-			h1 {
-				bottom: $h1-adjustment * 1.2;
-			}
-		}
-		.transition {
-			height: $transition-height * 1.2;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 1.2;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 1.2;
-					padding-top: $title-padding-top * 1.2;
+
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 1.2;
+						
 					}
 				}
 			}
@@ -921,25 +910,14 @@
 
 @media screen and (max-height: 1024px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.9;
-			h1 {
-				bottom: $h1-adjustment * 0.9;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.9;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.9;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.9;
-					padding-top: $title-padding-top * 0.9;
+
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.9;
+						
 					}
 				}
 			}
@@ -949,25 +927,14 @@
 
 @media screen and (max-height: 932px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.8;
-			h1 {
-				bottom: $h1-adjustment * 0.8;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.8;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.8;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.8;
-					padding-top: $title-padding-top * 0.8;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.8;
+						
 					}
 				}
 			}
@@ -977,25 +944,14 @@
 
 @media screen and (max-height: 896px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.75;
-			h1 {
-				bottom: $h1-adjustment * 0.75;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.75;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.75;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.75;
-					padding-top: $title-padding-top * 0.75;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.75;
+						
 					}
 				}
 			}
@@ -1005,25 +961,14 @@
 
 @media screen and (max-height: 768px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.65;
-			h1 {
-				bottom: $h1-adjustment * 0.65;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.65;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.65;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.65;
-					padding-top: $title-padding-top * 0.65;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.65;
+						
 					}
 				}
 			}
@@ -1033,25 +978,14 @@
 
 @media screen and (max-height: 667px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.6;
-			h1 {
-				bottom: $h1-adjustment * 0.6;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.6;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.6;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.6;
-					padding-top: $title-padding-top * 0.6;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.6;
+						
 					}
 				}
 			}
@@ -1061,25 +995,14 @@
 
 @media screen and (max-height: 512px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.45;
-			h1 {
-				bottom: $h1-adjustment * 0.45;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.45;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.45;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.45;
-					padding-top: $title-padding-top * 0.45;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.45;
+						
 					}
 				}
 			}
@@ -1089,25 +1012,14 @@
 
 @media screen and (max-height: 430px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.4;
-			h1 {
-				bottom: $h1-adjustment * 0.4;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.4;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.4;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.4;
-					padding-top: $title-padding-top * 0.4;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.4;
+						
 					}
 				}
 			}
@@ -1117,28 +1029,17 @@
 
 @media screen and (max-height: 414px) {
 	.about-me {
-		.greetings {
-			height: $greetings-height * 0.35;
-			h1 {
-				bottom: $h1-adjustment * 0.35;
-			}
-		}
-		.transition {
-			height: $transition-height * 0.35;
-		}
 		.personal-box {
 			.my-name {
-				height: $my-name-box-height * 0.35;
 				.section-title {
-					padding-bottom: $title-padding-bottom * 0.35;
-					padding-top: $title-padding-top * 0.35;
+					
 				}
 				.section-detail {
 					.add-info {
-						margin-top: $additional-info-adjustment * 0.35;
+						
 					}
 				}
 			}
 		}
 	}
-}
+}*/

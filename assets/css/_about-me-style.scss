@@ -3,9 +3,8 @@
 	border: $debug; //deb
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	position: relative;
-	min-height: 5000px;
 	width: 100%;
 	.greetings {
 		align-items: center;
@@ -13,7 +12,8 @@
 		display: flex;
 		justify-content: center;
 		position: inherit;
-		height: $greetings-height;
+		height: 91vh;
+		min-height: 440px;
 		width: 100%;
 		h1 {
 			color: white;
@@ -22,13 +22,12 @@
 			font-weight: normal;
 			text-align: center;
 			position: inherit;
-			bottom: $h1-adjustment;
 		}
 	}
 	.transition {
 		background: linear-gradient(to bottom, black 0%, transparent 100%);
 		border: none;
-		height: $transition-height;
+		height: 10vh;
 		width: 100%;
 	}
 	.personal-box {
@@ -47,7 +46,7 @@
 			display: flex;
 			flex-direction: column;
 			position: inherit;
-			height: $my-name-box-height;
+			height: 110vh;
 			width: 100%;
 			.section-title {
 				align-items: center;
@@ -62,8 +61,8 @@
 				color: $title-color;
 				display: flex;
 				justify-content: center;
-				padding-bottom: $title-padding-bottom;
-				padding-top: $title-padding-top;
+				padding-bottom: 1vh;
+				padding-top: 1vh;
 				position: inherit;
 				width: 100%;
 				h2 {
@@ -88,15 +87,16 @@
 				justify-content: space-around;
 				position: inherit;
 				height: 100%;
+				min-height: 440px;
 				width: 100%;
 				.add-info {
 					color: white;
-					font-size: 32px;
-					margin-bottom: 20px; // continua da qui
-					margin-top: 20px;
+					font-size: $additional-info;
+					margin-bottom: 1vh;
+					margin-top: 1vh;
 					position: relative;
 					text-align: center;
-					text-shadow: 5px 5px 5px black;
+					text-shadow: 0.5vw 0.5vh 1vh black;
 				}
 				.pic-pag {
 					align-items: center;
@@ -104,88 +104,81 @@
 					flex-direction: column;
 					justify-content: space-evenly;
 					position: relative;
-					width: 100%; //??!!
-					.pic-pag-mid {
+					width: 100%;
+					.slide-control {
+						display: none;
+					}
+					.bullets {
+						display: none;
+					}
+					.inner {
+						border: $debug;
 						display: flex;
 						justify-content: space-evenly;
 						position: inherit;
-						width: 75%;
-						.slide-control {
-							display: none;
-						}
-						.bullets {
-							display: none;
-						}
-						.inner {
+						width: 100%;
+						.slide {
 							display: flex;
-							justify-content: space-evenly;
+							justify-content: center;
 							position: inherit;
 							width: 100%;
-							.slide {
+							.slide-content {
 								display: flex;
-								justify-content: space-evenly;
+								justify-content: center;
 								position: inherit;
-                                width: 100%;
-								.slide-content {
+								.overlay-btn {
+									cursor: pointer;
 									display: flex;
 									justify-content: center;
 									position: inherit;
-									.overlay-btn {
-										cursor: pointer;
-										display: flex;
-										justify-content: center;
+									width: 100%;
+									.img-block {
+										box-shadow: 5px 5px 10px black;
+										display: block;
 										position: inherit;
-										.img-block {
-											box-shadow: 5px 5px 10px black;
-											display: block;
-											position: inherit;
-											height: auto;
-											width: 100%;
-											max-width: 500px;
+										max-height: 500px;
+									}
+								}
+								#overlayCheck1,
+								#overlayCheck2 {
+									display: none;
+								}
+								#overlayCheck1 {
+									&:checked {
+										~ .overlay {
+											height: 21%;
 										}
 									}
-									#overlayCheck1,
-									#overlayCheck2 {
-										display: none;
-									}
-									#overlayCheck1 {
-										&:checked {
-											~ .overlay {
-												height: 12%;
-											}
+								}
+								#overlayCheck2 {
+									&:checked {
+										~ .overlay {
+											height: 27%;
 										}
 									}
-									#overlayCheck2 {
-										&:checked {
-											~ .overlay {
-												height: 17%;
-											}
-										}
-									}
-									.overlay {
-										-moz-transition: height 0.5s ease;
-										-ms-transition: height 0.5s ease;
-										-o-transition: height 0.5s ease;
-										-webkit-transition: height 0.5s ease;
-										align-items: flex-start;
-										background-color: transparentize(black, 0.3);
-										display: flex;
-										justify-content: center;
-										overflow: hidden;
-										position: absolute;
-										transition: height 0.5s ease;
-										height: 0;
-										width: 100%;
-										max-width: 500px; //DIPENDE DALL'IMMAGINE
-										bottom: 0;
-										.image-desc {
-											color: white;
-											display: block;
-											font-size: $normal-font;
-											padding: $image-overlays-padding;
-											position: relative;
-											text-align: justify;
-										}
+								}
+								.overlay {
+									-moz-transition: height 0.5s ease;
+									-ms-transition: height 0.5s ease;
+									-o-transition: height 0.5s ease;
+									-webkit-transition: height 0.5s ease;
+									align-items: flex-start;
+									background-color: transparentize(black, 0.3);
+									display: flex;
+									justify-content: center;
+									overflow: hidden;
+									position: absolute;
+									transition: height 0.5s ease;
+									height: 0;
+									width: 100%;
+									bottom: 0;
+									.image-desc {
+										color: white;
+										display: block;
+										font-size: $normal-font;
+										padding: $image-overlays-padding;
+										position: relative;
+										text-align: justify;
 									}
 								}
 							}
@@ -194,30 +187,44 @@
 				}
 			}
 		}
-		.my-hobbies {
+	}
+	.my-hobbies {
+		border: $debug; //deb
+		display: flex;
+		flex-direction: column;
+		position: inherit;
+		height: 110vh;
+		width: 100%;
+		.section-title {
+			align-items: center;
+			background-color: darkslategray;
+			background-image: url(../img/background-title.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border: $debug; //deb
+			color: $title-color;
+			display: flex;
+			justify-content: center;
+			padding-bottom: 1vh;
+			padding-top: 1vh;
+			position: inherit;
+			width: 100%;
+		}
+		.section-detail {
+			align-items: center;
+			background-color: inherit;
+			background-image: url(../img/background-section.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
 			border: $debug; //deb
 			display: flex;
-			flex-direction: column;
+			justify-content: center;
 			position: inherit;
-			height: 1000px;
+			height: 100%;
+			min-height: 440px;
 			width: 100%;
-			.section-title {
-				align-items: center;
-				border: $debug; //deb
-				display: flex;
-				justify-content: center;
-				padding: 10px 0;
-				position: inherit;
-				width: 100%;
-			}
-			.section-detail {
-				align-items: center;
-				border: $debug; //deb
-				display: flex;
-				justify-content: center;
-				position: inherit;
-				width: 100%;
-			}
 		}
 	}
 }
