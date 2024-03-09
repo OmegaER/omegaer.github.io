@@ -95,33 +95,46 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 1.5;
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 1.5;
-					}
-					.pic-pag {
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											box-shadow: 8px 8px 15px black;
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 1.5;
 										}
 									}
-									.overlay {
-										.image-desc {
+									#nameOverlayCheck1 {
+										&:checked {
+											~ .name-overlay {
+												height: 23%;
+											}
+										}
+									}
+									#nameOverlayCheck2 {
+										&:checked {
+											~ .name-overlay {
+												height: 37%;
+											}
+										}
+									}
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font * 1.5;
-											padding: $image-overlays-padding * 1.5;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 1.5;
 					}
 				}
 			}
@@ -324,32 +337,32 @@
 	.about-me {
 		.personal-box {
 			.my-name {
-				.section-detail {
-					.pic-pag {
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt;
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays;
 										}
 									}
-									#overlayCheck1 {
+									#nameOverlayCheck1 {
 										&:checked {
-											~ .overlay {
-												/*continua*/
+											~ .name-overlay {
+												height: 23%;
 											}
 										}
 									}
-									#overlayCheck2 {
+									#nameOverlayCheck2 {
 										&:checked {
-											~ .overlay {
-												/*continua*/
+											~ .name-overlay {
+												height: 35%;
 											}
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt;
 										}
 									}
@@ -372,100 +385,32 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.95;
 					}
 				}
-				.section-detail {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.95;
+										}
+									}
+									.name-overlay {
+										.name-img-desc {
+											font-size: $normal-font-alt * 0.95;
+										}
+									}
+								}
+							}
+						}
+					}
 					.add-info {
 						font-size: $additional-info * 0.95;
-					}
-					.pic-pag {
-						align-items: flex-start;
-						overflow: hidden;
-						#slide1 {
-							&:checked {
-								~ .inner {
-									margin-left: 0;
-								}
-								~ .bullets {
-									.bullet-points {
-										&:nth-child(1) {
-											background-color: #444;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						#slide2 {
-							&:checked {
-								~ .inner {
-									margin-left: -100%;
-								}
-								~ .bullets {
-									.bullet-points {
-										&:nth-child(2) {
-											background-color: #444;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						.bullets {
-							align-self: center;
-							display: flex;
-							justify-content: space-evenly;
-							margin-bottom: 20px; //stat
-							margin-top: 20px; //stat
-							width: 25%;
-							.bullet-points {
-								-moz-transition: background-color 0.5s ease-out;
-								-o-transition: background-color 0.5s ease-out;
-								-webkit-transition: background-color 0.5s ease-out;
-								background-color: #ccc;
-								border-radius: 100%;
-								box-shadow: 2px 2px 1px black;
-								cursor: pointer;
-								margin-bottom: 10px; //stat
-								margin-top: 10px; //stat
-								opacity: 0.5;
-								transition: background-color 0.5s ease-out;
-								height: $bullet-points-size;
-								width: $bullet-points-size;
-								&:hover {
-									background-color: black;
-									transition: background-color 0.5s ease-in;
-								}
-							}
-						}
-						.inner {
-							-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							width: 200%;
-							.slide {
-								padding-bottom: 15px; //stat
-								width: 75%;
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.95;
-										}
-									}
-									.overlay {
-										.image-desc {
-											font-size: $normal-font-alt * 0.95;
-											padding: $image-overlays-padding * 0.95;
-										}
-									}
-								}
-							}
-						}
 					}
 				}
 			}
@@ -482,42 +427,32 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.9;
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.9;
-					}
-					.pic-pag {
-						.bullets {
-							//cont con margins
-							.bullet-points {
-								margin-left: $bullet-points-margin-x * 0.9;
-								margin-right: $bullet-points-margin-x * 0.9;
-								height: $bullet-points-size * 0.9;
-								width: $bullet-points-size * 0.9;
-							}
-						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.9;
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.9;
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt * 0.9;
-											padding: $image-overlays-padding * 0.9;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.9;
 					}
 				}
 			}
@@ -534,41 +469,32 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.85;
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.85;
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
-								margin-left: $bullet-points-margin-x * 0.85;
-								margin-right: $bullet-points-margin-x * 0.85;
-								height: $bullet-points-size * 0.85;
-								width: $bullet-points-size * 0.85;
-							}
-						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.85;
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.85;
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt * 0.85;
-											padding: $image-overlays-padding * 0.85;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.85;
 					}
 				}
 			}
@@ -585,41 +511,104 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.75;
+						br {
+							display: block;
+						}
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.75;
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
-								margin-left: $bullet-points-margin-x * 0.75;
-								margin-right: $bullet-points-margin-x * 0.75;
-								height: $bullet-points-size * 0.75;
-								width: $bullet-points-size * 0.75;
-							}
-						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.75;
-										}
-									}
-									.overlay {
-										.image-desc {
-											font-size: $normal-font-alt * 0.75;
-											padding: $image-overlays-padding * 0.75;
+				.name-section-detail {
+					justify-content: center;
+					.name-pic-pag {
+						align-items: flex-start;
+						overflow: hidden;
+						#nameSlide1 {
+							&:checked {
+								~ .name-inner {
+									margin-left: 0;
+								}
+								~ .name-bullets {
+									.name-bullet-points {
+										&:nth-child(1) {
+											background-color: #444;
+											background-image: url(../img/background-title.jpg);
 										}
 									}
 								}
 							}
 						}
+						#nameSlide2 {
+							&:checked {
+								~ .name-inner {
+									margin-left: -100%;
+								}
+								~ .name-bullets {
+									.name-bullet-points {
+										&:nth-child(2) {
+											background-color: #444;
+											background-image: url(../img/background-title.jpg);
+										}
+									}
+								}
+							}
+						}
+						.name-bullets {
+							align-self: center;
+							display: flex;
+							justify-content: space-evenly;
+							margin-bottom: 20px; //stat
+							margin-top: 20px; //stat
+							width: 25%;
+							.name-bullet-points {
+								-moz-transition: background-color 0.5s ease-out;
+								-o-transition: background-color 0.5s ease-out;
+								-webkit-transition: background-color 0.5s ease-out;
+								background-color: #ccc;
+								border: $border;
+								border-radius: 100%;
+								box-shadow: 0.5vh 0.5vw 1vw black;
+								cursor: pointer;
+								margin-left: $bullet-points-margin-x * 0.75;
+								margin-right: $bullet-points-margin-x * 0.75;
+								opacity: 0.5;
+								transition: background-color 0.5s ease-out;
+								height: $bullet-points-size * 0.75;
+								width: $bullet-points-size * 0.75;
+								&:hover {
+									background-color: black;
+									transition: background-color 0.5s ease-in;
+								}
+							}
+						}
+						.name-inner {
+							-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+							width: 200%;
+							.name-slide {
+								padding-bottom: 1.5vh;
+								width: 75%;
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.75;
+										}
+									}
+									.name-overlay {
+										.name-img-desc {
+											font-size: $normal-font-alt * 0.75;
+										}
+									}
+								}
+							}
+						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.75;
 					}
 				}
 			}
@@ -636,44 +625,40 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.65;
-						br {
-							display: block;
-						}
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.65;
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-bullets {
+							.name-bullet-points {
 								margin-left: $bullet-points-margin-x * 0.65;
 								margin-right: $bullet-points-margin-x * 0.65;
 								height: $bullet-points-size * 0.65;
 								width: $bullet-points-size * 0.65;
 							}
 						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.65;
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.65;
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt * 0.65;
-											padding: $image-overlays-padding * 0.65;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.65;
 					}
 				}
 			}
@@ -690,41 +675,40 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.6;
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.6;
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-bullets {
+							.name-bullet-points {
 								margin-left: $bullet-points-margin-x * 0.6;
 								margin-right: $bullet-points-margin-x * 0.6;
 								height: $bullet-points-size * 0.6;
 								width: $bullet-points-size * 0.6;
 							}
 						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.6;
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.6;
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt * 0.6;
-											padding: $image-overlays-padding * 0.6;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.6;
 					}
 				}
 			}
@@ -741,41 +725,40 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: math.div($h2, 2);
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: math.div($additional-info, 2);
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-bullets {
+							.name-bullet-points {
 								margin-left: math.div($bullet-points-margin-x, 2);
 								margin-right: math.div($bullet-points-margin-x, 2);
 								height: math.div($bullet-points-size, 2);
 								width: math.div($bullet-points-size, 2);
 							}
 						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: math.div($image-overlays-alt, 2);
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: math.div($image-overlays, 2);
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: math.div($normal-font-alt, 2);
-											padding: math.div($image-overlays-padding, 2);
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: math.div($additional-info, 2);
 					}
 				}
 			}
@@ -786,6 +769,7 @@
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
 	header {
+		min-width: $min-wiewport-width;
 		nav {
 			.logo-container {
 				.logo-img {
@@ -841,6 +825,7 @@
 		}
 	}
 	.about-me {
+		min-width: $min-wiewport-width;
 		.greetings {
 			h1 {
 				font-size: $h1 * 0.45;
@@ -848,41 +833,40 @@
 		}
 		.personal-box {
 			.my-name {
-				.section-title {
+				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.45;
 					}
 				}
-				.section-detail {
-					.add-info {
-						font-size: $additional-info * 0.45;
-					}
-					.pic-pag {
-						.bullets {
-							.bullet-points {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-bullets {
+							.name-bullet-points {
 								margin-left: $bullet-points-margin-x * 0.45;
 								margin-right: $bullet-points-margin-x * 0.45;
 								height: $bullet-points-size * 0.45;
 								width: $bullet-points-size * 0.45;
 							}
 						}
-						.inner {
-							.slide {
-								.slide-content {
-									.overlay-btn {
-										.img-block {
-											max-height: $image-overlays-alt * 0.45;
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay-btn {
+										.name-img-block {
+											max-height: $image-overlays * 0.45;
 										}
 									}
-									.overlay {
-										.image-desc {
+									.name-overlay {
+										.name-img-desc {
 											font-size: $normal-font-alt * 0.45;
-											padding: $image-overlays-padding * 0.45;
 										}
 									}
 								}
 							}
 						}
+					}
+					.add-info {
+						font-size: $additional-info * 0.45;
 					}
 				}
 			}

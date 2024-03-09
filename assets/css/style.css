@@ -1,983 +1,968 @@
 @font-face {
-	font-family: "introrustg-base2line";
-	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "introrustg-base2line";
+  src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background-attachment: fixed;
-	background-color: midnightblue;
-	background-image: url(../img/background-lofi.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-attachment: fixed;
+  background-color: midnightblue;
+  background-image: url(../img/background-lofi.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "introrustg-base2line";
+  font-weight: normal;
+  text-align: center;
 }
 
 header {
-	background: linear-gradient(to bottom, darkslategray 0%, black 100%);
-	position: relative;
-	width: 100%;
-	height: 100px;
+  background: linear-gradient(to bottom, darkslategray 0%, black 100%);
+  position: relative;
+  width: 100%;
+  height: 100px;
 }
 header nav {
-	align-items: center;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 1px solid #d4bf79;
-	border-bottom-right-radius: 10px;
-	display: flex;
-	font-family: "introrustg-base2line", sans-serif;
-	justify-content: space-between;
-	position: relative;
-	height: 100%;
-	width: 100%;
+  align-items: center;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #d4bf79;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  font-family: "introrustg-base2line", sans-serif;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 header nav .logo-container,
 header nav .nav-separator,
 header nav .nav-section {
-	display: flex;
+  display: flex;
 }
 header nav .logo-container,
 header nav .nav-section {
-	position: inherit;
+  position: inherit;
 }
 header nav .nav-separator,
 header nav .nav-section {
-	height: 100%;
+  height: 100%;
 }
 header nav .logo-container {
-	align-content: flex-end;
-	justify-content: space-around;
-	margin-left: 10px;
-	text-decoration: none;
-}
-header nav .logo-container .logo-img,
-header nav .logo-container em {
-	position: inherit;
+  align-content: flex-end;
+  justify-content: space-around;
+  margin-left: 10px;
+  text-decoration: none;
 }
 header nav .logo-container .logo-img {
-	display: flex;
+  display: flex;
 }
 header nav .logo-container em {
-	align-self: flex-end;
-	color: white;
-	display: block;
-	font-size: 56px;
+  align-self: flex-end;
+  color: white;
+  display: block;
+  font-size: 56px;
 }
 header nav .nav-separator {
-	border: none;
-	border-right: 1px solid #d4bf79;
-	border-radius: 10px;
-	position: absolute;
-	width: 20px;
-	left: 260px;
+  border: none;
+  border-right: 1px solid #d4bf79;
+  border-radius: 10px;
+  position: absolute;
+  width: 20px;
+  left: 260px;
 }
 header nav .nav-section {
-	align-items: center;
-	justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav .nav-section .nav-menu .nav-menu-btn {
-	display: none;
+  display: none;
 }
 header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-	display: none;
+  display: none;
 }
 header nav .nav-section .nav-menu .nav-menu-btn,
 header nav .nav-section .nav-menu #expandList {
-	display: none;
+  display: none;
 }
 header nav .nav-section .nav-menu .nav-list {
-	align-items: center;
-	display: flex;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 700px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 700px;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item {
-	-moz-transition: 0.5s ease;
-	-ms-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: white;
-	font-size: 22px;
-	position: inherit;
-	text-align: center;
-	text-decoration: none;
-	transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s ease;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-	text-shadow: 5px 5px 5px black;
+  text-shadow: 5px 5px 5px black;
 }
-header nav .nav-section .nav-menu .nav-list .nav-item:active,
-header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-	-moz-transform: translate(2px, 2px);
-	-ms-transform: translate(2px, 2px);
-	-o-transform: translate(2px, 2px);
-	-webkit-transform: translate(2px, 2px);
-	color: #777;
-	text-shadow: none;
-	transform: translate(2px, 2px);
+header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  -o-transform: translate(2px, 2px);
+  -webkit-transform: translate(2px, 2px);
+  color: #777;
+  text-shadow: none;
+  transform: translate(2px, 2px);
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:visited {
-	color: #d0d0d0;
+  color: #d0d0d0;
 }
-header nav .nav-section .nav-menu .nav-list .nav-item:hover,
-header nav .nav-section .nav-menu .nav-list .nav-item:visited:hover {
-	color: #d4bf79;
+header nav .nav-section .nav-menu .nav-list .nav-item:hover, header nav .nav-section .nav-menu .nav-list .nav-item:visited:hover {
+  color: #d4bf79;
 }
 header nav .nav-section .nav-menu .nav-list .list-separator {
-	border: 1px solid #d4bf79;
-	height: 30px;
+  border: 1px solid #d4bf79;
+  height: 30px;
 }
 header nav .nav-section .content-separator,
 header nav .nav-section .lang-stg {
-	position: inherit;
-	height: 100%;
+  position: inherit;
+  height: 100%;
 }
 header nav .nav-section .content-separator {
-	border: none;
-	border-right: 1px solid #d4bf79;
+  border: none;
+  border-right: 1px solid #d4bf79;
 }
 header nav .nav-section .lang-stg {
-	align-items: center;
-	background: inherit;
-	display: flex;
-	justify-content: center;
-	width: 80px;
+  align-items: center;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  width: 80px;
 }
 header nav .nav-section .lang-stg .lang-btn,
 header nav .nav-section .lang-stg .lang-content {
-	align-items: center;
+  align-items: center;
 }
 header nav .nav-section .lang-stg .lang-btn {
-	-moz-transition: 0.5s ease;
-	-ms-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	border: 1px solid transparent;
-	border-radius: 10px;
-	color: white;
-	cursor: pointer;
-	display: flex;
-	font-size: 22px;
-	padding: 5px;
-	transition: 0.5s ease;
-	z-index: 2;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 22px;
+  padding: 5px;
+  transition: 0.5s ease;
+  z-index: 2;
 }
 header nav .nav-section .lang-stg .lang-btn:hover {
-	border: 1px solid #d4bf79;
-	box-shadow: 5px 5px 5px black;
+  border: 1px solid #d4bf79;
+  box-shadow: 5px 5px 5px black;
 }
 header nav .nav-section .lang-stg #expandLang {
-	display: none;
+  display: none;
 }
 header nav .nav-section .lang-stg #expandLang:checked ~ .lang-btn {
-	border: none;
-	box-shadow: none;
-	transition: none;
+  border: none;
+  box-shadow: none;
+  transition: none;
 }
 header nav .nav-section .lang-stg #expandLang:checked ~ .lang-content {
-	display: flex;
+  display: flex;
 }
 header nav .nav-section .lang-stg .lang-content {
-	background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 1px solid #d4bf79;
-	border-right: none;
-	border-top: none;
-	border-bottom-right-radius: 10px;
-	display: none;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: 0 10px 10px 10px;
-	position: absolute;
-	z-index: 1;
-	height: 150px;
-	left: -2px;
-	right: 0;
-	top: 0;
+  background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #d4bf79;
+  border-right: none;
+  border-top: none;
+  border-bottom-right-radius: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 10px 10px 10px;
+  position: absolute;
+  z-index: 1;
+  height: 150px;
+  left: -2px;
+  right: 0;
+  top: 0;
 }
 header nav .nav-section .lang-stg .lang-content .lang-item {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 5px;
-	box-shadow: 5px 5px 5px black;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .about-me {
-	align-items: center;
-	border: 1px solid black;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
-	width: 100%;
+  align-items: center;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 .about-me .greetings {
-	align-items: center;
-	background-color: black;
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	height: 91vh;
-	min-height: 440px;
-	width: 100%;
+  align-items: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 91vh;
+  min-height: 440px;
+  width: 100%;
 }
 .about-me .greetings h1 {
-	color: white;
-	font-family: "introrustg-base2line";
-	font-size: 56px;
-	font-weight: normal;
-	text-align: center;
-	position: inherit;
+  color: white;
+  font-size: 56px;
 }
 .about-me .transition {
-	background: linear-gradient(to bottom, black 0%, transparent 100%);
-	border: none;
-	height: 10vh;
-	width: 100%;
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  border: none;
+  height: 10vh;
+  width: 100%;
 }
 .about-me .personal-box {
-	align-items: center;
-	border-left: 1px solid #d4bf79;
-	border-right: 1px solid #d4bf79;
-	border-top: 1px solid #d4bf79;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: inherit;
-	width: 90%;
+  align-items: center;
+  background-color: inherit;
+  background-image: url(../img/background-section.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 1px solid #d4bf79;
+  border-right: 1px solid #d4bf79;
+  border-top: 1px solid #d4bf79;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: inherit;
+  width: 90%;
 }
 .about-me .personal-box .my-name {
-	display: flex;
-	flex-direction: column;
-	position: inherit;
-	height: 110vh;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  height: 110vh;
+  min-height: 650px;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-title {
-	align-items: center;
-	background-color: darkslategray;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 1px solid #d4bf79;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-	color: #d4bf79;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 1vh;
-	padding-top: 1vh;
-	position: inherit;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-title {
+  align-items: center;
+  background-color: darkslategray;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #d4bf79;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  color: #d4bf79;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-title h2 {
-	font-family: "introrustg-base2line", sans-serif;
-	font-size: 42px;
-	font-weight: normal;
-	text-align: center;
+.about-me .personal-box .my-name .name-section-title h2 {
+  font-size: 42px;
 }
-.about-me .personal-box .my-name .section-title h2 br {
-	display: none;
+.about-me .personal-box .my-name .name-section-title h2 br {
+  display: none;
 }
-.about-me .personal-box .my-name .section-detail {
-	align-items: center;
-	background-color: inherit;
-	background-image: url(../img/background-section.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	position: inherit;
-	height: 100%;
-	min-height: 440px;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-detail {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  height: 100%;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-detail .add-info {
-	color: white;
-	font-size: 32px;
-	margin-bottom: 1vh;
-	margin-top: 1vh;
-	position: relative;
-	text-align: center;
-	text-shadow: 0.5vw 0.5vh 1vh black;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	position: relative;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-slide-control {
+  display: none;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .slide-control {
-	display: none;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+  display: none;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .bullets {
-	display: none;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+  display: flex;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner {
-	border: 1px solid black;
-	display: flex;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide {
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content {
+  display: flex;
+  justify-content: center;
+  position: inherit;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content {
-	display: flex;
-	justify-content: center;
-	position: inherit;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  width: 100%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn {
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	width: 100%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+  border-radius: 10px;
+  box-shadow: 0.5vh 0.5vw 1vw black;
+  display: block;
+  position: inherit;
+  max-height: 540px;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-	box-shadow: 5px 5px 10px black;
-	display: block;
-	position: inherit;
-	max-height: 500px;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
+  display: none;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck1,
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck2 {
-	display: none;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
+  height: 19%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck1:checked ~ .overlay {
-	height: 21%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
+  height: 25%;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck2:checked ~ .overlay {
-	height: 27%;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
+  -moz-transition: height 0.5s ease;
+  -ms-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  -webkit-transition: height 0.5s ease;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  transition: height 0.5s ease;
+  height: 0;
+  width: 100%;
+  bottom: 0;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay {
-	-moz-transition: height 0.5s ease;
-	-ms-transition: height 0.5s ease;
-	-o-transition: height 0.5s ease;
-	-webkit-transition: height 0.5s ease;
-	align-items: flex-start;
-	background-color: rgba(0, 0, 0, 0.7);
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
-	position: absolute;
-	transition: height 0.5s ease;
-	height: 0;
-	width: 100%;
-	bottom: 0;
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+  color: white;
+  display: block;
+  font-size: 22px;
+  padding: 1vh 1vw;
+  position: relative;
+  text-align: justify;
 }
-.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-	color: white;
-	display: block;
-	font-size: 22px;
-	padding: 10px;
-	position: relative;
-	text-align: justify;
+.about-me .personal-box .my-name .name-section-detail .add-info {
+  align-self: flex-end;
+  background: radial-gradient(#444 -100%, transparent 100%);
+  border-radius: 100%;
+  color: white;
+  font-size: 32px;
+  text-align: right;
+  text-shadow: 0.5vh 0.5vw 1vw black;
+  padding: 0.5vh 1vw;
+  max-width: 75%;
 }
 .about-me .my-hobbies {
-	border: 1px solid black;
-	display: flex;
-	flex-direction: column;
-	position: inherit;
-	height: 110vh;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  height: 110vh;
+  min-height: 648px;
+  width: 100%;
 }
-.about-me .my-hobbies .section-title {
-	align-items: center;
-	background-color: darkslategray;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 1px solid black;
-	color: #d4bf79;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 1vh;
-	padding-top: 1vh;
-	position: inherit;
-	width: 100%;
+.about-me .my-hobbies .hobby-section-title {
+  align-items: center;
+  background-color: darkslategray;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #d4bf79;
+  border-top: 1px solid #d4bf79;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  color: #d4bf79;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  position: inherit;
+  width: 100%;
 }
-.about-me .my-hobbies .section-detail {
-	align-items: center;
-	background-color: inherit;
-	background-image: url(../img/background-section.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 1px solid black;
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	height: 100%;
-	min-height: 440px;
-	width: 100%;
+.about-me .my-hobbies .hobby-section-title h2 {
+  font-size: 42px;
+}
+.about-me .my-hobbies .hobby-section-detail {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  height: 100%;
+  min-height: 440px;
+  width: 100%;
 }
 
 /*SPECIAL*/
 /*Screens > 1920px*/
 @media screen and (min-width: 1921px) {
-	header {
-		border-bottom-right-radius: 15px;
-		height: 150px;
-	}
-	header nav {
-		border-bottom: 2px solid #d4bf79;
-		border-bottom-right-radius: 15px;
-	}
-	header nav .logo-container {
-		margin-left: 15px;
-	}
-	header nav .logo-container .logo-img .logo-alt {
-		width: 150px;
-	}
-	header nav .logo-container em {
-		font-size: 84px;
-	}
-	header nav .nav-separator {
-		border-right: 2px solid #d4bf79;
-		border-radius: 15px;
-		width: 30px;
-		left: 400px;
-	}
-	header nav .nav-section .nav-menu .nav-list {
-		width: 1050px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item {
-		font-size: 33px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-		box-shadow: 8px 8px 5px black;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item:active,
-	header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-		transform: translate(3px, 3px);
-	}
-	header nav .nav-section .nav-menu .nav-list .list-separator {
-		border: 2px solid #d4bf79;
-		height: 45px;
-	}
-	header nav .nav-section .content-separator {
-		border-right: 2px solid #d4bf79;
-	}
-	header nav .nav-section .lang-stg {
-		margin: 0 10px 0 10px;
-		width: 120px;
-	}
-	header nav .nav-section .lang-stg .lang-btn {
-		border-radius: 15px;
-		font-size: 33px;
-		padding: 7.5px;
-	}
-	header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-		width: 60px;
-	}
-	header nav .nav-section .lang-stg .lang-btn:hover {
-		border: 2px solid #d4bf79;
-	}
-	header nav .nav-section .lang-stg .lang-content {
-		border: 2px solid #d4bf79;
-		border-right: none;
-		border-top: none;
-		border-bottom-right-radius: 15px;
-		padding: 7.5px;
-		height: 225px;
-		left: -10px;
-		right: -10px;
-	}
-	header nav .nav-section .lang-stg .lang-content .lang-item {
-		margin-top: 7.5px;
-	}
-	header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
-		width: 35px;
-	}
-	.about-me .greetings h1 {
-		font-size: 84px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 63px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 48px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		box-shadow: 8px 8px 15px black;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 33px;
-		padding: 15px;
-	}
+  header {
+    border-bottom-right-radius: 15px;
+    height: 150px;
+  }
+  header nav {
+    border-bottom: 2px solid #d4bf79;
+    border-bottom-right-radius: 15px;
+  }
+  header nav .logo-container {
+    margin-left: 15px;
+  }
+  header nav .logo-container .logo-img .logo-alt {
+    width: 150px;
+  }
+  header nav .logo-container em {
+    font-size: 84px;
+  }
+  header nav .nav-separator {
+    border-right: 2px solid #d4bf79;
+    border-radius: 15px;
+    width: 30px;
+    left: 400px;
+  }
+  header nav .nav-section .nav-menu .nav-list {
+    width: 1050px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    font-size: 33px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item:hover {
+    box-shadow: 8px 8px 5px black;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+    transform: translate(3px, 3px);
+  }
+  header nav .nav-section .nav-menu .nav-list .list-separator {
+    border: 2px solid #d4bf79;
+    height: 45px;
+  }
+  header nav .nav-section .content-separator {
+    border-right: 2px solid #d4bf79;
+  }
+  header nav .nav-section .lang-stg {
+    margin: 0 10px 0 10px;
+    width: 120px;
+  }
+  header nav .nav-section .lang-stg .lang-btn {
+    border-radius: 15px;
+    font-size: 33px;
+    padding: 7.5px;
+  }
+  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
+    width: 60px;
+  }
+  header nav .nav-section .lang-stg .lang-btn:hover {
+    border: 2px solid #d4bf79;
+  }
+  header nav .nav-section .lang-stg .lang-content {
+    border: 2px solid #d4bf79;
+    border-right: none;
+    border-top: none;
+    border-bottom-right-radius: 15px;
+    padding: 7.5px;
+    height: 225px;
+    left: -10px;
+    right: -10px;
+  }
+  header nav .nav-section .lang-stg .lang-content .lang-item {
+    margin-top: 7.5px;
+  }
+  header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
+    width: 35px;
+  }
+  .about-me .greetings h1 {
+    font-size: 84px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 63px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 675px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
+    height: 23%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
+    height: 37%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 33px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 48px;
+  }
 }
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 /*header*/
 @media screen and (max-width: 1052px) {
-	header nav .nav-section .nav-menu .nav-list {
-		width: 525px;
-	}
+  header nav .nav-section .nav-menu .nav-list {
+    width: 525px;
+  }
 }
 @media screen and (max-width: 879px) {
-	header nav .nav-separator {
-		left: 255px;
-	}
-	header nav .nav-section .nav-menu .nav-list {
-		width: auto;
-	}
+  header nav .nav-separator {
+    left: 255px;
+  }
+  header nav .nav-section .nav-menu .nav-list {
+    width: auto;
+  }
 }
 @media screen and (max-width: 768px) {
-	header {
-		height: 75px;
-	}
-	header nav .logo-container .logo-img .logo-alt {
-		width: 67px;
-	}
-	header nav .logo-container em {
-		font-size: 42px;
-	}
-	header nav .nav-separator {
-		left: 190px;
-	}
-	header nav .nav-section {
-		flex-direction: row-reverse;
-	}
-	header nav .nav-section .nav-menu {
-		align-items: flex-end;
-		border: 1px solid #d4bf79;
-		border-radius: 10px;
-		display: flex;
-		flex-direction: column;
-		margin-left: 10px;
-		margin-right: 10px;
-		position: relative;
-	}
-	header nav .nav-section .nav-menu .nav-menu-btn,
-	header nav .nav-section .nav-menu .nav-list {
-		display: flex;
-	}
-	header nav .nav-section .nav-menu .nav-menu-btn {
-		cursor: pointer;
-		border-radius: 10px;
-		z-index: 2;
-	}
-	header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-		display: block;
-		filter: invert(1);
-	}
-	header nav .nav-section .nav-menu .nav-menu-btn:active {
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-	header nav .nav-section .nav-menu #expandList {
-		display: none;
-	}
-	header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-		display: flex;
-		height: 110px;
-	}
-	header nav .nav-section .nav-menu .nav-list {
-		-moz-transition: height 0.5s ease;
-		-o-transition: height 0.5s ease;
-		-webkit-transition: height 0.5s ease;
-		align-items: flex-end;
-		flex-direction: column;
-		justify-content: flex-end;
-		overflow: hidden;
-		position: absolute;
-		transition: height 0.5s ease;
-		z-index: 1;
-		height: 0;
-		width: 700px;
-		max-width: auto;
-		right: -10px;
-		top: 60px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item {
-		background-color: black;
-		background-image: url(../img/background-title.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		border: 1px solid #d4bf79;
-		border-radius: 10px;
-		font-size: 19.8px;
-		padding: 5px;
-		position: relative;
-		bottom: 1px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-		box-shadow: 3px 3px 5px black;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item:active,
-	header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-		transform: translate(1px, 1px);
-	}
-	header nav .nav-section .nav-menu .nav-list .list-separator {
-		display: none;
-	}
-	header nav .nav-section .lang-stg .lang-btn {
-		font-size: 16.5px;
-	}
-	header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-		width: 30px;
-	}
-	header nav .nav-section .lang-stg .lang-content {
-		align-items: flex-end;
-		border-right: 1px solid #d4bf79;
-		border-bottom-left-radius: 10px;
-		flex-direction: row;
-		justify-content: space-evenly;
-		height: 112.5px;
-		left: 0;
-	}
+  header {
+    height: 75px;
+  }
+  header nav .logo-container .logo-img .logo-alt {
+    width: 67px;
+  }
+  header nav .logo-container em {
+    font-size: 42px;
+  }
+  header nav .nav-separator {
+    left: 190px;
+  }
+  header nav .nav-section {
+    flex-direction: row-reverse;
+  }
+  header nav .nav-section .nav-menu {
+    align-items: flex-end;
+    border: 1px solid #d4bf79;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+  }
+  header nav .nav-section .nav-menu .nav-menu-btn,
+  header nav .nav-section .nav-menu .nav-list {
+    display: flex;
+  }
+  header nav .nav-section .nav-menu .nav-menu-btn {
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
+    display: block;
+    filter: invert(1);
+  }
+  header nav .nav-section .nav-menu .nav-menu-btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  header nav .nav-section .nav-menu #expandList {
+    display: none;
+  }
+  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
+    display: flex;
+    height: 110px;
+  }
+  header nav .nav-section .nav-menu .nav-list {
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    transition: height 0.5s ease;
+    z-index: 1;
+    height: 0;
+    width: 700px;
+    max-width: auto;
+    right: -10px;
+    top: 60px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    background-color: black;
+    background-image: url(../img/background-title.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #d4bf79;
+    border-radius: 10px;
+    font-size: 19.8px;
+    padding: 5px;
+    position: relative;
+    bottom: 1px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item:hover {
+    box-shadow: 3px 3px 5px black;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+    transform: translate(1px, 1px);
+  }
+  header nav .nav-section .nav-menu .nav-list .list-separator {
+    display: none;
+  }
+  header nav .nav-section .lang-stg .lang-btn {
+    font-size: 16.5px;
+  }
+  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
+    width: 30px;
+  }
+  header nav .nav-section .lang-stg .lang-content {
+    align-items: flex-end;
+    border-right: 1px solid #d4bf79;
+    border-bottom-left-radius: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 112.5px;
+    left: 0;
+  }
 }
 @media screen and (max-width: 342px) {
-	header {
-		height: 55px;
-	}
-	header nav .nav-section .nav-menu {
-		margin-left: 2px;
-		margin-right: 2px;
-	}
-	header nav .nav-section .nav-menu .nav-list {
-		right: -2px;
-		top: 59px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item {
-		font-size: 17.6px;
-	}
-	header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-		height: 104.5px;
-	}
-	header nav .nav-section .lang-stg {
-		width: 60px;
-	}
-	header nav .nav-section .lang-stg .lang-content {
-		align-items: center;
-		flex-direction: column;
-		justify-content: flex-end;
-		height: 135px;
-	}
+  header {
+    height: 55px;
+  }
+  header nav .nav-section .nav-menu {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  header nav .nav-section .nav-menu .nav-list {
+    right: -2px;
+    top: 59px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    font-size: 17.6px;
+  }
+  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
+    height: 104.5px;
+  }
+  header nav .nav-section .lang-stg {
+    width: 60px;
+  }
+  header nav .nav-section .lang-stg .lang-content {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 135px;
+  }
 }
 /*about me*/
 @media screen and (max-width: 1280px) {
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 400px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck1:checked ~ .overlay {
-		/*continua*/
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content #overlayCheck2:checked ~ .overlay {
-		/*continua*/
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 21px;
-	}
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 450px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
+    height: 23%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
+    height: 35%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 21px;
+  }
 }
 @media screen and (max-width: 932px) {
-	.about-me .greetings h1 {
-		font-size: 53.2px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 39.9px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 30.4px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag {
-		align-items: flex-start;
-		overflow: hidden;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag #slide1:checked ~ .inner {
-		margin-left: 0;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag #slide1:checked ~ .bullets .bullet-points:nth-child(1) {
-		background-color: #444;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag #slide2:checked ~ .inner {
-		margin-left: -100%;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag #slide2:checked ~ .bullets .bullet-points:nth-child(2) {
-		background-color: #444;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets {
-		align-self: center;
-		display: flex;
-		justify-content: space-evenly;
-		margin-bottom: 20px;
-		margin-top: 20px;
-		width: 25%;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		-moz-transition: background-color 0.5s ease-out;
-		-o-transition: background-color 0.5s ease-out;
-		-webkit-transition: background-color 0.5s ease-out;
-		background-color: #ccc;
-		border-radius: 100%;
-		box-shadow: 2px 2px 1px black;
-		cursor: pointer;
-		margin-bottom: 10px;
-		margin-top: 10px;
-		opacity: 0.5;
-		transition: background-color 0.5s ease-out;
-		height: 30px;
-		width: 30px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points:hover {
-		background-color: black;
-		transition: background-color 0.5s ease-in;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner {
-		transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-		width: 200%;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide {
-		padding-bottom: 15px;
-		width: 75%;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 380px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 19.95px;
-		padding: 9.5px;
-	}
+  .about-me .greetings h1 {
+    font-size: 53.2px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 39.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 427.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 19.95px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 30.4px;
+  }
 }
 @media screen and (max-width: 820px) {
-	.about-me .greetings h1 {
-		font-size: 50.4px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 37.8px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 28.8px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 9px;
-		margin-right: 9px;
-		height: 27px;
-		width: 27px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 360px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 18.9px;
-		padding: 9px;
-	}
+  .about-me .greetings h1 {
+    font-size: 50.4px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 37.8px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 405px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 28.8px;
+  }
 }
 /*merge*/
 @media screen and (max-width: 768px) {
-	.about-me .greetings h1 {
-		font-size: 47.6px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 35.7px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 27.2px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 8.5px;
-		margin-right: 8.5px;
-		height: 25.5px;
-		width: 25.5px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 340px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 17.85px;
-		padding: 8.5px;
-	}
+  .about-me .greetings h1 {
+    font-size: 47.6px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 35.7px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 382.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 17.85px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 27.2px;
+  }
 }
 @media screen and (max-width: 667px) {
-	.about-me .greetings h1 {
-		font-size: 42px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 31.5px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 24px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 7.5px;
-		margin-right: 7.5px;
-		height: 22.5px;
-		width: 22.5px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 300px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 15.75px;
-		padding: 7.5px;
-	}
+  .about-me .greetings h1 {
+    font-size: 42px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 31.5px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 br {
+    display: block;
+  }
+  .about-me .personal-box .my-name .name-section-detail {
+    justify-content: center;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
+    margin-left: 0;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(1) {
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
+    margin-left: -100%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 25%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    background-color: #ccc;
+    border: 1px solid #d4bf79;
+    border-radius: 100%;
+    box-shadow: 0.5vh 0.5vw 1vw black;
+    cursor: pointer;
+    margin-left: 3.75px;
+    margin-right: 3.75px;
+    opacity: 0.5;
+    transition: background-color 0.5s ease-out;
+    height: 22.5px;
+    width: 22.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
+    background-color: black;
+    transition: background-color 0.5s ease-in;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    width: 200%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+    padding-bottom: 1.5vh;
+    width: 75%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 337.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 15.75px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 430px) {
-	.about-me .greetings h1 {
-		font-size: 36.4px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 27.3px;
-	}
-	.about-me .personal-box .my-name .section-title h2 br {
-		display: block;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 20.8px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 6.5px;
-		margin-right: 6.5px;
-		height: 19.5px;
-		width: 19.5px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 260px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 13.65px;
-		padding: 6.5px;
-	}
+  .about-me .greetings h1 {
+    font-size: 36.4px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 27.3px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    margin-left: 3.25px;
+    margin-right: 3.25px;
+    height: 19.5px;
+    width: 19.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 292.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 13.65px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 20.8px;
+  }
 }
 @media screen and (max-width: 375px) {
-	.about-me .greetings h1 {
-		font-size: 33.6px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 19.2px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 6px;
-		margin-right: 6px;
-		height: 18px;
-		width: 18px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 240px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 12.6px;
-		padding: 6px;
-	}
+  .about-me .greetings h1 {
+    font-size: 33.6px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 25.2px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    margin-left: 3px;
+    margin-right: 3px;
+    height: 18px;
+    width: 18px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 270px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 12.6px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 19.2px;
+  }
 }
 @media screen and (max-width: 320px) {
-	.about-me .greetings h1 {
-		font-size: 28px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 21px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 16px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 5px;
-		margin-right: 5px;
-		height: 15px;
-		width: 15px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 200px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 10.5px;
-		padding: 5px;
-	}
+  .about-me .greetings h1 {
+    font-size: 28px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 21px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    height: 15px;
+    width: 15px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 225px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 10.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 16px;
+  }
 }
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
-	header nav .logo-container .logo-img .logo-alt {
-		width: 50px;
-	}
-	header nav .logo-container em {
-		font-size: 30.8px;
-	}
-	header nav .nav-separator {
-		left: 140px;
-	}
-	header nav .nav-section .nav-menu {
-		margin-left: 5px;
-		margin-right: 5px;
-	}
-	header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-		width: 30px;
-	}
-	header nav .nav-section .nav-menu .nav-list {
-		right: -5px;
-		top: 43px;
-	}
-	header nav .nav-section .nav-menu .nav-list .nav-item {
-		font-size: 16.5px;
-	}
-	header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-		height: 99px;
-	}
-	header nav .nav-section .lang-stg {
-		font-size: 12.1px;
-		margin-right: 5px;
-		width: 60px;
-	}
-	header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-		width: 25px;
-	}
-	header nav .nav-section .lang-stg .lang-content {
-		height: 135px;
-	}
-	.about-me .greetings h1 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-name .section-title h2 {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-name .section-detail .add-info {
-		font-size: 14.4px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .bullets .bullet-points {
-		margin-left: 4.5px;
-		margin-right: 4.5px;
-		height: 13.5px;
-		width: 13.5px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay-btn .img-block {
-		max-height: 180px;
-	}
-	.about-me .personal-box .my-name .section-detail .pic-pag .inner .slide .slide-content .overlay .image-desc {
-		font-size: 9.45px;
-		padding: 4.5px;
-	}
+  header {
+    min-width: 280px;
+  }
+  header nav .logo-container .logo-img .logo-alt {
+    width: 50px;
+  }
+  header nav .logo-container em {
+    font-size: 30.8px;
+  }
+  header nav .nav-separator {
+    left: 140px;
+  }
+  header nav .nav-section .nav-menu {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
+    width: 30px;
+  }
+  header nav .nav-section .nav-menu .nav-list {
+    right: -5px;
+    top: 43px;
+  }
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    font-size: 16.5px;
+  }
+  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
+    height: 99px;
+  }
+  header nav .nav-section .lang-stg {
+    font-size: 12.1px;
+    margin-right: 5px;
+    width: 60px;
+  }
+  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
+    width: 25px;
+  }
+  header nav .nav-section .lang-stg .lang-content {
+    height: 135px;
+  }
+  .about-me {
+    min-width: 280px;
+  }
+  .about-me .greetings h1 {
+    font-size: 25.2px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    margin-left: 2.25px;
+    margin-right: 2.25px;
+    height: 13.5px;
+    width: 13.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    max-height: 202.5px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 9.45px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 14.4px;
+  }
 }
 /*--------------------------------HEIGHTS----------------------------------------------------------------
 @media screen and (max-height: 1368px) {

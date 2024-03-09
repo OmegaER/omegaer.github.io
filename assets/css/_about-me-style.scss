@@ -11,17 +11,12 @@
 		background-color: black;
 		display: flex;
 		justify-content: center;
-		position: inherit;
 		height: 91vh;
 		min-height: 440px;
 		width: 100%;
 		h1 {
 			color: white;
-			font-family: "introrustg-base2line";
 			font-size: $h1;
-			font-weight: normal;
-			text-align: center;
-			position: inherit;
 		}
 	}
 	.transition {
@@ -32,11 +27,16 @@
 	}
 	.personal-box {
 		align-items: center;
+		background-color: inherit;
+		background-image: url(../img/background-section.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
 		border-left: $border;
 		border-right: $border;
 		border-top: $border;
-		border-top-left-radius: $personal-box-radius;
-		border-top-right-radius: $personal-box-radius;
+		border-top-left-radius: $section-title-radius;
+		border-top-right-radius: $section-title-radius;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -47,8 +47,9 @@
 			flex-direction: column;
 			position: inherit;
 			height: 110vh;
+			min-height: 650px;
 			width: 100%;
-			.section-title {
+			.name-section-title {
 				align-items: center;
 				background-color: darkslategray;
 				background-image: url(../img/background-title.jpg);
@@ -56,114 +57,97 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				border-bottom: $border;
-				border-top-left-radius: $personal-box-radius;
-				border-top-right-radius: $personal-box-radius;
+				border-top-left-radius: $section-title-radius;
+				border-top-right-radius: $section-title-radius;
 				color: $title-color;
 				display: flex;
 				justify-content: center;
 				padding-bottom: 1vh;
 				padding-top: 1vh;
-				position: inherit;
 				width: 100%;
 				h2 {
-					font-family: $font-title;
 					font-size: $h2;
-					font-weight: normal;
-					text-align: center;
 					br {
 						display: none;
 					}
 				}
 			}
-			.section-detail {
+			.name-section-detail {
 				align-items: center;
-				background-color: inherit;
-				background-image: url(../img/background-section.jpg);
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
 				display: flex;
 				flex-direction: column;
-				justify-content: space-around;
+				justify-content: space-evenly;
 				position: inherit;
 				height: 100%;
-				min-height: 440px;
 				width: 100%;
-				.add-info {
-					color: white;
-					font-size: $additional-info;
-					margin-bottom: 1vh;
-					margin-top: 1vh;
-					position: relative;
-					text-align: center;
-					text-shadow: 0.5vw 0.5vh 1vh black;
-				}
-				.pic-pag {
+				.name-pic-pag {
 					align-items: center;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-evenly;
-					position: relative;
+					position: inherit;
 					width: 100%;
-					.slide-control {
+					.name-slide-control {
 						display: none;
 					}
-					.bullets {
+					.name-bullets {
 						display: none;
 					}
-					.inner {
-						border: $debug;
+					.name-inner {
 						display: flex;
 						justify-content: space-evenly;
 						position: inherit;
 						width: 100%;
-						.slide {
+						.name-slide {
 							display: flex;
 							justify-content: center;
 							position: inherit;
 							width: 100%;
-							.slide-content {
+							.name-slide-content {
 								display: flex;
 								justify-content: center;
 								position: inherit;
-								.overlay-btn {
+								.name-overlay-btn {
 									cursor: pointer;
 									display: flex;
 									justify-content: center;
 									position: inherit;
 									width: 100%;
-									.img-block {
-										box-shadow: 5px 5px 10px black;
+									.name-img-block {
+										border-radius: $border-radius;
+										box-shadow: 0.5vh 0.5vw 1vw black;
 										display: block;
 										position: inherit;
-										max-height: 500px;
+										max-height: $image-overlays * 1.2;
 									}
 								}
-								#overlayCheck1,
-								#overlayCheck2 {
+								#nameOverlayCheck1,
+								#nameOverlayCheck2 {
 									display: none;
 								}
-								#overlayCheck1 {
+								#nameOverlayCheck1 {
 									&:checked {
-										~ .overlay {
-											height: 21%;
+										~ .name-overlay {
+											height: 19%;
 										}
 									}
 								}
-								#overlayCheck2 {
+								#nameOverlayCheck2 {
 									&:checked {
-										~ .overlay {
-											height: 27%;
+										~ .name-overlay {
+											height: 25%;
 										}
 									}
 								}
-								.overlay {
+								.name-overlay {
 									-moz-transition: height 0.5s ease;
 									-ms-transition: height 0.5s ease;
 									-o-transition: height 0.5s ease;
 									-webkit-transition: height 0.5s ease;
 									align-items: flex-start;
 									background-color: transparentize(black, 0.3);
+									border-bottom-left-radius: $border-radius;
+									border-bottom-right-radius: $border-radius;
 									display: flex;
 									justify-content: center;
 									overflow: hidden;
@@ -172,11 +156,11 @@
 									height: 0;
 									width: 100%;
 									bottom: 0;
-									.image-desc {
+									.name-img-desc {
 										color: white;
 										display: block;
 										font-size: $normal-font;
-										padding: $image-overlays-padding;
+										padding: 1vh 1vw;
 										position: relative;
 										text-align: justify;
 									}
@@ -185,24 +169,38 @@
 						}
 					}
 				}
+				.add-info {
+					align-self: flex-end;
+					background: radial-gradient(#444 -100%, transparent 100%);
+					border-radius: 100%;
+					color: white;
+					font-size: $additional-info;
+					text-align: right;
+					text-shadow: 0.5vh 0.5vw 1vw black;
+					padding: 0.5vh 1vw;
+					max-width: 75%;
+				}
 			}
 		}
 	}
 	.my-hobbies {
-		border: $debug; //deb
 		display: flex;
 		flex-direction: column;
 		position: inherit;
 		height: 110vh;
+		min-height: 648px; //mod
 		width: 100%;
-		.section-title {
+		.hobby-section-title {
 			align-items: center;
 			background-color: darkslategray;
 			background-image: url(../img/background-title.jpg);
 			background-position: top;
 			background-repeat: no-repeat;
 			background-size: cover;
-			border: $debug; //deb
+			border-bottom: $border;
+			border-top: $border;
+			border-top-left-radius: $section-title-radius;
+			border-top-right-radius: $section-title-radius;
 			color: $title-color;
 			display: flex;
 			justify-content: center;
@@ -210,15 +208,12 @@
 			padding-top: 1vh;
 			position: inherit;
 			width: 100%;
+			h2 {
+				font-size: $h2;
+			}
 		}
-		.section-detail {
+		.hobby-section-detail {
 			align-items: center;
-			background-color: inherit;
-			background-image: url(../img/background-section.jpg);
-			background-position: top;
-			background-repeat: no-repeat;
-			background-size: cover;
-			border: $debug; //deb
 			display: flex;
 			justify-content: center;
 			position: inherit;
