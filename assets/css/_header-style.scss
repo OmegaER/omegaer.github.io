@@ -1,5 +1,5 @@
 header {
-	background: linear-gradient(to bottom, darkslategray 0%, black 100%);
+	background: linear-gradient(to bottom, $secondary-color 0%, black 100%);
 	position: relative;
 	width: 100%;
 	height: $header-height;
@@ -161,7 +161,7 @@ header {
 					}
 				}
 				.lang-content {
-					background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
+					background-color: linear-gradient(to bottom, $secondary-color 0%, black 100%);
 					background-image: url(../img/background-title.jpg);
 					background-position: top;
 					background-repeat: no-repeat;

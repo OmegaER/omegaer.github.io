@@ -33,6 +33,20 @@ h6 {
   text-align: center;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #d4bf79;
+}
+
+p {
+  color: white;
+  font-size: 22px;
+  text-shadow: 0.5vh 0.5vw 1vw black;
+}
+
 header {
   background: linear-gradient(to bottom, darkslategray 0%, black 100%);
   position: relative;
@@ -223,7 +237,6 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 
 .about-me {
   align-items: center;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,14 +269,12 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  border-left: 1px solid #d4bf79;
-  border-right: 1px solid #d4bf79;
-  border-top: 1px solid #d4bf79;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border: 1px solid #d4bf79;
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 5vh;
   position: inherit;
   width: 90%;
 }
@@ -285,11 +296,9 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   border-bottom: 1px solid #d4bf79;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  color: #d4bf79;
   display: flex;
   justify-content: center;
-  padding-bottom: 1vh;
-  padding-top: 1vh;
+  padding: 1vh 0;
   width: 100%;
 }
 .about-me .personal-box .my-name .name-section-title h2 {
@@ -347,43 +356,50 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
   border-radius: 10px;
-  box-shadow: 0.5vh 0.5vw 1vw black;
-  display: block;
+  box-shadow: 0.5vh 0.5vw 1vmax black;
   position: inherit;
-  max-height: 540px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 75vh;
+  min-height: 410px;
+  width: 33vw;
+  min-width: 210px;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
   display: none;
 }
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay,
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
+  min-height: 15%;
+}
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
-  height: 19%;
+  height: 15vh;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-  height: 25%;
+  height: 20vh;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
-  -moz-transition: height 0.5s ease;
-  -ms-transition: height 0.5s ease;
-  -o-transition: height 0.5s ease;
-  -webkit-transition: height 0.5s ease;
+  -moz-transition: height 0.5s ease, min-height 0.5s ease;
+  -o-transition: height 0.5s ease, min-height 0.5s ease;
+  -webkit-transition: height 0.5s ease, min-height 0.5s ease;
   align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.7);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow-y: scroll;
   position: absolute;
-  transition: height 0.5s ease;
+  transition: height 0.5s ease, min-height 0.5s ease;
   height: 0;
+  min-height: 0;
   width: 100%;
   bottom: 0;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
   color: white;
   display: block;
-  font-size: 22px;
   padding: 1vh 1vw;
   position: relative;
   text-align: justify;
@@ -395,11 +411,10 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   color: white;
   font-size: 32px;
   text-align: right;
-  text-shadow: 0.5vh 0.5vw 1vw black;
   padding: 0.5vh 1vw;
   max-width: 75%;
 }
-.about-me .my-hobbies {
+.about-me .personal-box .my-hobbies {
   display: flex;
   flex-direction: column;
   position: inherit;
@@ -407,7 +422,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   min-height: 648px;
   width: 100%;
 }
-.about-me .my-hobbies .hobby-section-title {
+.about-me .personal-box .my-hobbies .hobby-section-title {
   align-items: center;
   background-color: darkslategray;
   background-image: url(../img/background-title.jpg);
@@ -418,7 +433,6 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   border-top: 1px solid #d4bf79;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  color: #d4bf79;
   display: flex;
   justify-content: center;
   padding-bottom: 1vh;
@@ -426,10 +440,10 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   position: inherit;
   width: 100%;
 }
-.about-me .my-hobbies .hobby-section-title h2 {
+.about-me .personal-box .my-hobbies .hobby-section-title h2 {
   font-size: 42px;
 }
-.about-me .my-hobbies .hobby-section-detail {
+.about-me .personal-box .my-hobbies .hobby-section-detail {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -437,6 +451,63 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   height: 100%;
   min-height: 440px;
   width: 100%;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-slide-control {
+  display: none;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+  display: none;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+  display: flex;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5vh;
+  position: inherit;
+  width: 100%;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+  border: 1px solid #d4bf79;
+  border-radius: 10px;
+  background-color: darkslategray;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0.5vh 0.5vw 1vmax black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: inherit;
+  width: 20vw;
+  min-width: 210px;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  border-bottom: 1px solid #d4bf79;
+  font-size: 32px;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
+  -webkit-mask-image: linear-gradient(darkslategray 80%, transparent);
+  mask-image: linear-gradient(darkslategray 80%, transparent);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  padding: 1vh 1vw;
 }
 
 /*SPECIAL*/
@@ -518,17 +589,17 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   .about-me .greetings h1 {
     font-size: 84px;
   }
+  .about-me .personal-box {
+    border: 2px solid #d4bf79;
+  }
+  .about-me .personal-box .my-name {
+    min-height: 975px;
+  }
   .about-me .personal-box .my-name .name-section-title h2 {
     font-size: 63px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 675px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
-    height: 23%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-    height: 37%;
+    min-height: 615px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
     font-size: 33px;
@@ -685,32 +756,36 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
 }
 /*about me*/
+/*720p
 @media screen and (max-width: 1280px) {
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 450px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
-    height: 23%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-    height: 35%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 21px;
-  }
-}
+	.about-me {
+		.personal-box {
+			.my-name {
+				.name-section-detail {
+					.name-pic-pag {
+						.name-inner {
+							.name-slide {
+								.name-slide-content {
+									.name-overlay {
+										.name-img-desc {
+											?
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}*/
 @media screen and (max-width: 932px) {
   .about-me .greetings h1 {
     font-size: 53.2px;
   }
   .about-me .personal-box .my-name .name-section-title h2 {
     font-size: 39.9px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 427.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 19.95px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 30.4px;
@@ -722,12 +797,6 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   .about-me .personal-box .my-name .name-section-title h2 {
     font-size: 37.8px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 405px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 18.9px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 28.8px;
@@ -741,13 +810,80 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   .about-me .personal-box .my-name .name-section-title h2 {
     font-size: 35.7px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 382.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 17.85px;
-  }
   .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 27.2px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 35.7px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail {
+    justify-content: center;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
+    margin-left: 0;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(1) {
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
+    margin-left: -100%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
+    margin-left: -200%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(3) {
+    background-color: #444;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh 0;
+    width: 25%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    background-color: #ccc;
+    border: 1px solid #d4bf79;
+    border-radius: 100%;
+    box-shadow: 0.5vh 0.5vw 1vw black;
+    cursor: pointer;
+    margin: 0 0.5vw;
+    opacity: 0.5;
+    transition: background-color 0.5s ease-out;
+    height: 25.5px;
+    width: 25.5px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
+    -moz-transition: background-color 0.5s ease-in;
+    -o-transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
+    background-color: black;
+    transition: background-color 0.5s ease-in;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    width: 300%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+    width: 75%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+    width: 75vw;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 27.2px;
   }
 }
@@ -786,8 +922,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     align-self: center;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 2vh 0;
     width: 25%;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
@@ -799,14 +934,16 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     border-radius: 100%;
     box-shadow: 0.5vh 0.5vw 1vw black;
     cursor: pointer;
-    margin-left: 3.75px;
-    margin-right: 3.75px;
+    margin: 0 0.5vw;
     opacity: 0.5;
     transition: background-color 0.5s ease-out;
     height: 22.5px;
     width: 22.5px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
+    -moz-transition: background-color 0.5s ease-in;
+    -o-transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
     background-color: black;
     transition: background-color 0.5s ease-in;
   }
@@ -819,10 +956,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     width: 75%;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 337.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 15.75px;
+    width: 75vw;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 24px;
@@ -836,16 +970,8 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     font-size: 27.3px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    margin-left: 3.25px;
-    margin-right: 3.25px;
     height: 19.5px;
     width: 19.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 292.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 13.65px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 20.8px;
@@ -859,22 +985,15 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     font-size: 25.2px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    margin-left: 3px;
-    margin-right: 3px;
     height: 18px;
     width: 18px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 270px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 12.6px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 19.2px;
   }
 }
-@media screen and (max-width: 320px) {
+/*merge*/
+@media screen and (max-width: 342px) {
   .about-me .greetings h1 {
     font-size: 28px;
   }
@@ -882,16 +1001,8 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     font-size: 21px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    margin-left: 2.5px;
-    margin-right: 2.5px;
     height: 15px;
     width: 15px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 225px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 10.5px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 16px;
@@ -949,16 +1060,8 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     font-size: 18.9px;
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    margin-left: 2.25px;
-    margin-right: 2.25px;
     height: 13.5px;
     width: 13.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    max-height: 202.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 9.45px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 14.4px;

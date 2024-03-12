@@ -1,0 +1,144 @@
+.my-name {
+	display: flex;
+	flex-direction: column;
+	position: inherit;
+	height: 110vh;
+	min-height: $name-min-viewport-height;
+	width: 100%;
+	.name-section-title {
+		align-items: center;
+		background-color: darkslategray;
+		background-image: url(../img/background-title.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom: $border;
+		border-top-left-radius: $section-title-radius;
+		border-top-right-radius: $section-title-radius;
+		display: flex;
+		justify-content: center;
+		padding: 1vh 0;
+		width: 100%;
+		h2 {
+			font-size: $h2;
+			br {
+				display: none;
+			}
+		}
+	}
+	.name-section-detail {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		position: inherit;
+		height: 100%;
+		width: 100%;
+		.name-pic-pag {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			position: inherit;
+			width: 100%;
+			.name-slide-control {
+				display: none;
+			}
+			.name-bullets {
+				display: none;
+			}
+			.name-inner {
+				display: flex;
+				justify-content: space-evenly;
+				position: inherit;
+				width: 100%;
+				.name-slide {
+					display: flex;
+					justify-content: center;
+					position: inherit;
+					width: 100%;
+					.name-slide-content {
+						display: flex;
+						justify-content: center;
+						position: inherit;
+						.name-overlay-btn {
+							cursor: pointer;
+							display: flex;
+							justify-content: center;
+							position: inherit;
+							width: 100%;
+							.name-img-block {
+								border-radius: $border-radius;
+								box-shadow: 0.5vh 0.5vw 1vmax black;
+								position: inherit;
+								object-fit: cover;
+								height: 75vh;
+								min-height: $name-min-viewport-image-height;
+								width: 33vw;
+								min-width: $min-wiewport-width * 0.75;
+							}
+						}
+						#nameOverlayCheck1,
+						#nameOverlayCheck2 {
+							display: none;
+                            &:checked {
+								~ .name-overlay {
+                                    min-height: 15%;
+								}
+							}
+						}
+						#nameOverlayCheck1 {
+							&:checked {
+								~ .name-overlay {
+									height: 15vh;
+								}
+							}
+						}
+						#nameOverlayCheck2 {
+							&:checked {
+								~ .name-overlay {
+									height: 20vh;
+								}
+							}
+						}
+						.name-overlay {
+							-moz-transition: height 0.5s ease, min-height 0.5s ease;
+							-o-transition: height 0.5s ease, min-height 0.5s ease;
+							-webkit-transition: height 0.5s ease, min-height 0.5s ease;
+							align-items: flex-start;
+							background-color: transparentize(black, 0.3);
+							border-bottom-left-radius: $border-radius;
+							border-bottom-right-radius: $border-radius;
+							display: flex;
+							justify-content: center;
+							overflow-y: scroll;
+							position: absolute;
+							transition: height 0.5s ease, min-height 0.5s ease;
+							height: 0;
+                            min-height: 0;
+							width: 100%;
+							bottom: 0;
+							.name-img-desc {
+								color: white;
+								display: block;
+								padding: 1vh 1vw;
+								position: relative;
+								text-align: justify;
+							}
+						}
+					}
+				}
+			}
+		}
+		.add-info {
+			align-self: flex-end;
+			background: radial-gradient($soft-shadow -100%, transparent 100%);
+			border-radius: 100%;
+			color: white;
+			font-size: $additional-info;
+			text-align: right;
+			padding: 0.5vh 1vw;
+			max-width: 75%;
+		}
+	}
+}

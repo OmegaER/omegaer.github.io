@@ -7,6 +7,13 @@
 
 $debug: 1px solid black;
 
+$primary-color: midnightblue;
+$secondary-color: darkslategray;
+$soft-shadow: #444;
+$title-color: #d4bf79;
+$visited-links: #777;
+$visited-links-perm: #d0d0d0;
+
 $additional-info: 32px;
 $font-title: "introrustg-base2line", sans-serif;
 $border: 1px solid #d4bf79;
@@ -34,13 +41,11 @@ $language-content-padding: 0 10px 10px 10px;
 $language-item-separator: 5px;
 $language-settings-box: 80px;
 $logo-title: 56px;
-$normal-font: 22px;
-$normal-font-alt: 21px;
 $min-wiewport-width: 280px;
+$name-min-viewport-height: 650px;
+$name-min-viewport-image-height: 410px;
+$normal-font: 22px;
 $section-title-radius: 50px;
-$title-color: #d4bf79;
-$visited-links: #777;
-$visited-links-perm: #d0d0d0;
 
 * {
 	-moz-box-sizing: border-box;
@@ -52,7 +57,7 @@ $visited-links-perm: #d0d0d0;
 
 body {
 	background-attachment: fixed;
-	background-color: midnightblue;
+	background-color: $primary-color;
 	background-image: url(../img/background-lofi.jpg);
 	background-position: top;
 	background-repeat: no-repeat;
@@ -69,4 +74,17 @@ h6 {
 	font-family: "introrustg-base2line";
 	font-weight: normal;
 	text-align: center;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $title-color;
+}
+
+p {
+	color: white;
+	font-size: $normal-font;
+	text-shadow: 0.5vh 0.5vw 1vw black;
 }
