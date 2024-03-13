@@ -20,6 +20,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: auto;
+}
+body::-webkit-scrollbar {
+  width: 0.5vw;
+}
+body::-webkit-scrollbar-track {
+  background: darkslategray;
+}
+body::-webkit-scrollbar-thumb {
+  background: midnightblue;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #0e0e40;
 }
 
 h1,
@@ -50,8 +63,9 @@ p {
 header {
   background: linear-gradient(to bottom, darkslategray 0%, black 100%);
   position: relative;
+  height: 7vmax;
+  min-height: 55px;
   width: 100%;
-  height: 100px;
 }
 header nav {
   align-items: center;
@@ -64,6 +78,7 @@ header nav {
   display: flex;
   font-family: "introrustg-base2line", sans-serif;
   justify-content: space-between;
+  padding-left: 1vw;
   position: relative;
   height: 100%;
   width: 100%;
@@ -84,35 +99,45 @@ header nav .nav-section {
 header nav .logo-container {
   align-content: flex-end;
   justify-content: space-around;
-  margin-left: 10px;
   text-decoration: none;
 }
 header nav .logo-container .logo-img {
   display: flex;
 }
+header nav .logo-container .logo-img .logo-alt {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 7vmax;
+}
 header nav .logo-container em {
   align-self: flex-end;
   color: white;
   display: block;
-  font-size: 56px;
+  font-size: 4vmax;
 }
 header nav .nav-separator {
   border: none;
   border-right: 1px solid #d4bf79;
   border-radius: 10px;
-  position: absolute;
-  width: 20px;
-  left: 260px;
+  position: relative;
+  width: 2vw;
 }
 header nav .nav-section {
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  width: 80vw;
+}
+header nav .nav-section .nav-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 header nav .nav-section .nav-menu .nav-menu-btn {
   display: none;
 }
 header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
   display: none;
+  filter: invert(1);
 }
 header nav .nav-section .nav-menu .nav-menu-btn,
 header nav .nav-section .nav-menu #expandList {
@@ -122,21 +147,20 @@ header nav .nav-section .nav-menu .nav-list {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  width: 700px;
+  width: 85%;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item {
   -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   -webkit-transition: 0.5s ease;
   color: white;
-  font-size: 22px;
+  font-size: 25px;
   text-align: center;
   text-decoration: none;
   transition: 0.5s ease;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 0.5vh 0.5vw 1vmax black;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
   -moz-transform: translate(2px, 2px);
@@ -155,7 +179,7 @@ header nav .nav-section .nav-menu .nav-list .nav-item:hover, header nav .nav-sec
 }
 header nav .nav-section .nav-menu .nav-list .list-separator {
   border: 1px solid #d4bf79;
-  height: 30px;
+  height: 3vmax;
 }
 header nav .nav-section .content-separator,
 header nav .nav-section .lang-stg {
@@ -171,7 +195,7 @@ header nav .nav-section .lang-stg {
   background: inherit;
   display: flex;
   justify-content: center;
-  width: 80px;
+  padding: 0 1vw;
 }
 header nav .nav-section .lang-stg .lang-btn,
 header nav .nav-section .lang-stg .lang-content {
@@ -187,14 +211,20 @@ header nav .nav-section .lang-stg .lang-btn {
   color: white;
   cursor: pointer;
   display: flex;
-  font-size: 22px;
-  padding: 5px;
+  padding: 0.5vh 0.5vw;
   transition: 0.5s ease;
   z-index: 2;
 }
 header nav .nav-section .lang-stg .lang-btn:hover {
   border: 1px solid #d4bf79;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 0.5vh 0.5vw 1vmax black;
+}
+header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
+  filter: invert(1);
+  width: 3vmax;
+}
+header nav .nav-section .lang-stg .lang-btn span {
+  font-size: 22px;
 }
 header nav .nav-section .lang-stg #expandLang {
   display: none;
@@ -220,19 +250,22 @@ header nav .nav-section .lang-stg .lang-content {
   display: none;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 10px 10px 10px;
+  padding: 0 1vw 1vmax 1vw;
   position: absolute;
   z-index: 1;
-  height: 150px;
-  left: -2px;
+  height: 14vmax;
+  left: 0;
   right: 0;
   top: 0;
 }
 header nav .nav-section .lang-stg .lang-content .lang-item {
   display: flex;
   justify-content: flex-end;
-  margin-top: 5px;
-  box-shadow: 5px 5px 5px black;
+  margin-top: 1vmax;
+  box-shadow: 0.5vh 0.5vw 1vmax black;
+}
+header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
+  width: 2vmax;
 }
 
 .about-me {
@@ -362,8 +395,9 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
      object-fit: cover;
   height: 75vh;
   min-height: 410px;
+  max-width: 450px;
   width: 33vw;
-  min-width: 210px;
+  min-width: 280px;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
@@ -396,6 +430,19 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   min-height: 0;
   width: 100%;
   bottom: 0;
+}
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-track {
+  background: transparent;
+}
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 5px;
+}
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-thumb:hover {
+  background: black;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
   color: white;
@@ -515,76 +562,39 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 @media screen and (min-width: 1921px) {
   header {
     border-bottom-right-radius: 15px;
-    height: 150px;
   }
   header nav {
     border-bottom: 2px solid #d4bf79;
     border-bottom-right-radius: 15px;
   }
-  header nav .logo-container {
-    margin-left: 15px;
-  }
-  header nav .logo-container .logo-img .logo-alt {
-    width: 150px;
-  }
-  header nav .logo-container em {
-    font-size: 84px;
-  }
   header nav .nav-separator {
     border-right: 2px solid #d4bf79;
     border-radius: 15px;
-    width: 30px;
-    left: 400px;
-  }
-  header nav .nav-section .nav-menu .nav-list {
-    width: 1050px;
   }
   header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 33px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-    box-shadow: 8px 8px 5px black;
+    font-size: 37.5px;
   }
   header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
     transform: translate(3px, 3px);
   }
   header nav .nav-section .nav-menu .nav-list .list-separator {
     border: 2px solid #d4bf79;
-    height: 45px;
   }
   header nav .nav-section .content-separator {
     border-right: 2px solid #d4bf79;
   }
-  header nav .nav-section .lang-stg {
-    margin: 0 10px 0 10px;
-    width: 120px;
-  }
   header nav .nav-section .lang-stg .lang-btn {
     border-radius: 15px;
-    font-size: 33px;
-    padding: 7.5px;
-  }
-  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-    width: 60px;
   }
   header nav .nav-section .lang-stg .lang-btn:hover {
     border: 2px solid #d4bf79;
   }
+  header nav .nav-section .lang-stg .lang-btn span {
+    font-size: 33px;
+  }
   header nav .nav-section .lang-stg .lang-content {
     border: 2px solid #d4bf79;
-    border-right: none;
-    border-top: none;
     border-bottom-right-radius: 15px;
-    padding: 7.5px;
-    height: 225px;
-    left: -10px;
-    right: -10px;
-  }
-  header nav .nav-section .lang-stg .lang-content .lang-item {
-    margin-top: 7.5px;
-  }
-  header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
-    width: 35px;
   }
   .about-me .greetings h1 {
     font-size: 84px;
@@ -610,34 +620,20 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
 }
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 /*header*/
-@media screen and (max-width: 1052px) {
-  header nav .nav-section .nav-menu .nav-list {
-    width: 525px;
+@media screen and (max-width: 932px) {
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    font-size: 23.75px;
   }
 }
-@media screen and (max-width: 879px) {
-  header nav .nav-separator {
-    left: 255px;
-  }
-  header nav .nav-section .nav-menu .nav-list {
-    width: auto;
+@media screen and (max-width: 820px) {
+  header nav .nav-section .nav-menu .nav-list .nav-item {
+    font-size: 22.5px;
   }
 }
 @media screen and (max-width: 768px) {
-  header {
-    height: 75px;
-  }
-  header nav .logo-container .logo-img .logo-alt {
-    width: 67px;
-  }
-  header nav .logo-container em {
-    font-size: 42px;
-  }
-  header nav .nav-separator {
-    left: 190px;
-  }
   header nav .nav-section {
     flex-direction: row-reverse;
+    justify-content: flex-start;
   }
   header nav .nav-section .nav-menu {
     align-items: flex-end;
@@ -645,9 +641,9 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 1vw;
     position: relative;
+    width: auto;
   }
   header nav .nav-section .nav-menu .nav-menu-btn,
   header nav .nav-section .nav-menu .nav-list {
@@ -660,7 +656,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
     display: block;
-    filter: invert(1);
+    width: 4vmax;
   }
   header nav .nav-section .nav-menu .nav-menu-btn:active {
     background-color: rgba(0, 0, 0, 0.5);
@@ -670,7 +666,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
     display: flex;
-    height: 110px;
+    height: 90px;
   }
   header nav .nav-section .nav-menu .nav-list {
     -moz-transition: height 0.5s ease;
@@ -684,10 +680,9 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     transition: height 0.5s ease;
     z-index: 1;
     height: 0;
-    width: 700px;
-    max-width: auto;
-    right: -10px;
-    top: 60px;
+    width: 35vmax;
+    right: -5px;
+    top: 45px;
   }
   header nav .nav-section .nav-menu .nav-list .nav-item {
     background-color: black;
@@ -697,13 +692,10 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
     background-size: cover;
     border: 1px solid #d4bf79;
     border-radius: 10px;
-    font-size: 19.8px;
-    padding: 5px;
+    font-size: 18.75px;
+    margin-top: 0.5vmax;
+    padding: 0 0.5vmax;
     position: relative;
-    bottom: 1px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-    box-shadow: 3px 3px 5px black;
   }
   header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
     transform: translate(1px, 1px);
@@ -711,48 +703,21 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   header nav .nav-section .nav-menu .nav-list .list-separator {
     display: none;
   }
-  header nav .nav-section .lang-stg .lang-btn {
-    font-size: 16.5px;
-  }
-  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-    width: 30px;
-  }
   header nav .nav-section .lang-stg .lang-content {
     align-items: flex-end;
     border-right: 1px solid #d4bf79;
     border-bottom-left-radius: 10px;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 112.5px;
-    left: 0;
+    height: 11vmax;
   }
 }
 @media screen and (max-width: 342px) {
-  header {
-    height: 55px;
-  }
-  header nav .nav-section .nav-menu {
-    margin-left: 2px;
-    margin-right: 2px;
-  }
-  header nav .nav-section .nav-menu .nav-list {
-    right: -2px;
-    top: 59px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 17.6px;
-  }
-  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-    height: 104.5px;
-  }
-  header nav .nav-section .lang-stg {
-    width: 60px;
-  }
   header nav .nav-section .lang-stg .lang-content {
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    height: 135px;
+    height: 14vmax;
   }
 }
 /*about me*/
@@ -957,6 +922,7 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   }
   .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
     width: 75vw;
+    min-width: 210px;
   }
   .about-me .personal-box .my-name .name-section-detail .add-info {
     font-size: 24px;
@@ -1013,42 +979,11 @@ header nav .nav-section .lang-stg .lang-content .lang-item {
   header {
     min-width: 280px;
   }
-  header nav .logo-container .logo-img .logo-alt {
-    width: 50px;
-  }
-  header nav .logo-container em {
-    font-size: 30.8px;
-  }
-  header nav .nav-separator {
-    left: 140px;
-  }
-  header nav .nav-section .nav-menu {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-    width: 30px;
-  }
-  header nav .nav-section .nav-menu .nav-list {
-    right: -5px;
-    top: 43px;
-  }
   header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 16.5px;
-  }
-  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-    height: 99px;
+    font-size: 18.75px;
   }
   header nav .nav-section .lang-stg {
     font-size: 12.1px;
-    margin-right: 5px;
-    width: 60px;
-  }
-  header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-    width: 25px;
-  }
-  header nav .nav-section .lang-stg .lang-content {
-    height: 135px;
   }
   .about-me {
     min-width: 280px;

@@ -1,8 +1,9 @@
 header {
 	background: linear-gradient(to bottom, $secondary-color 0%, black 100%);
 	position: relative;
+	height: 7vmax;
+	min-height: 55px;
 	width: 100%;
-	height: $header-height;
 	nav {
 		align-items: center;
 		background-image: url(../img/background-title.jpg);
@@ -14,6 +15,7 @@ header {
 		display: flex;
 		font-family: $font-title;
 		justify-content: space-between;
+		padding-left: 1vw;
 		position: relative;
 		height: 100%;
 		width: 100%;
@@ -33,34 +35,41 @@ header {
 		.logo-container {
 			align-content: flex-end;
 			justify-content: space-around;
-			margin-left: $header-margin;
 			text-decoration: none;
 			.logo-img {
 				display: flex;
+				.logo-alt {
+					object-fit: contain;
+					width: 7vmax;
+				}
 			}
 			em {
 				align-self: flex-end;
 				color: white;
 				display: block;
-				font-size: $logo-title;
+				font-size: 4vmax;
 			}
 		}
 		.nav-separator {
 			border: none;
 			border-right: $border;
 			border-radius: $border-radius;
-			position: absolute;
-			width: $header-separator-width;
-			left: 260px;
+			position: relative;
+			width: 2vw;
 		}
 		.nav-section {
 			align-items: center;
-			justify-content: space-between;
+			justify-content: flex-end;
+			width: 80vw;
 			.nav-menu {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
 				.nav-menu-btn {
 					display: none;
 					.menu-icon {
 						display: none;
+						filter: invert(1);
 					}
 				}
 				.nav-menu-btn,
@@ -71,10 +80,9 @@ header {
 					align-items: center;
 					display: flex;
 					justify-content: space-evenly;
-					width: $header-link-box;
+					width: 85%;
 					.nav-item {
 						-moz-transition: 0.5s ease;
-						-ms-transition: 0.5s ease;
 						-o-transition: 0.5s ease;
 						-webkit-transition: 0.5s ease;
 						color: white;
@@ -83,7 +91,7 @@ header {
 						text-decoration: none;
 						transition: 0.5s ease;
 						&:hover {
-							text-shadow: 5px 5px 5px black;
+							text-shadow: 0.5vh 0.5vw 1vmax black;
 						}
 						&:active,
 						&:visited:active {
@@ -105,7 +113,7 @@ header {
 					}
 					.list-separator {
 						border: $border;
-						height: $header-link-separator-height;
+						height: 3vmax;
 					}
 				}
 			}
@@ -123,7 +131,7 @@ header {
 				background: inherit;
 				display: flex;
 				justify-content: center;
-				width: $language-settings-box;
+				padding: 0 1vw;
 				.lang-btn,
 				.lang-content {
 					align-items: center;
@@ -138,13 +146,19 @@ header {
 					color: white;
 					cursor: pointer;
 					display: flex;
-					font-size: $language-button-marker;
-					padding: $language-button-padding;
+					padding: 0.5vh 0.5vw;
 					transition: 0.5s ease;
 					z-index: 2;
 					&:hover {
 						border: $border;
-						box-shadow: 5px 5px 5px black;
+						box-shadow: 0.5vh 0.5vw 1vmax black;
+					}
+					.lang-btn-alt {
+						filter: invert(1);
+						width: 3vmax;
+					}
+					span {
+						font-size: $language-button-marker;
 					}
 				}
 				#expandLang {
@@ -173,18 +187,21 @@ header {
 					display: none;
 					flex-direction: column;
 					justify-content: flex-end;
-					padding: $language-content-padding;
+					padding: 0 1vw 1vmax 1vw;
 					position: absolute;
 					z-index: 1;
-					height: $language-content-height;
-					left: -2px;
+					height: 14vmax;
+					left: 0;
 					right: 0;
 					top: 0;
 					.lang-item {
 						display: flex;
 						justify-content: flex-end;
-						margin-top: $language-item-separator;
-						box-shadow: 5px 5px 5px black;
+						margin-top: 1vmax;
+						box-shadow: 0.5vh 0.5vw 1vmax black;
+						.lang-item-alt {
+							width: 2vmax;
+						}
 					}
 				}
 			}
