@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav class="header-nav">
 				<a
 					href="index.html"
 					class="logo-container">
@@ -25,48 +25,46 @@
 						<img
 							src="assets/img/omega-logo.png"
 							alt="Omega Logo"
-							width="100"
 							class="logo-alt" />
 						<em>MEGA</em>
 					</span>
 				</a>
-				<hr class="nav-separator" />
-				<div class="nav-section">
-					<div class="nav-menu">
+				<hr class="head-separator" />
+				<div class="head-section">
+					<div class="head-menu">
 						<input
 							type="checkbox"
 							name="menu-list"
 							id="expandList" />
 						<label
 							for="expandList"
-							class="nav-menu-btn">
+							class="head-menu-btn">
 							<img
 								src="assets/img/list.svg"
 								alt="Menu list"
-								width="40"
 								class="menu-icon" />
 						</label>
-						<span class="nav-list">
+						<span class="head-list">
 							<a
 								href="index.html"
-								class="nav-item">
+								class="head-list-item">
 								About me
 							</a>
 							<hr class="list-separator" />
 							<a
 								href="#"
-								class="nav-item">
+								class="head-list-item">
 								My character skills
 							</a>
 							<hr class="list-separator" />
 							<a
 								href="#"
-								class="nav-item">
+								class="head-list-item">
 								My projects
 							</a>
 						</span>
 					</div>
-					<hr class="content-separator" />
+					<hr class="head-cont-separator" />
 					<div class="lang-stg">
 						<input
 							type="checkbox"
@@ -118,7 +116,7 @@
 				<section class="my-name">
 					<div class="name-section-title">
 						<h2>
-							EMANUELE
+							EMANUELE ROMANO
 							<br />
 							(AKA OMEGA)
 						</h2>
@@ -249,7 +247,11 @@
 											src="assets/img/hobby-geek.jpg"
 											alt="Geek stuff"
 											class="hobby-img-block" />
-										<p class="hobby-img-desc">A minor shout-out goes to any relevant geek-based activity: <em>Magic TCG</em>, RPG's and manga, you name it. Technically, web developing can fall into this interest, as well</p>
+										<p class="hobby-img-desc">
+											A minor shout-out goes to any relevant geek-based activity:
+											<em>Magic TCG</em>
+											, RPG's and manga, you name it. Technically, web developing can fall into this interest, as well
+										</p>
 									</picture>
 								</div>
 							</div>
@@ -259,7 +261,52 @@
 			</div>
 		</main>
 		<footer>
-			<!--Contenuto-->
+			<div class="footer-nav">
+				<div class="forms">
+					<h2>Contact me!</h2>
+					<fieldset>
+						<input
+							type="text"
+							name="name"
+							id="firstName"
+							placeholder="First name" />
+						<input
+							type="text"
+							name="name"
+							id="lastName"
+							placeholder="Last name" />
+						<label
+							for="firstName"
+							class="guest-name">
+							prova<!--continua qui-->
+						</label>
+						<label
+							for="lastName"
+							class="guest-name"></label>
+					</fieldset>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="example@email.com" />
+					<textarea
+						name="type-form"
+						id="typeForm"
+						cols="30"
+						rows="10"
+						placeholder="Type your message here&hellip;"></textarea>
+					<label
+						for="email"
+						class="email"></label>
+					<label
+						for="typeForm"
+						class="textarea"></label>
+				</div>
+				<hr class="footer-separator" />
+				<div class="socials">
+					<!--con-->
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

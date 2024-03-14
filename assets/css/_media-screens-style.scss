@@ -5,17 +5,17 @@
 	header {
 		border-bottom-right-radius: $border-radius * 1.5;
 		max-height: $header-height-limits * 1.5;
-		nav {
+		.header-nav {
 			border-bottom: $border-lg;
 			border-bottom-right-radius: $border-radius * 1.5;
-			.nav-separator {
+			.head-separator {
 				border-right: $border-lg;
 				border-radius: $border-radius * 1.5;
 			}
-			.nav-section {
-				.nav-menu {
-					.nav-list {
-						.nav-item {
+			.head-section {
+				.head-menu {
+					.head-list {
+						.head-list-item {
 							font-size: $header-link * 1.5;
 							&:active,
 							&:visited:active {
@@ -31,7 +31,7 @@
 						}
 					}
 				}
-				.content-separator {
+				.head-cont-separator {
 					border-right: $border-lg;
 				}
 				.lang-stg {
@@ -137,11 +137,11 @@
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 @media screen and (max-width: 932px) {
 	header {
-		nav {
-			.nav-section {
-				.nav-menu {
-					.nav-list {
-						.nav-item {
+		.header-nav {
+			.head-section {
+				.head-menu {
+					.head-list {
+						.head-list-item {
 							font-size: $header-link * 0.95;
 						}
 					}
@@ -197,11 +197,11 @@
 
 @media screen and (max-width: 820px) {
 	header {
-		nav {
-			.nav-section {
-				.nav-menu {
-					.nav-list {
-						.nav-item {
+		.header-nav {
+			.head-section {
+				.head-menu {
+					.head-list {
+						.head-list-item {
 							font-size: $header-link * 0.9;
 						}
 					}
@@ -257,11 +257,11 @@
 
 @media screen and (max-width: 768px) {
 	header {
-		nav {
-			.nav-section {
+		.header-nav {
+			.head-section {
 				flex-direction: row-reverse;
 				justify-content: flex-start;
-				.nav-menu {
+				.head-menu {
 					align-items: flex-end;
 					border: $border;
 					border-radius: $border-radius;
@@ -270,11 +270,11 @@
 					margin: 0 1vw;
 					position: relative;
 					width: auto;
-					.nav-menu-btn,
-					.nav-list {
+					.head-menu-btn,
+					.head-list {
 						display: flex;
 					}
-					.nav-menu-btn {
+					.head-menu-btn {
 						cursor: pointer;
 						border-radius: $border-radius;
 						z-index: 2;
@@ -289,13 +289,13 @@
 					#expandList {
 						display: none;
 						&:checked {
-							~ .nav-list {
+							~ .head-list {
 								display: flex;
 								height: 90px;
 							}
 						}
 					}
-					.nav-list {
+					.head-list {
 						-moz-transition: height 0.5s ease;
 						-o-transition: height 0.5s ease;
 						-webkit-transition: height 0.5s ease;
@@ -310,7 +310,7 @@
 						width: 35vmax;
 						right: -5px;
 						top: 45px;
-						.nav-item {
+						.head-list-item {
 							background-color: black;
 							background-image: url(../img/background-title.jpg);
 							background-position: top;
@@ -360,6 +360,9 @@
 				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.85;
+						br {
+							display: block;
+						}
 					}
 				}
 				.name-section-detail {
@@ -493,9 +496,6 @@
 				.name-section-title {
 					h2 {
 						font-size: $h2 * 0.75;
-						br {
-							display: block;
-						}
 					}
 				}
 				.name-section-detail {
@@ -736,8 +736,8 @@
 
 @media screen and (max-width: 342px) {
 	header {
-		nav {
-			.nav-section {
+		.header-nav {
+			.head-section {
 				.lang-stg {
 					.lang-content {
 						align-items: center;
@@ -836,11 +836,11 @@
 @media screen and (max-width: 280px) {
 	header {
 		min-width: $min-viewport-width;
-		nav {
-			.nav-section {
-				.nav-menu {
-					.nav-list {
-						.nav-item {
+		.header-nav {
+			.head-section {
+				.head-menu {
+					.head-list {
+						.head-list-item {
 							font-size: $header-link * 0.75;
 						}
 					}

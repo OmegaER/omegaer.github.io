@@ -1,0 +1,33 @@
+footer {
+	align-items: center;
+    background: linear-gradient(135deg, $primary-color, $footer-corners-color, $primary-color);
+	border-top: $border;
+    display: flex;
+	position: relative;
+	height: 50vh;
+	min-height: 414px;
+	width: 100%;
+	.footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        height: 90%;
+        width: 100%;
+        .forms {
+            border: $debug;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 100%;
+            width: 45%;
+        }
+		.footer-separator {
+            border: none;
+            border-left: $border;
+			height: 100%;
+		}
+        .socials {
+            border: $debug; //d
+            width: 45%;
+        }
+	}
+}

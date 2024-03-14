@@ -5,7 +5,7 @@ header {
 	height: 6vmax;
 	min-height: $header-height-limits * 0.55;
 	width: 100%;
-	nav {
+	.header-nav {
 		align-items: center;
 		background-image: url(../img/background-title.jpg);
 		background-position: top;
@@ -21,16 +21,16 @@ header {
 		height: 100%;
 		width: 100%;
 		.logo-container,
-		.nav-separator,
-		.nav-section {
+		.head-separator,
+		.head-section {
 			display: flex;
 		}
 		.logo-container,
-		.nav-section {
+		.head-section {
 			position: inherit;
 		}
-		.nav-separator,
-		.nav-section {
+		.head-separator,
+		.head-section {
 			height: 100%;
 		}
 		.logo-container {
@@ -51,38 +51,38 @@ header {
 				font-size: 4vmax;
 			}
 		}
-		.nav-separator {
+		.head-separator {
 			border: none;
 			border-right: $border;
 			border-radius: $border-radius;
 			position: relative;
 			width: 2vw;
 		}
-		.nav-section {
+		.head-section {
 			align-items: center;
 			justify-content: flex-end;
 			width: 80vw;
-			.nav-menu {
+			.head-menu {
 				display: flex;
 				justify-content: flex-end;
 				width: 100%;
-				.nav-menu-btn {
+				.head-menu-btn {
 					display: none;
 					.menu-icon {
 						display: none;
 						filter: invert(1);
 					}
 				}
-				.nav-menu-btn,
+				.head-menu-btn,
 				#expandList {
 					display: none;
 				}
-				.nav-list {
+				.head-list {
 					align-items: center;
 					display: flex;
 					justify-content: space-evenly;
 					width: 85%;
-					.nav-item {
+					.head-list-item {
 						-moz-transition: 0.5s ease;
 						-o-transition: 0.5s ease;
 						-webkit-transition: 0.5s ease;
@@ -118,12 +118,12 @@ header {
 					}
 				}
 			}
-			.content-separator,
+			.head-cont-separator,
 			.lang-stg {
 				position: inherit;
 				height: 100%;
 			}
-			.content-separator {
+			.head-cont-separator {
 				border: none;
 				border-right: $border;
 			}
