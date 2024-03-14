@@ -1,38 +1,40 @@
 @font-face {
-  font-family: "introrustg-base2line";
-  src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "introrustg-base2line";
+	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
+	font-weight: normal;
+	font-style: normal;
 }
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #999;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #111;
 }
 
 body {
-  background-attachment: fixed;
-  background-color: midnightblue;
-  background-image: url(../img/background-lofi.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  overflow: auto;
-}
-body::-webkit-scrollbar {
-  width: 0.5vw;
-}
-body::-webkit-scrollbar-track {
-  background: darkslategray;
-}
-body::-webkit-scrollbar-thumb {
-  background: midnightblue;
-}
-body::-webkit-scrollbar-thumb:hover {
-  background: #0e0e40;
+	background-color: #262d42;
+	background-image: url(../img/background-lofi.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 h1,
@@ -41,684 +43,982 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "introrustg-base2line";
-  font-weight: normal;
-  text-align: center;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #d4bf79;
+	color: #ab9c87;
+	font-family: "introrustg-base2line";
+	font-weight: normal;
+	text-align: center;
 }
 
 p {
-  color: white;
-  font-size: 22px;
-  text-shadow: 0.5vh 0.5vw 1vw black;
+	color: white;
+	font-size: 22px;
+	text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 
 header {
-  background: linear-gradient(to bottom, darkslategray 0%, black 100%);
-  position: relative;
-  height: 7vmax;
-  min-height: 55px;
-  width: 100%;
+	background: linear-gradient(to bottom, #063258 0%, #111 100%);
+	position: relative;
+	max-height: 100px;
+	height: 6vmax;
+	min-height: 55px;
+	width: 100%;
 }
 header nav {
-  align-items: center;
-  background-image: url(../img/background-title.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid #d4bf79;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  font-family: "introrustg-base2line", sans-serif;
-  justify-content: space-between;
-  padding-left: 1vw;
-  position: relative;
-  height: 100%;
-  width: 100%;
+	align-items: center;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #ab9c87;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	font-family: "introrustg-base2line", sans-serif;
+	justify-content: space-between;
+	padding-left: 1vw;
+	position: relative;
+	height: 100%;
+	width: 100%;
 }
 header nav .logo-container,
 header nav .nav-separator,
 header nav .nav-section {
-  display: flex;
+	display: flex;
 }
 header nav .logo-container,
 header nav .nav-section {
-  position: inherit;
+	position: inherit;
 }
 header nav .nav-separator,
 header nav .nav-section {
-  height: 100%;
+	height: 100%;
 }
 header nav .logo-container {
-  align-content: flex-end;
-  justify-content: space-around;
-  text-decoration: none;
+	align-content: flex-end;
+	justify-content: space-around;
+	text-decoration: none;
 }
 header nav .logo-container .logo-img {
-  display: flex;
+	display: flex;
 }
 header nav .logo-container .logo-img .logo-alt {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 7vmax;
+	-o-object-fit: contain;
+	object-fit: contain;
+	width: 7vmax;
 }
 header nav .logo-container em {
-  align-self: flex-end;
-  color: white;
-  display: block;
-  font-size: 4vmax;
+	align-self: flex-end;
+	color: white;
+	display: block;
+	font-size: 4vmax;
 }
 header nav .nav-separator {
-  border: none;
-  border-right: 1px solid #d4bf79;
-  border-radius: 10px;
-  position: relative;
-  width: 2vw;
+	border: none;
+	border-right: 1px solid #ab9c87;
+	border-radius: 10px;
+	position: relative;
+	width: 2vw;
 }
 header nav .nav-section {
-  align-items: center;
-  justify-content: flex-end;
-  width: 80vw;
+	align-items: center;
+	justify-content: flex-end;
+	width: 80vw;
 }
 header nav .nav-section .nav-menu {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
 }
 header nav .nav-section .nav-menu .nav-menu-btn {
-  display: none;
+	display: none;
 }
 header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-  display: none;
-  filter: invert(1);
+	display: none;
+	filter: invert(1);
 }
 header nav .nav-section .nav-menu .nav-menu-btn,
 header nav .nav-section .nav-menu #expandList {
-  display: none;
+	display: none;
 }
 header nav .nav-section .nav-menu .nav-list {
-  align-items: center;
-  display: flex;
-  justify-content: space-evenly;
-  width: 85%;
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	width: 85%;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item {
-  -moz-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.5s ease;
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:hover {
-  text-shadow: 0.5vh 0.5vw 1vmax black;
+	text-shadow: 0.5vh 0.5vw 1vmax black;
 }
-header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-  -moz-transform: translate(2px, 2px);
-  -ms-transform: translate(2px, 2px);
-  -o-transform: translate(2px, 2px);
-  -webkit-transform: translate(2px, 2px);
-  color: #777;
-  text-shadow: none;
-  transform: translate(2px, 2px);
+header nav .nav-section .nav-menu .nav-list .nav-item:active,
+header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+	-moz-transform: translate(2px, 2px);
+	-ms-transform: translate(2px, 2px);
+	-o-transform: translate(2px, 2px);
+	-webkit-transform: translate(2px, 2px);
+	color: #999;
+	text-shadow: none;
+	transform: translate(2px, 2px);
 }
 header nav .nav-section .nav-menu .nav-list .nav-item:visited {
-  color: #d0d0d0;
+	color: #d0d0d0;
 }
-header nav .nav-section .nav-menu .nav-list .nav-item:hover, header nav .nav-section .nav-menu .nav-list .nav-item:visited:hover {
-  color: #d4bf79;
+header nav .nav-section .nav-menu .nav-list .nav-item:hover,
+header nav .nav-section .nav-menu .nav-list .nav-item:visited:hover {
+	color: #ab9c87;
 }
 header nav .nav-section .nav-menu .nav-list .list-separator {
-  border: 1px solid #d4bf79;
-  height: 3vmax;
+	border: 1px solid #ab9c87;
+	height: 2vmax;
 }
 header nav .nav-section .content-separator,
 header nav .nav-section .lang-stg {
-  position: inherit;
-  height: 100%;
+	position: inherit;
+	height: 100%;
 }
 header nav .nav-section .content-separator {
-  border: none;
-  border-right: 1px solid #d4bf79;
+	border: none;
+	border-right: 1px solid #ab9c87;
 }
 header nav .nav-section .lang-stg {
-  align-items: center;
-  background: inherit;
-  display: flex;
-  justify-content: center;
-  padding: 0 1vw;
+	align-items: center;
+	background: inherit;
+	display: flex;
+	justify-content: center;
+	padding: 0 1vw;
 }
 header nav .nav-section .lang-stg .lang-btn,
 header nav .nav-section .lang-stg .lang-content {
-  align-items: center;
+	align-items: center;
 }
 header nav .nav-section .lang-stg .lang-btn {
-  -moz-transition: 0.5s ease;
-  -ms-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  -webkit-transition: 0.5s ease;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  padding: 0.5vh 0.5vw;
-  transition: 0.5s ease;
-  z-index: 2;
+	-moz-transition: 0.5s ease;
+	-ms-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	padding: 0.5vh 0.5vw;
+	transition: 0.5s ease;
+	z-index: 2;
 }
 header nav .nav-section .lang-stg .lang-btn:hover {
-  border: 1px solid #d4bf79;
-  box-shadow: 0.5vh 0.5vw 1vmax black;
+	border: 1px solid #ab9c87;
+	box-shadow: 0.5vh 0.5vw 1vmax black;
 }
 header nav .nav-section .lang-stg .lang-btn .lang-btn-alt {
-  filter: invert(1);
-  width: 3vmax;
+	filter: invert(1);
+	width: 3vmax;
 }
 header nav .nav-section .lang-stg .lang-btn span {
-  font-size: 22px;
+	color: white;
+	font-size: 22px;
 }
 header nav .nav-section .lang-stg #expandLang {
-  display: none;
+	display: none;
 }
 header nav .nav-section .lang-stg #expandLang:checked ~ .lang-btn {
-  border: none;
-  box-shadow: none;
-  transition: none;
+	border: 1px solid transparent;
+	box-shadow: none;
+	transition: none;
 }
 header nav .nav-section .lang-stg #expandLang:checked ~ .lang-content {
-  display: flex;
+	display: flex;
 }
 header nav .nav-section .lang-stg .lang-content {
-  background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
-  background-image: url(../img/background-title.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid #d4bf79;
-  border-right: none;
-  border-top: none;
-  border-bottom-right-radius: 10px;
-  display: none;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 1vw 1vmax 1vw;
-  position: absolute;
-  z-index: 1;
-  height: 14vmax;
-  left: 0;
-  right: 0;
-  top: 0;
+	background-color: linear-gradient(to bottom, #063258 0%, black 100%);
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid #ab9c87;
+	border-right: none;
+	border-top: none;
+	border-bottom-right-radius: 10px;
+	display: none;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 0 1vw 1vmax 1vw;
+	position: absolute;
+	z-index: 1;
+	height: 14vmax;
+	left: 0;
+	right: 0;
+	top: 0;
 }
 header nav .nav-section .lang-stg .lang-content .lang-item {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1vmax;
-  box-shadow: 0.5vh 0.5vw 1vmax black;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1vmax;
+	box-shadow: 0.5vh 0.5vw 1vmax black;
 }
 header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
-  width: 2vmax;
+	width: 2vmax;
 }
 
 .about-me {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	width: 100%;
 }
 .about-me .greetings {
-  align-items: center;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  height: 91vh;
-  min-height: 440px;
-  width: 100%;
+	align-items: center;
+	background-color: #111;
+	display: flex;
+	justify-content: center;
+	height: 91vh;
+	min-height: 440px;
+	width: 100%;
 }
 .about-me .greetings h1 {
-  color: white;
-  font-size: 56px;
+	color: #999;
+	font-size: 56px;
 }
 .about-me .transition {
-  background: linear-gradient(to bottom, black 0%, transparent 100%);
-  border: none;
-  height: 10vh;
-  width: 100%;
+	background: linear-gradient(to bottom, #111 0%, transparent 100%);
+	border: none;
+	height: 10vh;
+	width: 100%;
 }
 .about-me .personal-box {
-  align-items: center;
-  background-color: inherit;
-  background-image: url(../img/background-section.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid #d4bf79;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 5vh;
-  position: inherit;
-  width: 90%;
+	align-items: center;
+	background-color: #2e465f;
+	background-image: url(../img/background-section.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid #ab9c87;
+	border-radius: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 5vh;
+	position: inherit;
+	width: 90%;
 }
 .about-me .personal-box .my-name {
-  display: flex;
-  flex-direction: column;
-  position: inherit;
-  height: 110vh;
-  min-height: 650px;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: inherit;
+	height: 110vh;
+	min-height: 650px;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-title {
-  align-items: center;
-  background-color: darkslategray;
-  background-image: url(../img/background-title.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid #d4bf79;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  display: flex;
-  justify-content: center;
-  padding: 1vh 0;
-  width: 100%;
+	align-items: center;
+	background-color: darkslategray;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #ab9c87;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding: 1vh 0;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-title h2 {
-  font-size: 42px;
+	font-size: 42px;
 }
 .about-me .personal-box .my-name .name-section-title h2 br {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-name .name-section-detail {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: inherit;
-  height: 100%;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: inherit;
+	height: 100%;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: inherit;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-slide-control {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
-  display: flex;
-  justify-content: space-evenly;
-  position: inherit;
-  width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
-  display: flex;
-  justify-content: center;
-  position: inherit;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content {
-  display: flex;
-  justify-content: center;
-  position: inherit;
+	display: flex;
+	justify-content: center;
+	position: inherit;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  position: inherit;
-  width: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-  border-radius: 10px;
-  box-shadow: 0.5vh 0.5vw 1vmax black;
-  position: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 75vh;
-  min-height: 410px;
-  max-width: 450px;
-  width: 33vw;
-  min-width: 280px;
+	border-radius: 10px;
+	box-shadow: 0.5vh 0.5vw 1vmax black;
+	position: inherit;
+	-o-object-fit: cover;
+	object-fit: cover;
+	height: 75vh;
+	min-height: 410px;
+	max-width: 450px;
+	width: 33vw;
+	min-width: 280px;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-  min-height: 15%;
+	min-height: 15%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
-  height: 15vh;
+	height: 15vh;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-  height: 20vh;
+	height: 20vh;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
-  -moz-transition: height 0.5s ease, min-height 0.5s ease;
-  -o-transition: height 0.5s ease, min-height 0.5s ease;
-  -webkit-transition: height 0.5s ease, min-height 0.5s ease;
-  align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  justify-content: center;
-  overflow-y: scroll;
-  position: absolute;
-  transition: height 0.5s ease, min-height 0.5s ease;
-  height: 0;
-  min-height: 0;
-  width: 100%;
-  bottom: 0;
-}
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar {
-  width: 0.5vw;
-}
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-track {
-  background: transparent;
-}
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-thumb {
-  background: #444;
-  border-radius: 5px;
-}
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay::-webkit-scrollbar-thumb:hover {
-  background: black;
+	-moz-transition: height 0.5s ease, min-height 0.5s ease;
+	-o-transition: height 0.5s ease, min-height 0.5s ease;
+	-webkit-transition: height 0.5s ease, min-height 0.5s ease;
+	align-items: flex-start;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	display: flex;
+	justify-content: center;
+	overflow-y: scroll;
+	position: absolute;
+	transition: height 0.5s ease, min-height 0.5s ease;
+	height: 0;
+	min-height: 0;
+	width: 100%;
+	bottom: 0;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-  color: white;
-  display: block;
-  padding: 1vh 1vw;
-  position: relative;
-  text-align: justify;
+	display: block;
+	padding: 1vh 1vw;
+	position: relative;
+	text-align: justify;
 }
 .about-me .personal-box .my-name .name-section-detail .add-info {
-  align-self: flex-end;
-  background: radial-gradient(#444 -100%, transparent 100%);
-  border-radius: 100%;
-  color: white;
-  font-size: 32px;
-  text-align: right;
-  padding: 0.5vh 1vw;
-  max-width: 75%;
+	align-self: flex-end;
+	background: radial-gradient(#555 -100%, transparent 100%);
+	border-radius: 100%;
+	font-size: 32px;
+	text-align: right;
+	padding: 0.5vh 1vw;
+	max-width: 75%;
 }
 .about-me .personal-box .my-hobbies {
-  display: flex;
-  flex-direction: column;
-  position: inherit;
-  height: 110vh;
-  min-height: 648px;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: inherit;
+	height: 110vh;
+	min-height: 648px;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-title {
-  align-items: center;
-  background-color: darkslategray;
-  background-image: url(../img/background-title.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid #d4bf79;
-  border-top: 1px solid #d4bf79;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1vh;
-  padding-top: 1vh;
-  position: inherit;
-  width: 100%;
+	align-items: center;
+	background-color: #063258;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-bottom: 1px solid #ab9c87;
+	border-top: 1px solid #ab9c87;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1vh;
+	padding-top: 1vh;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-title h2 {
-  font-size: 42px;
+	font-size: 42px;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: inherit;
-  height: 100%;
-  min-height: 440px;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	position: inherit;
+	height: 100%;
+	min-height: 440px;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  position: inherit;
-  width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-slide-control {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
-  display: none;
+	display: none;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
-  display: flex;
-  justify-content: space-evenly;
-  position: inherit;
-  width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 1.5vh;
-  position: inherit;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1.5vh;
+	position: inherit;
+	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-  border: 1px solid #d4bf79;
-  border-radius: 10px;
-  background-color: darkslategray;
-  background-image: url(../img/background-title.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0.5vh 0.5vw 1vmax black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: inherit;
-  width: 20vw;
-  min-width: 210px;
+	border: 1px solid #ab9c87;
+	border-radius: 10px;
+	background-color: #063258;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0.5vh 0.5vw 1vmax black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: inherit;
+	height: 75vh;
+	min-height: 390px;
+	width: 20vw;
+	min-width: 210px;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-  border-bottom: 1px solid #d4bf79;
-  font-size: 32px;
+	border-bottom: 1px solid #ab9c87;
+	font-size: 32px;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
-  -webkit-mask-image: linear-gradient(darkslategray 80%, transparent);
-  mask-image: linear-gradient(darkslategray 80%, transparent);
-  -o-object-fit: cover;
-     object-fit: cover;
+	-webkit-mask-image: linear-gradient(#063258 80%, transparent);
+	mask-image: linear-gradient(#063258 80%, transparent);
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-  padding: 1vh 1vw;
+	overflow-y: scroll;
+	padding: 1vh 1vw;
 }
 
-/*SPECIAL*/
-/*Screens > 1920px*/
+/*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
-  header {
-    border-bottom-right-radius: 15px;
-  }
-  header nav {
-    border-bottom: 2px solid #d4bf79;
-    border-bottom-right-radius: 15px;
-  }
-  header nav .nav-separator {
-    border-right: 2px solid #d4bf79;
-    border-radius: 15px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 37.5px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-    transform: translate(3px, 3px);
-  }
-  header nav .nav-section .nav-menu .nav-list .list-separator {
-    border: 2px solid #d4bf79;
-  }
-  header nav .nav-section .content-separator {
-    border-right: 2px solid #d4bf79;
-  }
-  header nav .nav-section .lang-stg .lang-btn {
-    border-radius: 15px;
-  }
-  header nav .nav-section .lang-stg .lang-btn:hover {
-    border: 2px solid #d4bf79;
-  }
-  header nav .nav-section .lang-stg .lang-btn span {
-    font-size: 33px;
-  }
-  header nav .nav-section .lang-stg .lang-content {
-    border: 2px solid #d4bf79;
-    border-bottom-right-radius: 15px;
-  }
-  .about-me .greetings h1 {
-    font-size: 84px;
-  }
-  .about-me .personal-box {
-    border: 2px solid #d4bf79;
-  }
-  .about-me .personal-box .my-name {
-    min-height: 975px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 63px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    min-height: 615px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-    font-size: 33px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 48px;
-  }
+	header {
+		border-bottom-right-radius: 15px;
+		max-height: 150px;
+	}
+	header nav {
+		border-bottom: 2px solid #ab9c87;
+		border-bottom-right-radius: 15px;
+	}
+	header nav .nav-separator {
+		border-right: 2px solid #ab9c87;
+		border-radius: 15px;
+	}
+	header nav .nav-section .nav-menu .nav-list .nav-item {
+		font-size: 37.5px;
+	}
+	header nav .nav-section .nav-menu .nav-list .nav-item:active,
+	header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+		transform: translate(3px, 3px);
+	}
+	header nav .nav-section .nav-menu .nav-list .list-separator {
+		border: 2px solid #ab9c87;
+	}
+	header nav .nav-section .content-separator {
+		border-right: 2px solid #ab9c87;
+	}
+	header nav .nav-section .lang-stg .lang-btn {
+		border-radius: 15px;
+	}
+	header nav .nav-section .lang-stg .lang-btn:hover {
+		border: 2px solid #ab9c87;
+	}
+	header nav .nav-section .lang-stg .lang-btn span {
+		font-size: 33px;
+	}
+	header nav .nav-section .lang-stg .lang-content {
+		border: 2px solid #ab9c87;
+		border-bottom-right-radius: 15px;
+	}
+	.about-me .greetings h1 {
+		font-size: 84px;
+	}
+	.about-me .personal-box {
+		border: 2px solid #ab9c87;
+		border-radius: 75px;
+	}
+	.about-me .personal-box .my-name {
+		min-height: 975px;
+	}
+	.about-me .personal-box .my-name .name-section-title {
+		border-bottom: 2px solid #ab9c87;
+		border-top-left-radius: 75px;
+		border-top-right-radius: 75px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 63px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+		border-radius: 15px;
+		min-height: 615px;
+		max-width: 675px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+		font-size: 33px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 48px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title {
+		border-bottom: 2px solid #ab9c87;
+		border-top: 2px solid #ab9c87;
+		border-top-left-radius: 75px;
+		border-top-right-radius: 75px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 63px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+		border: 2px solid #ab9c87;
+		border-radius: 15px;
+		min-height: 585px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		border-bottom: 2px solid #ab9c87;
+		font-size: 48px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+		font-size: 33px;
+	}
 }
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
-/*header*/
 @media screen and (max-width: 932px) {
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 23.75px;
-  }
+	header nav .nav-section .nav-menu .nav-list .nav-item {
+		font-size: 23.75px;
+	}
+	.about-me .greetings h1 {
+		font-size: 53.2px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 39.9px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 30.4px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 39.9px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 30.4px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+		font-size: 20.9px;
+	}
 }
 @media screen and (max-width: 820px) {
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 22.5px;
-  }
+	header nav .nav-section .nav-menu .nav-list .nav-item {
+		font-size: 22.5px;
+	}
+	.about-me .greetings h1 {
+		font-size: 50.4px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 37.8px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 28.8px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 37.8px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 28.8px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+		font-size: 19.8px;
+	}
 }
 @media screen and (max-width: 768px) {
-  header nav .nav-section {
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-  }
-  header nav .nav-section .nav-menu {
-    align-items: flex-end;
-    border: 1px solid #d4bf79;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 1vw;
-    position: relative;
-    width: auto;
-  }
-  header nav .nav-section .nav-menu .nav-menu-btn,
-  header nav .nav-section .nav-menu .nav-list {
-    display: flex;
-  }
-  header nav .nav-section .nav-menu .nav-menu-btn {
-    cursor: pointer;
-    border-radius: 10px;
-    z-index: 2;
-  }
-  header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
-    display: block;
-    width: 4vmax;
-  }
-  header nav .nav-section .nav-menu .nav-menu-btn:active {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  header nav .nav-section .nav-menu #expandList {
-    display: none;
-  }
-  header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
-    display: flex;
-    height: 90px;
-  }
-  header nav .nav-section .nav-menu .nav-list {
-    -moz-transition: height 0.5s ease;
-    -o-transition: height 0.5s ease;
-    -webkit-transition: height 0.5s ease;
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: absolute;
-    transition: height 0.5s ease;
-    z-index: 1;
-    height: 0;
-    width: 35vmax;
-    right: -5px;
-    top: 45px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    background-color: black;
-    background-image: url(../img/background-title.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid #d4bf79;
-    border-radius: 10px;
-    font-size: 18.75px;
-    margin-top: 0.5vmax;
-    padding: 0 0.5vmax;
-    position: relative;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item:active, header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
-    transform: translate(1px, 1px);
-  }
-  header nav .nav-section .nav-menu .nav-list .list-separator {
-    display: none;
-  }
-  header nav .nav-section .lang-stg .lang-content {
-    align-items: flex-end;
-    border-right: 1px solid #d4bf79;
-    border-bottom-left-radius: 10px;
-    flex-direction: row;
-    justify-content: space-evenly;
-    height: 11vmax;
-  }
+	header nav .nav-section {
+		flex-direction: row-reverse;
+		justify-content: flex-start;
+	}
+	header nav .nav-section .nav-menu {
+		align-items: flex-end;
+		border: 1px solid #ab9c87;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		margin: 0 1vw;
+		position: relative;
+		width: auto;
+	}
+	header nav .nav-section .nav-menu .nav-menu-btn,
+	header nav .nav-section .nav-menu .nav-list {
+		display: flex;
+	}
+	header nav .nav-section .nav-menu .nav-menu-btn {
+		cursor: pointer;
+		border-radius: 10px;
+		z-index: 2;
+	}
+	header nav .nav-section .nav-menu .nav-menu-btn .menu-icon {
+		display: block;
+		width: 4vmax;
+	}
+	header nav .nav-section .nav-menu .nav-menu-btn:active {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	header nav .nav-section .nav-menu #expandList {
+		display: none;
+	}
+	header nav .nav-section .nav-menu #expandList:checked ~ .nav-list {
+		display: flex;
+		height: 90px;
+	}
+	header nav .nav-section .nav-menu .nav-list {
+		-moz-transition: height 0.5s ease;
+		-o-transition: height 0.5s ease;
+		-webkit-transition: height 0.5s ease;
+		align-items: flex-end;
+		flex-direction: column;
+		justify-content: flex-end;
+		overflow: hidden;
+		position: absolute;
+		transition: height 0.5s ease;
+		z-index: 1;
+		height: 0;
+		width: 35vmax;
+		right: -5px;
+		top: 45px;
+	}
+	header nav .nav-section .nav-menu .nav-list .nav-item {
+		background-color: black;
+		background-image: url(../img/background-title.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 1px solid #ab9c87;
+		border-radius: 10px;
+		font-size: 18.75px;
+		margin-top: 0.5vmax;
+		padding: 0 0.5vmax;
+		position: relative;
+	}
+	header nav .nav-section .nav-menu .nav-list .nav-item:active,
+	header nav .nav-section .nav-menu .nav-list .nav-item:visited:active {
+		transform: translate(1px, 1px);
+	}
+	header nav .nav-section .nav-menu .nav-list .list-separator {
+		display: none;
+	}
+	header nav .nav-section .lang-stg .lang-content {
+		align-items: flex-end;
+		border-right: 1px solid #ab9c87;
+		border-bottom-left-radius: 10px;
+		flex-direction: row;
+		justify-content: space-evenly;
+		height: 11vmax;
+	}
+	.about-me .greetings h1 {
+		font-size: 47.6px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 35.7px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 27.2px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 35.7px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail {
+		justify-content: center;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+		align-items: flex-start;
+		overflow: hidden;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
+		margin-left: 0;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(1) {
+		background-color: #063258;
+		background-image: url(../img/background-title.jpg);
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
+		margin-left: -100%;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
+		background-color: #063258;
+		background-image: url(../img/background-title.jpg);
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
+		margin-left: -200%;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(3) {
+		background-color: #063258;
+		background-image: url(../img/background-title.jpg);
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+		align-self: center;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 2vh 0;
+		width: 25%;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		-moz-transition: background-color 0.5s ease-out;
+		-o-transition: background-color 0.5s ease-out;
+		-webkit-transition: background-color 0.5s ease-out;
+		background-color: #ccc;
+		border: 1px solid #ab9c87;
+		border-radius: 100%;
+		box-shadow: 0.5vh 0.5vw 1vmax #111;
+		cursor: pointer;
+		margin: 0 0.5vw;
+		opacity: 0.5;
+		transition: background-color 0.5s ease-out;
+		height: 25.5px;
+		width: 25.5px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
+		-moz-transition: background-color 0.5s ease-in;
+		-o-transition: background-color 0.5s ease-in;
+		-webkit-transition: background-color 0.5s ease-in;
+		background-color: #111;
+		transition: background-color 0.5s ease-in;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+		transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+		width: 300%;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+		width: 75%;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+		min-height: 507px;
+		width: 75vw;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 27.2px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+		font-size: 18.7px;
+	}
+}
+@media screen and (max-width: 667px) {
+	.about-me .greetings h1 {
+		font-size: 42px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 31.5px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 br {
+		display: block;
+	}
+	.about-me .personal-box .my-name .name-section-detail {
+		justify-content: center;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+		align-items: flex-start;
+		overflow: hidden;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
+		margin-left: 0;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(1) {
+		background-color: #063258;
+		background-image: url(../img/background-title.jpg);
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
+		margin-left: -100%;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
+		background-color: #063258;
+		background-image: url(../img/background-title.jpg);
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+		align-self: center;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 2vh 0;
+		width: 25%;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+		-moz-transition: background-color 0.5s ease-out;
+		-o-transition: background-color 0.5s ease-out;
+		-webkit-transition: background-color 0.5s ease-out;
+		background-color: #ccc;
+		border: 1px solid #ab9c87;
+		border-radius: 100%;
+		box-shadow: 0.5vh 0.5vw 1vw black;
+		cursor: pointer;
+		margin: 0 0.5vw;
+		opacity: 0.5;
+		transition: background-color 0.5s ease-out;
+		height: 22.5px;
+		width: 22.5px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
+		-moz-transition: background-color 0.5s ease-in;
+		-o-transition: background-color 0.5s ease-in;
+		-webkit-transition: background-color 0.5s ease-in;
+		background-color: black;
+		transition: background-color 0.5s ease-in;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+		transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+		width: 200%;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+		padding-bottom: 1.5vh;
+		width: 75%;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+		width: 75vw;
+		min-width: 210px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 24px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 31.5px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		height: 22.5px;
+		width: 22.5px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 24px;
+	}
+}
+@media screen and (max-width: 430px) {
+	.about-me .greetings h1 {
+		font-size: 36.4px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 27.3px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+		height: 19.5px;
+		width: 19.5px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 20.8px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 27.3px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		height: 19.5px;
+		width: 19.5px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 20.8px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.about-me .greetings h1 {
+		font-size: 33.6px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 25.2px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+		height: 18px;
+		width: 18px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 19.2px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 25.2px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		height: 18px;
+		width: 18px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 19.2px;
+	}
 }
 @media screen and (max-width: 342px) {
-  header nav .nav-section .lang-stg .lang-content {
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 14vmax;
-  }
+	header nav .nav-section .lang-stg .lang-content {
+		align-items: center;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 14vmax;
+	}
+	.about-me .greetings h1 {
+		font-size: 28px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 21px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+		height: 15px;
+		width: 15px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 16px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 21px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		height: 15px;
+		width: 15px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 16px;
+	}
 }
 /*about me*/
 /*720p
@@ -745,262 +1045,43 @@ header nav .nav-section .lang-stg .lang-content .lang-item .lang-item-alt {
 		}
 	}
 }*/
-@media screen and (max-width: 932px) {
-  .about-me .greetings h1 {
-    font-size: 53.2px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 39.9px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 30.4px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .about-me .greetings h1 {
-    font-size: 50.4px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 37.8px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 28.8px;
-  }
-}
-/*merge*/
-@media screen and (max-width: 768px) {
-  .about-me .greetings h1 {
-    font-size: 47.6px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 35.7px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 27.2px;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
-    font-size: 35.7px;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail {
-    justify-content: center;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
-    align-items: flex-start;
-    overflow: hidden;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
-    margin-left: 0;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(1) {
-    background-color: #444;
-    background-image: url(../img/background-title.jpg);
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
-    margin-left: -100%;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
-    background-color: #444;
-    background-image: url(../img/background-title.jpg);
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
-    margin-left: -200%;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(3) {
-    background-color: #444;
-    background-image: url(../img/background-title.jpg);
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
-    align-self: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2vh 0;
-    width: 25%;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
-    -moz-transition: background-color 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out;
-    -webkit-transition: background-color 0.5s ease-out;
-    background-color: #ccc;
-    border: 1px solid #d4bf79;
-    border-radius: 100%;
-    box-shadow: 0.5vh 0.5vw 1vw black;
-    cursor: pointer;
-    margin: 0 0.5vw;
-    opacity: 0.5;
-    transition: background-color 0.5s ease-out;
-    height: 25.5px;
-    width: 25.5px;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
-    -moz-transition: background-color 0.5s ease-in;
-    -o-transition: background-color 0.5s ease-in;
-    -webkit-transition: background-color 0.5s ease-in;
-    background-color: black;
-    transition: background-color 0.5s ease-in;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
-    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-    width: 300%;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
-    width: 75%;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-    width: 75vw;
-  }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-    font-size: 27.2px;
-  }
-}
-@media screen and (max-width: 667px) {
-  .about-me .greetings h1 {
-    font-size: 42px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 31.5px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 br {
-    display: block;
-  }
-  .about-me .personal-box .my-name .name-section-detail {
-    justify-content: center;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
-    align-items: flex-start;
-    overflow: hidden;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
-    margin-left: 0;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(1) {
-    background-color: #444;
-    background-image: url(../img/background-title.jpg);
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
-    margin-left: -100%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
-    background-color: #444;
-    background-image: url(../img/background-title.jpg);
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
-    align-self: center;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2vh 0;
-    width: 25%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    -moz-transition: background-color 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out;
-    -webkit-transition: background-color 0.5s ease-out;
-    background-color: #ccc;
-    border: 1px solid #d4bf79;
-    border-radius: 100%;
-    box-shadow: 0.5vh 0.5vw 1vw black;
-    cursor: pointer;
-    margin: 0 0.5vw;
-    opacity: 0.5;
-    transition: background-color 0.5s ease-out;
-    height: 22.5px;
-    width: 22.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
-    -moz-transition: background-color 0.5s ease-in;
-    -o-transition: background-color 0.5s ease-in;
-    -webkit-transition: background-color 0.5s ease-in;
-    background-color: black;
-    transition: background-color 0.5s ease-in;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
-    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-    width: 200%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
-    padding-bottom: 1.5vh;
-    width: 75%;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-    width: 75vw;
-    min-width: 210px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .about-me .greetings h1 {
-    font-size: 36.4px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 27.3px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    height: 19.5px;
-    width: 19.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 20.8px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .about-me .greetings h1 {
-    font-size: 33.6px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 25.2px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    height: 18px;
-    width: 18px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 19.2px;
-  }
-}
-/*merge*/
-@media screen and (max-width: 342px) {
-  .about-me .greetings h1 {
-    font-size: 28px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 21px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    height: 15px;
-    width: 15px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 16px;
-  }
-}
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
-  header {
-    min-width: 280px;
-  }
-  header nav .nav-section .nav-menu .nav-list .nav-item {
-    font-size: 18.75px;
-  }
-  header nav .nav-section .lang-stg {
-    font-size: 12.1px;
-  }
-  .about-me {
-    min-width: 280px;
-  }
-  .about-me .greetings h1 {
-    font-size: 25.2px;
-  }
-  .about-me .personal-box .my-name .name-section-title h2 {
-    font-size: 18.9px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-    height: 13.5px;
-    width: 13.5px;
-  }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
-    font-size: 14.4px;
-  }
+	header {
+		min-width: 280px;
+	}
+	header nav .nav-section .nav-menu .nav-list .nav-item {
+		font-size: 18.75px;
+	}
+	header nav .nav-section .lang-stg {
+		font-size: 12.1px;
+	}
+	.about-me {
+		min-width: 280px;
+	}
+	.about-me .greetings h1 {
+		font-size: 25.2px;
+	}
+	.about-me .personal-box .my-name .name-section-title h2 {
+		font-size: 18.9px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+		height: 13.5px;
+		width: 13.5px;
+	}
+	.about-me .personal-box .my-name .name-section-detail .add-info {
+		font-size: 14.4px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+		font-size: 18.9px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+		height: 13.5px;
+		width: 13.5px;
+	}
+	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+		font-size: 14.4px;
+	}
 }
 /*--------------------------------HEIGHTS----------------------------------------------------------------
 @media screen and (max-height: 1368px) {

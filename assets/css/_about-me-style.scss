@@ -7,26 +7,26 @@
 	width: 100%;
 	.greetings {
 		align-items: center;
-		background-color: black;
+		background-color: $dark-color;
 		display: flex;
 		justify-content: center;
 		height: 91vh;
 		min-height: 440px;
 		width: 100%;
 		h1 {
-			color: white;
+			color: $altered-text;
 			font-size: $h1;
 		}
 	}
 	.transition {
-		background: linear-gradient(to bottom, black 0%, transparent 100%);
+		background: linear-gradient(to bottom, $dark-color 0%, transparent 100%);
 		border: none;
 		height: 10vh;
 		width: 100%;
 	}
 	.personal-box {
 		align-items: center;
-		background-color: inherit;
+		background-color: $inner-box;
 		background-image: url(../img/background-section.jpg);
 		background-position: top;
 		background-repeat: no-repeat;
@@ -40,99 +40,6 @@
 		position: inherit;
 		width: 90%;
 		@import "my-name-style";
-		.my-hobbies {
-			display: flex;
-			flex-direction: column;
-			position: inherit;
-			height: 110vh;
-			min-height: 648px; //mod
-			width: 100%;
-			.hobby-section-title {
-				align-items: center;
-				background-color: $secondary-color;
-				background-image: url(../img/background-title.jpg);
-				background-position: top;
-				background-repeat: no-repeat;
-				background-size: cover;
-				border-bottom: $border;
-				border-top: $border;
-				border-top-left-radius: $section-title-radius;
-				border-top-right-radius: $section-title-radius;
-				display: flex;
-				justify-content: center;
-				padding-bottom: 1vh;
-				padding-top: 1vh;
-				position: inherit;
-				width: 100%;
-				h2 {
-					font-size: $h2;
-				}
-			}
-			.hobby-section-detail {
-				align-items: center;
-				display: flex;
-				justify-content: center;
-				position: inherit;
-				height: 100%;
-				min-height: 440px;
-				width: 100%;
-				.hobby-pic-pag {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-evenly;
-					position: inherit;
-					width: 100%;
-					.hobby-slide-control {
-						display: none;
-					}
-					.hobby-bullets {
-						display: none;
-					}
-					.hobby-inner {
-						display: flex;
-						justify-content: space-evenly;
-						position: inherit;
-						width: 100%;
-						.hobby-slide {
-							border: $debug; //deb
-							display: flex;
-							justify-content: center;
-							padding-bottom: 1.5vh;
-							position: inherit;
-							width: 100%;
-							.hobby-slide-content {
-								border: $border;
-								border-radius: $border-radius;
-								background-color: $secondary-color;
-								background-image: url(../img/background-title.jpg);
-								background-position: top;
-								background-repeat: no-repeat;
-								background-size: cover;
-								box-shadow: 0.5vh 0.5vw 1vmax black;
-								display: flex;
-								flex-direction: column;
-								justify-content: flex-start;
-								position: inherit;
-								width: 20vw;
-								min-width: $min-wiewport-width * 0.75;
-								h3 {
-									border-bottom: $border;
-									font-size: $h3;
-								}
-								.hobby-img-block {
-									-webkit-mask-image: linear-gradient($secondary-color 80%, transparent);
-									mask-image: linear-gradient($secondary-color 80%, transparent);
-									object-fit: cover;
-								}
-								.hobby-img-desc {
-									padding: 1vh 1vw;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+		@import "my-hobbies-style";
 	}
 }

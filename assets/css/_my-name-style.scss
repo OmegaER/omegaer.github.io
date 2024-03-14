@@ -76,9 +76,9 @@
 								object-fit: cover;
 								height: 75vh;
 								min-height: $name-min-viewport-image-height;
-								max-width: 450px;
+								max-width: $name-image-block-limits;
 								width: 33vw;
-								min-width: $min-wiewport-width;
+								min-width: $min-viewport-width;
 							}
 						}
 						#nameOverlayCheck1,
@@ -121,21 +121,7 @@
                             min-height: 0;
 							width: 100%;
 							bottom: 0;
-							&::-webkit-scrollbar {
-								width: 0.5vw;
-							}
-							&::-webkit-scrollbar-track {
-								background: transparent;
-							}
-							&::-webkit-scrollbar-thumb {
-								background: $soft-shadow;
-								border-radius: math.div($border-radius, 2);
-								&:hover {
-									background: black;
-								}
-							}
 							.name-img-desc {
-								color: white;
 								display: block;
 								padding: 1vh 1vw;
 								position: relative;
@@ -150,7 +136,6 @@
 			align-self: flex-end;
 			background: radial-gradient($soft-shadow -100%, transparent 100%);
 			border-radius: 100%;
-			color: white;
 			font-size: $additional-info;
 			text-align: right;
 			padding: 0.5vh 1vw;

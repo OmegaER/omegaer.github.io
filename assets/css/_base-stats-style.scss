@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @font-face {
 	font-family: "introrustg-base2line";
 	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
@@ -5,46 +7,48 @@
 	font-style: normal;
 }
 
+//box limits test
 $debug: 1px solid black;
 
-$primary-color: midnightblue;
-$secondary-color: darkslategray;
-$soft-shadow: #444;
-$title-color: #d4bf79;
-$visited-links: #777;
+//personal fonts
+$font-title: "introrustg-base2line", sans-serif;
+
+//colors
+$dark-color: #111;
+$inner-box: #2E465F;
+$logo-p-color: white;
+$primary-color: #262D42;
+$primary-color-scrollbar: #394362;
+$secondary-color: #063258;
+$secondary-color-scrollbar: #094D88;
+$soft-shadow: #555;
+$title-color: #AB9C87;
+$altered-text: #999;
 $visited-links-perm: #d0d0d0;
 
-$additional-info: 32px;
-$font-title: "introrustg-base2line", sans-serif;
-$border: 1px solid #d4bf79;
-$border-lg: 2px solid #d4bf79;
+//border shapes
+$border: 1px solid $title-color;
+$border-lg: 2px solid $title-color;
 $border-radius: 10px;
-$bullet-points-margin-x: 5px;
-$bullet-points-size: 30px;
+$section-title-radius: 50px;
+
+//font sizes
+$additional-info: 32px;
 $h1: 56px;
 $h2: 42px;
 $h3: 32px;
-$header-height: 100px;
 $header-link: 25px;
-$header-link-box: 700px;
-$header-link-box-small: 110px;
-$header-link-separator-height: 30px;
-$header-menu-small-left: 10px;
-$header-menu-small-right: 10px;
-$header-separator-width: 20px;
-$image-overlays: 450px;
 $language-button-marker: 22px;
-$language-button-padding: 5px;
-$language-content-height: 150px;
-$language-content-padding: 0 10px 10px 10px;
-$language-item-separator: 5px;
-$language-settings-box: 80px;
-$logo-title: 56px;
-$min-wiewport-width: 280px;
+$normal-font: 22px;
+
+//other
+$bullet-points-size: 30px;
+$header-height-limits: 100px;
+$hobby-slide-height-limits: 390px;
+$min-viewport-width: 280px;
+$name-image-block-limits: 450px;
 $name-min-viewport-height: 650px;
 $name-min-viewport-image-height: 410px;
-$normal-font: 22px;
-$section-title-radius: 50px;
 
 * {
 	-moz-box-sizing: border-box;
@@ -53,28 +57,26 @@ $section-title-radius: 50px;
 	margin: 0;
 	box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+	width: 0.5vw;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: $altered-text;
+	border-radius: math.div($border-radius, 2);
+	&:hover {
+		background: $dark-color;
+	}
+}
 body {
-	background-attachment: fixed;
 	background-color: $primary-color;
 	background-image: url(../img/background-lofi.jpg);
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	overflow: auto;
-	&::-webkit-scrollbar {
-		width: 0.5vw;
-	}
-	&::-webkit-scrollbar-track {
-		background: $secondary-color;
-	}
-	&::-webkit-scrollbar-thumb {
-		background: $primary-color;
-		&:hover {
-			background: #0e0e40;
-		}
-	}
 }
 
 h1,
@@ -83,20 +85,14 @@ h3,
 h4,
 h5,
 h6 {
+	color: $title-color;
 	font-family: "introrustg-base2line";
 	font-weight: normal;
 	text-align: center;
 }
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: $title-color;
-}
 
 p {
-	color: white;
+	color: $logo-p-color;
 	font-size: $normal-font;
-	text-shadow: 0.5vh 0.5vw 1vw black;
+	text-shadow: 0.5vh 0.5vw 1vmax $dark-color;
 }
