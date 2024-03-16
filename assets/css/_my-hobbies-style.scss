@@ -22,9 +22,6 @@
 		padding-top: 1vh;
 		position: inherit;
 		width: 100%;
-		h2 {
-			font-size: $h2;
-		}
 	}
 	.hobby-section-detail {
 		align-items: center;
@@ -66,7 +63,7 @@
 						background-position: top;
 						background-repeat: no-repeat;
 						background-size: cover;
-						box-shadow: 0.5vh 0.5vw 1vmax black;
+						box-shadow: $shadow;
 						display: flex;
 						flex-direction: column;
 						justify-content: flex-start;
@@ -77,7 +74,6 @@
 						min-width: $min-viewport-width * 0.75;
 						h3 {
 							border-bottom: $border;
-							font-size: $h3;
 						}
 						.hobby-img-block {
 							-webkit-mask-image: linear-gradient($secondary-color 80%, transparent);

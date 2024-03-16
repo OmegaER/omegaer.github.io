@@ -12,13 +12,47 @@ footer {
         justify-content: space-evenly;
         height: 90%;
         width: 100%;
-        .forms {
-            border: $debug;
+        form {
             display: flex;
-            justify-content: space-evenly;
+            font-family: $font-title;
+            justify-content: flex-start;
             flex-direction: column;
             height: 100%;
             width: 45%;
+            legend {
+                color: $title-color;
+                padding: 1vh 1vw;
+            }
+            fieldset {
+                border: none;
+                display: flex;
+                margin-top: 1vh;
+                &:last-of-type {
+                    height: 100%;
+                }
+                label {
+                    color: $altered-text;
+                    padding-left: 1vw;
+                    font-size: $h5;
+                    width: 35%;
+                }
+                input {
+                    border-radius: $section-title-radius;
+                    box-shadow: $shadow;
+                    font-size: $form-font;
+                    padding: 0 1vw;
+                    width: 25vw;
+                }
+                textarea {
+                    border-radius: $border-radius;
+                    border-bottom-right-radius: 0;
+                    box-shadow: $shadow;
+                    font-size: $form-font;
+                    padding: 0.5vw;
+                    height: 90%;
+                    width: 25vw;
+                }
+            }
         }
 		.footer-separator {
             border: none;

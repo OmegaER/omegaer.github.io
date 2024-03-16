@@ -22,7 +22,6 @@
 		padding: 1vh 0;
 		width: 100%;
 		h2 {
-			font-size: $h2;
 			br {
 				display: none;
 			}
@@ -71,7 +70,7 @@
 							width: 100%;
 							.name-img-block {
 								border-radius: $border-radius;
-								box-shadow: 0.5vh 0.5vw 1vmax black;
+								box-shadow: $shadow;
 								position: inherit;
 								object-fit: cover;
 								height: 75vh;
@@ -84,30 +83,25 @@
 						#nameOverlayCheck1,
 						#nameOverlayCheck2 {
 							display: none;
-                            &:checked {
-								~ .name-overlay {
-                                    min-height: 15%;
-								}
-							}
 						}
 						#nameOverlayCheck1 {
 							&:checked {
 								~ .name-overlay {
-									height: 15vh;
+									height: 8vmax;
 								}
 							}
 						}
 						#nameOverlayCheck2 {
 							&:checked {
 								~ .name-overlay {
-									height: 20vh;
+									height: 13vmax;
 								}
 							}
 						}
 						.name-overlay {
-							-moz-transition: height 0.5s ease, min-height 0.5s ease;
-							-o-transition: height 0.5s ease, min-height 0.5s ease;
-							-webkit-transition: height 0.5s ease, min-height 0.5s ease;
+							-moz-transition: height 0.5s ease;
+							-o-transition: height 0.5s ease;
+							-webkit-transition: height 0.5s ease;
 							align-items: flex-start;
 							background-color: transparentize(black, 0.3);
 							border-bottom-left-radius: $border-radius;
@@ -116,9 +110,8 @@
 							justify-content: center;
 							overflow-y: scroll;
 							position: absolute;
-							transition: height 0.5s ease, min-height 0.5s ease;
+							transition: height 0.5s ease;
 							height: 0;
-                            min-height: 0;
 							width: 100%;
 							bottom: 0;
 							.name-img-desc {
@@ -136,7 +129,7 @@
 			align-self: flex-end;
 			background: radial-gradient($soft-shadow -100%, transparent 100%);
 			border-radius: 100%;
-			font-size: $additional-info;
+			font-size: $h3;
 			text-align: right;
 			padding: 0.5vh 1vw;
 			max-width: 75%;

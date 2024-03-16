@@ -34,13 +34,13 @@ $border-radius: 10px;
 $section-title-radius: 50px;
 
 //font sizes
-$additional-info: 32px;
 $h1: 56px;
-$h2: 42px;
-$h3: 32px;
-$header-link: 25px;
-$language-button-marker: 22px;
-$normal-font: 22px;
+$h2: $h1 * 0.75;
+$h3: $h2 * 0.75;
+$h4: $h3 * 0.9;
+$h5: $h4 * 0.9;
+$normal-font: $h5 * 0.9;
+$form-font: $normal-font * 0.9;
 
 //other
 $bullet-points-size: 30px;
@@ -50,6 +50,7 @@ $min-viewport-width: 280px;
 $name-image-block-limits: 450px;
 $name-min-viewport-height: 650px;
 $name-min-viewport-image-height: 410px;
+$shadow: 0.5vh 0.5vw 1vmax $dark-color;
 
 * {
 	-moz-box-sizing: border-box;
@@ -68,7 +69,7 @@ $name-min-viewport-image-height: 410px;
 	background: $altered-text;
 	border-radius: math.div($border-radius, 2);
 	&:hover {
-		background: $dark-color;
+		background: $title-color;
 	}
 }
 body {
@@ -87,13 +88,24 @@ h4,
 h5,
 h6 {
 	color: $title-color;
-	font-family: "introrustg-base2line";
+	font-family: $font-title;
 	font-weight: normal;
 	text-align: center;
+}
+h1 {
+	color: $altered-text;
+	font-size: $h1;
+}
+h2,
+legend {
+	font-size: $h2;
+}
+h3 {
+	font-size: $h3;
 }
 
 p {
 	color: $logo-p-color;
 	font-size: $normal-font;
-	text-shadow: 0.5vh 0.5vw 1vmax $dark-color;
+	text-shadow: $shadow;
 }
