@@ -247,6 +247,7 @@
 					}
 				}
 				span {
+					justify-content: center;
 					margin-top: 1vh;
 					input {
 						font-size: $form-font * 0.95;
@@ -459,24 +460,19 @@
 						align-items: flex-start;
 						overflow: hidden;
 						#nameSlide1 {
-							&:checked {
-								~ .name-inner {
-									margin-left: 0;
-								}
+							&:hover {
 								~ .name-bullets {
-									.name-bullet-points {
-										&:nth-child(1) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
+									.name-bullet-effect {
+										&:first-of-type {
+											visibility: visible;
 										}
+										
 									}
 								}
 							}
-						}
-						#nameSlide2 {
 							&:checked {
 								~ .name-inner {
-									margin-left: -100%;
+									margin-left: 0;
 								}
 								~ .name-bullets {
 									.name-bullet-points {
@@ -488,12 +484,44 @@
 								}
 							}
 						}
+						#nameSlide2 {
+							&:hover {
+								~ .name-bullets {
+									.name-bullet-effect {
+										&:last-of-type {
+											visibility: visible;
+										}
+										
+									}
+								}
+							}
+							&:checked {
+								~ .name-inner {
+									margin-left: -100%;
+								}
+								~ .name-bullets {
+									.name-bullet-points {
+										&:nth-child(4) {
+											background-color: $secondary-color;
+											background-image: url(../img/background-title.jpg);
+										}
+									}
+								}
+							}
+						}
 						.name-bullets {
+							align-items: center;
 							align-self: center;
 							display: flex;
 							justify-content: space-evenly;
 							margin: 2vh 0;
 							width: 25%;
+							.name-bullet-effect {
+								color: $title-color;
+								display: block;
+								font-size: $h3 * 0.85;
+								visibility: hidden;
+							}
 							.name-bullet-points {
 								-moz-transition: background-color 0.5s ease-out;
 								-o-transition: background-color 0.5s ease-out;
@@ -506,8 +534,10 @@
 								margin: 0 0.5vw;
 								opacity: 0.5;
 								transition: background-color 0.5s ease-out;
-								height: $bullet-points-size * 0.85;
-								width: $bullet-points-size * 0.85;
+								height: 4vmin;
+								min-height: 15px;
+								width: 4vmin;
+								min-width: 15px;
 								&:hover {
 									-moz-transition: background-color 0.5s ease-in;
 									-o-transition: background-color 0.5s ease-in;
@@ -555,24 +585,19 @@
 						align-items: flex-start;
 						overflow: hidden;
 						#hobbySlide1 {
-							&:checked {
-								~ .hobby-inner {
-									margin-left: 0;
-								}
+							&:hover {
 								~ .hobby-bullets {
-									.hobby-bullet-points {
-										&:nth-child(1) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
+									.hobby-bullet-effect {
+										&:nth-of-type(1) {
+											visibility: visible;
 										}
+										
 									}
 								}
 							}
-						}
-						#hobbySlide2 {
 							&:checked {
 								~ .hobby-inner {
-									margin-left: -100%;
+									margin-left: 0;
 								}
 								~ .hobby-bullets {
 									.hobby-bullet-points {
@@ -584,14 +609,49 @@
 								}
 							}
 						}
+						#hobbySlide2 {
+							&:hover {
+								~ .hobby-bullets {
+									.hobby-bullet-effect {
+										&:nth-of-type(2) {
+											visibility: visible;
+										}
+										
+									}
+								}
+							}
+							&:checked {
+								~ .hobby-inner {
+									margin-left: -100%;
+								}
+								~ .hobby-bullets {
+									.hobby-bullet-points {
+										&:nth-child(4) {
+											background-color: $secondary-color;
+											background-image: url(../img/background-title.jpg);
+										}
+									}
+								}
+							}
+						}
 						#hobbySlide3 {
+							&:hover {
+								~ .hobby-bullets {
+									.hobby-bullet-effect {
+										&:nth-of-type(3) {
+											visibility: visible;
+										}
+										
+									}
+								}
+							}
 							&:checked {
 								~ .hobby-inner {
 									margin-left: -200%;
 								}
 								~ .hobby-bullets {
 									.hobby-bullet-points {
-										&:nth-child(3) {
+										&:nth-child(6) {
 											background-color: $secondary-color;
 											background-image: url(../img/background-title.jpg);
 										}
@@ -600,11 +660,18 @@
 							}
 						}
 						.hobby-bullets {
+							align-items: center;
 							align-self: center;
 							display: flex;
 							justify-content: space-evenly;
 							margin: 2vh 0;
-							width: 25%;
+							width: 35%;
+							.hobby-bullet-effect {
+								color: $title-color;
+								display: block;
+								font-size: $h3 * 0.85;
+								visibility: hidden;
+							}
 							.hobby-bullet-points {
 								-moz-transition: background-color 0.5s ease-out;
 								-o-transition: background-color 0.5s ease-out;
@@ -617,8 +684,10 @@
 								margin: 0 0.5vw;
 								opacity: 0.5;
 								transition: background-color 0.5s ease-out;
-								height: $bullet-points-size * 0.85;
-								width: $bullet-points-size * 0.85;
+								height: 4vmin;
+								min-height: 15px;
+								width: 4vmin;
+								min-width: 15px;
 								&:hover {
 									-moz-transition: background-color 0.5s ease-in;
 									-o-transition: background-color 0.5s ease-in;
@@ -701,9 +770,8 @@
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
-							.name-bullet-points {
-								height: $bullet-points-size * 0.75;
-								width: $bullet-points-size * 0.75;
+							.name-bullet-effect {
+								font-size: $h3 * 0.75;
 							}
 						}
 					}
@@ -721,9 +789,8 @@
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
-							.hobby-bullet-points {
-								height: $bullet-points-size * 0.75;
-								width: $bullet-points-size * 0.75;
+							.hobby-bullet-effect {
+								font-size: $h3 * 0.75;
 							}
 						}
 						.hobby-inner {
@@ -773,9 +840,8 @@
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
-							.name-bullet-points {
-								height: $bullet-points-size * 0.65;
-								width: $bullet-points-size * 0.65;
+							.name-bullet-effect {
+								font-size: $h3 * 0.65;
 							}
 						}
 					}
@@ -793,9 +859,8 @@
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
-							.hobby-bullet-points {
-								height: $bullet-points-size * 0.65;
-								width: $bullet-points-size * 0.65;
+							.hobby-bullet-effect {
+								font-size: $h3 * 0.65;
 							}
 						}
 						.hobby-inner {
@@ -845,9 +910,8 @@
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
-							.name-bullet-points {
-								height: $bullet-points-size * 0.6;
-								width: $bullet-points-size * 0.6;
+							.name-bullet-effect {
+								font-size: $h3 * 0.6;
 							}
 						}
 					}
@@ -865,9 +929,8 @@
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
-							.hobby-bullet-points {
-								height: $bullet-points-size * 0.6;
-								width: $bullet-points-size * 0.6;
+							.hobby-bullet-effect {
+								font-size: $h3 * 0.6;
 							}
 						}
 						.hobby-inner {
@@ -917,9 +980,8 @@
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
-							.name-bullet-points {
-								height: math.div($bullet-points-size, 2);
-								width: math.div($bullet-points-size, 2);
+							.name-bullet-effect {
+								font-size: math.div($h3, 2);
 							}
 						}
 					}
@@ -937,9 +999,8 @@
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
-							.hobby-bullet-points {
-								height: math.div($bullet-points-size, 2);
-								width: math.div($bullet-points-size, 2);
+							.hobby-bullet-effect {
+								font-size: math.div($h3, 2);
 							}
 						}
 						.hobby-inner {
@@ -1020,9 +1081,8 @@
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
-							.name-bullet-points {
-								height: $bullet-points-size * 0.45;
-								width: $bullet-points-size * 0.45;
+							.name-bullet-effect {
+								font-size: $h3 * 0.45;
 							}
 						}
 					}
@@ -1040,9 +1100,8 @@
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
-							.hobby-bullet-points {
-								height: $bullet-points-size * 0.45;
-								width: $bullet-points-size * 0.45;
+							.hobby-bullet-effect {
+								font-size: $h3 * 0.45;
 							}
 						}
 						.hobby-inner {

@@ -51,6 +51,7 @@ $name-image-block-limits: 450px;
 $name-min-viewport-height: 650px;
 $name-min-viewport-image-height: 410px;
 $shadow: 0.5vh 0.5vw 1vmax $dark-color;
+$shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 
 * {
 	-moz-box-sizing: border-box;
