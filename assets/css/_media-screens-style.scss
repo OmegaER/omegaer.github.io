@@ -154,6 +154,13 @@
 						font-size: $form-font * 1.5;
 					}
 				}
+				span {
+					input {
+						border: $border-lg;
+						border-radius: $section-title-radius * 1.5;
+						font-size: $form-font * 1.5;
+					}
+				}
 			}
 		}
 	}
@@ -225,14 +232,28 @@
 					font-size: $h2 * 0.95;
 				}
 				fieldset {
+					flex-direction: column;
 					label {
 						font-size: $h5 * 0.95;
+						width: 100%;
 					}
 					input {
 						font-size: $form-font * 0.95;
+						width: 100%;
 					}
 					textarea {
 						font-size: $form-font * 0.95;
+						width: 100%;
+					}
+				}
+				span {
+					margin-top: 1vh;
+					input {
+						font-size: $form-font * 0.95;
+						min-width: 65px;
+						&[type=reset] {
+							margin: 0 0 0 1vw;
+						}
 					}
 				}
 			}
@@ -293,6 +314,31 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.footer-nav {
+			form {
+				legend {
+					font-size: $h2 * 0.9;
+				}
+				fieldset {
+					label {
+						font-size: $h5 * 0.9;
+					}
+					input {
+						font-size: $form-font * 0.9;
+					}
+					textarea {
+						font-size: $form-font * 0.9;
+					}
+				}
+				span {
+					input {
+						font-size: $form-font * 0.9;
 					}
 				}
 			}
@@ -608,6 +654,31 @@
 			}
 		}
 	}
+	footer {
+		.footer-nav {
+			form {
+				legend {
+					font-size: $h2 * 0.85;
+				}
+				fieldset {
+					label {
+						font-size: $h5 * 0.85;
+					}
+					input {
+						font-size: $form-font * 0.85;
+					}
+					textarea {
+						font-size: $form-font * 0.85;
+					}
+				}
+				span {
+					input {
+						font-size: $form-font * 0.85;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 667px) {
@@ -669,6 +740,20 @@
 			}
 		}
 	}
+	footer {
+		.footer-nav {
+			form {
+				legend {
+					font-size: $h2 * 0.75;
+				}
+				fieldset {
+					label {
+						font-size: $h5 * 0.75;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 430px) {
@@ -722,6 +807,20 @@
 								}
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.footer-nav {
+			form {
+				legend {
+					font-size: $h2 * 0.65;
+				}
+				fieldset {
+					label {
+						font-size: $h5 * 0.65;
 					}
 				}
 			}
@@ -959,6 +1058,9 @@
 				}
 			}
 		}
+	}
+	footer {
+		min-width: $min-viewport-width;
 	}
 }
 

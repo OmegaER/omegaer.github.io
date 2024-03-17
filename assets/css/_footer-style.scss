@@ -37,13 +37,15 @@ footer {
                     width: 35%;
                 }
                 input {
+                    border: $border;
                     border-radius: $section-title-radius;
                     box-shadow: $shadow;
                     font-size: $form-font;
-                    padding: 0 1vw;
+                    padding: 0 0.5vw;
                     width: 25vw;
                 }
                 textarea {
+                    border: $border;
                     border-radius: $border-radius;
                     border-bottom-right-radius: 0;
                     box-shadow: $shadow;
@@ -51,6 +53,28 @@ footer {
                     padding: 0.5vw;
                     height: 90%;
                     width: 25vw;
+                }
+            }
+            span {
+                display: flex;
+                justify-content: flex-end;
+                height: 20%;
+                input {
+                    border: $border;
+                    border-radius: $section-title-radius;
+                    box-shadow: $shadow;
+                    font-size: $form-font;
+                    height: 100%;
+                    width: 20%;
+                    &[type=submit] {
+                        background-color: $secondary-color;
+                        color: $title-color;
+                    }
+                    &[type=reset] {
+                        background-color: $primary-color;
+                        color: $altered-text;
+                        margin: 0 2vw;
+                    }
                 }
             }
         }

@@ -581,13 +581,15 @@ footer .footer-nav form fieldset label {
   width: 35%;
 }
 footer .footer-nav form fieldset input {
+  border: 1px solid #ab9c87;
   border-radius: 50px;
   box-shadow: 0.5vh 0.5vw 1vmax #111;
   font-size: 20.66715px;
-  padding: 0 1vw;
+  padding: 0 0.5vw;
   width: 25vw;
 }
 footer .footer-nav form fieldset textarea {
+  border: 1px solid #ab9c87;
   border-radius: 10px;
   border-bottom-right-radius: 0;
   box-shadow: 0.5vh 0.5vw 1vmax #111;
@@ -595,6 +597,28 @@ footer .footer-nav form fieldset textarea {
   padding: 0.5vw;
   height: 90%;
   width: 25vw;
+}
+footer .footer-nav form span {
+  display: flex;
+  justify-content: flex-end;
+  height: 20%;
+}
+footer .footer-nav form span input {
+  border: 1px solid #ab9c87;
+  border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  font-size: 20.66715px;
+  height: 100%;
+  width: 20%;
+}
+footer .footer-nav form span input[type=submit] {
+  background-color: #063258;
+  color: #ab9c87;
+}
+footer .footer-nav form span input[type=reset] {
+  background-color: #262D42;
+  color: #999;
+  margin: 0 2vw;
 }
 footer .footer-nav .footer-separator {
   border: none;
@@ -718,6 +742,11 @@ footer .footer-nav .socials {
     border-bottom-right-radius: 0;
     font-size: 31.000725px;
   }
+  footer .footer-nav form span input {
+    border: 2px solid #ab9c87;
+    border-radius: 75px;
+    font-size: 31.000725px;
+  }
 }
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 @media screen and (max-width: 932px) {
@@ -745,14 +774,30 @@ footer .footer-nav .socials {
   footer .footer-nav form legend {
     font-size: 39.9px;
   }
+  footer .footer-nav form fieldset {
+    flex-direction: column;
+  }
   footer .footer-nav form fieldset label {
     font-size: 24.23925px;
+    width: 100%;
   }
   footer .footer-nav form fieldset input {
     font-size: 19.6337925px;
+    width: 100%;
   }
   footer .footer-nav form fieldset textarea {
     font-size: 19.6337925px;
+    width: 100%;
+  }
+  footer .footer-nav form span {
+    margin-top: 1vh;
+  }
+  footer .footer-nav form span input {
+    font-size: 19.6337925px;
+    min-width: 65px;
+  }
+  footer .footer-nav form span input[type=reset] {
+    margin: 0 0 0 1vw;
   }
 }
 @media screen and (max-width: 820px) {
@@ -776,6 +821,21 @@ footer .footer-nav .socials {
   }
   .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 20.66715px;
+  }
+  footer .footer-nav form legend {
+    font-size: 37.8px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 22.9635px;
+  }
+  footer .footer-nav form fieldset input {
+    font-size: 18.600435px;
+  }
+  footer .footer-nav form fieldset textarea {
+    font-size: 18.600435px;
+  }
+  footer .footer-nav form span input {
+    font-size: 18.600435px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1007,6 +1067,21 @@ footer .footer-nav .socials {
   .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 19.518975px;
   }
+  footer .footer-nav form legend {
+    font-size: 35.7px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 21.68775px;
+  }
+  footer .footer-nav form fieldset input {
+    font-size: 17.5670775px;
+  }
+  footer .footer-nav form fieldset textarea {
+    font-size: 17.5670775px;
+  }
+  footer .footer-nav form span input {
+    font-size: 17.5670775px;
+  }
 }
 @media screen and (max-width: 667px) {
   .about-me .greetings h1 {
@@ -1035,6 +1110,12 @@ footer .footer-nav .socials {
   .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 23.625px;
   }
+  footer .footer-nav form legend {
+    font-size: 31.5px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 19.13625px;
+  }
 }
 @media screen and (max-width: 430px) {
   .about-me .greetings h1 {
@@ -1059,6 +1140,12 @@ footer .footer-nav .socials {
   }
   .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 20.475px;
+  }
+  footer .footer-nav form legend {
+    font-size: 27.3px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 16.58475px;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1178,6 +1265,9 @@ footer .footer-nav .socials {
   }
   .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 14.175px;
+  }
+  footer {
+    min-width: 280px;
   }
 }
 /*--------------------------------HEIGHTS----------------------------------------------------------------

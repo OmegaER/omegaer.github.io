@@ -261,32 +261,47 @@
 		</main>
 		<footer>
 			<nav class="footer-nav">
-				<form>
+				<form
+					action=""
+					method="get">
 					<legend>Contact me!</legend>
-					<fieldset class="full-name">
+					<fieldset>
 						<label for="fullName">Full name</label>
 						<input
 							type="text"
 							name="guest-name"
 							id="fullName"
-							placeholder="Full name"
-							autocomplete="name" />
+							placeholder="Basch Von Ronsemburg"
+							autocomplete="name"
+							required />
 					</fieldset>
-					<fieldset class="email">
+					<fieldset>
 						<label for="email">Email</label>
 						<input
 							type="email"
 							name="email"
 							id="email"
-							placeholder="example@email.com" />
+							placeholder="example@email.com"
+							required />
 					</fieldset>
-					<fieldset class="type-form">
+					<fieldset>
 						<label for="typeForm">Your message</label>
 						<textarea
 							name="type-form"
 							id="typeForm"
-							placeholder="Type your message here&hellip;"></textarea>
+							placeholder="Type your message here&hellip;"
+							required></textarea>
 					</fieldset>
+					<span>
+						<input
+							type="submit"
+							value="Submit"
+							accesskey="s" />
+						<input
+							type="reset"
+							value="Reset"
+							accesskey="r" />
+					</span>
 				</form>
 				<hr class="footer-separator" />
 				<div class="socials">
