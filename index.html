@@ -14,41 +14,6 @@
 			rel="stylesheet"
 			href="assets/css/style.css" />
 		<title>My Webpage</title>
-		<!--EMAILJS SECTION - START-->
-		<script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-			const contactForm = document.querySelector("contact_form");
-			const submitBtn = document.querySelector("submit_btn");
-			const userName = document.querySelector("user_name");
-			const userEmail = document.querySelector("user_email");
-			const userMessage = document.querySelector("user_message");
-			const serviceID = "omega_webpage";
-			const templateID = "omega_form";
-			(function() {
-				emailjs.init({
-					publicKey: "GK1P-l5e5eEyCffxK",
-				});
-			})();
-			window.onload = function () {
-				document.getElementById(contactForm).addEventListener('submit', function (event) {
-					event.preventDefault();
-					emailjs.sendForm(serviceID, templateID, this).then(
-						() => {
-							console.log("SUCCESS!");
-							submitBtn.innerText = "Sent!";
-							userName.value = "";
-							userEmail.value = "";
-							userMessage.value = "";
-						}, (error) => {
-							console.log("FAILED...", error);
-							submitBtn.innerText = "Failed";
-						}
-					);
-				});
-			};
-		</script>
-		<!--EMAILJS SECTION - END-->
 	</head>
 	<body>
 		<header>
@@ -302,13 +267,12 @@
 		</main>
 		<footer>
 			<nav class="footer-nav">
-				<form
-					method="post"
-					id="contact_form">
+				<form id="contact_form">
 					<legend>Contact me!</legend>
 					<input
 						type="hidden"
-						name="contact_number" />
+						name="contact_number"
+						id="contact_number" />
 					<fieldset>
 						<label for="user_name">
 							Full name
@@ -351,7 +315,7 @@
 							type="submit"
 							value="Submit"
 							accesskey="s"
-							id="submit_btn" />
+							id="submitBtn" />
 						<input
 							type="reset"
 							value="Reset"
@@ -365,76 +329,78 @@
 						<div class="social-links">
 							<div class="envelope">
 								<h4>SOCIAL LINKS:</h4>
-								<span>
-									<a
-										href="https://www.facebook.com/Emanuele.Romano.Omega/"
-										target="_blank"
-										rel="noopener noreferrer">
+								<div class="link-group">
+									<span>
+										<a
+											href="https://www.facebook.com/Emanuele.Romano.Omega/"
+											target="_blank"
+											rel="noopener noreferrer">
+											<img
+												src="assets/img/facebook.svg"
+												alt="Facebook" />
+										</a>
 										<img
-											src="assets/img/facebook.svg"
-											alt="Facebook" />
-									</a>
-									<img
-										src="assets/img/suit-diamond-fill.svg"
-										alt="Link selector"
-										class="selector-effect" />
-								</span>
-								<span>
-									<a
-										href="https://www.instagram.com/semplicementeomega/"
-										target="_blank"
-										rel="noopener noreferrer">
+											src="assets/img/suit-diamond-fill.svg"
+											alt="Link selector"
+											class="selector-effect" />
+									</span>
+									<span>
+										<a
+											href="https://www.instagram.com/semplicementeomega/"
+											target="_blank"
+											rel="noopener noreferrer">
+											<img
+												src="assets/img/instagram.svg"
+												alt="Instagram" />
+										</a>
 										<img
-											src="assets/img/instagram.svg"
-											alt="Instagram" />
-									</a>
-									<img
-										src="assets/img/suit-diamond-fill.svg"
-										alt="Link selector"
-										class="selector-effect" />
-								</span>
-								<span>
-									<a
-										href="https://www.threads.net/@semplicementeomega"
-										target="_blank"
-										rel="noopener noreferrer">
+											src="assets/img/suit-diamond-fill.svg"
+											alt="Link selector"
+											class="selector-effect" />
+									</span>
+									<span>
+										<a
+											href="https://www.threads.net/@semplicementeomega"
+											target="_blank"
+											rel="noopener noreferrer">
+											<img
+												src="assets/img/threads.svg"
+												alt="Threads" />
+										</a>
 										<img
-											src="assets/img/threads.svg"
-											alt="Threads" />
-									</a>
-									<img
-										src="assets/img/suit-diamond-fill.svg"
-										alt="Link selector"
-										class="selector-effect" />
-								</span>
-								<span>
-									<a
-										href="https://twitter.com/OmegaSelvatico"
-										target="_blank"
-										rel="noopener noreferrer">
+											src="assets/img/suit-diamond-fill.svg"
+											alt="Link selector"
+											class="selector-effect" />
+									</span>
+									<span>
+										<a
+											href="https://twitter.com/OmegaSelvatico"
+											target="_blank"
+											rel="noopener noreferrer">
+											<img
+												src="assets/img/twitter-x.svg"
+												alt="X (Twitter)" />
+										</a>
 										<img
-											src="assets/img/twitter-x.svg"
-											alt="X (Twitter)" />
-									</a>
-									<img
-										src="assets/img/suit-diamond-fill.svg"
-										alt="Link selector"
-										class="selector-effect" />
-								</span>
-								<span>
-									<a
-										href="https://www.linkedin.com/in/emanuele-romano-264634288/"
-										target="_blank"
-										rel="noopener noreferrer">
+											src="assets/img/suit-diamond-fill.svg"
+											alt="Link selector"
+											class="selector-effect" />
+									</span>
+									<span>
+										<a
+											href="https://www.linkedin.com/in/emanuele-romano-264634288/"
+											target="_blank"
+											rel="noopener noreferrer">
+											<img
+												src="assets/img/linkedin.svg"
+												alt="LinkedIn" />
+										</a>
 										<img
-											src="assets/img/linkedin.svg"
-											alt="LinkedIn" />
-									</a>
-									<img
-										src="assets/img/suit-diamond-fill.svg"
-										alt="Link selector"
-										class="selector-effect" />
-								</span>
+											src="assets/img/suit-diamond-fill.svg"
+											alt="Link selector"
+											class="selector-effect" />
+									</span>
+								</div>
 							</div>
 						</div>
 						<div class="git">
@@ -472,5 +438,48 @@
 				</div>
 			</nav>
 		</footer>
+		<!--EMAILJS SECTION - START-->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: "GK1P-l5e5eEyCffxK",
+				});
+			})();
+		</script>
+		<script type="text/javascript">
+			const contactForm = document.getElementById("contact_form");
+			const serviceID = "service_y7neroj";
+			const templateID = "template_ygmb70h";
+			var submitBtn = document.getElementById("submitBtn");
+			var userName = document.getElementById("user_name");
+			var userEmail = document.getElementById("user_email");
+			var userMessage = document.getElementById("user_message");
+			let contactNumber = 0;
+
+			window.onload = function () {
+				contactForm.addEventListener("submit", function (event) {
+					event.preventDefault();
+					contactNumber++;
+					emailjs.sendForm(serviceID, templateID, this).then(
+						() => {
+							console.log("SUCCESS!");
+							submitBtn.value = "Sent!";
+							document.getElementById("contact_number").value = contactNumber;
+							userName.value = "";
+							userEmail.value = "";
+							userMessage.value = "";
+						},
+						(error) => {
+							console.log("FAILED...", error);
+							submitBtn.value = "Retry&hellip;";
+						}
+					);
+				});
+			};
+		</script>
+		<!--EMAILJS SECTION - END-->
 	</body>
 </html>

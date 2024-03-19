@@ -162,6 +162,35 @@
 					}
 				}
 			}
+			.footer-separator {
+				border: none;
+				border-left: $border-lg;
+			}
+			.socials {
+				h2 {
+					font-size: $h2 * 1.5;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 1.5;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 1.5;
+							}
+						}
+					}
+				}
+				.side-note {
+					border-top: $border-lg;
+					font-size: 24px;
+				}
+			}
 		}
 	}
 }
@@ -270,7 +299,65 @@
 			}
 			.socials {
 				height: 47.5%;
-				width: 75%;
+				width: 90%;
+				h2 {
+					font-size: $h2 * 0.95;
+					text-align: center;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							display: flex;
+							flex-direction: column;
+							justify-content: space-between;
+							margin-bottom: 0;
+							margin-top: 1vh;
+							height: 90%;
+							h4 {
+								font-size: $h4 * 0.95;
+							}
+							.link-group {
+								height: 50%;
+								span {
+									a {
+										img {
+											width: 4vmax;
+											&:hover {
+												width: 5vmax;
+											}
+										}
+									}
+									.selector-effect {
+										width: 3vmax;
+									}
+								}
+							}
+						}
+					}
+					.git {
+						.envelope {
+							height: 70%;
+							h4 {
+								font-size: $h4 * 0.95;
+							}
+							span {
+								margin-left: 1vw;
+								height: 50%;
+								a {
+									img {
+										width: 4vmax;
+										&:hover {
+											width: 5vmax;
+										}
+									}
+								}
+								.selector-effect {
+									width: 3vmax;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -354,6 +441,27 @@
 				span {
 					input {
 						font-size: $form-font * 0.9;
+					}
+				}
+			}
+			.socials {
+				h2 {
+					font-size: $h2 * 0.9;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.9;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.9;
+							}
+						}
 					}
 				}
 			}
@@ -480,7 +588,6 @@
 										&:first-of-type {
 											visibility: visible;
 										}
-										
 									}
 								}
 							}
@@ -505,7 +612,6 @@
 										&:last-of-type {
 											visibility: visible;
 										}
-										
 									}
 								}
 							}
@@ -605,7 +711,6 @@
 										&:nth-of-type(1) {
 											visibility: visible;
 										}
-										
 									}
 								}
 							}
@@ -630,7 +735,6 @@
 										&:nth-of-type(2) {
 											visibility: visible;
 										}
-										
 									}
 								}
 							}
@@ -655,7 +759,6 @@
 										&:nth-of-type(3) {
 											visibility: visible;
 										}
-										
 									}
 								}
 							}
@@ -760,6 +863,27 @@
 					}
 				}
 			}
+			.socials {
+				h2 {
+					font-size: $h2 * 0.85;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.85;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.85;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -833,6 +957,27 @@
 					}
 				}
 			}
+			.socials {
+				h2 {
+					font-size: $h2 * 0.75;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.75;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.75;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -903,6 +1048,27 @@
 					}
 				}
 			}
+			.socials {
+				h2 {
+					font-size: $h2 * 0.65;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.65;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.65;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -954,6 +1120,31 @@
 										font-size: $h3 * 0.6;
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.footer-nav {
+			.socials {
+				h2 {
+					font-size: $h2 * 0.6;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
 							}
 						}
 					}
@@ -1024,6 +1215,31 @@
 										font-size: math.div($h3, 2);
 									}
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		.footer-nav {
+			.socials {
+				h2 {
+					font-size: $h2 * 0.6;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
 							}
 						}
 					}
@@ -1134,6 +1350,29 @@
 	}
 	footer {
 		min-width: $min-viewport-width;
+		.footer-nav {
+			.socials {
+				h2 {
+					font-size: $h2 * 0.6;
+				}
+				.link-tree {
+					.social-links {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
+							}
+						}
+					}
+					.git {
+						.envelope {
+							h4 {
+								font-size: $h4 * 0.6;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
