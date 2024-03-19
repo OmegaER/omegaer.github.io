@@ -14,6 +14,41 @@
 			rel="stylesheet"
 			href="assets/css/style.css" />
 		<title>My Webpage</title>
+		<!--EMAILJS SECTION - START-->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+			const contactForm = document.querySelector("contact_form");
+			const submitBtn = document.querySelector("submit_btn");
+			const userName = document.querySelector("user_name");
+			const userEmail = document.querySelector("user_email");
+			const userMessage = document.querySelector("user_message");
+			const serviceID = "omega_webpage";
+			const templateID = "omega_form";
+			(function() {
+				emailjs.init({
+					publicKey: "GK1P-l5e5eEyCffxK",
+				});
+			})();
+			window.onload = function () {
+				document.getElementById(contactForm).addEventListener('submit', function (event) {
+					event.preventDefault();
+					emailjs.sendForm(serviceID, templateID, this).then(
+						() => {
+							console.log("SUCCESS!");
+							submitBtn.innerText = "Sent!";
+							userName.value = "";
+							userEmail.value = "";
+							userMessage.value = "";
+						}, (error) => {
+							console.log("FAILED...", error);
+							submitBtn.innerText = "Failed";
+						}
+					);
+				});
+			};
+		</script>
+		<!--EMAILJS SECTION - END-->
 	</head>
 	<body>
 		<header>
@@ -254,7 +289,8 @@
 											class="hobby-img-block" />
 										<p class="hobby-img-desc">
 											A minor shout-out goes to any relevant geek-based activity:
-											<em>Magic TCG</em>, RPG's and manga, you name it. Technically, web developing can fall into this interest, as well
+											<em>Magic TCG,</em>
+											RPG's and manga, you name it. Technically, web developing can fall into this interest, as well
 										</p>
 									</picture>
 								</div>
@@ -267,33 +303,46 @@
 		<footer>
 			<nav class="footer-nav">
 				<form
-					action=""
-					method="get">
+					method="post"
+					id="contact_form">
 					<legend>Contact me!</legend>
+					<input
+						type="hidden"
+						name="contact_number" />
 					<fieldset>
-						<label for="fullName">Full name</label>
+						<label for="user_name">
+							Full name
+							<i>*</i>
+						</label>
 						<input
 							type="text"
-							name="guest-name"
-							id="fullName"
+							name="user_name"
+							id="user_name"
 							placeholder="Basch Von Ronsemburg"
 							autocomplete="name"
 							required />
 					</fieldset>
 					<fieldset>
-						<label for="email">Email</label>
+						<label for="user_email">
+							Email
+							<i>*</i>
+						</label>
 						<input
 							type="email"
-							name="email"
-							id="email"
+							name="user_email"
+							id="user_email"
 							placeholder="example@email.com"
+							autocomplete="email"
 							required />
 					</fieldset>
 					<fieldset>
-						<label for="typeForm">Your message</label>
+						<label for="user_message">
+							Your message
+							<i>*</i>
+						</label>
 						<textarea
-							name="type-form"
-							id="typeForm"
+							name="user_message"
+							id="user_message"
 							placeholder="Type your message here&hellip;"
 							required></textarea>
 					</fieldset>
@@ -301,7 +350,8 @@
 						<input
 							type="submit"
 							value="Submit"
-							accesskey="s" />
+							accesskey="s"
+							id="submit_btn" />
 						<input
 							type="reset"
 							value="Reset"
@@ -310,7 +360,115 @@
 				</form>
 				<hr class="footer-separator" />
 				<div class="socials">
-					<!--con-->
+					<h2>MY LINK TREE</h2>
+					<section class="link-tree">
+						<div class="social-links">
+							<div class="envelope">
+								<h4>SOCIAL LINKS:</h4>
+								<span>
+									<a
+										href="https://www.facebook.com/Emanuele.Romano.Omega/"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/facebook.svg"
+											alt="Facebook" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+								<span>
+									<a
+										href="https://www.instagram.com/semplicementeomega/"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/instagram.svg"
+											alt="Instagram" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+								<span>
+									<a
+										href="https://www.threads.net/@semplicementeomega"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/threads.svg"
+											alt="Threads" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+								<span>
+									<a
+										href="https://twitter.com/OmegaSelvatico"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/twitter-x.svg"
+											alt="X (Twitter)" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+								<span>
+									<a
+										href="https://www.linkedin.com/in/emanuele-romano-264634288/"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/linkedin.svg"
+											alt="LinkedIn" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+							</div>
+						</div>
+						<div class="git">
+							<div class="envelope">
+								<h4>GITHUB:</h4>
+								<span>
+									<a
+										href="https://github.com/OmegaER"
+										target="_blank"
+										rel="noopener noreferrer">
+										<img
+											src="assets/img/github.svg"
+											alt="GitHub" />
+									</a>
+									<img
+										src="assets/img/suit-diamond-fill.svg"
+										alt="Link selector"
+										class="selector-effect" />
+								</span>
+							</div>
+						</div>
+					</section>
+					<section class="side-note">
+						<em>
+							This page has been created using HTML, CSS and basic SCSS as a
+							<a
+								href="https://www.start2impact.it/"
+								target="_blank"
+								rel="noopener noreferrer">
+								Start2Impact University
+							</a>
+							project
+						</em>
+					</section>
 				</div>
 			</nav>
 		</footer>

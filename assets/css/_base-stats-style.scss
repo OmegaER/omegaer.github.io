@@ -15,10 +15,10 @@ $font-title: "introrustg-base2line", sans-serif;
 
 //colors
 $dark-color: #111;
-$footer-corners-color: #04091C;
+$footer-mid-color: #04091c;
 $inner-box: #2e465f;
 $logo-p-color: white;
-$primary-color: #262D42;
+$primary-color: #262d42;
 $primary-color-scrollbar: #394362;
 $secondary-color: #063258;
 $secondary-color-scrollbar: #094d88;
@@ -103,6 +103,9 @@ legend {
 }
 h3 {
 	font-size: $h3;
+}
+h4 {
+	font-size: $h4;
 }
 
 p {

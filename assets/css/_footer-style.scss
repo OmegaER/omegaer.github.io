@@ -1,91 +1,228 @@
 footer {
 	align-items: center;
-    background: linear-gradient(135deg, $primary-color, $footer-corners-color, $primary-color);
+	background: linear-gradient(135deg, $primary-color, $footer-mid-color, $primary-color);
 	border-top: $border;
-    display: flex;
+	display: flex;
 	position: relative;
 	height: 50vh;
 	min-height: 414px;
 	width: 100%;
 	.footer-nav {
-        display: flex;
-        justify-content: space-evenly;
-        height: 90%;
-        width: 100%;
-        form {
-            display: flex;
-            font-family: $font-title;
-            justify-content: flex-start;
-            flex-direction: column;
-            padding: 0 1vw;
-            height: 100%;
-            width: 50%;
-            legend {
-                color: $title-color;
-            }
-            fieldset {
-                border: none;
-                display: flex;
-                margin-top: 1vh;
-                &:last-of-type {
-                    height: 100%;
-                }
-                label {
-                    color: $altered-text;
-                    padding-left: 1vw;
-                    font-size: $h5;
-                    width: 35%;
-                }
-                input {
-                    border: $border;
-                    border-radius: $section-title-radius;
-                    box-shadow: $shadow, $shadow-internal;
-                    font-size: $form-font;
-                    padding: 0 0.5vw;
-                    width: 25vw;
-                }
-                textarea {
-                    border: $border;
-                    border-radius: $border-radius;
-                    border-bottom-right-radius: 0;
-                    box-shadow: $shadow, $shadow-internal;
-                    font-size: $form-font;
-                    padding: 0.5vw;
-                    height: 90%;
-                    width: 25vw;
-                }
-            }
-            span {
-                display: flex;
-                justify-content: flex-end;
-                height: 20%;
-                input {
-                    border: $border;
-                    border-radius: $section-title-radius;
-                    box-shadow: $shadow;
-                    font-size: $form-font;
-                    height: 100%;
-                    width: 20%;
-                    &[type=submit] {
-                        background-color: $secondary-color;
-                        color: $title-color;
-                    }
-                    &[type=reset] {
-                        background-color: $primary-color;
-                        color: $altered-text;
-                        margin: 0 2vw;
-                    }
-                }
-            }
-        }
+		display: flex;
+		justify-content: space-evenly;
+		height: 90%;
+		width: 100%;
+		form {
+			display: flex;
+			flex-direction: column;
+			font-family: $font-title;
+			padding: 0 1vw;
+			height: 100%;
+			width: 50%;
+			legend {
+				color: $title-color;
+                text-shadow: $shadow;
+			}
+			fieldset {
+				border: none;
+				display: flex;
+				margin-top: 1vh;
+				&:last-of-type {
+					height: 100%;
+				}
+				label {
+					color: $altered-text;
+					padding-left: 1vw;
+					font-size: $h5;
+                    text-shadow: $shadow;
+					width: 35%;
+					i {
+						color: $title-color;
+						font-style: normal;
+					}
+				}
+				input {
+					border: $border;
+					border-radius: $section-title-radius;
+					box-shadow: $shadow, $shadow-internal;
+					font-size: $form-font;
+					padding: 0 0.5vw;
+					width: 25vw;
+				}
+				textarea {
+					border: $border;
+					border-radius: $border-radius;
+					border-bottom-right-radius: 0;
+					box-shadow: $shadow, $shadow-internal;
+					font-size: $form-font;
+					padding: 0.5vw;
+					height: 90%;
+					width: 25vw;
+				}
+			}
+			span {
+				display: flex;
+				justify-content: flex-end;
+				height: 20%;
+				input {
+					border: $border;
+					border-radius: $section-title-radius;
+					box-shadow: $shadow;
+					font-size: $form-font;
+					height: 100%;
+					width: 20%;
+					&[type="submit"] {
+						background-color: $secondary-color;
+						color: $title-color;
+					}
+					&[type="reset"] {
+						background-color: $primary-color;
+						color: $altered-text;
+						margin: 0 2vw;
+					}
+					&:hover {
+						cursor: pointer;
+					}
+					&:active {
+						-moz-transform: translate(0.2vh, 0.2vw);
+						-ms-transform: translate(0.2vh, 0.2vw);
+						-o-transform: translate(0.2vh, 0.2vw);
+						-webkit-transform: translate(0.2vh, 0.2vw);
+						box-shadow: none;
+						transform: translate(0.2vh, 0.2vw);
+					}
+				}
+			}
+		}
 		.footer-separator {
-            border: none;
-            border-left: $border;
+			border: none;
+			border-left: $border;
 			height: 100%;
 		}
-        .socials {
-            border: $debug; //d
-            width: 50%;
-        }
+		.socials {
+			display: flex;
+			flex-direction: column;
+            padding: 0 1vw;
+			height: 100%;
+			width: 50%;
+			h2 {
+				text-align: right;
+                text-shadow: $shadow;
+			}
+			.link-tree {
+				align-items: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				height: 100%;
+				width: 100%;
+				.social-links {
+					align-items: flex-end;
+					display: flex;
+					height: 100%;
+					width: 90%;
+					.envelope {
+						align-items: flex-end;
+						display: inline-flex;
+						justify-content: space-evenly;
+                        margin-bottom: 1vh;
+                        height: 50%;
+                        width: 100%;
+                        h4 {
+                            text-shadow: $shadow;
+                        }
+						span {
+							align-items: center;
+							display: flex;
+							flex-direction: column-reverse;
+                            justify-content: flex-start;
+                            height: 100%;
+							a {
+								img {
+									width: 2vmax;
+								}
+                                &:hover {
+                                    + .selector-effect {
+                                        visibility: visible;
+                                    }
+                                }
+							}
+                            .selector-effect {
+								filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+                                margin-bottom: 1vh;
+                                visibility: hidden;
+                                width: 1.5vmax;
+							}
+						}
+					}
+				}
+				.git {
+					align-items: flex-start;
+					display: flex;
+					height: 100%;
+					width: 40%;
+					.envelope {
+						align-items: flex-end;
+						display: inline-flex;
+						justify-content: space-evenly;
+                        margin-top: 1vh;
+                        height: 50%;
+                        width: 100%;
+                        h4 {
+                            text-shadow: $shadow;
+                        }
+						span {
+                            align-items: center;
+							display: flex;
+							flex-direction: column-reverse;
+                            justify-content: flex-start;
+                            height: 100%;
+							a {
+								img {
+									width: 2vmax;
+								}
+                                &:hover {
+                                    + .selector-effect {
+                                        visibility: visible;
+                                    }
+                                }
+							}
+                            .selector-effect {
+								filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+                                margin-bottom: 1vh;
+                                visibility: hidden;
+                                width: 1.5vmax;
+							}
+						}
+					}
+				}
+			}
+			.side-note {
+				border-top: $border;
+                color: $altered-text;
+				text-align: right;
+				width: 100%;
+                em {
+                    text-shadow: $shadow;
+                    a {
+                        -moz-transition: 0.5s ease;
+						-o-transition: 0.5s ease;
+						-webkit-transition: 0.5s ease;
+                        color: $logo-p-color;
+                        font-style: normal;
+                        font-weight: bold;
+                        text-decoration: none;
+                        transition: 0.5s ease;
+                        &:hover,
+                        &:visited:hover {
+                            color: $title-color;
+                        }
+                        &:visited {
+							color: $visited-links-perm;
+						}
+                    }
+                }
+			}
+		}
 	}
 }

@@ -226,9 +226,17 @@
 		}
 	}
 	footer {
+		min-height: 828px;
 		.footer-nav {
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: column;
+			height: 95%;
 			form {
+				height: 47.5%;
+				width: 75%;
 				legend {
+					align-self: center;
 					font-size: $h2 * 0.95;
 				}
 				fieldset {
@@ -247,16 +255,22 @@
 					}
 				}
 				span {
-					justify-content: center;
 					margin-top: 1vh;
 					input {
 						font-size: $form-font * 0.95;
 						min-width: 65px;
-						&[type=reset] {
-							margin: 0 0 0 1vw;
-						}
 					}
 				}
+			}
+			.footer-separator {
+				border-bottom: $border;
+				border-left: none;
+				height: 0;
+				width: 75%;
+			}
+			.socials {
+				height: 47.5%;
+				width: 75%;
 			}
 		}
 	}
@@ -665,7 +679,7 @@
 							display: flex;
 							justify-content: space-evenly;
 							margin: 2vh 0;
-							width: 35%;
+							width: 37.5%;
 							.hobby-bullet-effect {
 								color: $title-color;
 								display: block;
