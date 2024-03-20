@@ -1,7 +1,6 @@
-@use "sass:math";
-
 /*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
+	/*Constant: 1.5*/
 	header {
 		border-bottom-right-radius: $border-radius * 1.5;
 		max-height: $header-height-limits * 1.5;
@@ -17,14 +16,6 @@
 					.head-list {
 						.head-list-item {
 							font-size: $h5 * 1.5;
-							&:active,
-							&:visited:active {
-								-moz-transform: translate(3px, 3px);
-								-ms-transform: translate(3px, 3px);
-								-o-transform: translate(3px, 3px);
-								-webkit-transform: translate(3px, 3px);
-								transform: translate(3px, 3px);
-							}
 						}
 						.list-separator {
 							border: $border-lg;
@@ -195,6 +186,42 @@
 	}
 }
 
+@media screen and (max-width: 1756px) {
+	/*Constant: 0.95*/
+}
+
+@media screen and (max-width: 1592px) {
+	/*Constant: 0.9*/
+}
+
+@media screen and (max-width: 1428px) {
+	/*Constant: 0.85*/
+}
+
+@media screen and (max-width: 1264px) {
+	/*Constant: 0.8*/
+}
+
+@media screen and (max-width: 1100px) {
+	/*Constant: 0.75*/
+}
+
+@media screen and (max-width: 936px) {
+	/*Constant: 0.7*/
+}
+
+@media screen and (max-width: 772px) {
+	/*Constant: 0.65*/
+}
+
+@media screen and (max-width: 608px) {
+	/*Constant: 0.6*/
+}
+
+@media screen and (max-width: 444px) {
+	/*Constant: 0.55*/
+}
+
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 @media screen and (max-width: 932px) {
 	header {
@@ -317,6 +344,7 @@
 								font-size: $h4 * 0.95;
 							}
 							.link-group {
+								justify-content: space-evenly;
 								height: 50%;
 								span {
 									a {
@@ -536,14 +564,6 @@
 							margin-top: 0.5vmax;
 							padding: 0 0.5vmax;
 							position: relative;
-							&:active,
-							&:visited:active {
-								-moz-transform: translate(1px, 1px);
-								-ms-transform: translate(1px, 1px);
-								-o-transform: translate(1px, 1px);
-								-webkit-transform: translate(1px, 1px);
-								transform: translate(1px, 1px);
-							}
 						}
 						.list-separator {
 							display: none;
@@ -1172,47 +1192,47 @@
 	.about-me {
 		.greetings {
 			h1 {
-				font-size: math.div($h1, 2);
+				font-size: calc($h1/2);
 			}
 		}
 		.personal-box {
 			.my-name {
 				.name-section-title {
 					h2 {
-						font-size: math.div($h2, 2);
+						font-size: calc($h2/2);
 					}
 				}
 				.name-section-detail {
 					.name-pic-pag {
 						.name-bullets {
 							.name-bullet-effect {
-								font-size: math.div($h3, 2);
+								font-size: calc($h3/2);
 							}
 						}
 					}
 					.add-info {
-						font-size: math.div($h3, 2);
+						font-size: calc($h3/2);
 					}
 				}
 			}
 			.my-hobbies {
 				.hobby-section-title {
 					h2 {
-						font-size: math.div($h2, 2);
+						font-size: calc($h2/2);
 					}
 				}
 				.hobby-section-detail {
 					.hobby-pic-pag {
 						.hobby-bullets {
 							.hobby-bullet-effect {
-								font-size: math.div($h3, 2);
+								font-size: calc($h3/2);
 							}
 						}
 						.hobby-inner {
 							.hobby-slide {
 								.hobby-slide-content {
 									h3 {
-										font-size: math.div($h3, 2);
+										font-size: calc($h3/2);
 									}
 								}
 							}
@@ -1226,20 +1246,20 @@
 		.footer-nav {
 			.socials {
 				h2 {
-					font-size: $h2 * 0.6;
+					font-size: calc($h2/2);
 				}
 				.link-tree {
 					.social-links {
 						.envelope {
 							h4 {
-								font-size: $h4 * 0.6;
+								font-size: calc($h4/2);
 							}
 						}
 					}
 					.git {
 						.envelope {
 							h4 {
-								font-size: $h4 * 0.6;
+								font-size: calc($h4/2);
 							}
 						}
 					}
@@ -1277,6 +1297,7 @@
 
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
+	/*Constant: 0.5=calc(x/2)*/
 	header {
 		min-width: $min-viewport-width;
 		.header-nav {
@@ -1353,7 +1374,7 @@
 		.footer-nav {
 			.socials {
 				h2 {
-					font-size: $h2 * 0.6;
+					font-size: $h2 * 0.45;
 				}
 				.link-tree {
 					.social-links {

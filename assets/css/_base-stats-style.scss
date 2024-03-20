@@ -1,5 +1,3 @@
-@use "sass:math";
-
 @font-face {
 	font-family: "introrustg-base2line";
 	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
@@ -35,12 +33,12 @@ $section-title-radius: 50px;
 
 //font sizes
 $h1: 56px;
-$h2: $h1 * 0.75;
-$h3: $h2 * 0.75;
-$h4: $h3 * 0.9;
-$h5: $h4 * 0.9;
-$normal-font: $h5 * 0.9;
-$form-font: $normal-font * 0.9;
+$h2: $h1 * 0.75;	//42px
+$h3: $h2 * 0.75;	//31.5px (Min-constant = 0.55)
+$h4: $h3 * 0.9;	//28.35px (Min-constant = 0.6)
+$h5: $h4 * 0.9;	//25.515px (Min-constant = 0.65)
+$normal-font: $h5 * 0.9;	//22.9635px (Min-constant = 0.7)
+$form-font: $normal-font * 0.9;	//20.66715px (Min-constant = 0.8)
 
 //other
 $bullet-points-size: 30px;
@@ -68,7 +66,7 @@ $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 }
 ::-webkit-scrollbar-thumb {
 	background: $altered-text;
-	border-radius: math.div($border-radius, 2);
+	border-radius: calc($border-radius/2);
 	&:hover {
 		background: $title-color;
 	}

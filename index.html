@@ -271,8 +271,9 @@
 					<legend>Contact me!</legend>
 					<input
 						type="hidden"
-						name="contact_number"
-						id="contact_number" />
+						name="from_name"
+						value="Emanuele Romano"
+						id="from_name" />
 					<fieldset>
 						<label for="user_name">
 							Full name
@@ -443,13 +444,6 @@
 			type="text/javascript"
 			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<script type="text/javascript">
-			(function () {
-				emailjs.init({
-					publicKey: "GK1P-l5e5eEyCffxK",
-				});
-			})();
-		</script>
-		<script type="text/javascript">
 			const contactForm = document.getElementById("contact_form");
 			const serviceID = "service_y7neroj";
 			const templateID = "template_ygmb70h";
@@ -457,24 +451,28 @@
 			var userName = document.getElementById("user_name");
 			var userEmail = document.getElementById("user_email");
 			var userMessage = document.getElementById("user_message");
-			let contactNumber = 0;
 
+			(function () {
+				emailjs.init({
+					publicKey: "GK1P-l5e5eEyCffxK",
+				});
+			})();
 			window.onload = function () {
 				contactForm.addEventListener("submit", function (event) {
 					event.preventDefault();
-					contactNumber++;
+					submitBtn.value = 'Sending...';
 					emailjs.sendForm(serviceID, templateID, this).then(
 						() => {
 							console.log("SUCCESS!");
-							submitBtn.value = "Sent!";
-							document.getElementById("contact_number").value = contactNumber;
+							alert("Email sent!");
+							submitBtn.value = "Submit";
 							userName.value = "";
 							userEmail.value = "";
 							userMessage.value = "";
 						},
 						(error) => {
 							console.log("FAILED...", error);
-							submitBtn.value = "Retry&hellip;";
+							alert(JSON.stringify(err));
 						}
 					);
 				});

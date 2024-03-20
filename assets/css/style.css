@@ -1,40 +1,40 @@
 @font-face {
-	font-family: "introrustg-base2line";
-	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "introrustg-base2line";
+  src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 * {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-	width: 0.5vw;
+  width: 0.5vw;
 }
 
 ::-webkit-scrollbar-track {
-	background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #999;
-	border-radius: 5px;
+  background: #999;
+  border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: #ab9c87;
+  background: #ab9c87;
 }
 
 body {
-	background-color: #262d42;
-	background-image: url(../img/background-lofi.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #262d42;
+  background-image: url(../img/background-lofi.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 h1,
@@ -43,1515 +43,1533 @@ h3,
 h4,
 h5,
 h6 {
-	color: #ab9c87;
-	font-family: "introrustg-base2line", sans-serif;
-	font-weight: normal;
-	text-align: center;
+  color: #ab9c87;
+  font-family: "introrustg-base2line", sans-serif;
+  font-weight: normal;
+  text-align: center;
 }
 
 h1 {
-	color: #999;
-	font-size: 56px;
+  color: #999;
+  font-size: 56px;
 }
 
 h2,
 legend {
-	font-size: 42px;
+  font-size: 42px;
 }
 
 h3 {
-	font-size: 31.5px;
+  font-size: 31.5px;
 }
 
 h4 {
-	font-size: 28.35px;
+  font-size: 28.35px;
 }
 
 p {
-	color: white;
-	font-size: 22.9635px;
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  color: white;
+  font-size: 22.9635px;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 
 header {
-	background: linear-gradient(to bottom, #063258 0%, #111 100%);
-	position: relative;
-	max-height: 100px;
-	height: 6vmax;
-	min-height: 55px;
-	width: 100%;
+  background: linear-gradient(to bottom, #063258 0%, #111 100%);
+  position: relative;
+  max-height: 100px;
+  height: 6vmax;
+  min-height: 55px;
+  width: 100%;
 }
 header .header-nav {
-	align-items: center;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 1px solid #ab9c87;
-	border-bottom-right-radius: 10px;
-	display: flex;
-	font-family: "introrustg-base2line", sans-serif;
-	justify-content: space-between;
-	padding-left: 1vw;
-	position: relative;
-	height: 100%;
-	width: 100%;
+  align-items: center;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #ab9c87;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  font-family: "introrustg-base2line", sans-serif;
+  justify-content: space-between;
+  padding-left: 1vw;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 header .header-nav .logo-container,
 header .header-nav .head-separator,
 header .header-nav .head-section {
-	display: flex;
+  display: flex;
 }
 header .header-nav .logo-container,
 header .header-nav .head-section {
-	position: inherit;
+  position: inherit;
 }
 header .header-nav .head-separator,
 header .header-nav .head-section {
-	height: 100%;
+  height: 100%;
 }
 header .header-nav .logo-container {
-	align-content: flex-end;
-	justify-content: space-around;
-	text-decoration: none;
+  align-content: flex-end;
+  justify-content: space-around;
+  text-decoration: none;
 }
 header .header-nav .logo-container .logo-img {
-	display: flex;
+  display: flex;
 }
 header .header-nav .logo-container .logo-img .logo-alt {
-	-o-object-fit: contain;
-	object-fit: contain;
-	width: 7vmax;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 7vmax;
 }
 header .header-nav .logo-container em {
-	align-self: flex-end;
-	color: white;
-	display: block;
-	font-size: 4vmax;
+  align-self: flex-end;
+  color: white;
+  display: block;
+  font-size: 4vmax;
 }
 header .header-nav .head-separator {
-	border: none;
-	border-right: 1px solid #ab9c87;
-	border-radius: 10px;
-	position: relative;
-	width: 2vw;
+  border: none;
+  border-right: 1px solid #ab9c87;
+  border-radius: 10px;
+  position: relative;
+  width: 2vw;
 }
 header .header-nav .head-section {
-	align-items: center;
-	justify-content: flex-end;
-	width: 80vw;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80vw;
 }
 header .header-nav .head-section .head-menu {
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 header .header-nav .head-section .head-menu .head-menu-btn {
-	display: none;
+  display: none;
 }
 header .header-nav .head-section .head-menu .head-menu-btn .menu-icon {
-	display: none;
-	filter: invert(1);
+  display: none;
+  filter: invert(1);
 }
 header .header-nav .head-section .head-menu .head-menu-btn,
 header .header-nav .head-section .head-menu #expandList {
-	display: none;
+  display: none;
 }
 header .header-nav .head-section .head-menu .head-list {
-	align-items: center;
-	display: flex;
-	justify-content: space-evenly;
-	width: 85%;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 85%;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: white;
-	font-size: 25.515px;
-	text-align: center;
-	text-decoration: none;
-	transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  color: white;
+  font-size: 25.515px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s ease;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item:hover {
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
-header .header-nav .head-section .head-menu .head-list .head-list-item:active,
-header .header-nav .head-section .head-menu .head-list .head-list-item:visited:active {
-	-moz-transform: translate(0.2vh, 0.2vw);
-	-ms-transform: translate(0.2vh, 0.2vw);
-	-o-transform: translate(0.2vh, 0.2vw);
-	-webkit-transform: translate(0.2vh, 0.2vw);
-	color: #999;
-	text-shadow: none;
-	transform: translate(0.2vh, 0.2vw);
+header .header-nav .head-section .head-menu .head-list .head-list-item:active, header .header-nav .head-section .head-menu .head-list .head-list-item:visited:active {
+  -moz-transform: translate(0.2vh, 0.2vw);
+  -ms-transform: translate(0.2vh, 0.2vw);
+  -o-transform: translate(0.2vh, 0.2vw);
+  -webkit-transform: translate(0.2vh, 0.2vw);
+  color: #999;
+  text-shadow: none;
+  transform: translate(0.2vh, 0.2vw);
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item:visited {
-	color: #d0d0d0;
+  color: #d0d0d0;
 }
-header .header-nav .head-section .head-menu .head-list .head-list-item:hover,
-header .header-nav .head-section .head-menu .head-list .head-list-item:visited:hover {
-	color: #ab9c87;
+header .header-nav .head-section .head-menu .head-list .head-list-item:hover, header .header-nav .head-section .head-menu .head-list .head-list-item:visited:hover {
+  color: #ab9c87;
 }
 header .header-nav .head-section .head-menu .head-list .list-separator {
-	border: 1px solid #ab9c87;
-	height: 2vmax;
+  border: 1px solid #ab9c87;
+  height: 2vmax;
 }
 header .header-nav .head-section .head-cont-separator,
 header .header-nav .head-section .lang-stg {
-	position: inherit;
-	height: 100%;
+  position: inherit;
+  height: 100%;
 }
 header .header-nav .head-section .head-cont-separator {
-	border: none;
-	border-right: 1px solid #ab9c87;
+  border: none;
+  border-right: 1px solid #ab9c87;
 }
 header .header-nav .head-section .lang-stg {
-	align-items: center;
-	background: inherit;
-	display: flex;
-	justify-content: center;
-	padding: 0 1vw;
+  align-items: center;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  padding: 0 1vw;
 }
 header .header-nav .head-section .lang-stg .lang-btn,
 header .header-nav .head-section .lang-stg .lang-content {
-	align-items: center;
+  align-items: center;
 }
 header .header-nav .head-section .lang-stg .lang-btn {
-	-moz-transition: 0.5s ease;
-	-ms-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	border: 1px solid transparent;
-	border-radius: 10px;
-	cursor: pointer;
-	display: flex;
-	padding: 0.5vh 0.5vw;
-	transition: 0.5s ease;
-	z-index: 2;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5vh 0.5vw;
+  transition: 0.5s ease;
+  z-index: 2;
 }
 header .header-nav .head-section .lang-stg .lang-btn:hover {
-	border: 1px solid #ab9c87;
-	box-shadow: 0.5vh 0.5vw 1vmax #111;
+  border: 1px solid #ab9c87;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 header .header-nav .head-section .lang-stg .lang-btn .lang-btn-alt {
-	filter: invert(1);
-	width: 3vmax;
+  filter: invert(1);
+  width: 3vmax;
 }
 header .header-nav .head-section .lang-stg .lang-btn span {
-	color: white;
-	font-size: 22.9635px;
+  color: white;
+  font-size: 22.9635px;
 }
 header .header-nav .head-section .lang-stg #expandLang {
-	display: none;
+  display: none;
 }
 header .header-nav .head-section .lang-stg #expandLang:checked ~ .lang-btn {
-	border: 1px solid transparent;
-	box-shadow: none;
-	transition: none;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: none;
 }
 header .header-nav .head-section .lang-stg #expandLang:checked ~ .lang-content {
-	display: flex;
+  display: flex;
 }
 header .header-nav .head-section .lang-stg .lang-content {
-	background-color: linear-gradient(to bottom, #063258 0%, black 100%);
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 1px solid #ab9c87;
-	border-right: none;
-	border-top: none;
-	border-bottom-right-radius: 10px;
-	display: none;
-	flex-direction: column;
-	justify-content: flex-end;
-	padding: 0 1vw 1vmax 1vw;
-	position: absolute;
-	z-index: 1;
-	height: 14vmax;
-	left: 0;
-	right: 0;
-	top: 0;
+  background-color: linear-gradient(to bottom, #063258 0%, black 100%);
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ab9c87;
+  border-right: none;
+  border-top: none;
+  border-bottom-right-radius: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 1vw 1vmax 1vw;
+  position: absolute;
+  z-index: 1;
+  height: 14vmax;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 header .header-nav .head-section .lang-stg .lang-content .lang-item {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 1vmax;
-	box-shadow: 0.5vh 0.5vw 1vmax #111;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1vmax;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-alt {
-	width: 2vmax;
+  width: 2vmax;
 }
 
 .about-me {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	position: relative;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 .about-me .greetings {
-	align-items: center;
-	background-color: #111;
-	display: flex;
-	justify-content: center;
-	height: 91vh;
-	min-height: 440px;
-	width: 100%;
+  align-items: center;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  height: 91vh;
+  min-height: 440px;
+  width: 100%;
 }
 .about-me .transition {
-	background: linear-gradient(to bottom, #111 0%, transparent 100%);
-	border: none;
-	height: 10vh;
-	width: 100%;
+  background: linear-gradient(to bottom, #111 0%, transparent 100%);
+  border: none;
+  height: 10vh;
+  width: 100%;
 }
 .about-me .personal-box {
-	align-items: center;
-	background-color: #2e465f;
-	background-image: url(../img/background-section.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 1px solid #ab9c87;
-	border-radius: 50px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-bottom: 5vh;
-	position: inherit;
-	width: 90%;
+  align-items: center;
+  background-color: #2e465f;
+  background-image: url(../img/background-section.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ab9c87;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5vh;
+  position: inherit;
+  width: 90%;
 }
 .about-me .personal-box .my-name {
-	display: flex;
-	flex-direction: column;
-	position: inherit;
-	height: 110vh;
-	min-height: 650px;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  height: 110vh;
+  min-height: 650px;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-title {
-	align-items: center;
-	background-color: darkslategray;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 1px solid #ab9c87;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-	display: flex;
-	justify-content: center;
-	padding: 1vh 0;
-	width: 100%;
+  align-items: center;
+  background-color: darkslategray;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #ab9c87;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 1vh 0;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-title h2 br {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-name .name-section-detail {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	position: inherit;
-	height: 100%;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  height: 100%;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-slide-control {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
-	display: flex;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content {
-	display: flex;
-	justify-content: center;
-	position: inherit;
+  display: flex;
+  justify-content: center;
+  position: inherit;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn {
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-	border-radius: 10px;
-	box-shadow: 0.5vh 0.5vw 1vmax #111;
-	position: inherit;
-	-o-object-fit: cover;
-	object-fit: cover;
-	height: 75vh;
-	min-height: 410px;
-	max-width: 450px;
-	width: 33vw;
-	min-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  position: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 75vh;
+  min-height: 410px;
+  max-width: 450px;
+  width: 33vw;
+  min-width: 280px;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
-	height: 8vmax;
+  height: 8vmax;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
-	height: 13vmax;
+  height: 13vmax;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
-	-moz-transition: height 0.5s ease;
-	-o-transition: height 0.5s ease;
-	-webkit-transition: height 0.5s ease;
-	align-items: flex-start;
-	background-color: rgba(0, 0, 0, 0.7);
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	display: flex;
-	justify-content: center;
-	overflow-y: scroll;
-	position: absolute;
-	transition: height 0.5s ease;
-	height: 0;
-	width: 100%;
-	bottom: 0;
+  -moz-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  -webkit-transition: height 0.5s ease;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  position: absolute;
+  transition: height 0.5s ease;
+  height: 0;
+  width: 100%;
+  bottom: 0;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-	display: block;
-	padding: 1vh 1vw;
-	position: relative;
-	text-align: justify;
+  display: block;
+  padding: 1vh 1vw;
+  position: relative;
+  text-align: justify;
 }
 .about-me .personal-box .my-name .name-section-detail .add-info {
-	align-self: flex-end;
-	background: radial-gradient(#555 -100%, transparent 100%);
-	border-radius: 100%;
-	font-size: 31.5px;
-	text-align: right;
-	padding: 0.5vh 1vw;
-	max-width: 75%;
+  align-self: flex-end;
+  background: radial-gradient(#555 -100%, transparent 100%);
+  border-radius: 100%;
+  font-size: 31.5px;
+  text-align: right;
+  padding: 0.5vh 1vw;
+  max-width: 75%;
 }
 .about-me .personal-box .my-hobbies {
-	display: flex;
-	flex-direction: column;
-	position: inherit;
-	height: 110vh;
-	min-height: 648px;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  height: 110vh;
+  min-height: 648px;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-title {
-	align-items: center;
-	background-color: #063258;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border-bottom: 1px solid #ab9c87;
-	border-top: 1px solid #ab9c87;
-	border-top-left-radius: 50px;
-	border-top-right-radius: 50px;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 1vh;
-	padding-top: 1vh;
-	position: inherit;
-	width: 100%;
+  align-items: center;
+  background-color: #063258;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid #ab9c87;
+  border-top: 1px solid #ab9c87;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	position: inherit;
-	height: 100%;
-	min-height: 440px;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: inherit;
+  height: 100%;
+  min-height: 440px;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-slide-control {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
-	display: none;
+  display: none;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
-	display: flex;
-	justify-content: space-evenly;
-	position: inherit;
-	width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 1.5vh;
-	position: inherit;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.5vh;
+  position: inherit;
+  width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-	border: 1px solid #ab9c87;
-	border-radius: 10px;
-	background-color: #063258;
-	background-image: url(../img/background-title.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	box-shadow: 0.5vh 0.5vw 1vmax #111;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	position: inherit;
-	height: 75vh;
-	min-height: 390px;
-	width: 20vw;
-	min-width: 210px;
+  border: 1px solid #ab9c87;
+  border-radius: 10px;
+  background-color: #063258;
+  background-image: url(../img/background-title.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: inherit;
+  height: 75vh;
+  min-height: 390px;
+  width: 20vw;
+  min-width: 210px;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-	border-bottom: 1px solid #ab9c87;
+  border-bottom: 1px solid #ab9c87;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
-	-webkit-mask-image: linear-gradient(#063258 80%, transparent);
-	mask-image: linear-gradient(#063258 80%, transparent);
-	-o-object-fit: cover;
-	object-fit: cover;
+  -webkit-mask-image: linear-gradient(#063258 80%, transparent);
+  mask-image: linear-gradient(#063258 80%, transparent);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-	overflow-y: scroll;
-	padding: 1vh 1vw;
+  overflow-y: scroll;
+  padding: 1vh 1vw;
 }
 
 footer {
-	align-items: center;
-	background: linear-gradient(135deg, #262d42, #04091c, #262d42);
-	border-top: 1px solid #ab9c87;
-	display: flex;
-	position: relative;
-	height: 50vh;
-	min-height: 414px;
-	width: 100%;
+  align-items: center;
+  background: linear-gradient(135deg, #262d42, #04091c, #262d42);
+  border-top: 1px solid #ab9c87;
+  display: flex;
+  position: relative;
+  height: 50vh;
+  min-height: 414px;
+  width: 100%;
 }
 footer .footer-nav {
-	display: flex;
-	justify-content: space-evenly;
-	height: 90%;
-	width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  height: 90%;
+  width: 100%;
 }
 footer .footer-nav form {
-	display: flex;
-	flex-direction: column;
-	font-family: "introrustg-base2line", sans-serif;
-	padding: 0 1vw;
-	height: 100%;
-	width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-family: "introrustg-base2line", sans-serif;
+  padding: 0 1vw;
+  height: 100%;
+  width: 50%;
 }
 footer .footer-nav form legend {
-	color: #ab9c87;
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  color: #ab9c87;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 footer .footer-nav form fieldset {
-	border: none;
-	display: flex;
-	margin-top: 1vh;
+  border: none;
+  display: flex;
+  margin-top: 1vh;
 }
 footer .footer-nav form fieldset:last-of-type {
-	height: 100%;
+  height: 100%;
 }
 footer .footer-nav form fieldset label {
-	color: #999;
-	padding-left: 1vw;
-	font-size: 25.515px;
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
-	width: 35%;
+  color: #999;
+  padding-left: 1vw;
+  font-size: 25.515px;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 35%;
 }
 footer .footer-nav form fieldset label i {
-	color: #ab9c87;
-	font-style: normal;
+  color: #ab9c87;
+  font-style: normal;
 }
 footer .footer-nav form fieldset input {
-	border: 1px solid #ab9c87;
-	border-radius: 50px;
-	box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
-	font-size: 20.66715px;
-	padding: 0 0.5vw;
-	width: 25vw;
+  border: 1px solid #ab9c87;
+  border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  font-size: 20.66715px;
+  padding: 0 0.5vw;
+  width: 25vw;
 }
 footer .footer-nav form fieldset textarea {
-	border: 1px solid #ab9c87;
-	border-radius: 10px;
-	border-bottom-right-radius: 0;
-	box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
-	font-size: 20.66715px;
-	padding: 0.5vw;
-	height: 90%;
-	width: 25vw;
+  border: 1px solid #ab9c87;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  font-size: 20.66715px;
+  padding: 0.5vw;
+  height: 90%;
+  width: 25vw;
 }
 footer .footer-nav form span {
-	display: flex;
-	justify-content: flex-end;
-	height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  height: 20%;
 }
 footer .footer-nav form span input {
-	border: 1px solid #ab9c87;
-	border-radius: 50px;
-	box-shadow: 0.5vh 0.5vw 1vmax #111;
-	font-size: 20.66715px;
-	height: 100%;
-	width: 20%;
+  border: 1px solid #ab9c87;
+  border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  font-size: 20.66715px;
+  height: 100%;
+  width: 20%;
 }
-footer .footer-nav form span input[type="submit"] {
-	background-color: #063258;
-	color: #ab9c87;
+footer .footer-nav form span input[type=submit] {
+  background-color: #063258;
+  color: #ab9c87;
 }
-footer .footer-nav form span input[type="reset"] {
-	background-color: #262d42;
-	color: #999;
-	margin: 0 2vw;
+footer .footer-nav form span input[type=reset] {
+  background-color: #262d42;
+  color: #999;
+  margin: 0 2vw;
 }
 footer .footer-nav form span input:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 footer .footer-nav form span input:active {
-	-moz-transform: translate(0.2vh, 0.2vw);
-	-ms-transform: translate(0.2vh, 0.2vw);
-	-o-transform: translate(0.2vh, 0.2vw);
-	-webkit-transform: translate(0.2vh, 0.2vw);
-	box-shadow: none;
-	transform: translate(0.2vh, 0.2vw);
+  -moz-transform: translate(0.2vh, 0.2vw);
+  -ms-transform: translate(0.2vh, 0.2vw);
+  -o-transform: translate(0.2vh, 0.2vw);
+  -webkit-transform: translate(0.2vh, 0.2vw);
+  box-shadow: none;
+  transform: translate(0.2vh, 0.2vw);
 }
 footer .footer-nav .footer-separator {
-	border: none;
-	border-left: 1px solid #ab9c87;
-	height: 100%;
+  border: none;
+  border-left: 1px solid #ab9c87;
+  height: 100%;
 }
 footer .footer-nav .socials {
-	display: flex;
-	flex-direction: column;
-	padding: 0 1vw;
-	height: 100%;
-	width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vw;
+  height: 100%;
+  width: 50%;
 }
 footer .footer-nav .socials h2 {
-	text-align: right;
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-align: right;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 footer .footer-nav .socials .link-tree {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 100%;
-	width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links {
-	align-items: flex-end;
-	display: flex;
-	height: 50%;
-	width: 90%;
+  align-items: flex-end;
+  display: flex;
+  height: 50%;
+  width: 90%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope {
-	align-items: flex-end;
-	display: inline-flex;
-	justify-content: space-evenly;
-	margin-bottom: 1vh;
-	height: 50%;
-	width: 100%;
+  align-items: flex-end;
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-bottom: 1vh;
+  height: 50%;
+  width: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
-	width: 100%;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
-	display: inline-flex;
-	justify-content: space-evenly;
-	height: 100%;
-	width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span {
-	align-items: center;
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: flex-start;
-	height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  height: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:first-of-type a:hover {
-	filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%);
+  filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:nth-of-type(2) a:hover {
-	filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%);
+  filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:nth-of-type(3) a:hover {
-	filter: invert(0%) sepia(17%) saturate(1102%) hue-rotate(353deg) brightness(92%) contrast(87%);
+  filter: invert(0%) sepia(17%) saturate(1102%) hue-rotate(353deg) brightness(92%) contrast(87%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:nth-of-type(4) a:hover {
-	filter: invert(100%);
+  filter: invert(100%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:last-of-type a:hover {
-	filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%);
+  filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a {
-	transition: filter 0.5s ease;
+  transition: filter 0.5s ease;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
-	transition: width 0.5s ease;
-	width: 3vmax;
-	min-width: 16px;
+  transition: width 0.5s ease;
+  width: 3vmax;
+  min-width: 16px;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img:hover {
-	width: 3.5vmax;
+  width: 3.5vmax;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a:hover + .selector-effect {
-	height: 100%;
+  height: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span .selector-effect {
-	-moz-transition: height 0.7s ease;
-	-o-transition: height 0.7s ease;
-	-webkit-transition: height 0.7s ease;
-	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
-	margin-bottom: 1vh;
-	transition: height 0.7s ease;
-	height: 0;
-	width: 1.5vmax;
+  -moz-transition: height 0.7s ease;
+  -o-transition: height 0.7s ease;
+  -webkit-transition: height 0.7s ease;
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+  margin-bottom: 1vh;
+  transition: height 0.7s ease;
+  height: 0;
+  width: 1.5vmax;
 }
 footer .footer-nav .socials .link-tree .git {
-	align-items: flex-start;
-	display: flex;
-	height: 50%;
-	width: 40%;
+  align-items: flex-start;
+  display: flex;
+  height: 50%;
+  width: 40%;
 }
 footer .footer-nav .socials .link-tree .git .envelope {
-	align-items: flex-end;
-	display: inline-flex;
-	justify-content: space-evenly;
-	margin-top: 1vh;
-	height: 50%;
-	width: 100%;
+  align-items: flex-end;
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin-top: 1vh;
+  height: 50%;
+  width: 100%;
 }
 footer .footer-nav .socials .link-tree .git .envelope h4 {
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 footer .footer-nav .socials .link-tree .git .envelope span {
-	align-items: center;
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: flex-start;
-	height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  height: 100%;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a {
-	transition: filter 0.5s ease;
+  transition: filter 0.5s ease;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img {
-	transition: width 0.5s ease;
-	width: 3vmax;
-	min-width: 16px;
+  transition: width 0.5s ease;
+  width: 3vmax;
+  min-width: 16px;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img:hover {
-	width: 3.5vmax;
+  width: 3.5vmax;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a:hover {
-	filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
+  filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
 }
 footer .footer-nav .socials .link-tree .git .envelope span a:hover + .selector-effect {
-	height: 100%;
+  height: 100%;
 }
 footer .footer-nav .socials .link-tree .git .envelope span .selector-effect {
-	-moz-transition: height 0.7s ease;
-	-o-transition: height 0.7s ease;
-	-webkit-transition: height 0.7s ease;
-	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
-	margin-bottom: 1vh;
-	transition: height 0.7s ease;
-	height: 0;
-	width: 1.5vmax;
+  -moz-transition: height 0.7s ease;
+  -o-transition: height 0.7s ease;
+  -webkit-transition: height 0.7s ease;
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+  margin-bottom: 1vh;
+  transition: height 0.7s ease;
+  height: 0;
+  width: 1.5vmax;
 }
 footer .footer-nav .socials .side-note {
-	border-top: 1px solid #ab9c87;
-	color: #999;
-	text-align: right;
-	width: 100%;
+  border-top: 1px solid #ab9c87;
+  color: #999;
+  text-align: right;
+  width: 100%;
 }
 footer .footer-nav .socials .side-note em {
-	text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
 }
 footer .footer-nav .socials .side-note em a {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: white;
-	font-style: normal;
-	font-weight: bold;
-	text-decoration: none;
-	transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.5s ease;
 }
-footer .footer-nav .socials .side-note em a:hover,
-footer .footer-nav .socials .side-note em a:visited:hover {
-	color: #ab9c87;
+footer .footer-nav .socials .side-note em a:hover, footer .footer-nav .socials .side-note em a:visited:hover {
+  color: #ab9c87;
 }
 footer .footer-nav .socials .side-note em a:visited {
-	color: #d0d0d0;
+  color: #d0d0d0;
 }
 
 /*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
-	header {
-		border-bottom-right-radius: 15px;
-		max-height: 150px;
-	}
-	header .header-nav {
-		border-bottom: 2px double #ab9c87;
-		border-bottom-right-radius: 15px;
-	}
-	header .header-nav .head-separator {
-		border-right: 2px double #ab9c87;
-		border-radius: 15px;
-	}
-	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		font-size: 38.2725px;
-	}
-	header .header-nav .head-section .head-menu .head-list .head-list-item:active,
-	header .header-nav .head-section .head-menu .head-list .head-list-item:visited:active {
-		transform: translate(3px, 3px);
-	}
-	header .header-nav .head-section .head-menu .head-list .list-separator {
-		border: 2px double #ab9c87;
-	}
-	header .header-nav .head-section .head-cont-separator {
-		border-right: 2px double #ab9c87;
-	}
-	header .header-nav .head-section .lang-stg .lang-btn {
-		border-radius: 15px;
-	}
-	header .header-nav .head-section .lang-stg .lang-btn:hover {
-		border: 2px double #ab9c87;
-	}
-	header .header-nav .head-section .lang-stg .lang-btn span {
-		font-size: 34.44525px;
-	}
-	header .header-nav .head-section .lang-stg .lang-content {
-		border: 2px double #ab9c87;
-		border-bottom-right-radius: 15px;
-	}
-	.about-me .greetings h1 {
-		font-size: 84px;
-	}
-	.about-me .personal-box {
-		border: 2px double #ab9c87;
-		border-radius: 75px;
-	}
-	.about-me .personal-box .my-name {
-		min-height: 975px;
-	}
-	.about-me .personal-box .my-name .name-section-title {
-		border-bottom: 2px double #ab9c87;
-		border-top-left-radius: 75px;
-		border-top-right-radius: 75px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 63px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-		border-radius: 15px;
-		min-height: 615px;
-		max-width: 675px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
-		border-bottom-left-radius: 15px;
-		border-bottom-right-radius: 15px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
-		font-size: 34.44525px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 47.25px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title {
-		border-bottom: 2px double #ab9c87;
-		border-top: 2px double #ab9c87;
-		border-top-left-radius: 75px;
-		border-top-right-radius: 75px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 63px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-		border: 2px double #ab9c87;
-		border-radius: 15px;
-		min-height: 585px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		border-bottom: 2px double #ab9c87;
-		font-size: 47.25px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-		font-size: 34.44525px;
-	}
-	footer {
-		border-top: 2px double #ab9c87;
-		min-height: 621px;
-	}
-	footer .footer-nav form legend {
-		font-size: 63px;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 38.2725px;
-	}
-	footer .footer-nav form fieldset input {
-		border-radius: 75px;
-		font-size: 31.000725px;
-	}
-	footer .footer-nav form fieldset textarea {
-		border-radius: 15px;
-		border-bottom-right-radius: 0;
-		font-size: 31.000725px;
-	}
-	footer .footer-nav form span input {
-		border: 2px double #ab9c87;
-		border-radius: 75px;
-		font-size: 31.000725px;
-	}
-	footer .footer-nav .footer-separator {
-		border: none;
-		border-left: 2px double #ab9c87;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 63px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 42.525px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 42.525px;
-	}
-	footer .footer-nav .socials .side-note {
-		border-top: 2px double #ab9c87;
-		font-size: 24px;
-	}
+  /*Constant: 1.5*/
+  header {
+    border-bottom-right-radius: 15px;
+    max-height: 150px;
+  }
+  header .header-nav {
+    border-bottom: 2px double #ab9c87;
+    border-bottom-right-radius: 15px;
+  }
+  header .header-nav .head-separator {
+    border-right: 2px double #ab9c87;
+    border-radius: 15px;
+  }
+  header .header-nav .head-section .head-menu .head-list .head-list-item {
+    font-size: 38.2725px;
+  }
+  header .header-nav .head-section .head-menu .head-list .list-separator {
+    border: 2px double #ab9c87;
+  }
+  header .header-nav .head-section .head-cont-separator {
+    border-right: 2px double #ab9c87;
+  }
+  header .header-nav .head-section .lang-stg .lang-btn {
+    border-radius: 15px;
+  }
+  header .header-nav .head-section .lang-stg .lang-btn:hover {
+    border: 2px double #ab9c87;
+  }
+  header .header-nav .head-section .lang-stg .lang-btn span {
+    font-size: 34.44525px;
+  }
+  header .header-nav .head-section .lang-stg .lang-content {
+    border: 2px double #ab9c87;
+    border-bottom-right-radius: 15px;
+  }
+  .about-me .greetings h1 {
+    font-size: 84px;
+  }
+  .about-me .personal-box {
+    border: 2px double #ab9c87;
+    border-radius: 75px;
+  }
+  .about-me .personal-box .my-name {
+    min-height: 975px;
+  }
+  .about-me .personal-box .my-name .name-section-title {
+    border-bottom: 2px double #ab9c87;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 63px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    border-radius: 15px;
+    min-height: 615px;
+    max-width: 675px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+    font-size: 34.44525px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 47.25px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title {
+    border-bottom: 2px double #ab9c87;
+    border-top: 2px double #ab9c87;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 63px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+    border: 2px double #ab9c87;
+    border-radius: 15px;
+    min-height: 585px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    border-bottom: 2px double #ab9c87;
+    font-size: 47.25px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+    font-size: 34.44525px;
+  }
+  footer {
+    border-top: 2px double #ab9c87;
+    min-height: 621px;
+  }
+  footer .footer-nav form legend {
+    font-size: 63px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 38.2725px;
+  }
+  footer .footer-nav form fieldset input {
+    border-radius: 75px;
+    font-size: 31.000725px;
+  }
+  footer .footer-nav form fieldset textarea {
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    font-size: 31.000725px;
+  }
+  footer .footer-nav form span input {
+    border: 2px double #ab9c87;
+    border-radius: 75px;
+    font-size: 31.000725px;
+  }
+  footer .footer-nav .footer-separator {
+    border: none;
+    border-left: 2px double #ab9c87;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 63px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 42.525px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 42.525px;
+  }
+  footer .footer-nav .socials .side-note {
+    border-top: 2px double #ab9c87;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1756px) {
+  /*Constant: 0.95*/
+}
+@media screen and (max-width: 1592px) {
+  /*Constant: 0.9*/
+}
+@media screen and (max-width: 1428px) {
+  /*Constant: 0.85*/
+}
+@media screen and (max-width: 1264px) {
+  /*Constant: 0.8*/
+}
+@media screen and (max-width: 1100px) {
+  /*Constant: 0.75*/
+}
+@media screen and (max-width: 936px) {
+  /*Constant: 0.7*/
+}
+@media screen and (max-width: 772px) {
+  /*Constant: 0.65*/
+}
+@media screen and (max-width: 608px) {
+  /*Constant: 0.6*/
+}
+@media screen and (max-width: 444px) {
+  /*Constant: 0.55*/
 }
 /*------------------------------------------------------------------WIDTH---------------------------------------------------------------------*/
 @media screen and (max-width: 932px) {
-	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		font-size: 24.23925px;
-	}
-	.about-me .greetings h1 {
-		font-size: 53.2px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 39.9px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 29.925px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 39.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 29.925px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-		font-size: 21.815325px;
-	}
-	footer {
-		min-height: 828px;
-	}
-	footer .footer-nav {
-		align-items: center;
-		justify-content: space-between;
-		flex-direction: column;
-		height: 95%;
-	}
-	footer .footer-nav form {
-		height: 47.5%;
-		width: 75%;
-	}
-	footer .footer-nav form legend {
-		align-self: center;
-		font-size: 39.9px;
-	}
-	footer .footer-nav form fieldset {
-		flex-direction: column;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 24.23925px;
-		width: 100%;
-	}
-	footer .footer-nav form fieldset input {
-		font-size: 19.6337925px;
-		width: 100%;
-	}
-	footer .footer-nav form fieldset textarea {
-		font-size: 19.6337925px;
-		width: 100%;
-	}
-	footer .footer-nav form span {
-		margin-top: 1vh;
-	}
-	footer .footer-nav form span input {
-		font-size: 19.6337925px;
-		min-width: 65px;
-	}
-	footer .footer-nav .footer-separator {
-		border-bottom: 1px solid #ab9c87;
-		border-left: none;
-		height: 0;
-		width: 75%;
-	}
-	footer .footer-nav .socials {
-		height: 47.5%;
-		width: 90%;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 39.9px;
-		text-align: center;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-bottom: 0;
-		margin-top: 1vh;
-		height: 90%;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 26.9325px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
-		height: 50%;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
-		width: 4vmax;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img:hover {
-		width: 5vmax;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span .selector-effect {
-		width: 3vmax;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope {
-		height: 70%;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 26.9325px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span {
-		margin-left: 1vw;
-		height: 50%;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span a img {
-		width: 4vmax;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span a img:hover {
-		width: 5vmax;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span .selector-effect {
-		width: 3vmax;
-	}
+  header .header-nav .head-section .head-menu .head-list .head-list-item {
+    font-size: 24.23925px;
+  }
+  .about-me .greetings h1 {
+    font-size: 53.2px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 39.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 29.925px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 39.9px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 29.925px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+    font-size: 21.815325px;
+  }
+  footer {
+    min-height: 828px;
+  }
+  footer .footer-nav {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 95%;
+  }
+  footer .footer-nav form {
+    height: 47.5%;
+    width: 75%;
+  }
+  footer .footer-nav form legend {
+    align-self: center;
+    font-size: 39.9px;
+  }
+  footer .footer-nav form fieldset {
+    flex-direction: column;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 24.23925px;
+    width: 100%;
+  }
+  footer .footer-nav form fieldset input {
+    font-size: 19.6337925px;
+    width: 100%;
+  }
+  footer .footer-nav form fieldset textarea {
+    font-size: 19.6337925px;
+    width: 100%;
+  }
+  footer .footer-nav form span {
+    margin-top: 1vh;
+  }
+  footer .footer-nav form span input {
+    font-size: 19.6337925px;
+    min-width: 65px;
+  }
+  footer .footer-nav .footer-separator {
+    border-bottom: 1px solid #ab9c87;
+    border-left: none;
+    height: 0;
+    width: 75%;
+  }
+  footer .footer-nav .socials {
+    height: 47.5%;
+    width: 90%;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 39.9px;
+    text-align: center;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 1vh;
+    height: 90%;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 26.9325px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
+    justify-content: space-evenly;
+    height: 50%;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
+    width: 4vmax;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img:hover {
+    width: 5vmax;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope .link-group span .selector-effect {
+    width: 3vmax;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope {
+    height: 70%;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 26.9325px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope span {
+    margin-left: 1vw;
+    height: 50%;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope span a img {
+    width: 4vmax;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope span a img:hover {
+    width: 5vmax;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope span .selector-effect {
+    width: 3vmax;
+  }
 }
 @media screen and (max-width: 820px) {
-	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		font-size: 22.9635px;
-	}
-	.about-me .greetings h1 {
-		font-size: 50.4px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 37.8px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 28.35px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 37.8px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 28.35px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-		font-size: 20.66715px;
-	}
-	footer .footer-nav form legend {
-		font-size: 37.8px;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 22.9635px;
-	}
-	footer .footer-nav form fieldset input {
-		font-size: 18.600435px;
-	}
-	footer .footer-nav form fieldset textarea {
-		font-size: 18.600435px;
-	}
-	footer .footer-nav form span input {
-		font-size: 18.600435px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 37.8px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 25.515px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 25.515px;
-	}
+  header .header-nav .head-section .head-menu .head-list .head-list-item {
+    font-size: 22.9635px;
+  }
+  .about-me .greetings h1 {
+    font-size: 50.4px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 37.8px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 28.35px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 37.8px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 28.35px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+    font-size: 20.66715px;
+  }
+  footer .footer-nav form legend {
+    font-size: 37.8px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 22.9635px;
+  }
+  footer .footer-nav form fieldset input {
+    font-size: 18.600435px;
+  }
+  footer .footer-nav form fieldset textarea {
+    font-size: 18.600435px;
+  }
+  footer .footer-nav form span input {
+    font-size: 18.600435px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 37.8px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 25.515px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 25.515px;
+  }
 }
 @media screen and (max-width: 768px) {
-	header .header-nav .head-section {
-		flex-direction: row-reverse;
-		justify-content: flex-start;
-	}
-	header .header-nav .head-section .head-menu {
-		align-items: flex-end;
-		border: 1px solid #ab9c87;
-		border-radius: 10px;
-		display: flex;
-		flex-direction: column;
-		margin: 0 1vw;
-		position: relative;
-		width: auto;
-	}
-	header .header-nav .head-section .head-menu .head-menu-btn,
-	header .header-nav .head-section .head-menu .head-list {
-		display: flex;
-	}
-	header .header-nav .head-section .head-menu .head-menu-btn {
-		cursor: pointer;
-		border-radius: 10px;
-		z-index: 2;
-	}
-	header .header-nav .head-section .head-menu .head-menu-btn .menu-icon {
-		display: block;
-		width: 4vmax;
-	}
-	header .header-nav .head-section .head-menu .head-menu-btn:active {
-		background-color: rgba(0, 0, 0, 0.5);
-	}
-	header .header-nav .head-section .head-menu #expandList {
-		display: none;
-	}
-	header .header-nav .head-section .head-menu #expandList:checked ~ .head-list {
-		display: flex;
-		height: 90px;
-	}
-	header .header-nav .head-section .head-menu .head-list {
-		-moz-transition: height 0.5s ease;
-		-o-transition: height 0.5s ease;
-		-webkit-transition: height 0.5s ease;
-		align-items: flex-end;
-		flex-direction: column;
-		justify-content: flex-end;
-		overflow: hidden;
-		position: absolute;
-		transition: height 0.5s ease;
-		z-index: 1;
-		height: 0;
-		width: 35vmax;
-		right: -5px;
-		top: 45px;
-	}
-	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		background-color: black;
-		background-image: url(../img/background-title.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		border: 1px solid #ab9c87;
-		border-radius: 10px;
-		font-size: 19.13625px;
-		margin-top: 0.5vmax;
-		padding: 0 0.5vmax;
-		position: relative;
-	}
-	header .header-nav .head-section .head-menu .head-list .head-list-item:active,
-	header .header-nav .head-section .head-menu .head-list .head-list-item:visited:active {
-		transform: translate(1px, 1px);
-	}
-	header .header-nav .head-section .head-menu .head-list .list-separator {
-		display: none;
-	}
-	header .header-nav .head-section .lang-stg .lang-content {
-		align-items: flex-end;
-		border-right: 1px solid #ab9c87;
-		border-bottom-left-radius: 10px;
-		flex-direction: row;
-		justify-content: space-evenly;
-		height: 11vmax;
-	}
-	.about-me .greetings h1 {
-		font-size: 47.6px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 35.7px;
-	}
-	.about-me .personal-box .my-name .name-section-detail {
-		justify-content: center;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag {
-		align-items: flex-start;
-		overflow: hidden;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:hover ~ .name-bullets .name-bullet-effect:first-of-type {
-		visibility: visible;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
-		margin-left: 0;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
-		background-color: #063258;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:hover ~ .name-bullets .name-bullet-effect:last-of-type {
-		visibility: visible;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
-		margin-left: -100%;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(4) {
-		background-color: #063258;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
-		align-items: center;
-		align-self: center;
-		display: flex;
-		justify-content: space-evenly;
-		margin: 2vh 0;
-		width: 25%;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		color: #ab9c87;
-		display: block;
-		font-size: 26.775px;
-		visibility: hidden;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
-		-moz-transition: background-color 0.5s ease-out;
-		-o-transition: background-color 0.5s ease-out;
-		-webkit-transition: background-color 0.5s ease-out;
-		background-color: #ccc;
-		border: 1px solid #ab9c87;
-		border-radius: 100%;
-		box-shadow: 0.5vh 0.5vw 1vmax #111;
-		cursor: pointer;
-		margin: 0 0.5vw;
-		opacity: 0.5;
-		transition: background-color 0.5s ease-out;
-		height: 4vmin;
-		min-height: 15px;
-		width: 4vmin;
-		min-width: 15px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
-		-moz-transition: background-color 0.5s ease-in;
-		-o-transition: background-color 0.5s ease-in;
-		-webkit-transition: background-color 0.5s ease-in;
-		background-color: black;
-		transition: background-color 0.5s ease-in;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
-		transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-		width: 200%;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
-		padding-bottom: 1.5vh;
-		width: 75%;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
-		width: 75vw;
-		min-width: 238px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 26.775px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 35.7px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail {
-		justify-content: center;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
-		align-items: flex-start;
-		overflow: hidden;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(1) {
-		visibility: visible;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
-		margin-left: 0;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
-		background-color: #063258;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(2) {
-		visibility: visible;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
-		margin-left: -100%;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(4) {
-		background-color: #063258;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(3) {
-		visibility: visible;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
-		margin-left: -200%;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(6) {
-		background-color: #063258;
-		background-image: url(../img/background-title.jpg);
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
-		align-items: center;
-		align-self: center;
-		display: flex;
-		justify-content: space-evenly;
-		margin: 2vh 0;
-		width: 37.5%;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		color: #ab9c87;
-		display: block;
-		font-size: 26.775px;
-		visibility: hidden;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
-		-moz-transition: background-color 0.5s ease-out;
-		-o-transition: background-color 0.5s ease-out;
-		-webkit-transition: background-color 0.5s ease-out;
-		background-color: #ccc;
-		border: 1px solid #ab9c87;
-		border-radius: 100%;
-		box-shadow: 0.5vh 0.5vw 1vmax #111;
-		cursor: pointer;
-		margin: 0 0.5vw;
-		opacity: 0.5;
-		transition: background-color 0.5s ease-out;
-		height: 4vmin;
-		min-height: 15px;
-		width: 4vmin;
-		min-width: 15px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
-		-moz-transition: background-color 0.5s ease-in;
-		-o-transition: background-color 0.5s ease-in;
-		-webkit-transition: background-color 0.5s ease-in;
-		background-color: #111;
-		transition: background-color 0.5s ease-in;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
-		transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-		width: 300%;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
-		width: 75%;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-		min-height: 507px;
-		width: 75vw;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 26.775px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
-		font-size: 19.518975px;
-	}
-	footer .footer-nav form legend {
-		font-size: 35.7px;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 21.68775px;
-	}
-	footer .footer-nav form fieldset input {
-		font-size: 17.5670775px;
-	}
-	footer .footer-nav form fieldset textarea {
-		font-size: 17.5670775px;
-	}
-	footer .footer-nav form span input {
-		font-size: 17.5670775px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 35.7px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 24.0975px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 24.0975px;
-	}
+  header .header-nav .head-section {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+  header .header-nav .head-section .head-menu {
+    align-items: flex-end;
+    border: 1px solid #ab9c87;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vw;
+    position: relative;
+    width: auto;
+  }
+  header .header-nav .head-section .head-menu .head-menu-btn,
+  header .header-nav .head-section .head-menu .head-list {
+    display: flex;
+  }
+  header .header-nav .head-section .head-menu .head-menu-btn {
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  header .header-nav .head-section .head-menu .head-menu-btn .menu-icon {
+    display: block;
+    width: 4vmax;
+  }
+  header .header-nav .head-section .head-menu .head-menu-btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  header .header-nav .head-section .head-menu #expandList {
+    display: none;
+  }
+  header .header-nav .head-section .head-menu #expandList:checked ~ .head-list {
+    display: flex;
+    height: 90px;
+  }
+  header .header-nav .head-section .head-menu .head-list {
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    -webkit-transition: height 0.5s ease;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    transition: height 0.5s ease;
+    z-index: 1;
+    height: 0;
+    width: 35vmax;
+    right: -5px;
+    top: 45px;
+  }
+  header .header-nav .head-section .head-menu .head-list .head-list-item {
+    background-color: black;
+    background-image: url(../img/background-title.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ab9c87;
+    border-radius: 10px;
+    font-size: 19.13625px;
+    margin-top: 0.5vmax;
+    padding: 0 0.5vmax;
+    position: relative;
+  }
+  header .header-nav .head-section .head-menu .head-list .list-separator {
+    display: none;
+  }
+  header .header-nav .head-section .lang-stg .lang-content {
+    align-items: flex-end;
+    border-right: 1px solid #ab9c87;
+    border-bottom-left-radius: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 11vmax;
+  }
+  .about-me .greetings h1 {
+    font-size: 47.6px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 35.7px;
+  }
+  .about-me .personal-box .my-name .name-section-detail {
+    justify-content: center;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:hover ~ .name-bullets .name-bullet-effect:first-of-type {
+    visibility: visible;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
+    margin-left: 0;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
+    background-color: #063258;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:hover ~ .name-bullets .name-bullet-effect:last-of-type {
+    visibility: visible;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
+    margin-left: -100%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(4) {
+    background-color: #063258;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh 0;
+    width: 25%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    color: #ab9c87;
+    display: block;
+    font-size: 26.775px;
+    visibility: hidden;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    background-color: #ccc;
+    border: 1px solid #ab9c87;
+    border-radius: 100%;
+    box-shadow: 0.5vh 0.5vw 1vmax #111;
+    cursor: pointer;
+    margin: 0 0.5vw;
+    opacity: 0.5;
+    transition: background-color 0.5s ease-out;
+    height: 4vmin;
+    min-height: 15px;
+    width: 4vmin;
+    min-width: 15px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
+    -moz-transition: background-color 0.5s ease-in;
+    -o-transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
+    background-color: black;
+    transition: background-color 0.5s ease-in;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    width: 200%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+    padding-bottom: 1.5vh;
+    width: 75%;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+    width: 75vw;
+    min-width: 238px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 26.775px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 35.7px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail {
+    justify-content: center;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(1) {
+    visibility: visible;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
+    margin-left: 0;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
+    background-color: #063258;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(2) {
+    visibility: visible;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
+    margin-left: -100%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(4) {
+    background-color: #063258;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(3) {
+    visibility: visible;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
+    margin-left: -200%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(6) {
+    background-color: #063258;
+    background-image: url(../img/background-title.jpg);
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2vh 0;
+    width: 37.5%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    color: #ab9c87;
+    display: block;
+    font-size: 26.775px;
+    visibility: hidden;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    background-color: #ccc;
+    border: 1px solid #ab9c87;
+    border-radius: 100%;
+    box-shadow: 0.5vh 0.5vw 1vmax #111;
+    cursor: pointer;
+    margin: 0 0.5vw;
+    opacity: 0.5;
+    transition: background-color 0.5s ease-out;
+    height: 4vmin;
+    min-height: 15px;
+    width: 4vmin;
+    min-width: 15px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
+    -moz-transition: background-color 0.5s ease-in;
+    -o-transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
+    background-color: #111;
+    transition: background-color 0.5s ease-in;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+    transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    width: 300%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+    width: 75%;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+    min-height: 507px;
+    width: 75vw;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 26.775px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+    font-size: 19.518975px;
+  }
+  footer .footer-nav form legend {
+    font-size: 35.7px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 21.68775px;
+  }
+  footer .footer-nav form fieldset input {
+    font-size: 17.5670775px;
+  }
+  footer .footer-nav form fieldset textarea {
+    font-size: 17.5670775px;
+  }
+  footer .footer-nav form span input {
+    font-size: 17.5670775px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 35.7px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 24.0975px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 24.0975px;
+  }
 }
 @media screen and (max-width: 667px) {
-	.about-me .greetings h1 {
-		font-size: 42px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 31.5px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 br {
-		display: block;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		font-size: 23.625px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 23.625px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 31.5px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 23.625px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 23.625px;
-	}
-	footer .footer-nav form legend {
-		font-size: 31.5px;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 19.13625px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 31.5px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 21.2625px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 21.2625px;
-	}
+  .about-me .greetings h1 {
+    font-size: 42px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 31.5px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 br {
+    display: block;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    font-size: 23.625px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 23.625px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 31.5px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    font-size: 23.625px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 23.625px;
+  }
+  footer .footer-nav form legend {
+    font-size: 31.5px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 19.13625px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 31.5px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 21.2625px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 21.2625px;
+  }
 }
 @media screen and (max-width: 430px) {
-	.about-me .greetings h1 {
-		font-size: 36.4px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 27.3px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		font-size: 20.475px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 20.475px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 27.3px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 20.475px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 20.475px;
-	}
-	footer .footer-nav form legend {
-		font-size: 27.3px;
-	}
-	footer .footer-nav form fieldset label {
-		font-size: 16.58475px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 27.3px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 18.4275px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 18.4275px;
-	}
+  .about-me .greetings h1 {
+    font-size: 36.4px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 27.3px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    font-size: 20.475px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 20.475px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 27.3px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    font-size: 20.475px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 20.475px;
+  }
+  footer .footer-nav form legend {
+    font-size: 27.3px;
+  }
+  footer .footer-nav form fieldset label {
+    font-size: 16.58475px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 27.3px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 18.4275px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 18.4275px;
+  }
 }
 @media screen and (max-width: 375px) {
-	.about-me .greetings h1 {
-		font-size: 33.6px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 18.9px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 25.2px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 17.01px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 17.01px;
-	}
+  .about-me .greetings h1 {
+    font-size: 33.6px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 25.2px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 25.2px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 18.9px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 25.2px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 17.01px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 17.01px;
+  }
 }
 @media screen and (max-width: 342px) {
-	header .header-nav .head-section .lang-stg .lang-content {
-		align-items: center;
-		flex-direction: column;
-		justify-content: flex-end;
-		height: 14vmax;
-	}
-	.about-me .greetings h1 {
-		font-size: 28px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 21px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		font-size: 15.75px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 15.75px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 21px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 15.75px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 15.75px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 25.2px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 17.01px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 17.01px;
-	}
+  header .header-nav .head-section .lang-stg .lang-content {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 14vmax;
+  }
+  .about-me .greetings h1 {
+    font-size: 28px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 21px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    font-size: 15.75px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 15.75px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 21px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    font-size: 15.75px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 15.75px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 21px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 14.175px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 14.175px;
+  }
 }
 /*about me*/
 /*720p
@@ -1580,51 +1598,52 @@ footer .footer-nav .socials .side-note em a:visited {
 }*/
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
-	header {
-		min-width: 280px;
-	}
-	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		font-size: 19.13625px;
-	}
-	header .header-nav .head-section .lang-stg {
-		font-size: 12.629925px;
-	}
-	.about-me {
-		min-width: 280px;
-	}
-	.about-me .greetings h1 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
-		font-size: 14.175px;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 14.175px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 14.175px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 14.175px;
-	}
-	footer {
-		min-width: 280px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 25.2px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 17.01px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 17.01px;
-	}
+  /*Constant: 0.5=calc(x/2)*/
+  header {
+    min-width: 280px;
+  }
+  header .header-nav .head-section .head-menu .head-list .head-list-item {
+    font-size: 19.13625px;
+  }
+  header .header-nav .head-section .lang-stg {
+    font-size: 12.629925px;
+  }
+  .about-me {
+    min-width: 280px;
+  }
+  .about-me .greetings h1 {
+    font-size: 25.2px;
+  }
+  .about-me .personal-box .my-name .name-section-title h2 {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+    font-size: 14.175px;
+  }
+  .about-me .personal-box .my-name .name-section-detail .add-info {
+    font-size: 14.175px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+    font-size: 18.9px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+    font-size: 14.175px;
+  }
+  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+    font-size: 14.175px;
+  }
+  footer {
+    min-width: 280px;
+  }
+  footer .footer-nav .socials h2 {
+    font-size: 18.9px;
+  }
+  footer .footer-nav .socials .link-tree .social-links .envelope h4 {
+    font-size: 17.01px;
+  }
+  footer .footer-nav .socials .link-tree .git .envelope h4 {
+    font-size: 17.01px;
+  }
 }
 /*--------------------------------HEIGHTS----------------------------------------------------------------
 @media screen and (max-height: 1368px) {
