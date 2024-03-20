@@ -7,17 +7,11 @@
 	width: 100%;
 	.greetings {
 		align-items: center;
-		background-color: $dark-color;
+		background: linear-gradient($dark-color 90%, transparent 100%);
 		display: flex;
 		justify-content: center;
-		height: 91vh;
+		height: 101vh;
 		min-height: 440px;
-		width: 100%;
-	}
-	.transition {
-		background: linear-gradient(to bottom, $dark-color 0%, transparent 100%);
-		border: none;
-		height: 10vh;
 		width: 100%;
 	}
 	.personal-box {
@@ -32,9 +26,9 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-bottom: 5vh;
+		margin: 5vh 0;
 		position: inherit;
-		width: 90%;
+		width: 95%;
 		@import "main1-my-name-style";
 		@import "main1-my-hobbies-style";
 	}

@@ -292,17 +292,11 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .about-me .greetings {
   align-items: center;
-  background-color: #111;
+  background: linear-gradient(#111 90%, transparent 100%);
   display: flex;
   justify-content: center;
-  height: 91vh;
+  height: 101vh;
   min-height: 440px;
-  width: 100%;
-}
-.about-me .transition {
-  background: linear-gradient(to bottom, #111 0%, transparent 100%);
-  border: none;
-  height: 10vh;
   width: 100%;
 }
 .about-me .personal-box {
@@ -317,9 +311,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 5vh;
+  margin: 5vh 0;
   position: inherit;
-  width: 90%;
+  width: 95%;
 }
 .about-me .personal-box .my-name {
   display: flex;
@@ -421,7 +415,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   -o-transition: height 0.5s ease;
   -webkit-transition: height 0.5s ease;
   align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(17, 17, 17, 0.7);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
@@ -811,6 +805,64 @@ footer .footer-nav .socials .side-note em a:visited {
   color: #d0d0d0;
 }
 
+/*Animations*/
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-in-box {
+    from {
+      scale: 0.5;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    40% {
+      opacity: 1;
+    }
+    85%, 100% {
+      opacity: 0;
+    }
+  }
+  .about-me > .greetings {
+    animation: fade-out linear forwards;
+    animation-range-start: 25vh;
+    animation-range-end: cover;
+    animation-timeline: view();
+  }
+  .about-me > .personal-box {
+    animation: fade-in-box linear;
+    animation-range-start: cover;
+    animation-range-end: 50vh;
+    animation-timeline: view();
+  }
+  .personal-box > .my-hobbies {
+    animation: fade-in linear;
+    animation-range-start: cover;
+    animation-range-end: 20vh;
+    animation-timeline: view();
+  }
+  .name-section-detail > .name-pic-pag {
+    animation: fade-in linear;
+    animation-range: entry;
+    animation-timeline: view();
+  }
+  .hobby-section-detail > .hobby-pic-pag {
+    animation: fade-in linear forwards;
+    animation-range-start: cover;
+    animation-range-end: 50vh;
+    animation-timeline: view();
+  }
+}
 /*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
   /*Constant: 1.5*/
@@ -1238,7 +1290,7 @@ footer .footer-nav .socials .side-note em a:visited {
     width: 4vmax;
   }
   header .header-nav .head-section .head-menu .head-menu-btn:active {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(17, 17, 17, 0.5);
   }
   header .header-nav .head-section .head-menu #expandList {
     display: none;
