@@ -1,3 +1,67 @@
+/*Animations*/
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes fade-in-box {
+		from {
+			scale: 0.5;
+			opacity: 0;
+		}
+		to {scale: 1;
+			opacity: 1;
+		}
+	}
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fade-out {
+		40% {
+			opacity: 1;
+		}
+		85%,
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.about-me > .greetings {
+		animation: fade-out linear forwards;
+		animation-range-start: 25vh;
+		animation-range-end: cover;
+		animation-timeline: view();
+	}
+	
+	.about-me > .personal-box {
+		animation: fade-in-box linear;
+		animation-range-start: cover;
+		animation-range-end: 50vh;
+		animation-timeline: view();
+	}
+
+	.personal-box > .my-hobbies {
+		animation: fade-in linear;
+		animation-range-start: cover;
+		animation-range-end: 20vh;
+		animation-timeline: view();
+	}
+
+	.name-section-detail > .name-pic-pag {
+		animation: fade-in linear;
+		animation-range: entry;
+		animation-timeline: view();
+	}
+
+	.hobby-section-detail > .hobby-pic-pag {
+		animation: fade-in linear forwards;
+		animation-range-start: cover;
+		animation-range-end: 50vh;
+		animation-timeline: view();
+	}
+}
+
 /*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
 	/*Constant: 1.5*/
@@ -825,7 +889,7 @@
 							width: 4vmax;
 						}
 						&:active {
-							background-color: transparentize(black, 0.5);
+							background-color: transparentize($dark-color, 0.5);
 						}
 					}
 					#expandList {
