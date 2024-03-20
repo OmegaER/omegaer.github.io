@@ -5,7 +5,8 @@
 			scale: 0.5;
 			opacity: 0;
 		}
-		to {scale: 1;
+		to {
+			scale: 1;
 			opacity: 1;
 		}
 	}
@@ -33,8 +34,8 @@
 		animation-range-end: cover;
 		animation-timeline: view();
 	}
-	
-	.about-me > .personal-box {
+
+	.sticky-max-height > .personal-box {
 		animation: fade-in-box linear;
 		animation-range-start: cover;
 		animation-range-end: 50vh;
@@ -113,71 +114,73 @@
 				font-size: $h1 * 1.5;
 			}
 		}
-		.personal-box {
-			border: $border-lg;
-			border-radius: $section-title-radius * 1.5;
-			.my-name {
-				min-height: $name-min-viewport-height * 1.5;
-				.name-section-title {
-					border-bottom: $border-lg;
-					border-top-left-radius: $section-title-radius * 1.5;
-					border-top-right-radius: $section-title-radius * 1.5;
-					h2 {
-						font-size: $h2 * 1.5;
+		.sticky-max-height {
+			.personal-box {
+				border: $border-lg;
+				border-radius: $section-title-radius * 1.5;
+				.my-name {
+					min-height: $name-min-viewport-height * 1.5;
+					.name-section-title {
+						border-bottom: $border-lg;
+						border-top-left-radius: $section-title-radius * 1.5;
+						border-top-right-radius: $section-title-radius * 1.5;
+						h2 {
+							font-size: $h2 * 1.5;
+						}
 					}
-				}
-				.name-section-detail {
-					.name-pic-pag {
-						.name-inner {
-							.name-slide {
-								.name-slide-content {
-									.name-overlay-btn {
-										.name-img-block {
-											border-radius: $border-radius * 1.5;
-											min-height: $name-min-viewport-image-height * 1.5;
-											max-width: $name-image-block-limits * 1.5;
+					.name-section-detail {
+						.name-pic-pag {
+							.name-inner {
+								.name-slide {
+									.name-slide-content {
+										.name-overlay-btn {
+											.name-img-block {
+												border-radius: $border-radius * 1.5;
+												min-height: $name-min-viewport-image-height * 1.5;
+												max-width: $name-image-block-limits * 1.5;
+											}
 										}
-									}
-									.name-overlay {
-										border-bottom-left-radius: $border-radius * 1.5;
-										border-bottom-right-radius: $border-radius * 1.5;
-										.name-img-desc {
-											font-size: $normal-font * 1.5;
+										.name-overlay {
+											border-bottom-left-radius: $border-radius * 1.5;
+											border-bottom-right-radius: $border-radius * 1.5;
+											.name-img-desc {
+												font-size: $normal-font * 1.5;
+											}
 										}
 									}
 								}
 							}
 						}
-					}
-					.add-info {
-						font-size: $h3 * 1.5;
-					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					border-bottom: $border-lg;
-					border-top: $border-lg;
-					border-top-left-radius: $section-title-radius * 1.5;
-					border-top-right-radius: $section-title-radius * 1.5;
-					h2 {
-						font-size: $h2 * 1.5;
+						.add-info {
+							font-size: $h3 * 1.5;
+						}
 					}
 				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									border: $border-lg;
-									border-radius: $border-radius * 1.5;
-									min-height: $hobby-slide-height-limits * 1.5;
-									h3 {
-										border-bottom: $border-lg;
-										font-size: $h3 * 1.5;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 1.5;
+				.my-hobbies {
+					.hobby-section-title {
+						border-bottom: $border-lg;
+						border-top: $border-lg;
+						border-top-left-radius: $section-title-radius * 1.5;
+						border-top-right-radius: $section-title-radius * 1.5;
+						h2 {
+							font-size: $h2 * 1.5;
+						}
+					}
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										border: $border-lg;
+										border-radius: $border-radius * 1.5;
+										min-height: $hobby-slide-height-limits * 1.5;
+										h3 {
+											border-bottom: $border-lg;
+											font-size: $h3 * 1.5;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 1.5;
+										}
 									}
 								}
 							}
@@ -271,35 +274,37 @@
 				font-size: $h1 * 0.95;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.95;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.95;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.95;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.95;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.95;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.95;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.95;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.95;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.95;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.95;
+										}
 									}
 								}
 							}
@@ -378,35 +383,37 @@
 				font-size: $h1 * 0.9;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.9;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.9;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.9;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.9;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.9;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.9;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.9;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.9;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.9;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.9;
+										}
 									}
 								}
 							}
@@ -485,35 +492,37 @@
 				font-size: $h1 * 0.85;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.85;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.85;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.85;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.85;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.85;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.85;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.85;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.85;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.85;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.85;
+										}
 									}
 								}
 							}
@@ -592,35 +601,37 @@
 				font-size: $h1 * 0.8;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.8;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.8;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.8;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.8;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.8;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.8;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.8;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.8;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.8;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.8;
+										}
 									}
 								}
 							}
@@ -699,35 +710,37 @@
 				font-size: $h1 * 0.75;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.75;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.75;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.75;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.75;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.75;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.75;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.75;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.75;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.75;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.75;
+										}
 									}
 								}
 							}
@@ -790,35 +803,37 @@
 				font-size: $h1 * 0.7;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.7;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.7;
+						}
+					}
+					.name-section-detail {
+						.add-info {
+							font-size: $h3 * 0.7;
+						}
 					}
 				}
-				.name-section-detail {
-					.add-info {
-						font-size: $h3 * 0.7;
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.7;
+						}
 					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.7;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.7;
-									}
-									.hobby-img-desc {
-										font-size: $normal-font * 0.7;
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.7;
+										}
+										.hobby-img-desc {
+											font-size: $normal-font * 0.7;
+										}
 									}
 								}
 							}
@@ -953,271 +968,273 @@
 				font-size: $h1 * 0.65;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.65;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.65;
+						}
 					}
-				}
-				.name-section-detail {
-					justify-content: center;
-					.name-pic-pag {
-						align-items: flex-start;
-						overflow: hidden;
-						#nameSlide1 {
-							&:hover {
-								~ .name-bullets {
-									.name-bullet-effect {
-										&:first-of-type {
-											visibility: visible;
-										}
-									}
-								}
-							}
-							&:checked {
-								~ .name-inner {
-									margin-left: 0;
-								}
-								~ .name-bullets {
-									.name-bullet-points {
-										&:nth-child(2) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						#nameSlide2 {
-							&:hover {
-								~ .name-bullets {
-									.name-bullet-effect {
-										&:last-of-type {
-											visibility: visible;
-										}
-									}
-								}
-							}
-							&:checked {
-								~ .name-inner {
-									margin-left: -100%;
-								}
-								~ .name-bullets {
-									.name-bullet-points {
-										&:nth-child(4) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						.name-bullets {
-							align-items: center;
-							align-self: center;
-							display: flex;
-							justify-content: space-evenly;
-							margin: 2vh 0;
-							width: 25%;
-							.name-bullet-effect {
-								color: $title-color;
-								display: block;
-								font-size: $h3 * 0.65;
-								visibility: hidden;
-							}
-							.name-bullet-points {
-								-moz-transition: background-color 0.5s ease-out;
-								-o-transition: background-color 0.5s ease-out;
-								-webkit-transition: background-color 0.5s ease-out;
-								background-color: #ccc;
-								border: $border;
-								border-radius: 100%;
-								box-shadow: $shadow;
-								cursor: pointer;
-								margin: 0 0.5vw;
-								opacity: 0.5;
-								transition: background-color 0.5s ease-out;
-								height: 4vmin;
-								min-height: 15px;
-								width: 4vmin;
-								min-width: 15px;
+					.name-section-detail {
+						justify-content: center;
+						.name-pic-pag {
+							align-items: flex-start;
+							overflow: hidden;
+							#nameSlide1 {
 								&:hover {
-									-moz-transition: background-color 0.5s ease-in;
-									-o-transition: background-color 0.5s ease-in;
-									-webkit-transition: background-color 0.5s ease-in;
-									background-color: black;
-									transition: background-color 0.5s ease-in;
-								}
-							}
-						}
-						.name-inner {
-							-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							width: 200%;
-							.name-slide {
-								padding-bottom: 1.5vh;
-								width: 75%;
-								.name-slide-content {
-									.name-overlay-btn {
-										.name-img-block {
-											height: 65vh;
-											width: 75vw;
-											min-width: $min-viewport-width * 0.85; //FIXED
+									~ .name-bullets {
+										.name-bullet-effect {
+											&:first-of-type {
+												visibility: visible;
+											}
 										}
 									}
-									.name-overlay {
-										.name-img-desc {
-											padding: 1vh 3vw;
+								}
+								&:checked {
+									~ .name-inner {
+										margin-left: 0;
+									}
+									~ .name-bullets {
+										.name-bullet-points {
+											&:nth-child(2) {
+												background-color: $secondary-color;
+												background-image: url(../img/background-title.jpg);
+											}
 										}
 									}
 								}
 							}
-						}
-					}
-					.add-info {
-						font-size: $h3 * 0.65;
-					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.65;
-					}
-				}
-				.hobby-section-detail {
-					justify-content: center;
-					.hobby-pic-pag {
-						align-items: flex-start;
-						overflow: hidden;
-						#hobbySlide1 {
-							&:hover {
-								~ .hobby-bullets {
-									.hobby-bullet-effect {
-										&:nth-of-type(1) {
-											visibility: visible;
-										}
-									}
-								}
-							}
-							&:checked {
-								~ .hobby-inner {
-									margin-left: 0;
-								}
-								~ .hobby-bullets {
-									.hobby-bullet-points {
-										&:nth-child(2) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						#hobbySlide2 {
-							&:hover {
-								~ .hobby-bullets {
-									.hobby-bullet-effect {
-										&:nth-of-type(2) {
-											visibility: visible;
-										}
-									}
-								}
-							}
-							&:checked {
-								~ .hobby-inner {
-									margin-left: -100%;
-								}
-								~ .hobby-bullets {
-									.hobby-bullet-points {
-										&:nth-child(4) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						#hobbySlide3 {
-							&:hover {
-								~ .hobby-bullets {
-									.hobby-bullet-effect {
-										&:nth-of-type(3) {
-											visibility: visible;
-										}
-									}
-								}
-							}
-							&:checked {
-								~ .hobby-inner {
-									margin-left: -200%;
-								}
-								~ .hobby-bullets {
-									.hobby-bullet-points {
-										&:nth-child(6) {
-											background-color: $secondary-color;
-											background-image: url(../img/background-title.jpg);
-										}
-									}
-								}
-							}
-						}
-						.hobby-bullets {
-							align-items: center;
-							align-self: center;
-							display: flex;
-							justify-content: space-evenly;
-							margin: 2vh 0;
-							width: 37.5%;
-							.hobby-bullet-effect {
-								color: $title-color;
-								display: block;
-								font-size: $h3 * 0.65;
-								visibility: hidden;
-							}
-							.hobby-bullet-points {
-								-moz-transition: background-color 0.5s ease-out;
-								-o-transition: background-color 0.5s ease-out;
-								-webkit-transition: background-color 0.5s ease-out;
-								background-color: #ccc;
-								border: $border;
-								border-radius: 100%;
-								box-shadow: $shadow;
-								cursor: pointer;
-								margin: 0 0.5vw;
-								opacity: 0.5;
-								transition: background-color 0.5s ease-out;
-								height: 4vmin;
-								min-height: 15px;
-								width: 4vmin;
-								min-width: 15px;
+							#nameSlide2 {
 								&:hover {
-									-moz-transition: background-color 0.5s ease-in;
-									-o-transition: background-color 0.5s ease-in;
-									-webkit-transition: background-color 0.5s ease-in;
-									background-color: $dark-color;
-									transition: background-color 0.5s ease-in;
+									~ .name-bullets {
+										.name-bullet-effect {
+											&:last-of-type {
+												visibility: visible;
+											}
+										}
+									}
+								}
+								&:checked {
+									~ .name-inner {
+										margin-left: -100%;
+									}
+									~ .name-bullets {
+										.name-bullet-points {
+											&:nth-child(4) {
+												background-color: $secondary-color;
+												background-image: url(../img/background-title.jpg);
+											}
+										}
+									}
+								}
+							}
+							.name-bullets {
+								align-items: center;
+								align-self: center;
+								display: flex;
+								justify-content: space-evenly;
+								margin: 2vh 0;
+								width: 25%;
+								.name-bullet-effect {
+									color: $title-color;
+									display: block;
+									font-size: $h3 * 0.65;
+									visibility: hidden;
+								}
+								.name-bullet-points {
+									-moz-transition: background-color 0.5s ease-out;
+									-o-transition: background-color 0.5s ease-out;
+									-webkit-transition: background-color 0.5s ease-out;
+									background-color: #ccc;
+									border: $border;
+									border-radius: 100%;
+									box-shadow: $shadow;
+									cursor: pointer;
+									margin: 0 0.5vw;
+									opacity: 0.5;
+									transition: background-color 0.5s ease-out;
+									height: 4vmin;
+									min-height: 15px;
+									width: 4vmin;
+									min-width: 15px;
+									&:hover {
+										-moz-transition: background-color 0.5s ease-in;
+										-o-transition: background-color 0.5s ease-in;
+										-webkit-transition: background-color 0.5s ease-in;
+										background-color: black;
+										transition: background-color 0.5s ease-in;
+									}
+								}
+							}
+							.name-inner {
+								-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								width: 200%;
+								.name-slide {
+									padding-bottom: 1.5vh;
+									width: 75%;
+									.name-slide-content {
+										.name-overlay-btn {
+											.name-img-block {
+												height: 65vh;
+												width: 75vw;
+												min-width: $min-viewport-width * 0.85; //FIXED
+											}
+										}
+										.name-overlay {
+											.name-img-desc {
+												padding: 1vh 3vw;
+											}
+										}
+									}
 								}
 							}
 						}
-						.hobby-inner {
-							-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
-							width: 300%;
-							.hobby-slide {
-								width: 75%;
-								.hobby-slide-content {
-									min-height: $hobby-slide-height-limits * 1.3; //FIXED
-									width: 75vw;
-									h3 {
-										font-size: $h3 * 0.65;
+						.add-info {
+							font-size: $h3 * 0.65;
+						}
+					}
+				}
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.65;
+						}
+					}
+					.hobby-section-detail {
+						justify-content: center;
+						.hobby-pic-pag {
+							align-items: flex-start;
+							overflow: hidden;
+							#hobbySlide1 {
+								&:hover {
+									~ .hobby-bullets {
+										.hobby-bullet-effect {
+											&:nth-of-type(1) {
+												visibility: visible;
+											}
+										}
+									}
+								}
+								&:checked {
+									~ .hobby-inner {
+										margin-left: 0;
+									}
+									~ .hobby-bullets {
+										.hobby-bullet-points {
+											&:nth-child(2) {
+												background-color: $secondary-color;
+												background-image: url(../img/background-title.jpg);
+											}
+										}
+									}
+								}
+							}
+							#hobbySlide2 {
+								&:hover {
+									~ .hobby-bullets {
+										.hobby-bullet-effect {
+											&:nth-of-type(2) {
+												visibility: visible;
+											}
+										}
+									}
+								}
+								&:checked {
+									~ .hobby-inner {
+										margin-left: -100%;
+									}
+									~ .hobby-bullets {
+										.hobby-bullet-points {
+											&:nth-child(4) {
+												background-color: $secondary-color;
+												background-image: url(../img/background-title.jpg);
+											}
+										}
+									}
+								}
+							}
+							#hobbySlide3 {
+								&:hover {
+									~ .hobby-bullets {
+										.hobby-bullet-effect {
+											&:nth-of-type(3) {
+												visibility: visible;
+											}
+										}
+									}
+								}
+								&:checked {
+									~ .hobby-inner {
+										margin-left: -200%;
+									}
+									~ .hobby-bullets {
+										.hobby-bullet-points {
+											&:nth-child(6) {
+												background-color: $secondary-color;
+												background-image: url(../img/background-title.jpg);
+											}
+										}
+									}
+								}
+							}
+							.hobby-bullets {
+								align-items: center;
+								align-self: center;
+								display: flex;
+								justify-content: space-evenly;
+								margin: 2vh 0;
+								width: 37.5%;
+								.hobby-bullet-effect {
+									color: $title-color;
+									display: block;
+									font-size: $h3 * 0.65;
+									visibility: hidden;
+								}
+								.hobby-bullet-points {
+									-moz-transition: background-color 0.5s ease-out;
+									-o-transition: background-color 0.5s ease-out;
+									-webkit-transition: background-color 0.5s ease-out;
+									background-color: #ccc;
+									border: $border;
+									border-radius: 100%;
+									box-shadow: $shadow;
+									cursor: pointer;
+									margin: 0 0.5vw;
+									opacity: 0.5;
+									transition: background-color 0.5s ease-out;
+									height: 4vmin;
+									min-height: 15px;
+									width: 4vmin;
+									min-width: 15px;
+									&:hover {
+										-moz-transition: background-color 0.5s ease-in;
+										-o-transition: background-color 0.5s ease-in;
+										-webkit-transition: background-color 0.5s ease-in;
+										background-color: $dark-color;
+										transition: background-color 0.5s ease-in;
+									}
+								}
+							}
+							.hobby-inner {
+								-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-ms-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+								width: 300%;
+								.hobby-slide {
+									width: 75%;
+									.hobby-slide-content {
+										min-height: $hobby-slide-height-limits * 1.3; //FIXED
+										width: 75vw;
+										h3 {
+											font-size: $h3 * 0.65;
+										}
 									}
 								}
 							}
@@ -1342,47 +1359,49 @@
 				font-size: $h1 * 0.6;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.6;
-						br {
-							display: block;
-						}
-					}
-				}
-				.name-section-detail {
-					.name-pic-pag {
-						.name-bullets {
-							.name-bullet-effect {
-								font-size: $h3 * 0.6;
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.6;
+							br {
+								display: block;
 							}
 						}
 					}
-					.add-info {
-						font-size: $h3 * 0.6;
-					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.6;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-bullets {
-							.hobby-bullet-effect {
-								font-size: $h3 * 0.6;
+					.name-section-detail {
+						.name-pic-pag {
+							.name-bullets {
+								.name-bullet-effect {
+									font-size: $h3 * 0.6;
+								}
 							}
 						}
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.6;
+						.add-info {
+							font-size: $h3 * 0.6;
+						}
+					}
+				}
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.6;
+						}
+					}
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-bullets {
+								.hobby-bullet-effect {
+									font-size: $h3 * 0.6;
+								}
+							}
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.6;
+										}
 									}
 								}
 							}
@@ -1432,44 +1451,46 @@
 				font-size: $h1 * 0.55;
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: $h2 * 0.55;
-					}
-				}
-				.name-section-detail {
-					.name-pic-pag {
-						.name-bullets {
-							.name-bullet-effect {
-								font-size: $h3 * 0.55;
-							}
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: $h2 * 0.55;
 						}
 					}
-					.add-info {
-						font-size: $h3 * 0.55;
-					}
-				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: $h2 * 0.55;
-					}
-				}
-				.hobby-section-detail {
-					.hobby-pic-pag {
-						.hobby-bullets {
-							.hobby-bullet-effect {
-								font-size: $h3 * 0.55;
+					.name-section-detail {
+						.name-pic-pag {
+							.name-bullets {
+								.name-bullet-effect {
+									font-size: $h3 * 0.55;
+								}
 							}
 						}
-						.hobby-inner {
-							.hobby-slide {
-								.hobby-slide-content {
-									h3 {
-										font-size: $h3 * 0.55;
+						.add-info {
+							font-size: $h3 * 0.55;
+						}
+					}
+				}
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: $h2 * 0.55;
+						}
+					}
+					.hobby-section-detail {
+						.hobby-pic-pag {
+							.hobby-bullets {
+								.hobby-bullet-effect {
+									font-size: $h3 * 0.55;
+								}
+							}
+							.hobby-inner {
+								.hobby-slide {
+									.hobby-slide-content {
+										h3 {
+											font-size: $h3 * 0.55;
+										}
 									}
 								}
 							}
@@ -1520,18 +1541,20 @@
 				font-size: calc($h1/2);
 			}
 		}
-		.personal-box {
-			.my-name {
-				.name-section-title {
-					h2 {
-						font-size: calc($h2/2);
+		.sticky-max-height {
+			.personal-box {
+				.my-name {
+					.name-section-title {
+						h2 {
+							font-size: calc($h2/2);
+						}
 					}
 				}
-			}
-			.my-hobbies {
-				.hobby-section-title {
-					h2 {
-						font-size: calc($h2/2);
+				.my-hobbies {
+					.hobby-section-title {
+						h2 {
+							font-size: calc($h2/2);
+						}
 					}
 				}
 			}

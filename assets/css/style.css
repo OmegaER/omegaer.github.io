@@ -5,11 +5,10 @@
   font-style: normal;
 }
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -295,11 +294,19 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background: linear-gradient(#111 90%, transparent 100%);
   display: flex;
   justify-content: center;
-  height: 101vh;
+  height: 111vh;
   min-height: 440px;
   width: 100%;
 }
-.about-me .personal-box {
+.about-me .sticky-max-height {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.about-me .sticky-max-height .personal-box {
   align-items: center;
   background-color: #2e465f;
   background-image: url(../img/background-section.jpg);
@@ -308,14 +315,15 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-size: cover;
   border: 1px solid #ab9c87;
   border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 5vh 0;
+  margin: 5vh 0 3vh 0;
   position: inherit;
   width: 95%;
 }
-.about-me .personal-box .my-name {
+.about-me .sticky-max-height .personal-box .my-name {
   display: flex;
   flex-direction: column;
   position: inherit;
@@ -323,9 +331,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   min-height: 650px;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-title {
+.about-me .sticky-max-height .personal-box .my-name .name-section-title {
   align-items: center;
-  background-color: darkslategray;
+  background-color: #063258;
   background-image: url(../img/background-title.jpg);
   background-position: top;
   background-repeat: no-repeat;
@@ -338,10 +346,10 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   padding: 1vh 0;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-title h2 br {
+.about-me .sticky-max-height .personal-box .my-name .name-section-title h2 br {
   display: none;
 }
-.about-me .personal-box .my-name .name-section-detail {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -350,7 +358,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   height: 100%;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -358,37 +366,37 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-slide-control {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-slide-control {
   display: none;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
   display: none;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
   display: flex;
   justify-content: space-evenly;
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
   display: flex;
   justify-content: center;
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content {
   display: flex;
   justify-content: center;
   position: inherit;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
   border-radius: 10px;
   box-shadow: 0.5vh 0.5vw 1vmax #111;
   position: inherit;
@@ -400,17 +408,17 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 33vw;
   min-width: 280px;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
   display: none;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1:checked ~ .name-overlay {
   height: 23%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2:checked ~ .name-overlay {
   height: 28%;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
   -moz-transition: height 0.5s ease;
   -o-transition: height 0.5s ease;
   -webkit-transition: height 0.5s ease;
@@ -427,13 +435,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 100%;
   bottom: 0;
 }
-.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
   display: block;
   padding: 1vh 1vw;
   position: relative;
   text-align: justify;
 }
-.about-me .personal-box .my-name .name-section-detail .add-info {
+.about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
   align-self: flex-end;
   background: radial-gradient(#555 -100%, transparent 100%);
   border-radius: 100%;
@@ -442,7 +450,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   padding: 0.5vh 1vw;
   max-width: 75%;
 }
-.about-me .personal-box .my-hobbies {
+.about-me .sticky-max-height .personal-box .my-hobbies {
   display: flex;
   flex-direction: column;
   position: inherit;
@@ -450,7 +458,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   min-height: 648px;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-title {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title {
   align-items: center;
   background-color: #063258;
   background-image: url(../img/background-title.jpg);
@@ -468,7 +476,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -477,7 +485,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   min-height: 440px;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -485,26 +493,26 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-slide-control {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-slide-control {
   display: none;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
   display: none;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
   display: flex;
   justify-content: space-evenly;
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
   display: flex;
   justify-content: center;
   padding-bottom: 1.5vh;
   position: inherit;
   width: 100%;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
   border: 1px solid #ab9c87;
   border-radius: 10px;
   background-color: #063258;
@@ -522,18 +530,38 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 20vw;
   min-width: 210px;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
   border-bottom: 1px solid #ab9c87;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
   -webkit-mask-image: linear-gradient(#063258 80%, transparent);
   mask-image: linear-gradient(#063258 80%, transparent);
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+.about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
   overflow-y: scroll;
   padding: 1vh 1vw;
+}
+.about-me .sticky-max-height a {
+  align-self: flex-end;
+  border: 1px solid #ab9c87;
+  border-radius: 10px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  background-color: #063258;
+  background-image: url(../img/background-title.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 1vw 1vh 0;
+  position: sticky;
+  min-width: 35px;
+  bottom: 1vh;
+}
+.about-me .sticky-max-height a img {
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+  margin: 0.5vh 0.5vw;
+  width: 5vw;
+  min-width: 35px;
 }
 
 footer {
@@ -839,7 +867,7 @@ footer .footer-nav .socials .side-note em a:visited {
     animation-range-end: cover;
     animation-timeline: view();
   }
-  .about-me > .personal-box {
+  .sticky-max-height > .personal-box {
     animation: fade-in-box linear;
     animation-range-start: cover;
     animation-range-end: 50vh;
@@ -903,55 +931,55 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 84px;
   }
-  .about-me .personal-box {
+  .about-me .sticky-max-height .personal-box {
     border: 2px double #ab9c87;
     border-radius: 75px;
   }
-  .about-me .personal-box .my-name {
+  .about-me .sticky-max-height .personal-box .my-name {
     min-height: 975px;
   }
-  .about-me .personal-box .my-name .name-section-title {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title {
     border-bottom: 2px double #ab9c87;
     border-top-left-radius: 75px;
     border-top-right-radius: 75px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 63px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
     border-radius: 15px;
     min-height: 615px;
     max-width: 675px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
     font-size: 34.44525px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 47.25px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title {
     border-bottom: 2px double #ab9c87;
     border-top: 2px double #ab9c87;
     border-top-left-radius: 75px;
     border-top-right-radius: 75px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 63px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
     border: 2px double #ab9c87;
     border-radius: 15px;
     min-height: 585px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     border-bottom: 2px double #ab9c87;
     font-size: 47.25px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 34.44525px;
   }
   footer {
@@ -1004,19 +1032,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 53.2px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 39.9px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 29.925px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 39.9px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 29.925px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 21.815325px;
   }
   footer .footer-nav form legend {
@@ -1052,19 +1080,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 50.4px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 37.8px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 28.35px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 37.8px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 28.35px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 20.66715px;
   }
   footer .footer-nav form legend {
@@ -1100,19 +1128,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 47.6px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 35.7px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 26.775px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 35.7px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 26.775px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 19.518975px;
   }
   footer .footer-nav form legend {
@@ -1148,19 +1176,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 44.8px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 33.6px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 25.2px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 33.6px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 25.2px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 18.3708px;
   }
   footer .footer-nav form legend {
@@ -1196,19 +1224,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 42px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 31.5px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 23.625px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 31.5px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 23.625px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 17.222625px;
   }
   footer .footer-nav form legend {
@@ -1232,19 +1260,19 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 39.2px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 29.4px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 22.05px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 29.4px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 22.05px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
     font-size: 16.07445px;
   }
   footer .footer-nav form legend {
@@ -1342,37 +1370,37 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 36.4px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 27.3px;
   }
-  .about-me .personal-box .my-name .name-section-detail {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail {
     justify-content: center;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag {
     align-items: flex-start;
     overflow: hidden;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:hover ~ .name-bullets .name-bullet-effect:first-of-type {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:hover ~ .name-bullets .name-bullet-effect:first-of-type {
     visibility: visible;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-inner {
     margin-left: 0;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide1:checked ~ .name-bullets .name-bullet-points:nth-child(2) {
     background-color: #063258;
     background-image: url(../img/background-title.jpg);
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:hover ~ .name-bullets .name-bullet-effect:last-of-type {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:hover ~ .name-bullets .name-bullet-effect:last-of-type {
     visibility: visible;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-inner {
     margin-left: -100%;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(4) {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag #nameSlide2:checked ~ .name-bullets .name-bullet-points:nth-child(4) {
     background-color: #063258;
     background-image: url(../img/background-title.jpg);
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets {
     align-items: center;
     align-self: center;
     display: flex;
@@ -1380,13 +1408,13 @@ footer .footer-nav .socials .side-note em a:visited {
     margin: 2vh 0;
     width: 25%;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
     color: #ab9c87;
     display: block;
     font-size: 20.475px;
     visibility: hidden;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points {
     -moz-transition: background-color 0.5s ease-out;
     -o-transition: background-color 0.5s ease-out;
     -webkit-transition: background-color 0.5s ease-out;
@@ -1403,73 +1431,73 @@ footer .footer-nav .socials .side-note em a:visited {
     width: 4vmin;
     min-width: 15px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-points:hover {
     -moz-transition: background-color 0.5s ease-in;
     -o-transition: background-color 0.5s ease-in;
     -webkit-transition: background-color 0.5s ease-in;
     background-color: black;
     transition: background-color 0.5s ease-in;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner {
     transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
     width: 200%;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide {
     padding-bottom: 1.5vh;
     width: 75%;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
     height: 65vh;
     width: 75vw;
     min-width: 238px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
     padding: 1vh 3vw;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 20.475px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 27.3px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail {
     justify-content: center;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag {
     align-items: flex-start;
     overflow: hidden;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(1) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(1) {
     visibility: visible;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-inner {
     margin-left: 0;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide1:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(2) {
     background-color: #063258;
     background-image: url(../img/background-title.jpg);
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(2) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(2) {
     visibility: visible;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-inner {
     margin-left: -100%;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(4) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide2:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(4) {
     background-color: #063258;
     background-image: url(../img/background-title.jpg);
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(3) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:hover ~ .hobby-bullets .hobby-bullet-effect:nth-of-type(3) {
     visibility: visible;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-inner {
     margin-left: -200%;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(6) {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag #hobbySlide3:checked ~ .hobby-bullets .hobby-bullet-points:nth-child(6) {
     background-color: #063258;
     background-image: url(../img/background-title.jpg);
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets {
     align-items: center;
     align-self: center;
     display: flex;
@@ -1477,13 +1505,13 @@ footer .footer-nav .socials .side-note em a:visited {
     margin: 2vh 0;
     width: 37.5%;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
     color: #ab9c87;
     display: block;
     font-size: 20.475px;
     visibility: hidden;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points {
     -moz-transition: background-color 0.5s ease-out;
     -o-transition: background-color 0.5s ease-out;
     -webkit-transition: background-color 0.5s ease-out;
@@ -1500,25 +1528,25 @@ footer .footer-nav .socials .side-note em a:visited {
     width: 4vmin;
     min-width: 15px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-points:hover {
     -moz-transition: background-color 0.5s ease-in;
     -o-transition: background-color 0.5s ease-in;
     -webkit-transition: background-color 0.5s ease-in;
     background-color: #111;
     transition: background-color 0.5s ease-in;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner {
     transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
     width: 300%;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide {
     width: 75%;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
     min-height: 507px;
     width: 75vw;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 20.475px;
   }
   footer {
@@ -1620,25 +1648,25 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 33.6px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 25.2px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 br {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 br {
     display: block;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
     font-size: 18.9px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 18.9px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 25.2px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
     font-size: 18.9px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 18.9px;
   }
   footer .footer-nav form legend {
@@ -1659,22 +1687,22 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 30.8px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 23.1px;
   }
-  .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
     font-size: 17.325px;
   }
-  .about-me .personal-box .my-name .name-section-detail .add-info {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-detail .add-info {
     font-size: 17.325px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 23.1px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
     font-size: 17.325px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
     font-size: 17.325px;
   }
   footer .footer-nav form legend {
@@ -1702,10 +1730,10 @@ footer .footer-nav .socials .side-note em a:visited {
   .about-me .greetings h1 {
     font-size: 28px;
   }
-  .about-me .personal-box .my-name .name-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-name .name-section-title h2 {
     font-size: 21px;
   }
-  .about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  .about-me .sticky-max-height .personal-box .my-hobbies .hobby-section-title h2 {
     font-size: 21px;
   }
   footer {

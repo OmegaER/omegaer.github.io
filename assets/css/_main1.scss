@@ -10,26 +10,55 @@
 		background: linear-gradient($dark-color 90%, transparent 100%);
 		display: flex;
 		justify-content: center;
-		height: 101vh;
+		height: 111vh;
 		min-height: 440px;
 		width: 100%;
 	}
-	.personal-box {
+	.sticky-max-height {
 		align-items: center;
-		background-color: $inner-box;
-		background-image: url(../img/background-section.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
-		border: $border;
-		border-radius: $section-title-radius;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
-		margin: 5vh 0;
-		position: inherit;
-		width: 95%;
-		@import "main1-my-name-style";
-		@import "main1-my-hobbies-style";
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		.personal-box {
+			align-items: center;
+			background-color: $inner-box;
+			background-image: url(../img/background-section.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border: $border;
+			border-radius: $section-title-radius;
+			box-shadow: $shadow;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 5vh 0 3vh 0;
+			position: inherit;
+			width: 95%;
+			@import "main1-my-name-style";
+			@import "main1-my-hobbies-style";
+		}
+		a {
+			align-self: flex-end;
+			border: $border;
+			border-radius: $border-radius;
+			box-shadow: $shadow;
+			background-color: $secondary-color;
+			background-image: url(../img/background-title.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0 1vw 1vh 0;
+			position: sticky;
+			min-width: 35px;
+			bottom: 1vh;
+			img {
+				filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+				margin: 0.5vh 0.5vw;
+				width: 5vw;
+				min-width: 35px;
+			}
+		}
 	}
 }
