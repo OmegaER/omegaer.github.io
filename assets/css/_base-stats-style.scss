@@ -54,9 +54,10 @@ $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
 	width: 0.5vw;
