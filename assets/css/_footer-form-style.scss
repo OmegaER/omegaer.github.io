@@ -1,0 +1,83 @@
+form {
+	display: flex;
+	flex-direction: column;
+	font-family: $font-title;
+	padding: 0 1vw;
+	height: 100%;
+	width: 50%;
+	legend {
+		color: $title-color;
+		text-shadow: $shadow;
+	}
+    fieldset,
+    span {
+        display: flex;
+    }
+	fieldset {
+		border: none;
+		margin-top: 1vh;
+		&:last-of-type {
+			height: 100%;
+		}
+		label {
+			color: $altered-text;
+			padding-left: 1vw;
+			font-size: $h5;
+			text-shadow: $shadow;
+			width: 35%;
+			i {
+				color: $title-color;
+				font-style: normal;
+			}
+		}
+        input,
+        textarea {
+            border: $border;
+            box-shadow: $shadow, $shadow-internal;
+			font-size: $form-font;
+            width: 25vw;
+        }
+		input {
+			border-radius: $section-title-radius;
+			padding: 0 0.5vw;
+		}
+		textarea {
+			border-radius: $border-radius;
+			border-bottom-right-radius: 0;
+			padding: 0.5vw;
+			height: 90%;
+		}
+	}
+	span {
+		justify-content: flex-end;
+		height: 20%;
+		input {
+			border: $border;
+			border-radius: $section-title-radius;
+			box-shadow: $shadow;
+			font-size: $form-font;
+			height: 100%;
+			width: 20%;
+			&[type="submit"] {
+				background-color: $secondary-color;
+				color: $title-color;
+			}
+			&[type="reset"] {
+				background-color: $primary-color;
+				color: $altered-text;
+				margin: 0 2vw;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+			&:active {
+				-moz-transform: translate(0.2vh, 0.2vw);
+				-ms-transform: translate(0.2vh, 0.2vw);
+				-o-transform: translate(0.2vh, 0.2vw);
+				-webkit-transform: translate(0.2vh, 0.2vw);
+				box-shadow: none;
+				transform: translate(0.2vh, 0.2vw);
+			}
+		}
+	}
+}

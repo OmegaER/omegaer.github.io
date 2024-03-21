@@ -33,12 +33,12 @@ $section-title-radius: 50px;
 
 //font sizes
 $h1: 56px;
-$h2: $h1 * 0.75;	//42px
-$h3: $h2 * 0.75;	//31.5px (Min-constant = 0.55)
-$h4: $h3 * 0.9;	//28.35px (Min-constant = 0.6)
-$h5: $h4 * 0.9;	//25.515px (Min-constant = 0.65)
-$normal-font: $h5 * 0.9;	//22.9635px (Min-constant = 0.7)
-$form-font: $normal-font * 0.9;	//20.66715px (Min-constant = 0.8)
+$h2: $h1 * 0.75; //42px
+$h3: $h2 * 0.75; //31.5px (Min-constant = 0.55)
+$h4: $h3 * 0.9; //28.35px (Min-constant = 0.6)
+$h5: $h4 * 0.9; //25.515px (Min-constant = 0.65)
+$normal-font: $h5 * 0.9; //22.9635px (Min-constant = 0.7)
+$form-font: $normal-font * 0.9; //20.66715px (Min-constant = 0.8)
 
 //other
 $bullet-points-size: 30px;
@@ -46,7 +46,7 @@ $header-height-limits: 100px;
 $hobby-slide-height-limits: 390px;
 $min-viewport-width: 280px;
 $name-image-block-limits: 450px;
-$name-min-viewport-height: 650px;
+$name-min-viewport-height: 700px;
 $name-min-viewport-image-height: 410px;
 $shadow: 0.5vh 0.5vw 1vmax $dark-color;
 $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
@@ -58,20 +58,21 @@ $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-	width: 0.5vw;
-}
-::-webkit-scrollbar-track {
-	background: transparent;
-}
-::-webkit-scrollbar-thumb {
-	background: $altered-text;
-	border-radius: calc($border-radius/2);
-	&:hover {
-		background: $title-color;
+	::-webkit-scrollbar {
+		width: 0.5vw;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $altered-text;
+		border-radius: calc($border-radius/2);
+		&:hover {
+			background: $title-color;
+		}
 	}
 }
+
 body {
 	background-color: $primary-color;
 	background-image: url(../img/background-lofi.jpg);

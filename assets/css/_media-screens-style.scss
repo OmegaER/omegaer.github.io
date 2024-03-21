@@ -5,7 +5,8 @@
 			scale: 0.5;
 			opacity: 0;
 		}
-		to {scale: 1;
+		to {
+			scale: 1;
 			opacity: 1;
 		}
 	}
@@ -27,13 +28,16 @@
 		}
 	}
 
-	.about-me > .greetings {
-		animation: fade-out linear forwards;
-		animation-range-start: 25vh;
-		animation-range-end: cover;
-		animation-timeline: view();
+	/*FireFox locker due to incompatibility of the browser*/
+	@supports (animation-timeline: view()) {
+		.about-me > .greetings {
+			animation: fade-out linear forwards;
+			animation-range-start: 25vh;
+			animation-range-end: cover;
+			animation-timeline: view();
+		}
 	}
-	
+
 	.about-me > .personal-box {
 		animation: fade-in-box linear;
 		animation-range-start: cover;
@@ -71,6 +75,11 @@
 		.header-nav {
 			border-bottom: $border-lg;
 			border-bottom-right-radius: $border-radius * 1.5;
+			.logo-container {
+				em {
+					font-size: $h1 * 1.5;
+				}
+			}
 			.head-separator {
 				border-right: $border-lg;
 				border-radius: $border-radius * 1.5;
@@ -127,6 +136,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 1.5;
+					}
 					.name-pic-pag {
 						.name-inner {
 							.name-slide {
@@ -254,11 +266,23 @@
 	/*Constant: 0.95*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.95;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
 						.head-list-item {
 							font-size: $h5 * 0.95;
+						}
+					}
+					.lang-stg {
+						.lang-btn {
+							span {
+								font-size: $normal-font * 0.95;
+							}
 						}
 					}
 				}
@@ -279,6 +303,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.95;
+					}
 					.add-info {
 						font-size: $h3 * 0.95;
 					}
@@ -361,11 +388,23 @@
 	/*Constant: 0.9*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.9;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
 						.head-list-item {
 							font-size: $h5 * 0.9;
+						}
+					}
+					.lang-stg {
+						.lang-btn {
+							span {
+								font-size: $normal-font * 0.9;
+							}
 						}
 					}
 				}
@@ -386,6 +425,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.9;
+					}
 					.add-info {
 						font-size: $h3 * 0.9;
 					}
@@ -468,11 +510,23 @@
 	/*Constant: 0.85*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.85;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
 						.head-list-item {
 							font-size: $h5 * 0.85;
+						}
+					}
+					.lang-stg {
+						.lang-btn {
+							span {
+								font-size: $normal-font * 0.85;
+							}
 						}
 					}
 				}
@@ -493,6 +547,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.85;
+					}
 					.add-info {
 						font-size: $h3 * 0.85;
 					}
@@ -575,11 +632,23 @@
 	/*Constant: 0.8*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.8;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
 						.head-list-item {
 							font-size: $h5 * 0.8;
+						}
+					}
+					.lang-stg {
+						.lang-btn {
+							span {
+								font-size: $normal-font * 0.8;
+							}
 						}
 					}
 				}
@@ -600,6 +669,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.8;
+					}
 					.add-info {
 						font-size: $h3 * 0.8;
 					}
@@ -682,6 +754,11 @@
 	/*Constant: 0.75 - no $form-font*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.75;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
@@ -707,6 +784,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.75;
+					}
 					.add-info {
 						font-size: $h3 * 0.75;
 					}
@@ -773,6 +853,11 @@
 	/*Constant: 0.7 - no $form-font*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.7;
+				}
+			}
 			.head-section {
 				.head-menu {
 					.head-list {
@@ -798,6 +883,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.7;
+					}
 					.add-info {
 						font-size: $h3 * 0.7;
 					}
@@ -864,6 +952,11 @@
 	/*Constant: 0.65 - no $form-font, $normal-font*/
 	header {
 		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.65;
+				}
+			}
 			.head-section {
 				flex-direction: row-reverse;
 				justify-content: flex-start;
@@ -887,6 +980,7 @@
 						.menu-icon {
 							display: block;
 							width: 4vmax;
+							min-width: calc($h1/2);
 						}
 						&:active {
 							background-color: transparentize($dark-color, 0.5);
@@ -897,7 +991,7 @@
 						&:checked {
 							~ .head-list {
 								display: flex;
-								height: 90px;
+								height: 75px;
 							}
 						}
 					}
@@ -913,7 +1007,7 @@
 						transition: height 0.5s ease;
 						z-index: 1;
 						height: 0;
-						width: 35vmax;
+						width: $min-viewport-width;
 						right: -5px;
 						top: 45px;
 						.head-list-item {
@@ -936,12 +1030,8 @@
 				}
 				.lang-stg {
 					.lang-content {
-						align-items: flex-end;
 						border-right: $border;
 						border-bottom-left-radius: $border-radius;
-						flex-direction: row;
-						justify-content: space-evenly;
-						height: 11vmax;
 					}
 				}
 			}
@@ -962,6 +1052,9 @@
 				}
 				.name-section-detail {
 					justify-content: center;
+					.sm-presentation {
+						font-size: $h3 * 0.65;
+					}
 					.name-pic-pag {
 						align-items: flex-start;
 						overflow: hidden;
@@ -1336,6 +1429,15 @@
 
 @media screen and (max-width: 608px) {
 	/*Constant: 0.6 - no $form-font, $normal-font, $h5*/
+	header {
+		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.6;
+				}
+			}
+		}
+	}
 	.about-me {
 		.greetings {
 			h1 {
@@ -1353,6 +1455,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.6;
+					}
 					.name-pic-pag {
 						.name-bullets {
 							.name-bullet-effect {
@@ -1426,6 +1531,15 @@
 
 @media screen and (max-width: 444px) {
 	/*Constant: 0.55 - no $form-font, $normal-font, $h5, $h4*/
+	header {
+		.header-nav {
+			.logo-container {
+				em {
+					font-size: $h1 * 0.55;
+				}
+			}
+		}
+	}
 	.about-me {
 		.greetings {
 			h1 {
@@ -1440,6 +1554,9 @@
 					}
 				}
 				.name-section-detail {
+					.sm-presentation {
+						font-size: $h3 * 0.55;
+					}
 					.name-pic-pag {
 						.name-bullets {
 							.name-bullet-effect {
@@ -1501,14 +1618,9 @@
 	header {
 		min-width: $min-viewport-width;
 		.header-nav {
-			.head-section {
-				.lang-stg {
-					.lang-content {
-						align-items: center;
-						flex-direction: column;
-						justify-content: flex-end;
-						height: 14vmax;
-					}
+			.logo-container {
+				em {
+					font-size: calc($h1/2);
 				}
 			}
 		}

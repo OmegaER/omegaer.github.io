@@ -3,9 +3,52 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta
+			name="author"
+			content="Emanuele Romano" />
+		<meta
+			name="description"
+			content="This is my personal webpage as a Start2Impact University project. Come and check my works!" />
+		<meta
+			name="generator"
+			content="Visual Studio Code" />
+		<meta
+			name="keywords"
+			content="html css scss personal webpage emailjs curriculum social links" />
+		<meta
+			name="robots"
+			content="all" />
+		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=1" />
-		<!--Aggiungere meta description, meta Open Graph e meta robots-->
+		<meta
+			property="og:description"
+			content="This is my personal webpage as a Start2Impact University project. Come and check my works!" />
+		<meta
+			property="og:determiner"
+			content="" />
+		<!--Aggiungere alla creazione del sito-->
+		<meta
+			property="og:image"
+			content="#" />
+		<meta
+			property="og:locale"
+			content="en_GB" />
+		<meta
+			property="og:locale:alternate"
+			content="it_IT" />
+		<meta
+			property="og:title"
+			content="Omega: About me" />
+		<meta
+			property="og:site_name"
+			content="Omega Webpage" />
+		<meta
+			property="og:type"
+			content="website" />
+		<!--Aggiungere alla creazione del sito-->
+		<meta
+			property="url"
+			content="#" />
 		<link
 			rel="shortcut icon"
 			href="assets/img/favicon.ico"
@@ -13,13 +56,14 @@
 		<link
 			rel="stylesheet"
 			href="assets/css/style.css" />
-		<title>My Webpage</title>
+		<title>Omega: About me</title>
 	</head>
 	<body>
 		<header>
 			<nav class="header-nav">
 				<a
 					href="index.html"
+					name="logo"
 					class="logo-container">
 					<span class="logo-img">
 						<img
@@ -121,6 +165,16 @@
 						</h2>
 					</div>
 					<div class="name-section-detail">
+						<p class="sm-presentation">
+							I'm a Full Stack Development student at
+							<a
+								href="https://www.start2impact.it/"
+								target="_blank"
+								rel="noopener noreferrer">
+								<em>Start2Impact University.</em>
+							</a>
+							Feel free to poke around my website, widgets and links!
+						</p>
 						<div class="name-pic-pag">
 							<input
 								type="radio"
@@ -262,6 +316,13 @@
 						</div>
 					</div>
 				</section>
+			</div>
+			<div class="max-sticky-height">
+				<a href="#logo">
+					<img
+						src="assets/img/box-arrow-up.svg"
+						alt="Home" />
+				</a>
 			</div>
 		</main>
 		<footer>
@@ -425,7 +486,7 @@
 					</section>
 					<section class="side-note">
 						<em>
-							This page has been created using HTML, CSS and basic SCSS as a
+							This page has been created using HTML, CSS and basic SCSS knowledge as a
 							<a
 								href="https://www.start2impact.it/"
 								target="_blank"
@@ -461,7 +522,7 @@
 			window.onload = function () {
 				contactForm.addEventListener("submit", function (event) {
 					event.preventDefault();
-					submitBtn.value = 'Sending...';
+					submitBtn.value = "Sending...";
 					emailjs.sendForm(serviceID, templateID, this).then(
 						() => {
 							console.log("SUCCESS!");

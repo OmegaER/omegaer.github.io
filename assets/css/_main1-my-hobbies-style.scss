@@ -5,8 +5,15 @@
 	height: 110vh;
 	min-height: 648px;
 	width: 100%;
-	.hobby-section-title {
+	.hobby-section-title,
+	.hobby-section-detail {
 		align-items: center;
+		display: flex;
+		justify-content: center;
+		position: inherit;
+		width: 100%;
+	}
+	.hobby-section-title {
 		background-color: $secondary-color;
 		background-image: url(../img/background-title.jpg);
 		background-position: top;
@@ -16,21 +23,12 @@
 		border-top: $border;
 		border-top-left-radius: $section-title-radius;
 		border-top-right-radius: $section-title-radius;
-		display: flex;
-		justify-content: center;
 		padding-bottom: 1vh;
 		padding-top: 1vh;
-		position: inherit;
-		width: 100%;
 	}
 	.hobby-section-detail {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		position: inherit;
 		height: 100%;
-		min-height: 440px;
-		width: 100%;
+		min-height: 240px;
 		.hobby-pic-pag {
 			align-items: center;
 			display: flex;
@@ -81,7 +79,7 @@
 							object-fit: cover;
 						}
 						.hobby-img-desc {
-                            overflow-y: scroll;
+							overflow-y: scroll;
 							padding: 1vh 1vw;
 						}
 					}

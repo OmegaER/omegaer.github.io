@@ -5,8 +5,12 @@
 	height: 110vh;
 	min-height: $name-min-viewport-height;
 	width: 100%;
-	.name-section-title {
+	.name-section-title,
+	.name-section-detail {
 		align-items: center;
+		display: flex;
+	}
+	.name-section-title {
 		background-color: $secondary-color;
 		background-image: url(../img/background-title.jpg);
 		background-position: top;
@@ -15,7 +19,6 @@
 		border-bottom: $border;
 		border-top-left-radius: $section-title-radius;
 		border-top-right-radius: $section-title-radius;
-		display: flex;
 		justify-content: center;
 		padding: 1vh 0;
 		width: 100%;
@@ -26,13 +29,34 @@
 		}
 	}
 	.name-section-detail {
-		align-items: center;
-		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
 		position: inherit;
 		height: 100%;
 		width: 100%;
+		.sm-presentation {
+			background: radial-gradient($soft-shadow -100%, transparent 100%);
+			border-radius: 100%;
+			font-size: $h3;
+			padding: 0.5vh 1vw;
+			text-align: center;
+			a {
+				-moz-transition: 0.5s ease;
+				-o-transition: 0.5s ease;
+				-webkit-transition: 0.5s ease;
+				color: $altered-text;
+				font-style: normal;
+				text-decoration: none;
+				transition: 0.5s ease;
+				&:visited {
+					color: $visited-links-perm;
+				}
+				&:hover,
+				&:visited:hover {
+					color: $title-color;
+				}
+			}
+		}
 		.name-pic-pag {
 			align-items: center;
 			display: flex;
@@ -40,9 +64,7 @@
 			justify-content: space-evenly;
 			position: inherit;
 			width: 100%;
-			.name-slide-control {
-				display: none;
-			}
+			.name-slide-control,
 			.name-bullets {
 				display: none;
 			}
@@ -60,16 +82,17 @@
 						display: flex;
 						justify-content: center;
 						position: inherit;
-						.name-overlay-btn {
-							cursor: pointer;
+						.name-overlay-btn,
+						.name-overlay {
 							display: flex;
 							justify-content: center;
-							position: inherit;
 							width: 100%;
+						}
+						.name-overlay-btn {
+							cursor: pointer;
 							.name-img-block {
 								border-radius: $border-radius;
 								box-shadow: $shadow;
-								position: inherit;
 								object-fit: cover;
 								height: 75vh;
 								min-height: $name-min-viewport-image-height;
@@ -104,13 +127,10 @@
 							background-color: transparentize($dark-color, 0.3);
 							border-bottom-left-radius: $border-radius;
 							border-bottom-right-radius: $border-radius;
-							display: flex;
-							justify-content: center;
 							overflow-y: scroll;
 							position: absolute;
 							transition: height 0.5s ease;
 							height: 0;
-							width: 100%;
 							bottom: 0;
 							.name-img-desc {
 								display: block;

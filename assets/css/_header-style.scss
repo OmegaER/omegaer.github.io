@@ -42,13 +42,14 @@ header {
 				.logo-alt {
 					object-fit: contain;
 					width: 7vmax;
+					min-width: $h1;
 				}
 			}
 			em {
 				align-self: flex-end;
 				color: $logo-p-color;
 				display: block;
-				font-size: 4vmax;
+				font-size: $h1;
 			}
 		}
 		.head-separator {
@@ -156,6 +157,7 @@ header {
 					.lang-btn-alt {
 						filter: invert(1);
 						width: 3vmax;
+						min-width: calc($h1/2);
 					}
 					span {
 						color: $logo-p-color;
@@ -176,7 +178,7 @@ header {
 					}
 				}
 				.lang-content {
-					background-color: linear-gradient(to bottom, $secondary-color 0%, black 100%);
+					background: linear-gradient(to bottom, $secondary-color 0%, black 100%);
 					background-image: url(../img/background-title.jpg);
 					background-position: top;
 					background-repeat: no-repeat;
@@ -192,16 +194,18 @@ header {
 					position: absolute;
 					z-index: 1;
 					height: 14vmax;
+					min-height: calc($min-viewport-width/2);
 					left: 0;
 					right: 0;
 					top: 0;
 					.lang-item {
 						display: flex;
 						justify-content: flex-end;
-						margin-top: 1vmax;
+						margin-top: 2vh;
 						box-shadow: $shadow;
 						.lang-item-alt {
 							width: 2vmax;
+							min-width: $normal-font;
 						}
 					}
 				}

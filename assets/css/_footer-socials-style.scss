@@ -1,0 +1,204 @@
+.socials {
+	display: flex;
+	flex-direction: column;
+	padding: 0 1vw;
+	height: 100%;
+	width: 50%;
+	h2 {
+		text-align: right;
+		text-shadow: $shadow;
+	}
+    .link-tree,
+    .side-note {
+        width: 100%;
+    }
+	.link-tree {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+		.social-links {
+			align-items: flex-end;
+			display: flex;
+			height: 50%;
+			width: 90%;
+			.envelope {
+				align-items: flex-end;
+				display: inline-flex;
+				justify-content: space-evenly;
+				margin-bottom: 1vh;
+				height: 50%;
+				width: 100%;
+                h4,
+                .link-group {
+                    width: 100%;
+                }
+				h4 {
+					text-shadow: $shadow;
+				}
+				.link-group {
+					display: inline-flex;
+					justify-content: space-between;
+					height: 100%;
+					span {
+						align-items: center;
+						display: flex;
+						flex-direction: column-reverse;
+						justify-content: flex-start;
+						height: 100%;
+						&:first-of-type {
+							a {
+								&:hover {
+									filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%); //Facebook filter
+								}
+							}
+						}
+						&:nth-of-type(2) {
+							a {
+								&:hover {
+									filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%); //Instagram filter
+								}
+							}
+						}
+						&:nth-of-type(3) {
+							a {
+								&:hover {
+									filter: invert(0%) sepia(17%) saturate(1102%) hue-rotate(353deg) brightness(92%) contrast(87%); //Threads filter
+								}
+							}
+						}
+						&:nth-of-type(4) {
+							a {
+								&:hover {
+									filter: invert(100%); //X filter
+								}
+							}
+						}
+						&:last-of-type {
+							a {
+								&:hover {
+									filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%); //LinkedIn filters
+								}
+							}
+						}
+						a {
+							-moz-transition: filter 0.5s ease;
+							-o-transition: filter 0.5s ease;
+							-webkit-transition: filter 0.5s ease;
+							transition: filter 0.5s ease;
+							img {
+								-moz-transition: width 0.5s ease;
+								-o-transition: width 0.5s ease;
+								-webkit-transition: width 0.5s ease;
+								transition: width 0.5s ease;
+								width: 3vmax;
+								min-width: 16px;
+								&:hover {
+									width: 3.5vmax;
+								}
+							}
+							&:hover {
+								+ .selector-effect {
+									height: 100%;
+								}
+							}
+						}
+						.selector-effect {
+							-moz-transition: height 0.7s ease;
+							-o-transition: height 0.7s ease;
+							-webkit-transition: height 0.7s ease;
+							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+							margin-bottom: 1vh;
+							transition: height 0.7s ease;
+							height: 0;
+							width: 1.5vmax;
+						}
+					}
+				}
+			}
+		}
+		.git {
+			align-items: flex-start;
+			display: flex;
+			height: 50%;
+			width: 40%;
+			.envelope {
+				align-items: flex-end;
+				display: inline-flex;
+				justify-content: space-evenly;
+				margin-top: 1vh;
+				height: 50%;
+				width: 100%;
+				h4 {
+					text-shadow: $shadow;
+				}
+				span {
+					align-items: center;
+					display: flex;
+					flex-direction: column-reverse;
+					justify-content: flex-start;
+					height: 100%;
+					a {
+						-moz-transition: filter 0.5s ease;
+						-o-transition: filter 0.5s ease;
+						-webkit-transition: filter 0.5s ease;
+						transition: filter 0.5s ease;
+						img {
+							-moz-transition: width 0.5s ease;
+							-o-transition: width 0.5s ease;
+							-webkit-transition: width 0.5s ease;
+							transition: width 0.5s ease;
+							width: 3vmax;
+							min-width: 16px;
+							&:hover {
+								width: 3.5vmax;
+							}
+						}
+						&:hover {
+							filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%); //GitHub filter
+							+ .selector-effect {
+								height: 100%;
+							}
+						}
+					}
+					.selector-effect {
+						-moz-transition: height 0.7s ease;
+						-o-transition: height 0.7s ease;
+						-webkit-transition: height 0.7s ease;
+						filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+						margin-bottom: 1vh;
+						transition: height 0.7s ease;
+						height: 0;
+						width: 1.5vmax;
+					}
+				}
+			}
+		}
+	}
+	.side-note {
+		border-top: $border;
+		color: $altered-text;
+		text-align: right;
+		em {
+			text-shadow: $shadow;
+			a {
+				-moz-transition: 0.5s ease;
+				-o-transition: 0.5s ease;
+				-webkit-transition: 0.5s ease;
+				color: $logo-p-color;
+				font-style: normal;
+				font-weight: bold;
+				text-decoration: none;
+				transition: 0.5s ease;
+				&:hover,
+				&:visited:hover {
+					color: $title-color;
+				}
+				&:visited {
+					color: $visited-links-perm;
+				}
+			}
+		}
+	}
+}
