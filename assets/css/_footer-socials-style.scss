@@ -92,10 +92,10 @@
 								-o-transition: width 0.5s ease;
 								-webkit-transition: width 0.5s ease;
 								transition: width 0.5s ease;
-								width: 3vmax;
-								min-width: 16px;
+								width: 2vmax;
+								min-width: $normal-font;
 								&:hover {
-									width: 3.5vmax;
+									width: 2.5vmax;
 								}
 							}
 							&:hover {
@@ -109,10 +109,11 @@
 							-o-transition: height 0.7s ease;
 							-webkit-transition: height 0.7s ease;
 							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
-							margin-bottom: 1vh;
+							margin-bottom: 0.5vh;
 							transition: height 0.7s ease;
 							height: 0;
 							width: 1.5vmax;
+							min-width: 16px;
 						}
 					}
 				}
@@ -149,10 +150,10 @@
 							-o-transition: width 0.5s ease;
 							-webkit-transition: width 0.5s ease;
 							transition: width 0.5s ease;
-							width: 3vmax;
-							min-width: 16px;
+							width: 2vmax;
+							min-width: $normal-font;
 							&:hover {
-								width: 3.5vmax;
+								width: 2.5vmax;
 							}
 						}
 						&:hover {
@@ -167,10 +168,11 @@
 						-o-transition: height 0.7s ease;
 						-webkit-transition: height 0.7s ease;
 						filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
-						margin-bottom: 1vh;
+						margin-bottom: 0.5vh;
 						transition: height 0.7s ease;
 						height: 0;
 						width: 1.5vmax;
+						min-width: 16px;
 					}
 				}
 			}

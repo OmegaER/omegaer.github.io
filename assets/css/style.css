@@ -764,11 +764,11 @@ footer .footer-nav .socials .link-tree .social-links .envelope .link-group span 
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
 	transition: width 0.5s ease;
-	width: 3vmax;
-	min-width: 16px;
+	width: 2vmax;
+	min-width: 22.9635px;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img:hover {
-	width: 3.5vmax;
+	width: 2.5vmax;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a:hover + .selector-effect {
 	height: 100%;
@@ -778,10 +778,11 @@ footer .footer-nav .socials .link-tree .social-links .envelope .link-group span 
 	-o-transition: height 0.7s ease;
 	-webkit-transition: height 0.7s ease;
 	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
-	margin-bottom: 1vh;
+	margin-bottom: 0.5vh;
 	transition: height 0.7s ease;
 	height: 0;
 	width: 1.5vmax;
+	min-width: 16px;
 }
 footer .footer-nav .socials .link-tree .git {
 	align-items: flex-start;
@@ -812,11 +813,11 @@ footer .footer-nav .socials .link-tree .git .envelope span a {
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img {
 	transition: width 0.5s ease;
-	width: 3vmax;
-	min-width: 16px;
+	width: 2vmax;
+	min-width: 22.9635px;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img:hover {
-	width: 3.5vmax;
+	width: 2.5vmax;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a:hover {
 	filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
@@ -829,10 +830,11 @@ footer .footer-nav .socials .link-tree .git .envelope span .selector-effect {
 	-o-transition: height 0.7s ease;
 	-webkit-transition: height 0.7s ease;
 	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
-	margin-bottom: 1vh;
+	margin-bottom: 0.5vh;
 	transition: height 0.7s ease;
 	height: 0;
 	width: 1.5vmax;
+	min-width: 16px;
 }
 footer .footer-nav .socials .side-note {
 	border-top: 1px solid #ab9c87;
@@ -1688,12 +1690,13 @@ footer .footer-nav .socials .side-note em a:visited {
 		text-align: center;
 	}
 	footer .footer-nav .socials .link-tree .social-links .envelope {
+		align-items: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		margin-bottom: 0;
 		margin-top: 1vh;
-		height: 90%;
+		height: 100%;
 	}
 	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
 		font-size: 18.4275px;
@@ -1702,33 +1705,19 @@ footer .footer-nav .socials .side-note em a:visited {
 		justify-content: space-evenly;
 		height: 50%;
 	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
-		width: 4vmax;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img:hover {
-		width: 5vmax;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope .link-group span .selector-effect {
-		width: 3vmax;
-	}
 	footer .footer-nav .socials .link-tree .git .envelope {
-		height: 70%;
+		align-items: center;
+		margin-top: 0;
+		height: 100%;
 	}
 	footer .footer-nav .socials .link-tree .git .envelope h4 {
 		font-size: 18.4275px;
 	}
 	footer .footer-nav .socials .link-tree .git .envelope span {
+		align-self: flex-start;
+		margin-top: 1vmax;
 		margin-left: 1vw;
 		height: 50%;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span a img {
-		width: 4vmax;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span a img:hover {
-		width: 5vmax;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope span .selector-effect {
-		width: 3vmax;
 	}
 }
 @media screen and (max-width: 608px) {
