@@ -1,0 +1,98 @@
+.skills-equip {
+	border: $debug; //d
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	width: 100%;
+	.maj-skills {
+		width: 50%;
+		h2 {
+			background-color: $secondary-color;
+			background-image: url(../img/background-title.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-bottom: $border;
+			text-shadow: $shadow;
+		}
+		.maj-skills-ord {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			width: 100%;
+			.maj-skill-item {
+				align-items: flex-start;
+				display: flex;
+				flex-direction: column;
+				margin: 1vh 1vw;
+				text-shadow: $shadow;
+				width: 100%;
+                &:first-of-type {
+                    div {
+                        background-color: $altered-text;
+                        span {
+                            width: 75%;
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    div {
+                        background-color: $altered-text;
+                        span {
+                            width: 5%;
+                        }
+                    }
+                    .p-s {
+                        color: $altered-text;
+                        margin-top: 0.5vh;
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                }
+				h4 {
+					background: radial-gradient($soft-shadow -100%, transparent 100%);
+					border-radius: 100%;
+                    img {
+                        filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+                    }
+                    em {
+                        font-size: $normal-font;
+                    }
+				}
+				div {
+                    align-items: center;
+					background-color: $skill-disabled-container;
+					border-radius: $section-title-radius;
+					box-shadow: $shadow, $shadow-internal;
+                    display: flex;
+					height: 30px;
+					width: 80%;
+                    span {
+                        background: linear-gradient(135deg, $primary-color, $footer-mid-color);
+                        border-radius: $section-title-radius;
+                        display: flex;
+                        margin-left: 0.1vw;
+                        height: 95%;
+                    }
+				}
+			}
+		}
+	}
+	hr {
+		border: $border;
+	}
+	.access-skills {
+		width: 50%;
+		h2 {
+			background-color: $secondary-color;
+			background-image: url(../img/background-title.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-bottom: $border;
+			text-shadow: $shadow;
+		}
+	}
+}

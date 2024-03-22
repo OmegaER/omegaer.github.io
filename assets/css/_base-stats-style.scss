@@ -20,6 +20,7 @@ $primary-color: #262d42;
 $primary-color-scrollbar: #394362;
 $secondary-color: #063258;
 $secondary-color-scrollbar: #094d88;
+$skill-disabled-container: #333;
 $soft-shadow: #555;
 $title-color: #ab9c87;
 $altered-text: #999;
@@ -84,6 +85,8 @@ body {
 
 h1,
 h2,
+summary,
+legend,
 h3,
 h4,
 h5,

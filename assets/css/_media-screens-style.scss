@@ -198,6 +198,13 @@
 				}
 			}
 		}
+		.max-sticky-height {
+			a {
+				border: $border-lg;
+				border-radius: $border-radius * 1.5;
+				padding: 7.5px 7.5px;
+			}
+		}
 	}
 	footer {
 		border-top: $border-lg;

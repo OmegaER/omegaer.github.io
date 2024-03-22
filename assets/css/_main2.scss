@@ -1,0 +1,67 @@
+.my-skills {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	.skills-box {
+		align-items: center;
+		background-color: $inner-box;
+		background-image: url(../img/background-section.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: $border;
+		border-radius: $section-title-radius;
+		box-shadow: $shadow;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 5vh 0;
+		position: inherit;
+		width: 95%;
+		h1 {
+			background-color: $secondary-color;
+			background-image: url(../img/background-title.jpg);
+			background-position: top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-bottom: $border;
+			border-top-left-radius: $section-title-radius;
+			border-top-right-radius: $section-title-radius;
+            color: $title-color;
+			padding: 1vh 0;
+            text-shadow: $shadow;
+			width: 100%;
+		}
+		@import "main2-skills-equip";
+	}
+	.max-sticky-height {
+		display: flex;
+		position: absolute;
+		height: 70%;
+		bottom: 0;
+		right: 0;
+		a {
+			align-self: flex-end;
+			border: $border;
+			border-radius: $border-radius;
+			box-shadow: $shadow;
+			background-color: $secondary-color;
+			background-image: url(../img/background-title.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0 1vw 1vh 0;
+			padding: 5px 5px;
+			position: sticky;
+			min-width: 35px;
+			bottom: 1vh;
+			img {
+				filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+				width: 3vw;
+				min-width: 35px;
+			}
+		}
+	}
+}

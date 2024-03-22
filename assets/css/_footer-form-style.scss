@@ -6,6 +6,7 @@ form {
 	height: 100%;
 	width: 50%;
 	legend {
+		align-self: flex-start;
 		color: $title-color;
 		text-shadow: $shadow;
 	}
@@ -24,7 +25,7 @@ form {
 			padding-left: 1vw;
 			font-size: $h5;
 			text-shadow: $shadow;
-			width: 35%;
+			width: 40%;
 			i {
 				color: $title-color;
 				font-style: normal;
@@ -35,7 +36,7 @@ form {
             border: $border;
             box-shadow: $shadow, $shadow-internal;
 			font-size: $form-font;
-            width: 25vw;
+            width: 60%;
         }
 		input {
 			border-radius: $section-title-radius;
