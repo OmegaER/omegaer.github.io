@@ -23,6 +23,7 @@ $secondary-color-scrollbar: #094d88;
 $skill-disabled-container: #333;
 $soft-shadow: #555;
 $title-color: #ab9c87;
+$title-color-alt: #423B26;
 $altered-text: #999;
 $visited-links-perm: #d0d0d0;
 
@@ -109,6 +110,9 @@ h3 {
 }
 h4 {
 	font-size: $h4;
+}
+h5 {
+	font-size: $h5;
 }
 
 p {

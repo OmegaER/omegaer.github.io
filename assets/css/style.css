@@ -65,6 +65,10 @@ h4 {
   font-size: 28.35px;
 }
 
+h5 {
+  font-size: 25.515px;
+}
+
 p {
   color: white;
   font-size: 22.9635px;
@@ -624,13 +628,14 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 100%;
 }
 .my-skills .skills-box .skills-equip {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  position: relative;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills {
+  position: inherit;
   width: 50%;
 }
 .my-skills .skills-box .skills-equip .maj-skills h2 {
@@ -647,31 +652,48 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   display: flex;
   flex-direction: column;
   list-style: none;
+  padding: 0 1vw 0 1vw;
+  position: inherit;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin: 1vh 1vw;
+  margin: 1vh 0 1vh 0;
+  position: inherit;
   text-shadow: 0.5vh 0.5vw 1vmax #111;
   width: 100%;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type div {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type h4 img {
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type .maj-skill-cont .skill-bar {
   background-color: #999;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type div span {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type .maj-skill-cont .skill-bar .skill-mastery {
   width: 75%;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) div {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type .maj-skill-cont .skill-bar .skill-bns {
+  width: 80%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) h4 img {
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar {
   background-color: #999;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) div span {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-mastery {
   width: 5%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-bns {
+  width: 10%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .p-s {
   color: #999;
   margin-top: 0.5vh;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 80%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .p-s i {
   font-style: normal;
@@ -681,26 +703,209 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   border-radius: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 img {
-  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+  width: 2vmax;
+  min-width: 16px;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 em {
   font-size: 22.9635px;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item div {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: inherit;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont .skill-bar {
   align-items: center;
   background-color: #333;
   border-radius: 50px;
   box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
   display: flex;
+  position: inherit;
   height: 30px;
   width: 80%;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item div span {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont .skill-bar .skill-mastery {
   background: linear-gradient(135deg, #262d42, #04091c);
   border-radius: 50px;
   display: flex;
   margin-left: 0.1vw;
-  height: 95%;
+  z-index: 2;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont .skill-bar .skill-bns {
+  background: linear-gradient(135deg, #ab9c87, #423B26);
+  border-radius: 50px;
+  display: flex;
+  margin-left: 0.1vw;
+  position: absolute;
+  z-index: 1;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont p {
+  color: #ab9c87;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills {
+  display: flex;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills summary {
+  font-size: 28.35px;
+  text-align: start;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 1vw 0 1vw;
+  position: inherit;
+  width: 100%;
+  /*Temporary*/
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 0 1vh 0;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type h5 img {
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type .min-skill-cont .skill-bar {
+  background-color: #999;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type .min-skill-cont .skill-bar .skill-mastery {
+  width: 35%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type .min-skill-cont .skill-bar .skill-bns {
+  width: 40%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) h5 img {
+  filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) .min-skill-cont .skill-bar {
+  background-color: #999;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) .min-skill-cont .skill-bar .skill-mastery {
+  width: 55%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) .min-skill-cont .skill-bar .skill-bns {
+  width: 60%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item h5 {
+  background: radial-gradient(#555 -100%, transparent 100%);
+  border-radius: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item h5 img {
+  width: 2vmax;
+  min-width: 16px;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: inherit;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont .skill-bar {
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 50%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont .skill-bar .skill-mastery {
+  background: linear-gradient(135deg, #262d42, #04091c);
+  border-radius: 50px;
+  display: flex;
+  margin-left: 0.1vw;
+  z-index: 2;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont .skill-bar .skill-bns {
+  background: linear-gradient(135deg, #ab9c87, #423B26);
+  border-radius: 50px;
+  display: flex;
+  margin-left: 0.1vw;
+  position: absolute;
+  z-index: 1;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont p {
+  color: #ab9c87;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 0 1vh 0;
+  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 {
+  background: radial-gradient(#555 -100%, transparent 100%);
+  border-radius: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 img {
+  width: 2vmax;
+  min-width: 16px;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
+  font-size: 22.9635px;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw .min-skill-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: inherit;
+  width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw .min-skill-cont .skill-bar {
+  border: 1px dashed #ab9c87;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50px;
+  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  display: flex;
+  position: relative;
+  height: 30px;
+  width: 50%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw .min-skill-cont .skill-bar .skill-mastery {
+  background: linear-gradient(135deg, #262d42, #04091c);
+  border-radius: 50px;
+  display: flex;
+  margin-left: 0.1vw;
+  z-index: 2;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw .min-skill-cont .skill-bar .skill-bns {
+  background: linear-gradient(135deg, #ab9c87, #423B26);
+  border-radius: 50px;
+  display: flex;
+  margin-left: 0.1vw;
+  position: absolute;
+  z-index: 1;
+  height: 90%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw .min-skill-cont p {
+  color: #ab9c87;
 }
 .my-skills .skills-box .skills-equip hr {
   border: 1px solid #ab9c87;

@@ -1,10 +1,11 @@
 .skills-equip {
-	border: $debug; //d
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
+	position: relative;
 	width: 100%;
 	.maj-skills {
+		position: inherit;
 		width: 50%;
 		h2 {
 			background-color: $secondary-color;
@@ -20,62 +21,282 @@
 			display: flex;
 			flex-direction: column;
 			list-style: none;
+			padding: 0 1vw 0 1vw;
+			position: inherit;
 			width: 100%;
 			.maj-skill-item {
+				align-items: flex-start;
+				display: flex;
+				flex-direction: column;
+				margin: 1vh 0 1vh 0;
+				position: inherit;
+				text-shadow: $shadow;
+				width: 100%;
+				&:first-of-type {
+					h4 {
+						img {
+							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+						}
+					}
+					.maj-skill-cont {
+						.skill-bar {
+							background-color: $altered-text;
+							.skill-mastery {
+								width: 75%;
+							}
+							.skill-bns {
+								width: 80%;
+							}
+						}
+					}
+				}
+				&:nth-of-type(2) {
+					h4 {
+						img {
+							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+						}
+					}
+					.maj-skill-cont {
+						.skill-bar {
+							background-color: $altered-text;
+							.skill-mastery {
+								width: 5%;
+							}
+							.skill-bns {
+								width: 10%;
+							}
+						}
+					}
+					.p-s {
+						color: $altered-text;
+						margin-top: 0.5vh;
+						text-shadow: $shadow;
+						width: 80%;
+						i {
+							font-style: normal;
+						}
+					}
+				}
+				h4 {
+					background: radial-gradient($soft-shadow -100%, transparent 100%);
+					border-radius: 100%;
+					img {
+						width: 2vmax;
+						min-width: 16px;
+					}
+					em {
+						font-size: $normal-font;
+					}
+				}
+				.maj-skill-cont {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					position: inherit;
+					width: 100%;
+					.skill-bar {
+						align-items: center;
+						background-color: $skill-disabled-container;
+						border-radius: $section-title-radius;
+						box-shadow: $shadow, $shadow-internal;
+						display: flex;
+						position: inherit;
+						height: 30px;
+						width: 80%;
+						.skill-mastery {
+							background: linear-gradient(135deg, $primary-color, $footer-mid-color);
+							border-radius: $section-title-radius;
+							display: flex;
+							margin-left: 0.1vw;
+							z-index: 2;
+							height: 90%;
+						}
+						.skill-bns {
+							background: linear-gradient(135deg, $title-color, $title-color-alt);
+							border-radius: $section-title-radius;
+							display: flex;
+							margin-left: 0.1vw;
+							position: absolute;
+							z-index: 1;
+							height: 90%;
+						}
+					}
+					p {
+						color: $title-color;
+					}
+				}
+			}
+			.min-skills-start {
 				align-items: flex-start;
 				display: flex;
 				flex-direction: column;
 				margin: 1vh 1vw;
 				text-shadow: $shadow;
 				width: 100%;
-                &:first-of-type {
-                    div {
-                        background-color: $altered-text;
-                        span {
-                            width: 75%;
-                        }
-                    }
-                }
-                &:nth-of-type(2) {
-                    div {
-                        background-color: $altered-text;
-                        span {
-                            width: 5%;
-                        }
-                    }
-                    .p-s {
-                        color: $altered-text;
-                        margin-top: 0.5vh;
-                        i {
-                            font-style: normal;
-                        }
-                    }
-                }
-				h4 {
-					background: radial-gradient($soft-shadow -100%, transparent 100%);
-					border-radius: 100%;
-                    img {
-                        filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
-                    }
-                    em {
-                        font-size: $normal-font;
-                    }
-				}
-				div {
-                    align-items: center;
-					background-color: $skill-disabled-container;
-					border-radius: $section-title-radius;
-					box-shadow: $shadow, $shadow-internal;
-                    display: flex;
-					height: 30px;
-					width: 80%;
-                    span {
-                        background: linear-gradient(135deg, $primary-color, $footer-mid-color);
-                        border-radius: $section-title-radius;
-                        display: flex;
-                        margin-left: 0.1vw;
-                        height: 95%;
-                    }
+				.min-skills {
+					display: flex;
+					width: 100%;
+					summary {
+						font-size: $h4;
+						text-align: start;
+						text-shadow: $shadow;
+					}
+					.min-skills-ord {
+						align-items: flex-start;
+						display: flex;
+						flex-direction: column;
+						list-style: none;
+						padding: 0 1vw 0 1vw;
+						position: inherit;
+						width: 100%;
+						.min-skill-item {
+							align-items: flex-start;
+							display: flex;
+							flex-direction: column;
+							margin: 1vh 0 1vh 0;
+							text-shadow: $shadow;
+							width: 100%;
+							&:first-of-type {
+								h5 {
+									img {
+										filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+									}
+								}
+								.min-skill-cont {
+									.skill-bar {
+										background-color: $altered-text;
+										.skill-mastery {
+											width: 35%;
+										}
+										.skill-bns {
+											width: 40%;
+										}
+									}
+								}
+							}
+							&:nth-of-type(2) {
+								h5 {
+									img {
+										filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+									}
+								}
+								.min-skill-cont {
+									.skill-bar {
+										background-color: $altered-text;
+										.skill-mastery {
+											width: 55%;
+										}
+										.skill-bns {
+											width: 60%;
+										}
+									}
+								}
+							}
+							h5 {
+								background: radial-gradient($soft-shadow -100%, transparent 100%);
+								border-radius: 100%;
+								img {
+									width: 2vmax;
+									min-width: 16px;
+								}
+							}
+							.min-skill-cont {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								position: inherit;
+								width: 100%;
+								.skill-bar {
+									align-items: center;
+									background-color: $skill-disabled-container;
+									border-radius: $section-title-radius;
+									box-shadow: $shadow, $shadow-internal;
+									display: flex;
+									position: relative;
+									height: 30px;
+									width: 50%;
+									.skill-mastery {
+										background: linear-gradient(135deg, $primary-color, $footer-mid-color);
+										border-radius: $section-title-radius;
+										display: flex;
+										margin-left: 0.1vw;
+										z-index: 2;
+										height: 90%;
+									}
+									.skill-bns {
+										background: linear-gradient(135deg, $title-color, $title-color-alt);
+										border-radius: $section-title-radius;
+										display: flex;
+										margin-left: 0.1vw;
+										position: absolute;
+										z-index: 1;
+										height: 90%;
+									}
+								}
+								p {
+									color: $title-color;
+								}
+							}
+						}
+						/*Temporary*/
+						.min-skill-item-otw {
+							align-items: flex-start;
+							display: flex;
+							flex-direction: column;
+							margin: 1vh 0 1vh 0;
+							text-shadow: $shadow;
+							width: 100%;
+							h5 {
+								background: radial-gradient($soft-shadow -100%, transparent 100%);
+								border-radius: 100%;
+								img {
+									width: 2vmax;
+									min-width: 16px;
+								}
+								em {
+									font-size: $normal-font;
+								}
+							}
+							.min-skill-cont {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								position: inherit;
+								width: 100%;
+								.skill-bar {
+									border: 1px dashed $title-color;
+									align-items: center;
+									background-color: $skill-disabled-container;
+									border-radius: $section-title-radius;
+									box-shadow: $shadow, $shadow-internal;
+									display: flex;
+									position: relative;
+									height: 30px;
+									width: 50%;
+									.skill-mastery {
+										background: linear-gradient(135deg, $primary-color, $footer-mid-color);
+										border-radius: $section-title-radius;
+										display: flex;
+										margin-left: 0.1vw;
+										z-index: 2;
+										height: 90%;
+									}
+									.skill-bns {
+										background: linear-gradient(135deg, $title-color, $title-color-alt);
+										border-radius: $section-title-radius;
+										display: flex;
+										margin-left: 0.1vw;
+										position: absolute;
+										z-index: 1;
+										height: 90%;
+									}
+								}
+								p {
+									color: $title-color;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
