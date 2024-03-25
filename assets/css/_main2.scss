@@ -17,7 +17,7 @@
 		box-shadow: $shadow;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		margin: 5vh 0;
 		position: inherit;
 		width: 95%;
@@ -40,7 +40,7 @@
 	.max-sticky-height {
 		display: flex;
 		position: absolute;
-		height: 70%;
+		height: 20%;
 		bottom: 0;
 		right: 0;
 		a {

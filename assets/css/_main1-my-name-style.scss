@@ -23,6 +23,7 @@
 		padding: 1vh 0;
 		width: 100%;
 		h2 {
+			text-shadow: $shadow;
 			br {
 				display: none;
 			}
@@ -35,8 +36,7 @@
 		height: 100%;
 		width: 100%;
 		.sm-presentation {
-			background: radial-gradient($soft-shadow -100%, transparent 100%);
-			border-radius: 100%;
+			-webkit-text-stroke: 0.5px $dark-color;
 			font-size: $h3;
 			padding: 0.5vh 1vw;
 			text-align: center;
@@ -144,9 +144,8 @@
 			}
 		}
 		.add-info {
+			-webkit-text-stroke: 0.5px $dark-color;
 			align-self: flex-end;
-			background: radial-gradient($soft-shadow -100%, transparent 100%);
-			border-radius: 100%;
 			font-size: $h3;
 			text-align: right;
 			padding: 0.5vh 1vw;

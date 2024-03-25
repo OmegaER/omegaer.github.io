@@ -72,7 +72,7 @@ h5 {
 p {
   color: white;
   font-size: 22.9635px;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 
 header {
@@ -113,7 +113,6 @@ header .header-nav .head-section {
   height: 100%;
 }
 header .header-nav .logo-container {
-  align-content: flex-end;
   justify-content: space-around;
   text-decoration: none;
 }
@@ -123,11 +122,12 @@ header .header-nav .logo-container .logo-img {
 header .header-nav .logo-container .logo-img .logo-alt {
   -o-object-fit: contain;
      object-fit: contain;
+  max-width: 112px;
   width: 7vmax;
   min-width: 56px;
 }
 header .header-nav .logo-container em {
-  align-self: flex-end;
+  align-self: center;
   color: white;
   display: block;
   font-size: 56px;
@@ -177,7 +177,7 @@ header .header-nav .head-section .head-menu .head-list .head-list-item {
   transition: 0.5s ease;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item:hover {
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item:active, header .header-nav .head-section .head-menu .head-list .head-list-item:visited:active {
   -moz-transform: translate(0.2vh, 0.2vw);
@@ -233,7 +233,7 @@ header .header-nav .head-section .lang-stg .lang-btn {
 }
 header .header-nav .head-section .lang-stg .lang-btn:hover {
   border: 1px solid #ab9c87;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 header .header-nav .head-section .lang-stg .lang-btn .lang-btn-alt {
   filter: invert(1);
@@ -281,7 +281,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item {
   display: flex;
   justify-content: flex-end;
   margin-top: 2vh;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-alt {
   width: 2vmax;
@@ -314,7 +314,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-size: cover;
   border: 1px solid #ab9c87;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,6 +349,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   padding: 1vh 0;
   width: 100%;
 }
+.about-me .personal-box .my-name .name-section-title h2 {
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+}
 .about-me .personal-box .my-name .name-section-title h2 br {
   display: none;
 }
@@ -360,8 +363,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 100%;
 }
 .about-me .personal-box .my-name .name-section-detail .sm-presentation {
-  background: radial-gradient(#555 -100%, transparent 100%);
-  border-radius: 100%;
+  -webkit-text-stroke: 0.5px #111;
   font-size: 31.5px;
   padding: 0.5vh 1vw;
   text-align: center;
@@ -421,7 +423,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
   border-radius: 10px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   -o-object-fit: cover;
      object-fit: cover;
   height: 75vh;
@@ -461,9 +463,8 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   text-align: justify;
 }
 .about-me .personal-box .my-name .name-section-detail .add-info {
+  -webkit-text-stroke: 0.5px #111;
   align-self: flex-end;
-  background: radial-gradient(#555 -100%, transparent 100%);
-  border-radius: 100%;
   font-size: 31.5px;
   text-align: right;
   padding: 0.5vh 1vw;
@@ -497,6 +498,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   border-top-right-radius: 50px;
   padding-bottom: 1vh;
   padding-top: 1vh;
+}
+.about-me .personal-box .my-hobbies .hobby-section-title h2 {
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail {
   height: 100%;
@@ -537,7 +541,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -549,6 +553,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
   border-bottom: 1px solid #ab9c87;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
   -webkit-mask-image: linear-gradient(#063258 80%, transparent);
@@ -571,7 +576,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   align-self: flex-end;
   border: 1px solid #ab9c87;
   border-radius: 10px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   background-color: #063258;
   background-image: url(../img/background-title.jpg);
   background-repeat: no-repeat;
@@ -605,10 +610,10 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-size: cover;
   border: 1px solid #ab9c87;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 5vh 0;
   position: inherit;
   width: 95%;
@@ -624,12 +629,11 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   border-top-right-radius: 50px;
   color: #ab9c87;
   padding: 1vh 0;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   position: relative;
   width: 100%;
@@ -645,7 +649,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid #ab9c87;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord {
   align-items: flex-start;
@@ -662,7 +666,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   flex-direction: column;
   margin: 1vh 0 1vh 0;
   position: inherit;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type h4 img {
@@ -675,7 +679,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 75%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type .maj-skill-cont .skill-bar .skill-bns {
-  width: 80%;
+  width: 76%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) h4 img {
   filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
@@ -684,29 +688,29 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-color: #999;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-mastery {
-  width: 5%;
+  border-radius: 100%;
+  height: 65%;
+  width: 2%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-bns {
-  width: 10%;
+  border-radius: 100%;
+  height: 75%;
+  width: 3%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .p-s {
   color: #999;
   margin-top: 0.5vh;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 80%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .p-s i {
   font-style: normal;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 {
-  background: radial-gradient(#555 -100%, transparent 100%);
-  border-radius: 100%;
-}
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 img {
   width: 2vmax;
   min-width: 16px;
 }
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 em {
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item h4 .p-s {
   font-size: 22.9635px;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont {
@@ -717,10 +721,11 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont .skill-bar {
+  border: 1px solid #423B26;
   align-items: center;
   background-color: #333;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
   display: flex;
   position: inherit;
   height: 30px;
@@ -744,24 +749,46 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   height: 90%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item .maj-skill-cont p {
+  -webkit-text-stroke: 0.5px #423B26;
   color: #ab9c87;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin: 1vh 1vw;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  margin: 1vh 0 1vh 1vw;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills {
+  -o-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  border: 1px solid transparent;
+  border-radius: 10px;
   display: flex;
-  width: 100%;
+  margin: 0 1vw;
+  transition: width 0.5s;
+  width: 50%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills[open] {
+  width: 90%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills summary {
+  background-color: #063258;
+  background-image: url(../img/background-title.jpg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ab9c87;
+  border-radius: 10px;
   font-size: 28.35px;
+  padding: 0 1vw;
   text-align: start;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills summary:hover {
+  cursor: pointer;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord {
   align-items: flex-start;
@@ -778,7 +805,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   display: flex;
   flex-direction: column;
   margin: 1vh 0 1vh 0;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type h5 img {
@@ -791,7 +818,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 35%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type .min-skill-cont .skill-bar .skill-bns {
-  width: 40%;
+  width: 36%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) h5 img {
   filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
@@ -800,14 +827,10 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-color: #999;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) .min-skill-cont .skill-bar .skill-mastery {
-  width: 55%;
+  width: 58%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:nth-of-type(2) .min-skill-cont .skill-bar .skill-bns {
-  width: 60%;
-}
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item h5 {
-  background: radial-gradient(#555 -100%, transparent 100%);
-  border-radius: 100%;
+  width: 59%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item h5 img {
   width: 2vmax;
@@ -821,10 +844,11 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont .skill-bar {
+  border: 1px solid #423B26;
   align-items: center;
   background-color: #333;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
   display: flex;
   position: relative;
   height: 30px;
@@ -848,6 +872,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   height: 90%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item .min-skill-cont p {
+  -webkit-text-stroke: 0.5px #423B26;
   color: #ab9c87;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw {
@@ -855,12 +880,8 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   display: flex;
   flex-direction: column;
   margin: 1vh 0 1vh 0;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 100%;
-}
-.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 {
-  background: radial-gradient(#555 -100%, transparent 100%);
-  border-radius: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 img {
   width: 2vmax;
@@ -881,7 +902,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   align-items: center;
   background-color: #333;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
   display: flex;
   position: relative;
   height: 30px;
@@ -920,12 +941,62 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid #ab9c87;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list {
+  list-style-position: inside;
+  position: relative;
+  height: 85%;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item {
+  color: #ab9c87;
+  font-family: "introrustg-base2line", sans-serif;
+  font-size: 25.515px;
+  margin: 1vh 0 0 1vw;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item em {
+  -webkit-text-stroke: 0.5px #111;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22.9635px;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:nth-of-type(5) em i {
+  -webkit-text-stroke: 0.5px #423B26;
+  color: #ab9c87;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type {
+  color: #999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22.9635px;
+  list-style: none;
+  margin: 0 1vw 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type a {
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  color: #999;
+  font-style: italic;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type a:visited {
+  color: #d0d0d0;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type a:hover, .my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type a:visited:hover {
+  color: #ab9c87;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:last-of-type a img {
+  width: 22.9635px;
 }
 .my-skills .max-sticky-height {
   display: flex;
   position: absolute;
-  height: 70%;
+  height: 20%;
   bottom: 0;
   right: 0;
 }
@@ -933,7 +1004,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   align-self: flex-end;
   border: 1px solid #ab9c87;
   border-radius: 10px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   background-color: #063258;
   background-image: url(../img/background-title.jpg);
   background-repeat: no-repeat;
@@ -977,7 +1048,7 @@ footer .footer-nav form {
 footer .footer-nav form legend {
   align-self: flex-start;
   color: #ab9c87;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav form fieldset,
 footer .footer-nav form span {
@@ -994,7 +1065,7 @@ footer .footer-nav form fieldset label {
   color: #999;
   padding-left: 1vw;
   font-size: 25.515px;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
   width: 40%;
 }
 footer .footer-nav form fieldset label i {
@@ -1004,7 +1075,7 @@ footer .footer-nav form fieldset label i {
 footer .footer-nav form fieldset input,
 footer .footer-nav form fieldset textarea {
   border: 1px solid #ab9c87;
-  box-shadow: 0.5vh 0.5vw 1vmax #111, inset 0vh 0vw 1vmax #555;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
   font-size: 20.66715px;
   width: 60%;
 }
@@ -1025,7 +1096,7 @@ footer .footer-nav form span {
 footer .footer-nav form span input {
   border: 1px solid #ab9c87;
   border-radius: 50px;
-  box-shadow: 0.5vh 0.5vw 1vmax #111;
+  box-shadow: 0.5vh 0.5vw 0.5vmax #111;
   font-size: 20.66715px;
   height: 100%;
   width: 20%;
@@ -1064,7 +1135,7 @@ footer .footer-nav .socials {
 }
 footer .footer-nav .socials h2 {
   text-align: right;
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .link-tree,
 footer .footer-nav .socials .side-note {
@@ -1096,7 +1167,7 @@ footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
   width: 100%;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
   display: inline-flex;
@@ -1165,7 +1236,7 @@ footer .footer-nav .socials .link-tree .git .envelope {
   width: 100%;
 }
 footer .footer-nav .socials .link-tree .git .envelope h4 {
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .link-tree .git .envelope span {
   align-items: center;
@@ -1208,7 +1279,7 @@ footer .footer-nav .socials .side-note {
   text-align: right;
 }
 footer .footer-nav .socials .side-note em {
-  text-shadow: 0.5vh 0.5vw 1vmax #111;
+  text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .side-note em a {
   -moz-transition: 0.5s ease;
@@ -1298,6 +1369,9 @@ footer .footer-nav .socials .side-note em a:visited {
   header .header-nav {
     border-bottom: 2px double #ab9c87;
     border-bottom-right-radius: 15px;
+  }
+  header .header-nav .logo-container .logo-img .logo-alt {
+    max-width: 168px;
   }
   header .header-nav .logo-container em {
     font-size: 84px;
@@ -1880,7 +1954,7 @@ footer .footer-nav .socials .side-note em a:visited {
     background-color: #ccc;
     border: 1px solid #ab9c87;
     border-radius: 100%;
-    box-shadow: 0.5vh 0.5vw 1vmax #111;
+    box-shadow: 0.5vh 0.5vw 0.5vmax #111;
     cursor: pointer;
     margin: 0 0.5vw;
     opacity: 0.5;
@@ -1977,7 +2051,7 @@ footer .footer-nav .socials .side-note em a:visited {
     background-color: #ccc;
     border: 1px solid #ab9c87;
     border-radius: 100%;
-    box-shadow: 0.5vh 0.5vw 1vmax #111;
+    box-shadow: 0.5vh 0.5vw 0.5vmax #111;
     cursor: pointer;
     margin: 0 0.5vw;
     opacity: 0.5;

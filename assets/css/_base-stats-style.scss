@@ -29,7 +29,10 @@ $visited-links-perm: #d0d0d0;
 
 //border shapes
 $border: 1px solid $title-color;
+$border-alt: 1px solid $title-color-alt;
+$border-transparent: 1px solid transparent;
 $border-lg: 2px double $title-color;
+$border-lg-alt: 2px solid $title-color-alt;
 $border-radius: 10px;
 $section-title-radius: 50px;
 
@@ -50,7 +53,7 @@ $min-viewport-width: 280px;
 $name-image-block-limits: 450px;
 $name-min-viewport-height: 700px;
 $name-min-viewport-image-height: 410px;
-$shadow: 0.5vh 0.5vw 1vmax $dark-color;
+$shadow: 0.5vh 0.5vw 0.5vmax $dark-color;
 $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 
 * {

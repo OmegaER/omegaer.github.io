@@ -76,6 +76,11 @@
 			border-bottom: $border-lg;
 			border-bottom-right-radius: $border-radius * 1.5;
 			.logo-container {
+				.logo-img {
+					.logo-alt {
+						max-width: $h1 * 3;	//FIXED
+					}
+				}
 				em {
 					font-size: $h1 * 1.5;
 				}

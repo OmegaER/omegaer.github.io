@@ -25,6 +25,9 @@
 		border-top-right-radius: $section-title-radius;
 		padding-bottom: 1vh;
 		padding-top: 1vh;
+		h2 {
+			text-shadow: $shadow;
+		}
 	}
 	.hobby-section-detail {
 		height: 100%;
@@ -72,6 +75,7 @@
 						min-width: $min-viewport-width * 0.75;
 						h3 {
 							border-bottom: $border;
+							text-shadow: $shadow;
 						}
 						.hobby-img-block {
 							-webkit-mask-image: linear-gradient($secondary-color 80%, transparent);

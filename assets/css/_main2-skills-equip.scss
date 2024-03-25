@@ -1,6 +1,5 @@
 .skills-equip {
 	display: flex;
-	flex-direction: row;
 	justify-content: flex-start;
 	position: relative;
 	width: 100%;
@@ -45,7 +44,7 @@
 								width: 75%;
 							}
 							.skill-bns {
-								width: 80%;
+								width: 76%;
 							}
 						}
 					}
@@ -60,10 +59,14 @@
 						.skill-bar {
 							background-color: $altered-text;
 							.skill-mastery {
-								width: 5%;
+								border-radius: 100%; //Temporary
+								height: 65%; //Temporary
+								width: 2%;
 							}
 							.skill-bns {
-								width: 10%;
+								border-radius: 100%; //Temporary
+								height: 75%; //Temporary
+								width: 3%;
 							}
 						}
 					}
@@ -78,13 +81,11 @@
 					}
 				}
 				h4 {
-					background: radial-gradient($soft-shadow -100%, transparent 100%);
-					border-radius: 100%;
 					img {
 						width: 2vmax;
 						min-width: 16px;
 					}
-					em {
+					.p-s {
 						font-size: $normal-font;
 					}
 				}
@@ -95,6 +96,7 @@
 					position: inherit;
 					width: 100%;
 					.skill-bar {
+						border: $border-alt;
 						align-items: center;
 						background-color: $skill-disabled-container;
 						border-radius: $section-title-radius;
@@ -122,6 +124,7 @@
 						}
 					}
 					p {
+						-webkit-text-stroke: 0.5px $title-color-alt;
 						color: $title-color;
 					}
 				}
@@ -130,16 +133,37 @@
 				align-items: flex-start;
 				display: flex;
 				flex-direction: column;
-				margin: 1vh 1vw;
+				margin: 1vh 0 1vh 1vw;
 				text-shadow: $shadow;
 				width: 100%;
 				.min-skills {
+					-o-transition: width 0.5s;
+					-moz-transition: width 0.5s;
+					-webkit-transition: width 0.5s;
+					border: $border-transparent;
+					border-radius: $border-radius;
 					display: flex;
-					width: 100%;
+					margin: 0 1vw;
+					transition: width 0.5s;
+					width: 50%;
+					&[open] {
+						width: 90%;
+					}
 					summary {
+						background-color: $secondary-color;
+						background-image: url(../img/background-title.jpg);
+						background-position: left center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						border: $border;
+						border-radius: $border-radius;
 						font-size: $h4;
+						padding: 0 1vw;
 						text-align: start;
 						text-shadow: $shadow;
+						&:hover {
+							cursor: pointer;
+						}
 					}
 					.min-skills-ord {
 						align-items: flex-start;
@@ -169,7 +193,7 @@
 											width: 35%;
 										}
 										.skill-bns {
-											width: 40%;
+											width: 36%;
 										}
 									}
 								}
@@ -184,17 +208,15 @@
 									.skill-bar {
 										background-color: $altered-text;
 										.skill-mastery {
-											width: 55%;
+											width: 58%;
 										}
 										.skill-bns {
-											width: 60%;
+											width: 59%;
 										}
 									}
 								}
 							}
 							h5 {
-								background: radial-gradient($soft-shadow -100%, transparent 100%);
-								border-radius: 100%;
 								img {
 									width: 2vmax;
 									min-width: 16px;
@@ -207,6 +229,7 @@
 								position: inherit;
 								width: 100%;
 								.skill-bar {
+									border: $border-alt;
 									align-items: center;
 									background-color: $skill-disabled-container;
 									border-radius: $section-title-radius;
@@ -234,6 +257,7 @@
 									}
 								}
 								p {
+									-webkit-text-stroke: 0.5px $title-color-alt;
 									color: $title-color;
 								}
 							}
@@ -247,8 +271,6 @@
 							text-shadow: $shadow;
 							width: 100%;
 							h5 {
-								background: radial-gradient($soft-shadow -100%, transparent 100%);
-								border-radius: 100%;
 								img {
 									width: 2vmax;
 									min-width: 16px;
@@ -314,6 +336,61 @@
 			background-size: cover;
 			border-bottom: $border;
 			text-shadow: $shadow;
+		}
+		.access-skills-list {
+			list-style-position: inside;
+			position: relative;
+			height: 85%;
+			.access-skills-item {
+				color: $title-color;
+				font-family: $font-title;
+				font-size: $h5;
+				margin: 1vh 0 0 1vw;
+				text-shadow: $shadow;
+				em {
+					-webkit-text-stroke: 0.5px $dark-color;
+					color: $logo-p-color;
+					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+					font-size: $normal-font;
+				}
+				&:nth-of-type(5) {
+					em {
+						i {
+							-webkit-text-stroke: 0.5px $title-color-alt;
+							color: $title-color;
+						}
+					}
+				}
+				&:last-of-type {
+					color: $altered-text;
+					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+					font-size: $normal-font;
+					list-style: none;
+					margin: 0 1vw 0 0;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					a {
+						-moz-transition: 0.5s ease;
+						-o-transition: 0.5s ease;
+						-webkit-transition: 0.5s ease;
+						color: $altered-text;
+						font-style: italic;
+						text-decoration: none;
+						transition: 0.5s ease;
+						&:visited {
+							color: $visited-links-perm;
+						}
+						&:hover,
+						&:visited:hover {
+							color: $title-color;
+						}
+						img {
+							width: $normal-font;
+						}
+					}
+				}
+			}
 		}
 	}
 }
