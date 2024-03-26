@@ -16,9 +16,10 @@
 	}
 	.personal-box {
 		align-items: center;
+		background-attachment: fixed;
 		background-color: $inner-box;
 		background-image: url(../img/background-section.jpg);
-		background-position: top;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		border: $border;

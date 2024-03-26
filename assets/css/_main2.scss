@@ -7,9 +7,10 @@
 	width: 100%;
 	.skills-box {
 		align-items: center;
+		background-attachment: fixed;
 		background-color: $inner-box;
 		background-image: url(../img/background-section.jpg);
-		background-position: top;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		border: $border;
@@ -36,11 +37,11 @@
 			width: 100%;
 		}
 		@import "main2-skills-equip";
+		@import "main2-skills-history";
 	}
 	.max-sticky-height {
 		display: flex;
 		position: absolute;
-		height: 20%;
 		bottom: 0;
 		right: 0;
 		a {

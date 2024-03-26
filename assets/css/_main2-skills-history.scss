@@ -1,0 +1,68 @@
+.skills-hist {
+	width: 100%;
+	&:not([open]) {
+		> summary {
+			border-bottom: none;
+			border-bottom-left-radius: $section-title-radius;
+			border-bottom-right-radius: $section-title-radius;
+		}
+	}
+	&[open] {
+		> summary {
+			border-bottom: $border;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+	summary {
+		background-color: $secondary-color;
+		background-image: url(../img/background-title.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-top: $border;
+		cursor: pointer;
+		font-size: $h2;
+	}
+	ul {
+		list-style: none;
+		padding: 0 1vw 1vh 3vw;
+		li {
+			color: $title-color;
+			margin-top: 1vh;
+			h6 {
+				background-color: $secondary-color;
+				background-image: url(../img/background-title.jpg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: $border;
+				border-radius: $border-radius;
+				padding: 1vh 1vw;
+				text-align: left;
+				width: fit-content;
+			}
+			p {
+                text-indent: 0.8em;
+				&:last-of-type {
+					a {
+						-moz-transition: 0.5s ease;
+						-o-transition: 0.5s ease;
+						-webkit-transition: 0.5s ease;
+						color: $logo-p-color;
+						font-style: italic;
+						text-decoration: none;
+						transition: 0.5s ease;
+						&:visited {
+							color: $visited-links-perm;
+						}
+						&:hover,
+						&:visited:hover {
+							color: $title-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

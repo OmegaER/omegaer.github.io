@@ -81,6 +81,7 @@
 					}
 				}
 				h4 {
+					text-align: start;
 					img {
 						width: 2vmax;
 						min-width: 16px;
@@ -137,15 +138,17 @@
 				text-shadow: $shadow;
 				width: 100%;
 				.min-skills {
-					-o-transition: width 0.5s;
-					-moz-transition: width 0.5s;
-					-webkit-transition: width 0.5s;
+					-o-transition: width 0.5s ease;
+					-moz-transition: width 0.5s ease;
+					-webkit-transition: width 0.5s ease;
 					border: $border-transparent;
 					border-radius: $border-radius;
 					display: flex;
 					margin: 0 1vw;
-					transition: width 0.5s;
-					width: 50%;
+					transition: width 0.5s ease;
+					&:not([open]) {
+						width: 50%;
+					}
 					&[open] {
 						width: 90%;
 					}
@@ -157,13 +160,10 @@
 						background-size: cover;
 						border: $border;
 						border-radius: $border-radius;
+						cursor: pointer;
 						font-size: $h4;
 						padding: 0 1vw;
 						text-align: start;
-						text-shadow: $shadow;
-						&:hover {
-							cursor: pointer;
-						}
 					}
 					.min-skills-ord {
 						align-items: flex-start;
@@ -327,6 +327,8 @@
 		border: $border;
 	}
 	.access-skills {
+		position: relative;
+		min-height: 700px;
 		width: 50%;
 		h2 {
 			background-color: $secondary-color;
@@ -338,56 +340,63 @@
 			text-shadow: $shadow;
 		}
 		.access-skills-list {
-			list-style-position: inside;
-			position: relative;
-			height: 85%;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
 			.access-skills-item {
-				color: $title-color;
-				font-family: $font-title;
-				font-size: $h5;
-				margin: 1vh 0 0 1vw;
-				text-shadow: $shadow;
-				em {
-					-webkit-text-stroke: 0.5px $dark-color;
-					color: $logo-p-color;
-					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-					font-size: $normal-font;
+				border-bottom: $border;
+				display: flex;
+				width: 90%;
+				h6 {
+					padding: 1vh 1vw;
+					text-align: start;
+					width: 50%;
 				}
-				&:nth-of-type(5) {
+				p {
+					-webkit-text-stroke: 0.5px $dark-color;
+					background: transparentize($primary-color, 0.3);
+					display: flex;
+					flex-direction: column;
+					padding: 1vh 1vw;
+					width: 50%;
 					em {
-						i {
-							-webkit-text-stroke: 0.5px $title-color-alt;
-							color: $title-color;
-						}
+						-webkit-text-stroke: 0.5px $title-color-alt;
+						color: $title-color;
 					}
 				}
-				&:last-of-type {
-					color: $altered-text;
-					font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-					font-size: $normal-font;
-					list-style: none;
-					margin: 0 1vw 0 0;
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					a {
-						-moz-transition: 0.5s ease;
-						-o-transition: 0.5s ease;
-						-webkit-transition: 0.5s ease;
-						color: $altered-text;
-						font-style: italic;
-						text-decoration: none;
-						transition: 0.5s ease;
-						&:visited {
-							color: $visited-links-perm;
-						}
-						&:hover,
-						&:visited:hover {
-							color: $title-color;
-						}
-						img {
-							width: $normal-font;
-						}
+				&:first-of-type {
+					border-top: $border;
+					margin-top: 1vh;
+				}
+			}
+		}
+		.skills-add-info-cont {
+			display: flex;
+			justify-content: flex-end;
+			padding: 2vh 1vw 1vh 1vw;
+			width: 100%;
+			.skills-add-info {
+				color: $altered-text;
+				font-size: $normal-font;
+				text-align: right;
+				width: 80%;
+				a {
+					-moz-transition: 0.5s ease;
+					-o-transition: 0.5s ease;
+					-webkit-transition: 0.5s ease;
+					color: $logo-p-color;
+					font-style: italic;
+					text-decoration: none;
+					transition: 0.5s ease;
+					&:visited {
+						color: $visited-links-perm;
+					}
+					&:hover,
+					&:visited:hover {
+						color: $title-color;
+					}
+					img {
+						width: $normal-font;
 					}
 				}
 			}

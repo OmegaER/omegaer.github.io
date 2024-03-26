@@ -1332,6 +1332,26 @@
 			}
 		}
 	}
+	.my-skills {
+		.skills-box {
+			.skills-equip {
+				flex-direction: column;
+				.maj-skills {
+					width: 100%;
+				}
+				hr {
+					display: none;
+				}
+				.access-skills {
+					border-top: $border;
+					width: 100%;
+					.skills-add-info {
+						bottom: 1vh;
+					}
+				}
+			}
+		}
+	}
 	footer {
 		min-height: 828px;
 		.footer-nav {
