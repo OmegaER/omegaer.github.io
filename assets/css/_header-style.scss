@@ -6,11 +6,8 @@ header {
 	min-height: $header-height-limits * 0.55;
 	width: 100%;
 	.header-nav {
+		@include header-background;
 		align-items: center;
-		background-image: url(../img/background-title.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
 		border-bottom: $border;
 		border-bottom-right-radius: $border-radius;
 		display: flex;
@@ -71,7 +68,7 @@ header {
 					display: none;
 					.menu-icon {
 						display: none;
-						filter: invert(1);
+						filter: $inverted-filter;
 					}
 				}
 				.head-menu-btn,
@@ -84,14 +81,11 @@ header {
 					justify-content: space-evenly;
 					width: 85%;
 					.head-list-item {
-						-moz-transition: 0.5s ease;
-						-o-transition: 0.5s ease;
-						-webkit-transition: 0.5s ease;
+						@include base-transition;
 						color: $logo-p-color;
 						font-size: $h5;
 						text-align: center;
 						text-decoration: none;
-						transition: 0.5s ease;
 						&:hover {
 							text-shadow: $shadow;
 						}
@@ -139,27 +133,31 @@ header {
 					align-items: center;
 				}
 				.lang-btn {
-					-moz-transition: 0.5s ease;
-					-ms-transition: 0.5s ease;
-					-o-transition: 0.5s ease;
-					-webkit-transition: 0.5s ease;
-					border: 1px solid transparent;
+					@include base-transition;
+					border: $border-transparent;
 					border-radius: $border-radius;
 					cursor: pointer;
 					display: flex;
 					padding: 0.5vh 0.5vw;
-					transition: 0.5s ease;
 					z-index: 2;
 					&:hover {
 						border: $border;
 						box-shadow: $shadow;
+						> .lang-btn-alt {
+							filter: $title-filter;
+						}
+						> span {
+							filter: $title-filter;
+						}
 					}
 					.lang-btn-alt {
-						filter: invert(1);
+						@include base-transition;
+						filter: $inverted-filter;
 						width: 3vmax;
 						min-width: calc($h1/2);
 					}
 					span {
+						@include base-transition;
 						color: $logo-p-color;
 						font-size: $normal-font;
 					}
@@ -168,7 +166,10 @@ header {
 					display: none;
 					&:checked {
 						~ .lang-btn {
-							border: 1px solid transparent;
+							-o-transition: none;
+							-moz-transition: none;
+							-webkit-transition: none;
+							border: $border-transparent;
 							box-shadow: none;
 							transition: none;
 						}
@@ -178,11 +179,7 @@ header {
 					}
 				}
 				.lang-content {
-					background: linear-gradient(to bottom, $secondary-color 0%, black 100%);
-					background-image: url(../img/background-title.jpg);
-					background-position: top;
-					background-repeat: no-repeat;
-					background-size: cover;
+					@include header-background;
 					border: $border;
 					border-right: none;
 					border-top: none;

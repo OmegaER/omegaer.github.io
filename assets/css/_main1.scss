@@ -15,13 +15,8 @@
 		width: 100%;
 	}
 	.personal-box {
+		@include main-background;
 		align-items: center;
-		background-attachment: fixed;
-		background-color: $inner-box;
-		background-image: url(../img/background-section.jpg);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
 		border: $border;
 		border-radius: $section-title-radius;
 		box-shadow: $shadow;
@@ -42,23 +37,24 @@
 		bottom: 0;
 		right: 0;
 		a {
+			@include base-transition;
+			@include title-background;
 			align-self: flex-end;
 			border: $border;
 			border-radius: $border-radius;
 			box-shadow: $shadow;
-			background-color: $secondary-color;
-			background-image: url(../img/background-title.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
 			margin: 0 1vw 1vh 0;
 			padding: 5px 5px;
 			position: sticky;
 			min-width: 35px;
 			bottom: 1vh;
 			img {
-				filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+				filter: $title-filter;
 				width: 3vw;
 				min-width: 35px;
+			}
+			&:hover {
+				box-shadow: $shadow-special;
 			}
 		}
 	}

@@ -2,18 +2,14 @@
 	display: flex;
 	justify-content: flex-start;
 	position: relative;
+	min-height: 650px;
 	width: 100%;
 	.maj-skills {
 		position: inherit;
 		width: 50%;
 		h2 {
-			background-color: $secondary-color;
-			background-image: url(../img/background-title.jpg);
-			background-position: top;
-			background-repeat: no-repeat;
-			background-size: cover;
+			@include title-background;
 			border-bottom: $border;
-			text-shadow: $shadow;
 		}
 		.maj-skills-ord {
 			align-items: flex-start;
@@ -29,12 +25,11 @@
 				flex-direction: column;
 				margin: 1vh 0 1vh 0;
 				position: inherit;
-				text-shadow: $shadow;
 				width: 100%;
 				&:first-of-type {
 					h4 {
 						img {
-							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+							filter: $title-filter;
 						}
 					}
 					.maj-skill-cont {
@@ -52,20 +47,16 @@
 				&:nth-of-type(2) {
 					h4 {
 						img {
-							filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+							filter: $title-filter;
 						}
 					}
 					.maj-skill-cont {
 						.skill-bar {
 							background-color: $altered-text;
 							.skill-mastery {
-								border-radius: 100%; //Temporary
-								height: 65%; //Temporary
 								width: 2%;
 							}
 							.skill-bns {
-								border-radius: 100%; //Temporary
-								height: 75%; //Temporary
 								width: 3%;
 							}
 						}
@@ -103,6 +94,7 @@
 						border-radius: $section-title-radius;
 						box-shadow: $shadow, $shadow-internal;
 						display: flex;
+						overflow: hidden;
 						position: inherit;
 						height: 30px;
 						width: 80%;
@@ -135,17 +127,13 @@
 				display: flex;
 				flex-direction: column;
 				margin: 1vh 0 1vh 1vw;
-				text-shadow: $shadow;
 				width: 100%;
 				.min-skills {
-					-o-transition: width 0.5s ease;
-					-moz-transition: width 0.5s ease;
-					-webkit-transition: width 0.5s ease;
+					@include base-transition;
 					border: $border-transparent;
 					border-radius: $border-radius;
 					display: flex;
 					margin: 0 1vw;
-					transition: width 0.5s ease;
 					&:not([open]) {
 						width: 50%;
 					}
@@ -153,11 +141,7 @@
 						width: 90%;
 					}
 					summary {
-						background-color: $secondary-color;
-						background-image: url(../img/background-title.jpg);
-						background-position: left center;
-						background-repeat: no-repeat;
-						background-size: cover;
+						@include title-background;
 						border: $border;
 						border-radius: $border-radius;
 						cursor: pointer;
@@ -177,13 +161,12 @@
 							align-items: flex-start;
 							display: flex;
 							flex-direction: column;
-							margin: 1vh 0 1vh 0;
-							text-shadow: $shadow;
+							margin: 1vh 0;
 							width: 100%;
 							&:first-of-type {
 								h5 {
 									img {
-										filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+										filter: $title-filter;
 									}
 								}
 								.min-skill-cont {
@@ -201,7 +184,7 @@
 							&:nth-of-type(2) {
 								h5 {
 									img {
-										filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+										filter: $title-filter;
 									}
 								}
 								.min-skill-cont {
@@ -235,6 +218,7 @@
 									border-radius: $section-title-radius;
 									box-shadow: $shadow, $shadow-internal;
 									display: flex;
+									overflow: hidden;
 									position: relative;
 									height: 30px;
 									width: 50%;
@@ -262,15 +246,15 @@
 								}
 							}
 						}
-						/*Temporary*/
+						/*Temporary - To continue in next projects*/
 						.min-skill-item-otw {
 							align-items: flex-start;
 							display: flex;
 							flex-direction: column;
-							margin: 1vh 0 1vh 0;
-							text-shadow: $shadow;
+							margin: 1vh 0;
 							width: 100%;
 							h5 {
+								text-align: start;
 								img {
 									width: 2vmax;
 									min-width: 16px;
@@ -292,6 +276,7 @@
 									border-radius: $section-title-radius;
 									box-shadow: $shadow, $shadow-internal;
 									display: flex;
+									overflow: hidden;
 									position: relative;
 									height: 30px;
 									width: 50%;
@@ -328,75 +313,72 @@
 	}
 	.access-skills {
 		position: relative;
-		min-height: 700px;
 		width: 50%;
 		h2 {
-			background-color: $secondary-color;
-			background-image: url(../img/background-title.jpg);
-			background-position: top;
-			background-repeat: no-repeat;
-			background-size: cover;
+			@include title-background;
 			border-bottom: $border;
-			text-shadow: $shadow;
 		}
-		.access-skills-list {
-			align-items: center;
+		.access-skills-cont {
 			display: flex;
 			flex-direction: column;
-			.access-skills-item {
-				border-bottom: $border;
+			justify-content: space-between;
+			height: 90%;
+			width: 100%;
+			.access-skills-list {
+				align-items: center;
 				display: flex;
-				width: 90%;
-				h6 {
-					padding: 1vh 1vw;
-					text-align: start;
-					width: 50%;
-				}
-				p {
-					-webkit-text-stroke: 0.5px $dark-color;
-					background: transparentize($primary-color, 0.3);
+				flex-direction: column;
+				.access-skills-item {
+					border-bottom: $border;
 					display: flex;
-					flex-direction: column;
-					padding: 1vh 1vw;
-					width: 50%;
-					em {
-						-webkit-text-stroke: 0.5px $title-color-alt;
-						color: $title-color;
+					width: 90%;
+					h6 {
+						padding: 1vh 1vw;
+						text-align: start;
+						width: 50%;
 					}
-				}
-				&:first-of-type {
-					border-top: $border;
-					margin-top: 1vh;
+					p {
+						-webkit-text-stroke: 0.5px $dark-color;
+						background: transparentize($primary-color, 0.3);
+						display: flex;
+						flex-direction: column;
+						padding: 1vh 1vw;
+						width: 50%;
+						em {
+							-webkit-text-stroke: 0.5px $title-color-alt;
+							color: $title-color;
+						}
+					}
+					&:first-of-type {
+						border-top: $border;
+						margin-top: 1vh;
+					}
 				}
 			}
-		}
-		.skills-add-info-cont {
-			display: flex;
-			justify-content: flex-end;
-			padding: 2vh 1vw 1vh 1vw;
-			width: 100%;
-			.skills-add-info {
-				color: $altered-text;
-				font-size: $normal-font;
-				text-align: right;
-				width: 80%;
-				a {
-					-moz-transition: 0.5s ease;
-					-o-transition: 0.5s ease;
-					-webkit-transition: 0.5s ease;
-					color: $logo-p-color;
-					font-style: italic;
-					text-decoration: none;
-					transition: 0.5s ease;
-					&:visited {
-						color: $visited-links-perm;
-					}
-					&:hover,
-					&:visited:hover {
-						color: $title-color;
-					}
-					img {
-						width: $normal-font;
+			.skills-add-info-cont {
+				display: flex;
+				justify-content: flex-end;
+				padding: 1vh 1vw;
+				width: 100%;
+				.skills-add-info {
+					color: $altered-text;
+					text-align: right;
+					width: 80%;
+					a {
+						@include base-transition;
+						color: $logo-p-color;
+						font-style: italic;
+						text-decoration: none;
+						&:visited {
+							color: $visited-links-perm;
+						}
+						&:hover,
+						&:visited:hover {
+							color: $title-color;
+						}
+						img {
+							width: $normal-font;
+						}
 					}
 				}
 			}

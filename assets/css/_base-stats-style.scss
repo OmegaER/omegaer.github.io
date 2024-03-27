@@ -5,14 +5,57 @@
 	font-style: normal;
 }
 
-//box limits test
+//mixins - backgrounds
+@mixin body-background {
+	background-attachment: fixed;
+	background-color: $primary-color;
+	background-image: url(../img/background-lofi.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin header-background {
+	background-color: $dark-color;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin main-background {
+	background-attachment: fixed;
+	background-color: $inner-box;
+	background-image: url(../img/background-section.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin title-background {
+	background-color: $secondary-color;
+	background-image: url(../img/background-title.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+//mixins - transitions
+@mixin base-transition {
+	-moz-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+@mixin slide-transition {
+	-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+}
+
+//-box limits test-
 $debug: 1px solid black;
 
-//personal fonts
-$font-title: "introrustg-base2line", sans-serif;
-$font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
 //colors
+$altered-text: #999;
 $dark-color: #111;
 $footer-mid-color: #04091c;
 $inner-box: #2e465f;
@@ -24,11 +67,10 @@ $secondary-color-scrollbar: #094d88;
 $skill-disabled-container: #333;
 $soft-shadow: #555;
 $title-color: #ab9c87;
-$title-color-alt: #423B26;
-$altered-text: #999;
+$title-color-alt: #423b26;
 $visited-links-perm: #d0d0d0;
 
-//border shapes
+//borders
 $border: 1px solid $title-color;
 $border-alt: 1px solid $title-color-alt;
 $border-transparent: 1px solid transparent;
@@ -36,6 +78,19 @@ $border-lg: 2px double $title-color;
 $border-lg-alt: 2px solid $title-color-alt;
 $border-radius: 10px;
 $section-title-radius: 50px;
+
+//filters
+$facebook-filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%);
+$github-filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
+$instagram-filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%);
+$inverted-filter: invert(100%); //Also X filter
+$linkedin-filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%);
+$threads-filter: invert(0%) sepia(17%) saturate(1102%) hue-rotate(353deg) brightness(92%) contrast(87%);
+$title-filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+
+//fonts
+$font-title: "introrustg-base2line", sans-serif;
+$font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 //font sizes
 $h1: 56px;
@@ -46,6 +101,11 @@ $h5: $h4 * 0.9; //25.515px (Min-constant = 0.65)
 $normal-font: $h5 * 0.9; //22.9635px (Min-constant = 0.7)
 $form-font: $normal-font * 0.9; //20.66715px (Min-constant = 0.8)
 
+//shadows
+$shadow: 0.5vh 0.5vw 0.5vmax $dark-color;
+$shadow-special: 0.5vh 0.5vw 0.5vmax $title-color;
+$shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
+
 //other
 $bullet-points-size: 30px;
 $header-height-limits: 100px;
@@ -54,8 +114,6 @@ $min-viewport-width: 280px;
 $name-image-block-limits: 450px;
 $name-min-viewport-height: 700px;
 $name-min-viewport-image-height: 410px;
-$shadow: 0.5vh 0.5vw 0.5vmax $dark-color;
-$shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 
 * {
 	-moz-box-sizing: border-box;
@@ -80,12 +138,7 @@ $shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
 }
 
 body {
-	background-attachment: fixed;
-	background-color: $primary-color;
-	background-image: url(../img/background-lofi.jpg);
-	background-position: top;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include body-background;
 	font-family: $font-body;
 }
 
@@ -124,7 +177,6 @@ h6,
 p {
 	font-size: $normal-font;
 }
-
 p {
 	color: $logo-p-color;
 	text-shadow: $shadow;

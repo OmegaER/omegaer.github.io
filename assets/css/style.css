@@ -90,11 +90,12 @@ header {
 	width: 100%;
 }
 header .header-nav {
-	align-items: center;
+	background-color: #111;
 	background-image: url(../img/background-title.jpg);
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
+	align-items: center;
 	border-bottom: 1px solid #ab9c87;
 	border-bottom-right-radius: 10px;
 	display: flex;
@@ -160,7 +161,7 @@ header .header-nav .head-section .head-menu .head-menu-btn {
 }
 header .header-nav .head-section .head-menu .head-menu-btn .menu-icon {
 	display: none;
-	filter: invert(1);
+	filter: invert(100%);
 }
 header .header-nav .head-section .head-menu .head-menu-btn,
 header .header-nav .head-section .head-menu #expandList {
@@ -173,14 +174,11 @@ header .header-nav .head-section .head-menu .head-list {
 	width: 85%;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
 	color: white;
 	font-size: 25.515px;
 	text-align: center;
 	text-decoration: none;
-	transition: 0.5s ease;
 }
 header .header-nav .head-section .head-menu .head-list .head-list-item:hover {
 	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
@@ -227,28 +225,32 @@ header .header-nav .head-section .lang-stg .lang-content {
 	align-items: center;
 }
 header .header-nav .head-section .lang-stg .lang-btn {
-	-moz-transition: 0.5s ease;
-	-ms-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
 	border: 1px solid transparent;
 	border-radius: 10px;
 	cursor: pointer;
 	display: flex;
 	padding: 0.5vh 0.5vw;
-	transition: 0.5s ease;
 	z-index: 2;
 }
 header .header-nav .head-section .lang-stg .lang-btn:hover {
 	border: 1px solid #ab9c87;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
+header .header-nav .head-section .lang-stg .lang-btn:hover > .lang-btn-alt {
+	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
+header .header-nav .head-section .lang-stg .lang-btn:hover > span {
+	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
+}
 header .header-nav .head-section .lang-stg .lang-btn .lang-btn-alt {
-	filter: invert(1);
+	transition: 0.5s ease;
+	filter: invert(100%);
 	width: 3vmax;
 	min-width: 28px;
 }
 header .header-nav .head-section .lang-stg .lang-btn span {
+	transition: 0.5s ease;
 	color: white;
 	font-size: 22.9635px;
 }
@@ -256,6 +258,9 @@ header .header-nav .head-section .lang-stg #expandLang {
 	display: none;
 }
 header .header-nav .head-section .lang-stg #expandLang:checked ~ .lang-btn {
+	-o-transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
 	border: 1px solid transparent;
 	box-shadow: none;
 	transition: none;
@@ -264,7 +269,7 @@ header .header-nav .head-section .lang-stg #expandLang:checked ~ .lang-content {
 	display: flex;
 }
 header .header-nav .head-section .lang-stg .lang-content {
-	background: linear-gradient(to bottom, #063258 0%, black 100%);
+	background-color: #111;
 	background-image: url(../img/background-title.jpg);
 	background-position: top;
 	background-repeat: no-repeat;
@@ -314,13 +319,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	width: 100%;
 }
 .about-me .personal-box {
-	align-items: center;
 	background-attachment: fixed;
 	background-color: #2e465f;
 	background-image: url(../img/background-section.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	align-items: center;
 	border: 1px solid #ab9c87;
 	border-radius: 50px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
@@ -348,7 +353,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .about-me .personal-box .my-name .name-section-title {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #ab9c87;
@@ -357,9 +362,6 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	justify-content: center;
 	padding: 1vh 0;
 	width: 100%;
-}
-.about-me .personal-box .my-name .name-section-title h2 {
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .about-me .personal-box .my-name .name-section-title h2 br {
 	display: none;
@@ -378,20 +380,15 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	text-align: center;
 }
 .about-me .personal-box .my-name .name-section-detail .sm-presentation a {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: #999;
-	font-style: normal;
-	text-decoration: none;
 	transition: 0.5s ease;
+	text-decoration: none;
 }
-.about-me .personal-box .my-name .name-section-detail .sm-presentation a:visited {
-	color: #d0d0d0;
+.about-me .personal-box .my-name .name-section-detail .sm-presentation a img {
+	min-width: 112px;
+	width: 10vmax;
 }
-.about-me .personal-box .my-name .name-section-detail .sm-presentation a:hover,
-.about-me .personal-box .my-name .name-section-detail .sm-presentation a:visited:hover {
-	color: #ab9c87;
+.about-me .personal-box .my-name .name-section-detail .sm-presentation a:hover {
+	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag {
 	align-items: center;
@@ -432,6 +429,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	cursor: pointer;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block {
+	transition: 0.5s ease;
 	border-radius: 10px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
 	-o-object-fit: cover;
@@ -441,6 +439,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	max-width: 450px;
 	width: 33vw;
 	min-width: 280px;
+}
+.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay-btn .name-img-block:hover {
+	box-shadow: 0.5vh 0.5vw 0.5vmax #ab9c87;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck1,
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content #nameOverlayCheck2 {
@@ -453,16 +454,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	height: 28%;
 }
 .about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay {
-	-moz-transition: height 0.5s ease;
-	-o-transition: height 0.5s ease;
-	-webkit-transition: height 0.5s ease;
+	transition: 0.5s ease;
 	align-items: flex-start;
 	background-color: rgba(17, 17, 17, 0.7);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	overflow-y: scroll;
 	position: absolute;
-	transition: height 0.5s ease;
 	height: 0;
 	bottom: 0;
 }
@@ -471,14 +469,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	padding: 1vh 1vw;
 	position: relative;
 	text-align: justify;
-}
-.about-me .personal-box .my-name .name-section-detail .add-info {
-	-webkit-text-stroke: 0.5px #111;
-	align-self: flex-end;
-	font-size: 31.5px;
-	text-align: right;
-	padding: 0.5vh 1vw;
-	max-width: 75%;
+	text-indent: 0.8em;
 }
 .about-me .personal-box .my-hobbies {
 	display: flex;
@@ -499,7 +490,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .about-me .personal-box .my-hobbies .hobby-section-title {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #ab9c87;
@@ -508,9 +499,6 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	border-top-right-radius: 50px;
 	padding-bottom: 1vh;
 	padding-top: 1vh;
-}
-.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail {
 	height: 100%;
@@ -544,13 +532,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	width: 100%;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
-	border: 1px solid #ab9c87;
-	border-radius: 10px;
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border: 1px solid #ab9c87;
+	border-radius: 10px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
 	display: flex;
 	flex-direction: column;
@@ -563,7 +551,6 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
 	border-bottom: 1px solid #ab9c87;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-block {
 	-webkit-mask-image: linear-gradient(#063258 80%, transparent);
@@ -574,6 +561,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
 	overflow-y: scroll;
 	padding: 1vh 1vw;
+	text-indent: 0.8em;
 }
 .about-me .max-sticky-height {
 	display: flex;
@@ -583,14 +571,16 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	right: 0;
 }
 .about-me .max-sticky-height a {
+	transition: 0.5s ease;
+	background-color: #063258;
+	background-image: url(../img/background-title.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	align-self: flex-end;
 	border: 1px solid #ab9c87;
 	border-radius: 10px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
-	background-color: #063258;
-	background-image: url(../img/background-title.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 	margin: 0 1vw 1vh 0;
 	padding: 5px 5px;
 	position: sticky;
@@ -602,6 +592,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	width: 3vw;
 	min-width: 35px;
 }
+.about-me .max-sticky-height a:hover {
+	box-shadow: 0.5vh 0.5vw 0.5vmax #ab9c87;
+}
 
 .my-skills {
 	align-items: center;
@@ -612,13 +605,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	width: 100%;
 }
 .my-skills .skills-box {
-	align-items: center;
 	background-attachment: fixed;
 	background-color: #2e465f;
 	background-image: url(../img/background-section.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	align-items: center;
 	border: 1px solid #ab9c87;
 	border-radius: 50px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
@@ -632,7 +625,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .my-skills .skills-box h1 {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #ab9c87;
@@ -640,13 +633,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	border-top-right-radius: 50px;
 	color: #ab9c87;
 	padding: 1vh 0;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 	width: 100%;
 }
 .my-skills .skills-box .skills-equip {
 	display: flex;
 	justify-content: flex-start;
 	position: relative;
+	min-height: 650px;
 	width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills {
@@ -656,11 +649,10 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .my-skills .skills-box .skills-equip .maj-skills h2 {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #ab9c87;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord {
 	align-items: flex-start;
@@ -677,7 +669,6 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	flex-direction: column;
 	margin: 1vh 0 1vh 0;
 	position: inherit;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 	width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:first-of-type h4 img {
@@ -699,13 +690,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	background-color: #999;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-mastery {
-	border-radius: 100%;
-	height: 65%;
 	width: 2%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .maj-skill-cont .skill-bar .skill-bns {
-	border-radius: 100%;
-	height: 75%;
 	width: 3%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .maj-skill-item:nth-of-type(2) .p-s {
@@ -741,6 +728,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	border-radius: 50px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
 	display: flex;
+	overflow: hidden;
 	position: inherit;
 	height: 30px;
 	width: 80%;
@@ -771,18 +759,14 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	display: flex;
 	flex-direction: column;
 	margin: 1vh 0 1vh 1vw;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 	width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills {
-	-o-transition: width 0.5s ease;
-	-moz-transition: width 0.5s ease;
-	-webkit-transition: width 0.5s ease;
+	transition: 0.5s ease;
 	border: 1px solid transparent;
 	border-radius: 10px;
 	display: flex;
 	margin: 0 1vw;
-	transition: width 0.5s ease;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills:not([open]) {
 	width: 50%;
@@ -793,7 +777,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills summary {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: left center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 1px solid #ab9c87;
@@ -811,14 +795,13 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	padding: 0 1vw 0 1vw;
 	position: inherit;
 	width: 100%;
-	/*Temporary*/
+	/*Temporary - To continue in next projects*/
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item {
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
-	margin: 1vh 0 1vh 0;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+	margin: 1vh 0;
 	width: 100%;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item:first-of-type h5 img {
@@ -863,6 +846,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	border-radius: 50px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
 	display: flex;
+	overflow: hidden;
 	position: relative;
 	height: 30px;
 	width: 50%;
@@ -892,9 +876,11 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
-	margin: 1vh 0 1vh 0;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
+	margin: 1vh 0;
 	width: 100%;
+}
+.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 {
+	text-align: start;
 }
 .my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 img {
 	width: 2vmax;
@@ -917,6 +903,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	border-radius: 50px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111, inset 0vh 0vw 1vmax #555;
 	display: flex;
+	overflow: hidden;
 	position: relative;
 	height: 30px;
 	width: 50%;
@@ -946,34 +933,39 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .my-skills .skills-box .skills-equip .access-skills {
 	position: relative;
-	min-height: 700px;
 	width: 50%;
 }
 .my-skills .skills-box .skills-equip .access-skills h2 {
 	background-color: #063258;
 	background-image: url(../img/background-title.jpg);
-	background-position: top;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #ab9c87;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 90%;
+	width: 100%;
+}
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item {
 	border-bottom: 1px solid #ab9c87;
 	display: flex;
 	width: 90%;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item h6 {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item h6 {
 	padding: 1vh 1vw;
 	text-align: start;
 	width: 50%;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item p {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item p {
 	-webkit-text-stroke: 0.5px #111;
 	background: rgba(38, 45, 66, 0.7);
 	display: flex;
@@ -981,43 +973,39 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	padding: 1vh 1vw;
 	width: 50%;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item p em {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item p em {
 	-webkit-text-stroke: 0.5px #423b26;
 	color: #ab9c87;
 }
-.my-skills .skills-box .skills-equip .access-skills .access-skills-list .access-skills-item:first-of-type {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item:first-of-type {
 	border-top: 1px solid #ab9c87;
 	margin-top: 1vh;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont {
 	display: flex;
 	justify-content: flex-end;
-	padding: 2vh 1vw 1vh 1vw;
+	padding: 1vh 1vw;
 	width: 100%;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info {
 	color: #999;
-	font-size: 22.9635px;
 	text-align: right;
 	width: 80%;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info a {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info a {
+	transition: 0.5s ease;
 	color: white;
 	font-style: italic;
 	text-decoration: none;
-	transition: 0.5s ease;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info a:visited {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info a:visited {
 	color: #d0d0d0;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info a:hover,
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info a:visited:hover {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info a:hover,
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info a:visited:hover {
 	color: #ab9c87;
 }
-.my-skills .skills-box .skills-equip .access-skills .skills-add-info-cont .skills-add-info a img {
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info-cont .skills-add-info a img {
 	width: 22.9635px;
 }
 .my-skills .skills-box .skills-hist {
@@ -1045,7 +1033,7 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 }
 .my-skills .skills-box .skills-hist ul {
 	list-style: none;
-	padding: 0 1vw 1vh 3vw;
+	padding: 1vh 3vw 5vh 3vw;
 }
 .my-skills .skills-box .skills-hist ul li {
 	color: #ab9c87;
@@ -1068,36 +1056,35 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	text-indent: 0.8em;
 }
 .my-skills .skills-box .skills-hist ul li p:last-of-type a {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: white;
-	font-style: italic;
-	text-decoration: none;
 	transition: 0.5s ease;
+	text-decoration: none;
 }
-.my-skills .skills-box .skills-hist ul li p:last-of-type a:visited {
-	color: #d0d0d0;
+.my-skills .skills-box .skills-hist ul li p:last-of-type a:hover {
+	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
 }
-.my-skills .skills-box .skills-hist ul li p:last-of-type a:hover,
-.my-skills .skills-box .skills-hist ul li p:last-of-type a:visited:hover {
-	color: #ab9c87;
+.my-skills .skills-box .skills-hist ul li p:last-of-type a img {
+	margin-top: 1vh;
+	min-width: 112px;
+	width: 10vmax;
 }
 .my-skills .max-sticky-height {
-	display: flex;
+	display: none;
 	position: absolute;
+	height: 20%;
 	bottom: 0;
 	right: 0;
 }
 .my-skills .max-sticky-height a {
+	transition: 0.5s ease;
+	background-color: #063258;
+	background-image: url(../img/background-title.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	align-self: flex-end;
 	border: 1px solid #ab9c87;
 	border-radius: 10px;
 	box-shadow: 0.5vh 0.5vw 0.5vmax #111;
-	background-color: #063258;
-	background-image: url(../img/background-title.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
 	margin: 0 1vw 1vh 0;
 	padding: 5px 5px;
 	position: sticky;
@@ -1108,6 +1095,9 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
 	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
 	width: 3vw;
 	min-width: 35px;
+}
+.my-skills .max-sticky-height a:hover {
+	box-shadow: 0.5vh 0.5vw 0.5vmax #ab9c87;
 }
 
 footer {
@@ -1136,8 +1126,6 @@ footer .footer-nav form {
 }
 footer .footer-nav form legend {
 	align-self: flex-start;
-	color: #ab9c87;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav form fieldset,
 footer .footer-nav form span {
@@ -1224,7 +1212,6 @@ footer .footer-nav .socials {
 }
 footer .footer-nav .socials h2 {
 	text-align: right;
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .link-tree,
 footer .footer-nav .socials .side-note {
@@ -1255,9 +1242,6 @@ footer .footer-nav .socials .link-tree .social-links .envelope h4,
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
 	width: 100%;
 }
-footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
-}
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
 	display: inline-flex;
 	justify-content: space-between;
@@ -1286,10 +1270,10 @@ footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:
 	filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a {
-	transition: filter 0.5s ease;
+	transition: 0.5s ease;
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
-	transition: width 0.5s ease;
+	transition: 0.5s ease;
 	width: 2vmax;
 	min-width: 22.9635px;
 }
@@ -1324,9 +1308,6 @@ footer .footer-nav .socials .link-tree .git .envelope {
 	height: 50%;
 	width: 100%;
 }
-footer .footer-nav .socials .link-tree .git .envelope h4 {
-	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
-}
 footer .footer-nav .socials .link-tree .git .envelope span {
 	align-items: center;
 	display: flex;
@@ -1335,10 +1316,10 @@ footer .footer-nav .socials .link-tree .git .envelope span {
 	height: 100%;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a {
-	transition: filter 0.5s ease;
+	transition: 0.5s ease;
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img {
-	transition: width 0.5s ease;
+	transition: 0.5s ease;
 	width: 2vmax;
 	min-width: 22.9635px;
 }
@@ -1371,21 +1352,16 @@ footer .footer-nav .socials .side-note em {
 	text-shadow: 0.5vh 0.5vw 0.5vmax #111;
 }
 footer .footer-nav .socials .side-note em a {
-	-moz-transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	color: white;
-	font-style: normal;
-	font-weight: bold;
-	text-decoration: none;
 	transition: 0.5s ease;
+	text-decoration: none;
 }
-footer .footer-nav .socials .side-note em a:hover,
-footer .footer-nav .socials .side-note em a:visited:hover {
-	color: #ab9c87;
+footer .footer-nav .socials .side-note em a:hover {
+	filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%);
 }
-footer .footer-nav .socials .side-note em a:visited {
-	color: #d0d0d0;
+footer .footer-nav .socials .side-note em a img {
+	margin-top: 1vh;
+	min-width: 112px;
+	width: 5vmax;
 }
 
 /*Animations*/
@@ -1453,6 +1429,26 @@ footer .footer-nav .socials .side-note em a:visited {
 /*SPECIAL - Screens > 1920px*/
 @media screen and (min-width: 1921px) {
 	/*Constant: 1.5*/
+	h1 {
+		font-size: 84px;
+	}
+	h2,
+	legend {
+		font-size: 63px;
+	}
+	h3 {
+		font-size: 47.25px;
+	}
+	h4 {
+		font-size: 42.525px;
+	}
+	h5 {
+		font-size: 38.2725px;
+	}
+	h6,
+	p {
+		font-size: 34.44525px;
+	}
 	header {
 		border-bottom-right-radius: 15px;
 		max-height: 150px;
@@ -1493,9 +1489,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		border: 2px double #ab9c87;
 		border-bottom-right-radius: 15px;
 	}
-	.about-me .greetings h1 {
-		font-size: 84px;
-	}
 	.about-me .personal-box {
 		border: 2px double #ab9c87;
 		border-radius: 75px;
@@ -1507,9 +1500,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		border-bottom: 2px double #ab9c87;
 		border-top-left-radius: 75px;
 		border-top-right-radius: 75px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 63px;
 	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 47.25px;
@@ -1526,17 +1516,11 @@ footer .footer-nav .socials .side-note em a:visited {
 	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
 		font-size: 34.44525px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 47.25px;
-	}
 	.about-me .personal-box .my-hobbies .hobby-section-title {
 		border-bottom: 2px double #ab9c87;
 		border-top: 2px double #ab9c87;
 		border-top-left-radius: 75px;
 		border-top-right-radius: 75px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 63px;
 	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content {
 		border: 2px double #ab9c87;
@@ -1545,7 +1529,6 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
 		border-bottom: 2px double #ab9c87;
-		font-size: 47.25px;
 	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
 		font-size: 34.44525px;
@@ -1558,9 +1541,6 @@ footer .footer-nav .socials .side-note em a:visited {
 	footer {
 		border-top: 2px double #ab9c87;
 		min-height: 621px;
-	}
-	footer .footer-nav form legend {
-		font-size: 63px;
 	}
 	footer .footer-nav form fieldset label {
 		font-size: 38.2725px;
@@ -1583,15 +1563,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		border: none;
 		border-left: 2px double #ab9c87;
 	}
-	footer .footer-nav .socials h2 {
-		font-size: 63px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 42.525px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 42.525px;
-	}
 	footer .footer-nav .socials .side-note {
 		border-top: 2px double #ab9c87;
 		font-size: 24px;
@@ -1599,6 +1570,26 @@ footer .footer-nav .socials .side-note em a:visited {
 }
 @media screen and (max-width: 1756px) {
 	/*Constant: 0.95*/
+	h1 {
+		font-size: 53.2px;
+	}
+	h2,
+	legend {
+		font-size: 39.9px;
+	}
+	h3 {
+		font-size: 29.925px;
+	}
+	h4 {
+		font-size: 26.9325px;
+	}
+	h5 {
+		font-size: 24.23925px;
+	}
+	h6,
+	p {
+		font-size: 21.815325px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 53.2px;
 	}
@@ -1608,29 +1599,11 @@ footer .footer-nav .socials .side-note em a:visited {
 	header .header-nav .head-section .head-menu .lang-stg .lang-btn span {
 		font-size: 21.815325px;
 	}
-	.about-me .greetings h1 {
-		font-size: 53.2px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 39.9px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 29.925px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 29.925px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 39.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 29.925px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 21.815325px;
-	}
-	footer .footer-nav form legend {
-		font-size: 39.9px;
 	}
 	footer .footer-nav form fieldset label {
 		font-size: 24.23925px;
@@ -1643,19 +1616,30 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	footer .footer-nav form span input {
 		font-size: 19.6337925px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 39.9px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 26.9325px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 26.9325px;
 	}
 }
 @media screen and (max-width: 1592px) {
 	/*Constant: 0.9*/
+	h1 {
+		font-size: 50.4px;
+	}
+	h2,
+	legend {
+		font-size: 37.8px;
+	}
+	h3 {
+		font-size: 28.35px;
+	}
+	h4 {
+		font-size: 25.515px;
+	}
+	h5 {
+		font-size: 22.9635px;
+	}
+	h6,
+	p {
+		font-size: 20.66715px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 50.4px;
 	}
@@ -1665,29 +1649,11 @@ footer .footer-nav .socials .side-note em a:visited {
 	header .header-nav .head-section .head-menu .lang-stg .lang-btn span {
 		font-size: 20.66715px;
 	}
-	.about-me .greetings h1 {
-		font-size: 50.4px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 37.8px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 28.35px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 28.35px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 37.8px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 28.35px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 20.66715px;
-	}
-	footer .footer-nav form legend {
-		font-size: 37.8px;
 	}
 	footer .footer-nav form fieldset label {
 		font-size: 22.9635px;
@@ -1700,19 +1666,30 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	footer .footer-nav form span input {
 		font-size: 18.600435px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 37.8px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 25.515px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 25.515px;
 	}
 }
 @media screen and (max-width: 1428px) {
 	/*Constant: 0.85*/
+	h1 {
+		font-size: 47.6px;
+	}
+	h2,
+	legend {
+		font-size: 35.7px;
+	}
+	h3 {
+		font-size: 26.775px;
+	}
+	h4 {
+		font-size: 24.0975px;
+	}
+	h5 {
+		font-size: 21.68775px;
+	}
+	h6,
+	p {
+		font-size: 19.518975px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 47.6px;
 	}
@@ -1722,29 +1699,11 @@ footer .footer-nav .socials .side-note em a:visited {
 	header .header-nav .head-section .head-menu .lang-stg .lang-btn span {
 		font-size: 19.518975px;
 	}
-	.about-me .greetings h1 {
-		font-size: 47.6px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 35.7px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 26.775px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 26.775px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 35.7px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 26.775px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 19.518975px;
-	}
-	footer .footer-nav form legend {
-		font-size: 35.7px;
 	}
 	footer .footer-nav form fieldset label {
 		font-size: 21.68775px;
@@ -1757,19 +1716,30 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	footer .footer-nav form span input {
 		font-size: 17.5670775px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 35.7px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 24.0975px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 24.0975px;
 	}
 }
 @media screen and (max-width: 1264px) {
 	/*Constant: 0.8*/
+	h1 {
+		font-size: 44.8px;
+	}
+	h2,
+	legend {
+		font-size: 33.6px;
+	}
+	h3 {
+		font-size: 25.2px;
+	}
+	h4 {
+		font-size: 22.68px;
+	}
+	h5 {
+		font-size: 20.412px;
+	}
+	h6,
+	p {
+		font-size: 18.3708px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 44.8px;
 	}
@@ -1779,29 +1749,11 @@ footer .footer-nav .socials .side-note em a:visited {
 	header .header-nav .head-section .head-menu .lang-stg .lang-btn span {
 		font-size: 18.3708px;
 	}
-	.about-me .greetings h1 {
-		font-size: 44.8px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 33.6px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 25.2px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 33.6px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 25.2px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 18.3708px;
-	}
-	footer .footer-nav form legend {
-		font-size: 33.6px;
 	}
 	footer .footer-nav form fieldset label {
 		font-size: 20.412px;
@@ -1815,102 +1767,95 @@ footer .footer-nav .socials .side-note em a:visited {
 	footer .footer-nav form span input {
 		font-size: 16.53372px;
 	}
-	footer .footer-nav .socials h2 {
-		font-size: 33.6px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 22.68px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 22.68px;
-	}
 }
 @media screen and (max-width: 1100px) {
 	/*Constant: 0.75 - no $form-font*/
+	h1 {
+		font-size: 42px;
+	}
+	h2,
+	legend {
+		font-size: 31.5px;
+	}
+	h3 {
+		font-size: 23.625px;
+	}
+	h4 {
+		font-size: 21.2625px;
+	}
+	h5 {
+		font-size: 19.13625px;
+	}
+	h6,
+	p {
+		font-size: 17.222625px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 42px;
 	}
 	header .header-nav .head-section .head-menu .head-list .head-list-item {
 		font-size: 19.13625px;
 	}
-	.about-me .greetings h1 {
-		font-size: 42px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 31.5px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 23.625px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 23.625px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 31.5px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 23.625px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 17.222625px;
-	}
-	footer .footer-nav form legend {
-		font-size: 31.5px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 31.5px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 21.2625px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 21.2625px;
 	}
 }
 @media screen and (max-width: 936px) {
 	/*Constant: 0.7 - no $form-font*/
+	h1 {
+		font-size: 39.2px;
+	}
+	h2,
+	legend {
+		font-size: 29.4px;
+	}
+	h3 {
+		font-size: 22.05px;
+	}
+	h4 {
+		font-size: 19.845px;
+	}
+	h5 {
+		font-size: 17.8605px;
+	}
+	h6,
+	p {
+		font-size: 16.07445px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 39.2px;
 	}
 	header .header-nav .head-section .head-menu .head-list .head-list-item {
 		font-size: 17.8605px;
 	}
-	.about-me .greetings h1 {
-		font-size: 39.2px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 29.4px;
-	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 22.05px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 22.05px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 29.4px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 22.05px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content .hobby-img-desc {
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills .min-skills-ord .min-skill-item-otw h5 em {
 		font-size: 16.07445px;
-	}
-	footer .footer-nav form legend {
-		font-size: 29.4px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 29.4px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 19.845px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 19.845px;
 	}
 }
 @media screen and (max-width: 772px) {
 	/*Constant: 0.65 - no $form-font, $normal-font*/
+	h1 {
+		font-size: 36.4px;
+	}
+	h2,
+	legend {
+		font-size: 27.3px;
+	}
+	h3 {
+		font-size: 20.475px;
+	}
+	h4 {
+		font-size: 18.4275px;
+	}
+	h5 {
+		font-size: 16.58475px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 36.4px;
 	}
@@ -1953,15 +1898,12 @@ footer .footer-nav .socials .side-note em a:visited {
 		height: 75px;
 	}
 	header .header-nav .head-section .head-menu .head-list {
-		-moz-transition: height 0.5s ease;
-		-o-transition: height 0.5s ease;
-		-webkit-transition: height 0.5s ease;
+		transition: 0.5s ease;
 		align-items: flex-end;
 		flex-direction: column;
 		justify-content: flex-end;
 		overflow: hidden;
 		position: absolute;
-		transition: height 0.5s ease;
 		z-index: 1;
 		height: 0;
 		width: 280px;
@@ -1969,9 +1911,9 @@ footer .footer-nav .socials .side-note em a:visited {
 		top: 45px;
 	}
 	header .header-nav .head-section .head-menu .head-list .head-list-item {
-		background-color: black;
+		background-color: #063258;
 		background-image: url(../img/background-title.jpg);
-		background-position: top;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		border: 1px solid #ab9c87;
@@ -1987,12 +1929,6 @@ footer .footer-nav .socials .side-note em a:visited {
 	header .header-nav .head-section .lang-stg .lang-content {
 		border-right: 1px solid #ab9c87;
 		border-bottom-left-radius: 10px;
-	}
-	.about-me .greetings h1 {
-		font-size: 36.4px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 27.3px;
 	}
 	.about-me .personal-box .my-name .name-section-detail {
 		justify-content: center;
@@ -2077,12 +2013,6 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-inner .name-slide .name-slide-content .name-overlay .name-img-desc {
 		padding: 1vh 3vw;
-	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 20.475px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 27.3px;
 	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail {
 		justify-content: center;
@@ -2170,14 +2100,17 @@ footer .footer-nav .socials .side-note em a:visited {
 		min-height: 507px;
 		width: 75vw;
 	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 20.475px;
-	}
 	.my-skills .skills-box .skills-equip {
 		flex-direction: column;
 	}
 	.my-skills .skills-box .skills-equip .maj-skills {
 		width: 100%;
+	}
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills {
+		align-self: center;
+	}
+	.my-skills .skills-box .skills-equip .maj-skills .maj-skills-ord .min-skills-start .min-skills summary {
+		text-align: center;
 	}
 	.my-skills .skills-box .skills-equip hr {
 		display: none;
@@ -2186,8 +2119,11 @@ footer .footer-nav .socials .side-note em a:visited {
 		border-top: 1px solid #ab9c87;
 		width: 100%;
 	}
-	.my-skills .skills-box .skills-equip .access-skills .skills-add-info {
+	.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .skills-add-info {
 		bottom: 1vh;
+	}
+	.my-skills .max-sticky-height {
+		display: flex;
 	}
 	footer {
 		min-height: 828px;
@@ -2204,7 +2140,6 @@ footer .footer-nav .socials .side-note em a:visited {
 	}
 	footer .footer-nav form legend {
 		align-self: center;
-		font-size: 27.3px;
 	}
 	footer .footer-nav form fieldset {
 		flex-direction: column;
@@ -2236,7 +2171,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		width: 90%;
 	}
 	footer .footer-nav .socials h2 {
-		font-size: 27.3px;
 		text-align: center;
 	}
 	footer .footer-nav .socials .link-tree .social-links .envelope {
@@ -2248,9 +2182,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		margin-top: 1vh;
 		height: 100%;
 	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 18.4275px;
-	}
 	footer .footer-nav .socials .link-tree .social-links .envelope .link-group {
 		justify-content: space-evenly;
 		height: 50%;
@@ -2259,9 +2190,6 @@ footer .footer-nav .socials .side-note em a:visited {
 		align-items: center;
 		margin-top: 0;
 		height: 100%;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 18.4275px;
 	}
 	footer .footer-nav .socials .link-tree .git .envelope span {
 		align-self: flex-start;
@@ -2272,14 +2200,21 @@ footer .footer-nav .socials .side-note em a:visited {
 }
 @media screen and (max-width: 608px) {
 	/*Constant: 0.6 - no $form-font, $normal-font, $h5*/
+	h1 {
+		font-size: 33.6px;
+	}
+	h2,
+	legend {
+		font-size: 25.2px;
+	}
+	h3 {
+		font-size: 18.9px;
+	}
+	h4 {
+		font-size: 17.01px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 33.6px;
-	}
-	.about-me .greetings h1 {
-		font-size: 33.6px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 25.2px;
 	}
 	.about-me .personal-box .my-name .name-section-title h2 br {
 		display: block;
@@ -2290,41 +2225,24 @@ footer .footer-nav .socials .side-note em a:visited {
 	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
 		font-size: 18.9px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 25.2px;
-	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
 		font-size: 18.9px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
-		font-size: 18.9px;
-	}
-	footer .footer-nav form legend {
-		font-size: 25.2px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 25.2px;
-	}
-	footer .footer-nav .socials .link-tree .social-links .envelope h4 {
-		font-size: 17.01px;
-	}
-	footer .footer-nav .socials .link-tree .git .envelope h4 {
-		font-size: 17.01px;
 	}
 }
 @media screen and (max-width: 444px) {
 	/*Constant: 0.55 - no $form-font, $normal-font, $h5, $h4*/
+	h1 {
+		font-size: 30.8px;
+	}
+	h2,
+	legend {
+		font-size: 23.1px;
+	}
+	h3 {
+		font-size: 17.325px;
+	}
 	header .header-nav .logo-container em {
 		font-size: 30.8px;
-	}
-	.about-me .greetings h1 {
-		font-size: 30.8px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 23.1px;
 	}
 	.about-me .personal-box .my-name .name-section-detail .sm-presentation {
 		font-size: 17.325px;
@@ -2332,16 +2250,7 @@ footer .footer-nav .socials .side-note em a:visited {
 	.about-me .personal-box .my-name .name-section-detail .name-pic-pag .name-bullets .name-bullet-effect {
 		font-size: 17.325px;
 	}
-	.about-me .personal-box .my-name .name-section-detail .add-info {
-		font-size: 17.325px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 23.1px;
-	}
 	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-bullets .hobby-bullet-effect {
-		font-size: 17.325px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-detail .hobby-pic-pag .hobby-inner .hobby-slide .hobby-slide-content h3 {
 		font-size: 17.325px;
 	}
 	footer .footer-nav form legend {
@@ -2354,6 +2263,13 @@ footer .footer-nav .socials .side-note em a:visited {
 /*GALAXY FOLD - Screens <= 280px*/
 @media screen and (max-width: 280px) {
 	/*Constant: 0.5=calc(x/2) - no $form-font, $normal-font, $h5, $h4, $h3*/
+	h1 {
+		font-size: 28px;
+	}
+	h2,
+	legend {
+		font-size: 21px;
+	}
 	header {
 		min-width: 280px;
 	}
@@ -2363,19 +2279,10 @@ footer .footer-nav .socials .side-note em a:visited {
 	.about-me {
 		min-width: 280px;
 	}
-	.about-me .greetings h1 {
-		font-size: 28px;
-	}
-	.about-me .personal-box .my-name .name-section-title h2 {
-		font-size: 21px;
-	}
-	.about-me .personal-box .my-hobbies .hobby-section-title h2 {
-		font-size: 21px;
+	.my-skills {
+		min-width: 280px;
 	}
 	footer {
 		min-width: 280px;
-	}
-	footer .footer-nav .socials h2 {
-		font-size: 21px;
 	}
 }

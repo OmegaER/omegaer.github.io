@@ -11,11 +11,7 @@
 		display: flex;
 	}
 	.name-section-title {
-		background-color: $secondary-color;
-		background-image: url(../img/background-title.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
+		@include title-background;
 		border-bottom: $border;
 		border-top-left-radius: $section-title-radius;
 		border-top-right-radius: $section-title-radius;
@@ -23,7 +19,6 @@
 		padding: 1vh 0;
 		width: 100%;
 		h2 {
-			text-shadow: $shadow;
 			br {
 				display: none;
 			}
@@ -41,19 +36,14 @@
 			padding: 0.5vh 1vw;
 			text-align: center;
 			a {
-				-moz-transition: 0.5s ease;
-				-o-transition: 0.5s ease;
-				-webkit-transition: 0.5s ease;
-				color: $altered-text;
-				font-style: normal;
+				@include base-transition;
 				text-decoration: none;
-				transition: 0.5s ease;
-				&:visited {
-					color: $visited-links-perm;
+				img {
+					min-width: $h1 * 2;
+					width: 10vmax;
 				}
-				&:hover,
-				&:visited:hover {
-					color: $title-color;
+				&:hover {
+					filter: $title-filter;
 				}
 			}
 		}
@@ -91,6 +81,7 @@
 						.name-overlay-btn {
 							cursor: pointer;
 							.name-img-block {
+								@include base-transition;
 								border-radius: $border-radius;
 								box-shadow: $shadow;
 								object-fit: cover;
@@ -99,6 +90,9 @@
 								max-width: $name-image-block-limits;
 								width: 33vw;
 								min-width: $min-viewport-width;
+								&:hover {
+									box-shadow: $shadow-special;
+								}
 							}
 						}
 						#nameOverlayCheck1,
@@ -120,16 +114,13 @@
 							}
 						}
 						.name-overlay {
-							-moz-transition: height 0.5s ease;
-							-o-transition: height 0.5s ease;
-							-webkit-transition: height 0.5s ease;
+							@include base-transition;
 							align-items: flex-start;
 							background-color: transparentize($dark-color, 0.3);
 							border-bottom-left-radius: $border-radius;
 							border-bottom-right-radius: $border-radius;
 							overflow-y: scroll;
 							position: absolute;
-							transition: height 0.5s ease;
 							height: 0;
 							bottom: 0;
 							.name-img-desc {
@@ -137,19 +128,12 @@
 								padding: 1vh 1vw;
 								position: relative;
 								text-align: justify;
+								text-indent: 0.8em;
 							}
 						}
 					}
 				}
 			}
-		}
-		.add-info {
-			-webkit-text-stroke: 0.5px $dark-color;
-			align-self: flex-end;
-			font-size: $h3;
-			text-align: right;
-			padding: 0.5vh 1vw;
-			max-width: 75%;
 		}
 	}
 }
