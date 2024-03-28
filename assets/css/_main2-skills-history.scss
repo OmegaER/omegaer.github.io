@@ -35,8 +35,28 @@
 				width: fit-content;
 			}
 			p {
-				text-indent: 0.8em;
-				&:last-of-type {
+				margin-top: 0.5vh;
+			}
+			.skill-context {
+				-webkit-text-stroke: $text-stroke-special;
+				color: $title-color;
+				text-indent: 0;
+				strong {
+					-webkit-text-stroke: $text-stroke;
+					color: $logo-p-color;
+				}
+			}
+			.skill-date {
+				-webkit-text-stroke: $text-stroke-special;
+				color: $title-color;
+				text-indent: 0;
+				em {
+					-webkit-text-stroke: $text-stroke;
+					color: $logo-p-color;
+				}
+			}
+			&:last-of-type {
+				.skill-context {
 					a {
 						@include base-transition;
 						text-decoration: none;

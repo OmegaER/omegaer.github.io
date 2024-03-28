@@ -1,0 +1,50 @@
+.i-am-error {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-pixel;
+    padding: 5vh 2vw;
+    height: 100vh;
+    width: 100%;
+    h1 {
+        color: darkslategray;
+        font-family: $font-i-am-error;
+        font-size: $h1-bonus;
+        text-align: start;
+        text-shadow: none;
+        width: 50%;
+    }
+    q {
+        color: $altered-text;
+        font-size: $h2;
+        font-style: italic;
+        margin-top: 2vh;
+        width: 50%;
+    }
+    em {
+        font-size: $h3;
+        font-style: normal;
+        color: darkslategray;
+        i {
+            color: $altered-text;
+            font-weight: bold;
+        }
+    }
+    p {
+        color: $title-color;
+        margin-top: 2vh;
+        text-indent: 0;
+        text-shadow: none;
+        width: 50%;
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            &:hover {
+                color: darkslategray;
+            }
+            &:focus {
+                color: $altered-text;
+            }
+        }
+    }
+}

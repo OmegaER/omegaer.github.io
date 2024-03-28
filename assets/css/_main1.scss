@@ -34,7 +34,7 @@
 		display: flex;
 		position: absolute;
 		height: 70%;
-		bottom: 0;
+		bottom: 1vh;
 		right: 0;
 		a {
 			@include base-transition;

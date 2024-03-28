@@ -141,6 +141,15 @@
 			}
 		}
 	}
+	main {
+		.max-sticky-height {
+			a {
+				border: $border-lg;
+				border-radius: $border-radius * 1.5;
+				padding: 7.5px 7.5px;
+			}
+		}
+	}
 	.about-me {
 		.personal-box {
 			border: $border-lg;
@@ -208,12 +217,152 @@
 				}
 			}
 		}
-		.max-sticky-height {
-			a {
-				border: $border-lg;
-				border-radius: $border-radius * 1.5;
-				padding: 7.5px 7.5px;
+	}
+	.my-skills {
+		.skills-box {
+			border: $border-lg;
+			border-radius: $section-title-radius * 1.5;
+			h1 {
+				border-bottom: $border-lg;
+				border-top-left-radius: $section-title-radius * 1.5;
+				border-top-right-radius: $section-title-radius * 1.5;
 			}
+			.skills-equip {
+				min-height: 1140px;
+				.maj-skills {
+					h2 {
+						border-bottom: $border-lg;
+					}
+					.maj-skills-ord {
+						.maj-skill-item {
+							.maj-skill-cont {
+								.skill-bar {
+									border: $border-lg-alt;
+									border-radius: $section-title-radius * 1.5;
+									height: 45px;
+									.skill-mastery {
+										border-radius: $section-title-radius * 1.5;
+									}
+									.skill-bns {
+										border-radius: $section-title-radius * 1.5;
+									}
+								}
+							}
+						}
+						.min-skills-start {
+							.min-skills {
+								border-radius: $border-radius * 1.5;
+								summary {
+									border: $border-lg;
+									border-radius: $border-radius * 1.5;
+									font-size: $h4 * 1.5;
+								}
+								.min-skills-ord {
+									.min-skill-item {
+										.min-skill-cont {
+											.skill-bar {
+												border: $border-lg-alt;
+												border-radius: $section-title-radius * 1.5;
+												height: 45px;
+												.skill-mastery {
+													border-radius: $section-title-radius * 1.5;
+												}
+												.skill-bns {
+													border-radius: $section-title-radius * 1.5;
+												}
+											}
+										}
+									}
+									.min-skill-item-otw {
+										h5 {
+											em {
+												font-size: $normal-font * 1.5;
+											}
+										}
+										.min-skill-cont {
+											.skill-bar {
+												border: 2px dashed $title-color;
+												border-radius: $section-title-radius * 1.5;
+												height: 45px;
+												.skill-mastery {
+													border-radius: $section-title-radius * 1.5;
+												}
+												.skill-bns {
+													border-radius: $section-title-radius * 1.5;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				hr {
+					border: $border-lg;
+				}
+				.access-skills {
+					h2 {
+						border-bottom: $border-lg;
+					}
+					.access-skills-cont {
+						.access-skills-list {
+							.access-skills-item {
+								border-bottom: $border-lg;
+								&:first-of-type {
+									border-top: $border-lg;
+								}
+							}
+						}
+						.skills-add-info-cont {
+							.skills-add-info {
+								a {
+									img {
+										width: $normal-font * 1.5;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.skills-hist {
+				&:not([open]) {
+					> summary {
+						border-bottom: none;
+						border-bottom-left-radius: $section-title-radius * 1.5;
+						border-bottom-right-radius: $section-title-radius * 1.5;
+					}
+				}
+				&[open] {
+					> summary {
+						border-bottom: $border-lg;
+					}
+				}
+				summary {
+					border-top: $border-lg;
+					font-size: $h2 * 1.5;
+				}
+				ul {
+					li {
+						h6 {
+							border: $border-lg;
+							border-radius: $border-radius * 1.5;
+						}
+					}
+				}
+			}
+		}
+	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 1.5;
+		}
+		q {
+			font-size: $h2 * 1.5;
+		}
+		em {
+			font-size: $h3 * 1.5;
 		}
 	}
 	footer {
@@ -338,6 +487,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.95;
+		}
+		q {
+			font-size: $h2 * 0.95;
+		}
+		em {
+			font-size: $h3 * 0.95;
+		}
+	}
 	footer {
 		.footer-nav {
 			form {
@@ -441,6 +601,17 @@
 					}
 				}
 			}
+		}
+	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.9;
+		}
+		q {
+			font-size: $h2 * 0.9;
+		}
+		em {
+			font-size: $h3 * 0.9;
 		}
 	}
 	footer {
@@ -548,6 +719,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.85;
+		}
+		q {
+			font-size: $h2 * 0.85;
+		}
+		em {
+			font-size: $h3 * 0.85;
+		}
+	}
 	footer {
 		.footer-nav {
 			form {
@@ -653,6 +835,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.8;
+		}
+		q {
+			font-size: $h2 * 0.8;
+		}
+		em {
+			font-size: $h3 * 0.8;
+		}
+	}
 	footer {
 		.footer-nav {
 			form {
@@ -751,6 +944,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.75;
+		}
+		q {
+			font-size: $h2 * 0.75;
+		}
+		em {
+			font-size: $h3 * 0.75;
+		}
+	}
 }
 
 @media screen and (max-width: 936px) {
@@ -825,6 +1029,17 @@
 					}
 				}
 			}
+		}
+	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.7;
+		}
+		q {
+			font-size: $h2 * 0.7;
+		}
+		em {
+			font-size: $h3 * 0.7;
 		}
 	}
 }
@@ -1216,6 +1431,17 @@
 			display: flex;
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.65;
+		}
+		q {
+			font-size: $h2 * 0.65;
+		}
+		em {
+			font-size: $h3 * 0.65;
+		}
+	}
 	footer {
 		min-height: 828px;
 		.footer-nav {
@@ -1356,6 +1582,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.6;
+		}
+		q {
+			font-size: $h2 * 0.6;
+		}
+		em {
+			font-size: $h3 * 0.6;
+		}
+	}
 }
 
 @media screen and (max-width: 444px) {
@@ -1408,6 +1645,17 @@
 			}
 		}
 	}
+	.i-am-error {
+		h1 {
+			font-size: $h1-bonus * 0.55;
+		}
+		q {
+			font-size: $h2 * 0.55;
+		}
+		em {
+			font-size: $h3 * 0.55;
+		}
+	}
 	footer {
 		.footer-nav {
 			form {
@@ -1444,11 +1692,16 @@
 			}
 		}
 	}
-	.about-me {
+	main {
 		min-width: $min-viewport-width;
 	}
-	.my-skills {
-		min-width: $min-viewport-width;
+	.i-am-error {
+		h1 {
+			font-size: $h1; //FIXED
+		}
+		q {
+			font-size: calc($h2/2);
+		}
 	}
 	footer {
 		min-width: $min-viewport-width;

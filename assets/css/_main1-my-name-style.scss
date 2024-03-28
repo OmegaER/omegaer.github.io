@@ -31,10 +31,10 @@
 		height: 100%;
 		width: 100%;
 		.sm-presentation {
-			-webkit-text-stroke: 0.5px $dark-color;
 			font-size: $h3;
 			padding: 0.5vh 1vw;
 			text-align: center;
+			text-indent: 0;
 			a {
 				@include base-transition;
 				text-decoration: none;
