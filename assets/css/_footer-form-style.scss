@@ -8,10 +8,10 @@ form {
 	legend {
 		align-self: flex-start;
 	}
-    fieldset,
-    span {
-        display: flex;
-    }
+	fieldset,
+	span {
+		display: flex;
+	}
 	fieldset {
 		border: none;
 		margin-top: 1vh;
@@ -29,13 +29,13 @@ form {
 				font-style: normal;
 			}
 		}
-        input,
-        textarea {
-            border: $border;
-            box-shadow: $shadow, $shadow-internal;
+		input,
+		textarea {
+			border: $border;
+			box-shadow: $shadow, $shadow-internal;
 			font-size: $form-font;
-            width: 60%;
-        }
+			width: 60%;
+		}
 		input {
 			border-radius: $section-title-radius;
 			padding: 0 0.5vw;

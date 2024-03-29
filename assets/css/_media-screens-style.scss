@@ -1695,6 +1695,25 @@
 	main {
 		min-width: $min-viewport-width;
 	}
+	.my-skills {
+		.skills-box {
+			.skills-equip {
+				.access-skills {
+					.access-skills-cont {
+						.access-skills-list {
+							.access-skills-item {
+								h6 {
+									.ita-br {
+										display: inline;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	.i-am-error {
 		h1 {
 			font-size: $h1; //FIXED

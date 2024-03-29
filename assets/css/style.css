@@ -987,6 +987,10 @@ header .header-nav .head-section .lang-stg .lang-content .lang-item .lang-item-a
   text-align: start;
   width: 50%;
 }
+.my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item h6 .ita-br {
+  display: none;
+  font-style: normal;
+}
 .my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item p {
   background: rgba(38, 45, 66, 0.7);
   display: flex;
@@ -2549,6 +2553,9 @@ footer .footer-nav .socials .side-note em a img {
   }
   main {
     min-width: 280px;
+  }
+  .my-skills .skills-box .skills-equip .access-skills .access-skills-cont .access-skills-list .access-skills-item h6 .ita-br {
+    display: inline;
   }
   .i-am-error h1 {
     font-size: 56px;
