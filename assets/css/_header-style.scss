@@ -1,105 +1,103 @@
 header {
-	background: linear-gradient(to bottom, darkslategray 0%, black 100%);
+	background: linear-gradient(to bottom, $secondary-color 0%, $dark-color 100%);
 	position: relative;
+	max-height: $header-height-limits;
+	height: 6vmax;
+	min-height: $header-height-limits * 0.55;
 	width: 100%;
-	height: $header-height;
-	nav {
+	.header-nav {
+		@include header-background;
 		align-items: center;
-		background-image: url(../img/background-title.jpg);
-		background-position: top;
-		background-repeat: no-repeat;
-		background-size: cover;
 		border-bottom: $border;
 		border-bottom-right-radius: $border-radius;
 		display: flex;
 		font-family: $font-title;
 		justify-content: space-between;
+		padding-left: 1vw;
 		position: relative;
 		height: 100%;
 		width: 100%;
 		.logo-container,
-		.nav-separator,
-		.nav-section {
+		.head-separator,
+		.head-section {
 			display: flex;
 		}
 		.logo-container,
-		.nav-section {
+		.head-section {
 			position: inherit;
 		}
-		.nav-separator,
-		.nav-section {
+		.head-separator,
+		.head-section {
 			height: 100%;
 		}
 		.logo-container {
-			align-content: flex-end;
 			justify-content: space-around;
-			margin-left: $header-margin;
 			text-decoration: none;
-			.logo-img,
-			em {
-				position: inherit;
-			}
 			.logo-img {
 				display: flex;
+				.logo-alt {
+					object-fit: contain;
+					max-width: $h1 * 2;
+					width: 7vmax;
+					min-width: $h1;
+				}
 			}
 			em {
-				align-self: flex-end;
-				color: white;
+				align-self: center;
+				color: $logo-p-color;
 				display: block;
-				font-size: $logo-title;
+				font-size: $h1;
 			}
 		}
-		.nav-separator {
+		.head-separator {
 			border: none;
 			border-right: $border;
 			border-radius: $border-radius;
-			position: absolute;
-			width: $header-separator-width;
-			left: 260px;
+			position: relative;
+			width: 2vw;
 		}
-		.nav-section {
+		.head-section {
 			align-items: center;
-			justify-content: space-between;
-			.nav-menu {
-				.nav-menu-btn {
+			justify-content: flex-end;
+			width: 80vw;
+			.head-menu {
+				display: flex;
+				justify-content: flex-end;
+				width: 100%;
+				.head-menu-btn {
 					display: none;
 					.menu-icon {
 						display: none;
+						filter: $inverted-filter;
 					}
 				}
-				.nav-menu-btn,
+				.head-menu-btn,
 				#expandList {
 					display: none;
 				}
-				.nav-list {
+				.head-list {
 					align-items: center;
 					display: flex;
 					justify-content: space-evenly;
-					position: inherit;
-					width: $header-link-box;
-					.nav-item {
-						-moz-transition: 0.5s ease;
-						-ms-transition: 0.5s ease;
-						-o-transition: 0.5s ease;
-						-webkit-transition: 0.5s ease;
-						color: white;
-						font-size: $header-link;
-						position: inherit;
+					width: 85%;
+					.head-list-item {
+						@include base-transition;
+						color: $logo-p-color;
+						font-size: $h5;
 						text-align: center;
 						text-decoration: none;
-						transition: 0.5s ease;
 						&:hover {
-							text-shadow: 5px 5px 5px black;
+							text-shadow: $shadow;
 						}
 						&:active,
 						&:visited:active {
-							-moz-transform: translate(2px, 2px);
-							-ms-transform: translate(2px, 2px);
-							-o-transform: translate(2px, 2px);
-							-webkit-transform: translate(2px, 2px);
-							color: $visited-links;
+							-moz-transform: translate(0.2vh, 0.2vw);
+							-ms-transform: translate(0.2vh, 0.2vw);
+							-o-transform: translate(0.2vh, 0.2vw);
+							-webkit-transform: translate(0.2vh, 0.2vw);
+							color: $altered-text;
 							text-shadow: none;
-							transform: translate(2px, 2px);
+							transform: translate(0.2vh, 0.2vw);
 						}
 						&:visited {
 							color: $visited-links-perm;
@@ -111,16 +109,16 @@ header {
 					}
 					.list-separator {
 						border: $border;
-						height: $header-link-separator-height;
+						height: 2vmax;
 					}
 				}
 			}
-			.content-separator,
+			.head-cont-separator,
 			.lang-stg {
 				position: inherit;
 				height: 100%;
 			}
-			.content-separator {
+			.head-cont-separator {
 				border: none;
 				border-right: $border;
 			}
@@ -129,35 +127,49 @@ header {
 				background: inherit;
 				display: flex;
 				justify-content: center;
-				width: $language-settings-box;
+				padding: 0 1vw;
 				.lang-btn,
 				.lang-content {
 					align-items: center;
 				}
 				.lang-btn {
-					-moz-transition: 0.5s ease;
-					-ms-transition: 0.5s ease;
-					-o-transition: 0.5s ease;
-					-webkit-transition: 0.5s ease;
-					border: 1px solid transparent;
+					@include base-transition;
+					border: $border-transparent;
 					border-radius: $border-radius;
-					color: white;
 					cursor: pointer;
 					display: flex;
-					font-size: $language-button-marker;
-					padding: $language-button-padding;
-					transition: 0.5s ease;
+					padding: 0.5vh 0.5vw;
 					z-index: 2;
 					&:hover {
 						border: $border;
-						box-shadow: 5px 5px 5px black;
+						box-shadow: $shadow;
+						> .lang-btn-alt {
+							filter: $title-filter;
+						}
+						> span {
+							filter: $title-filter;
+						}
+					}
+					.lang-btn-alt {
+						@include base-transition;
+						filter: $inverted-filter;
+						width: 3vmax;
+						min-width: calc($h1/2);
+					}
+					span {
+						@include base-transition;
+						color: $logo-p-color;
+						font-size: $normal-font;
 					}
 				}
 				#expandLang {
 					display: none;
 					&:checked {
 						~ .lang-btn {
-							border: none;
+							-o-transition: none;
+							-moz-transition: none;
+							-webkit-transition: none;
+							border: $border-transparent;
 							box-shadow: none;
 							transition: none;
 						}
@@ -167,11 +179,7 @@ header {
 					}
 				}
 				.lang-content {
-					background-color: linear-gradient(to bottom, darkslategray 0%, black 100%);
-					background-image: url(../img/background-title.jpg);
-					background-position: top;
-					background-repeat: no-repeat;
-					background-size: cover;
+					@include header-background;
 					border: $border;
 					border-right: none;
 					border-top: none;
@@ -179,18 +187,23 @@ header {
 					display: none;
 					flex-direction: column;
 					justify-content: flex-end;
-					padding: $language-content-padding;
+					padding: 0 1vw 1vmax 1vw;
 					position: absolute;
 					z-index: 1;
-					height: $language-content-height;
-					left: -2px;
+					height: 14vmax;
+					min-height: calc($min-viewport-width/2);
+					left: 0;
 					right: 0;
 					top: 0;
 					.lang-item {
 						display: flex;
 						justify-content: flex-end;
-						margin-top: $language-item-separator;
-						box-shadow: 5px 5px 5px black;
+						margin-top: 2vh;
+						box-shadow: $shadow;
+						.lang-item-alt {
+							width: 2vmax;
+							min-width: $normal-font;
+						}
 					}
 				}
 			}

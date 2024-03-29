@@ -1,0 +1,76 @@
+.skills-hist {
+	width: 100%;
+	&:not([open]) {
+		> summary {
+			border-bottom: none;
+			border-bottom-left-radius: $section-title-radius;
+			border-bottom-right-radius: $section-title-radius;
+		}
+	}
+	&[open] {
+		> summary {
+			border-bottom: $border;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+	summary {
+		@include title-background;
+		border-top: $border;
+		cursor: pointer;
+		font-size: $h2;
+	}
+	ul {
+		list-style: none;
+		padding: 1vh 3vw 5vh 3vw;
+		li {
+			color: $title-color;
+			margin-top: 1vh;
+			h6 {
+				@include title-background;
+				border: $border;
+				border-radius: $border-radius;
+				padding: 1vh 1vw;
+				text-align: left;
+				width: fit-content;
+			}
+			p {
+				margin-top: 0.5vh;
+			}
+			.skill-context {
+				-webkit-text-stroke: $text-stroke-special;
+				color: $title-color;
+				text-indent: 0;
+				strong {
+					-webkit-text-stroke: $text-stroke;
+					color: $logo-p-color;
+				}
+			}
+			.skill-date {
+				-webkit-text-stroke: $text-stroke-special;
+				color: $title-color;
+				text-indent: 0;
+				em {
+					-webkit-text-stroke: $text-stroke;
+					color: $logo-p-color;
+				}
+			}
+			&:last-of-type {
+				.skill-context {
+					a {
+						@include base-transition;
+						text-decoration: none;
+						&:hover {
+							filter: $title-filter;
+						}
+						img {
+							margin-top: 1vh;
+							min-width: $h1 * 2;
+							width: 10vmax;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,55 +1,208 @@
+//font-faces
 @font-face {
 	font-family: "introrustg-base2line";
 	src: url(../fonts/introrustg-base2line.otf) format("opentype"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff) format("woff"), url(../fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-
-$debug: 1px solid black;
-$font-title: "introrustg-base2line", sans-serif;
-$border: 1px solid #d4bf79;
-$border-lg: 2px solid #d4bf79;
-$border-radius: 10px;
-$greetings-height: 1200px;
-$h1: 56px;
-$h1-adjustment: 200px;
-$header-height: 100px;
-$header-link: 22px;
-$header-link-box: 700px;
-$header-link-box-small: 110px;
-$header-link-separator-height: 30px;
-$header-margin: 10px;
-$header-menu-small-left: 10px;
-$header-menu-small-right: 10px;
-$header-separator-width: 20px;
-$language-button-marker: 22px;
-$language-button-padding: 5px;
-$language-content-height: 150px;
-$language-content-padding: 0 10px 10px 10px;
-$language-item-separator: 5px;
-$language-settings-box: 80px;
-$logo-title: 56px;
-$my-name-box-height: 1200px;
-$personal-box-radius: 50px;
-$title-color: #d4bf79;
-$title-padding-bottom: 10px;
-$title-padding-top: 10px;
-$transition-height: 100px;
-$visited-links: #777;
-$visited-links-perm: #d0d0d0;
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+@font-face {
+	font-family: "silkscreen-normal";
+	src: url(../fonts/silkscreen_normal_macroman/slkscr-webfont.woff) format(woff);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "silkscreen-bold";
+	src: url(../fonts/silkscreen_bold_macroman/slkscrb-webfont.woff) format(woff);
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "sjonarbokclassic-regular";
+	src: url(../fonts/sjonarbokclassic_regular_macroman/sjonarbok_classic-webfont.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
-body {
+//mixins - backgrounds
+@mixin body-background {
 	background-attachment: fixed;
-	background-color: midnightblue;
+	background-color: $primary-color;
 	background-image: url(../img/background-lofi.jpg);
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+@mixin header-background {
+	background-color: $dark-color;
+	background-image: url(../img/background-title.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin main-background {
+	background-attachment: fixed;
+	background-color: $inner-box;
+	background-image: url(../img/background-section.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin title-background {
+	background-color: $secondary-color;
+	background-image: url(../img/background-title.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+//mixins - transitions
+@mixin base-transition {
+	-moz-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+@mixin slide-transition {
+	-moz-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	-o-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	-webkit-transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+	transition: margin-left cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+}
+
+//-box limits test-
+$debug: 1px solid black;
+
+//colors
+$altered-text: #999;
+$dark-color: #111;
+$footer-mid-color: #04091c;
+$inner-box: #2e465f;
+$logo-p-color: white;
+$primary-color: #262d42;
+$primary-color-scrollbar: #394362;
+$secondary-color: #063258;
+$secondary-color-scrollbar: #094d88;
+$skill-disabled-container: #333;
+$soft-shadow: #555;
+$title-color: #ab9c87;
+$title-color-alt: #423b26;
+$visited-links-perm: #d0d0d0;
+
+//borders
+$border: 1px solid $title-color;
+$border-alt: 1px solid $title-color-alt;
+$border-transparent: 1px solid transparent;
+$border-lg: 2px double $title-color;
+$border-lg-alt: 2px solid $title-color-alt;
+$border-radius: 10px;
+$section-title-radius: 50px;
+$text-stroke: 0.5px $dark-color;
+$text-stroke-special: 0.5px $title-color-alt;
+
+//filters
+$facebook-filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%);
+$github-filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
+$instagram-filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%);
+$inverted-filter: invert(100%); //Also X filter
+$linkedin-filter: invert(23%) sepia(34%) saturate(4379%) hue-rotate(179deg) brightness(114%) contrast(97%);
+$threads-filter: invert(0%) sepia(17%) saturate(1102%) hue-rotate(353deg) brightness(92%) contrast(87%);
+$title-filter: invert(62%) sepia(12%) saturate(549%) hue-rotate(356deg) brightness(101%) contrast(83%); //Like $title-color
+
+//font families
+$font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-i-am-error: "sjonarbokclassic-regular";
+$font-pixel: "silkscreen-normal", "silkscreen-bold";
+$font-title: "introrustg-base2line";
+
+//font sizes
+$h1: 56px;
+$h1-bonus: $h1 * 2; //112px
+$h2: $h1 * 0.75; //42px
+$h3: $h2 * 0.75; //31.5px (Min-constant = 0.55)
+$h4: $h3 * 0.9; //28.35px (Min-constant = 0.6)
+$h5: $h4 * 0.9; //25.515px (Min-constant = 0.65)
+$normal-font: $h5 * 0.9; //22.9635px (Min-constant = 0.7)
+$form-font: $normal-font * 0.9; //20.66715px (Min-constant = 0.8)
+
+//shadows
+$shadow: 0.5vh 0.5vw 0.5vmax $dark-color;
+$shadow-special: 0.5vh 0.5vw 0.5vmax $title-color;
+$shadow-internal: inset 0vh 0vw 1vmax $soft-shadow;
+
+//other
+$bullet-points-size: 30px;
+$header-height-limits: 100px;
+$hobby-slide-height-limits: 390px;
+$min-viewport-width: 280px;
+$name-image-block-limits: 450px;
+$name-min-viewport-height: 700px;
+$name-min-viewport-image-height: 410px;
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	::-webkit-scrollbar {
+		width: 0.5vw;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $altered-text;
+		border-radius: calc($border-radius/2);
+		&:hover {
+			background: $title-color;
+		}
+	}
+}
+body {
+	@include body-background;
+	font-family: $font-body;
+}
+
+h1,
+h2,
+summary,
+legend,
+h3,
+h4,
+h5,
+h6 {
+	color: $title-color;
+	font-family: $font-title;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: $shadow;
+}
+h1 {
+	color: $altered-text;
+	font-size: $h1;
+}
+h2,
+legend {
+	font-size: $h2;
+}
+h3 {
+	font-size: $h3;
+}
+h4 {
+	font-size: $h4;
+}
+h5 {
+	font-size: $h5;
+}
+h6,
+p {
+	font-size: $normal-font;
+}
+p {
+	-webkit-text-stroke: $text-stroke;
+	color: $logo-p-color;
+	text-indent: 1vw;
+	text-shadow: $shadow;
 }

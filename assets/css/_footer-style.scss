@@ -1,0 +1,23 @@
+footer {
+	align-items: center;
+	background: linear-gradient(135deg, $primary-color, $footer-mid-color, $primary-color);
+	border-top: $border;
+	display: flex;
+	position: relative;
+	height: 50vh;
+	min-height: 414px;
+	width: 100%;
+	.footer-nav {
+		display: flex;
+		justify-content: space-evenly;
+		height: 90%;
+		width: 100%;
+		@import "footer-form-style";
+		.footer-separator {
+			border: none;
+			border-left: $border;
+			height: 100%;
+		}
+		@import "footer-socials-style";
+	}
+}

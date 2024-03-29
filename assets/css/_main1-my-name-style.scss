@@ -1,0 +1,139 @@
+.my-name {
+	display: flex;
+	flex-direction: column;
+	position: inherit;
+	height: 110vh;
+	min-height: $name-min-viewport-height;
+	width: 100%;
+	.name-section-title,
+	.name-section-detail {
+		align-items: center;
+		display: flex;
+	}
+	.name-section-title {
+		@include title-background;
+		border-bottom: $border;
+		border-top-left-radius: $section-title-radius;
+		border-top-right-radius: $section-title-radius;
+		justify-content: center;
+		padding: 1vh 0;
+		width: 100%;
+		h2 {
+			br {
+				display: none;
+			}
+		}
+	}
+	.name-section-detail {
+		flex-direction: column;
+		justify-content: space-evenly;
+		position: inherit;
+		height: 100%;
+		width: 100%;
+		.sm-presentation {
+			font-size: $h3;
+			padding: 0.5vh 1vw;
+			text-align: center;
+			text-indent: 0;
+			a {
+				@include base-transition;
+				text-decoration: none;
+				img {
+					min-width: $h1 * 2;
+					width: 10vmax;
+				}
+				&:hover {
+					filter: $title-filter;
+				}
+			}
+		}
+		.name-pic-pag {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			position: inherit;
+			width: 100%;
+			.name-slide-control,
+			.name-bullets {
+				display: none;
+			}
+			.name-inner {
+				display: flex;
+				justify-content: space-evenly;
+				position: inherit;
+				width: 100%;
+				.name-slide {
+					display: flex;
+					justify-content: center;
+					position: inherit;
+					width: 100%;
+					.name-slide-content {
+						display: flex;
+						justify-content: center;
+						position: inherit;
+						.name-overlay-btn,
+						.name-overlay {
+							display: flex;
+							justify-content: center;
+							width: 100%;
+						}
+						.name-overlay-btn {
+							cursor: pointer;
+							.name-img-block {
+								@include base-transition;
+								border-radius: $border-radius;
+								box-shadow: $shadow;
+								object-fit: cover;
+								height: 75vh;
+								min-height: $name-min-viewport-image-height;
+								max-width: $name-image-block-limits;
+								width: 33vw;
+								min-width: $min-viewport-width;
+								&:hover {
+									box-shadow: $shadow-special;
+								}
+							}
+						}
+						#nameOverlayCheck1,
+						#nameOverlayCheck2 {
+							display: none;
+						}
+						#nameOverlayCheck1 {
+							&:checked {
+								~ .name-overlay {
+									height: 23%;
+								}
+							}
+						}
+						#nameOverlayCheck2 {
+							&:checked {
+								~ .name-overlay {
+									height: 28%;
+								}
+							}
+						}
+						.name-overlay {
+							@include base-transition;
+							align-items: flex-start;
+							background-color: transparentize($dark-color, 0.3);
+							border-bottom-left-radius: $border-radius;
+							border-bottom-right-radius: $border-radius;
+							overflow-y: scroll;
+							position: absolute;
+							height: 0;
+							bottom: 0;
+							.name-img-desc {
+								display: block;
+								padding: 1vh 1vw;
+								position: relative;
+								text-align: justify;
+								text-indent: 0.8em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
