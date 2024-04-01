@@ -6,4 +6,4 @@ Wait, hold on! This is my personal webpage as a **Start2Impact University** proj
 
 [Repository link](https://github.com/OmegaER/omegaer.github.io.git)
 
-![Scratchy Omega (testa-trasparente)](https://github.com/OmegaER/omegaer.github.io/assets/158183341/fa833a58-1369-4a26-893c-9a04b46b5c6b)
+![Scratchy Omega (testa-trasparente-piccolo)](https://github.com/OmegaER/omegaer.github.io/assets/158183341/ad480392-cc5d-4f21-92c3-86d791d97b84)
