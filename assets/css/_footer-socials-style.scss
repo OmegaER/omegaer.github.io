@@ -80,6 +80,7 @@
 						}
 						a {
 							@include base-transition;
+							filter: $altered-filter;
 							img {
 								@include base-transition;
 								width: 2vmax;
@@ -129,6 +130,7 @@
 					height: 100%;
 					a {
 						@include base-transition;
+						filter: $altered-filter;
 						img {
 							@include base-transition;
 							width: 2vmax;

@@ -1370,6 +1370,7 @@ footer .footer-nav .socials .link-tree .social-links .envelope .link-group span:
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a {
 	transition: 0.5s ease;
+	filter: invert(70%) sepia(0%) saturate(21%) hue-rotate(170deg) brightness(86%) contrast(96%);
 }
 footer .footer-nav .socials .link-tree .social-links .envelope .link-group span a img {
 	transition: 0.5s ease;
@@ -1416,6 +1417,7 @@ footer .footer-nav .socials .link-tree .git .envelope span {
 }
 footer .footer-nav .socials .link-tree .git .envelope span a {
 	transition: 0.5s ease;
+	filter: invert(70%) sepia(0%) saturate(21%) hue-rotate(170deg) brightness(86%) contrast(96%);
 }
 footer .footer-nav .socials .link-tree .git .envelope span a img {
 	transition: 0.5s ease;

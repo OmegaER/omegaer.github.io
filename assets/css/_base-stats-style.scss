@@ -101,6 +101,7 @@ $text-stroke: 0.5px $dark-color;
 $text-stroke-special: 0.5px $title-color-alt;
 
 //filters
+$altered-filter: invert(70%) sepia(0%) saturate(21%) hue-rotate(170deg) brightness(86%) contrast(96%);
 $facebook-filter: invert(31%) sepia(100%) saturate(325%) hue-rotate(181deg) brightness(90%) contrast(90%);
 $github-filter: invert(29%) sepia(7%) saturate(683%) hue-rotate(178deg) brightness(94%) contrast(97%);
 $instagram-filter: invert(63%) sepia(13%) saturate(1550%) hue-rotate(316deg) brightness(107%) contrast(90%);
