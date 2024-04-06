@@ -411,7 +411,10 @@
 		</main>
 		<footer>
 			<nav class="footer-nav">
-				<form id="contact_form">
+				<form
+					id="contact_form"
+					action="?"
+					method="post">
 					<legend>Contact me!</legend>
 					<input
 						type="hidden"
@@ -460,7 +463,10 @@
 							type="submit"
 							value="Submit"
 							accesskey="s"
-							id="submitBtn" />
+							class="g-recaptcha"
+							id="submitBtn"
+							data-sitekey="6LeWZLIpAAAAADgWbYNVAiwUYiF4LX17LGkO_tJ3"
+							data-callback="onSubmit" />
 						<input
 							type="reset"
 							value="Reset"
@@ -625,6 +631,15 @@
 					);
 				});
 			};
+		</script>
+		<script
+			src="https://www.google.com/recaptcha/api.js"
+			async
+			defer></script>
+		<script>
+			function onSubmit(token) {
+				document.getElementById("contact-form").submit();
+			}
 		</script>
 	</body>
 </html>
