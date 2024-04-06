@@ -411,8 +411,7 @@
 		<footer>
 			<nav class="footer-nav">
 				<form
-					id="contact_form"
-					action="?">
+					id="contact_form">
 					<legend>Contattami!</legend>
 					<input
 						type="hidden"
@@ -461,10 +460,7 @@
 							type="submit"
 							value="Invia"
 							accesskey="s"
-							class="g-recaptcha"
-							id="submitBtn"
-							data-sitekey="6LeWZLIpAAAAADgWbYNVAiwUYiF4LX17LGkO_tJ3"
-							data-callback="onSubmit" />
+							id="submitBtn" />
 						<input
 							type="reset"
 							value="Resetta"
@@ -624,19 +620,11 @@
 						(error) => {
 							console.log("FAILED...", error);
 							alert(JSON.stringify(err));
+							submitBtn.value = "Error";
 						}
 					);
 				});
 			};
-		</script>
-		<script
-			src="https://www.google.com/recaptcha/api.js"
-			async
-			defer></script>
-		<script>
-			function onSubmit(token) {
-				document.getElementById("contact-form").submit();
-			}
 		</script>
 	</body>
 </html>
